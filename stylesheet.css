@@ -1,0 +1,377 @@
+html {
+  box-sizing: border-box;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 16px;
+  height: 100%;
+  width: 100%;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+h1, h2, h3, h4, h5, h6, p{
+  margin: 0;
+  padding: 0;
+}
+.header{
+  width: 1220px;
+  margin: 0 auto;
+  position: relative;
+  padding-top: 60px;
+}
+.login, .register{
+  color: #868686;
+  font-size: 0.7em;
+  font-weight: 700;
+  margin-right: 4em;
+  letter-spacing: 1px;
+  float: right;
+  position: absolute;
+  top: 7%;
+  right: 13%;
+}
+.register{
+  right: 3%;
+}
+.logo{
+  color: #ef4e91;
+  font-size: 4em;
+  font-weight: 400;
+  display: inline-block;
+  margin-top: -35px;
+}
+.navigation{
+  float: right;
+}
+.nav_item{
+  display: inline-block;
+  margin-right: 2.5em;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  font-size: 0.8em;
+}
+.search{
+  margin-right: 2em;
+  float: right;
+}
+.stripe{
+  background-color: #ebebeb;
+  height: 1px;
+  width: 100%;
+}
+.main{
+  width: 1220px;
+  margin: 0 auto;
+  height: 1080px;
+  position: relative;
+}
+.main_head{
+  font-weight: 400;
+  font-size: 3.5em;
+  letter-spacing: 3px;
+  position: absolute;
+  top: 35%;
+}
+.main_dress{
+  position: absolute;
+  top: 0%;
+  right: -10%;
+  width: 777px;
+}
+.main_description{
+  position: absolute;
+  top: 45%;
+  width: 50%;
+  letter-spacing: 2px;
+  font-size: 1.1em;
+}
+.main_button{
+  display: block;
+  position: absolute;
+  text-decoration: none;
+  top: 60%;
+  width: 330px;
+  height: 90px;
+  background-color: #ef4e91;
+  color: white;
+  font-weight: 700;
+  font-size: 2em;
+  text-align: center;
+  padding-top: 20px;
+  border-radius: 5px;
+}
+.subscribe{
+  margin-top: -1px;
+  width: 100%;
+  height: 160px;
+  background-color: #ef4e91;
+}
+.subscribe_wrap{
+  width: 1220px;
+  margin: 0 auto;
+  height: 160px;
+  position: relative;
+}
+.subscribe_head{
+  color: white;
+  font-size: 2.2em;
+  letter-spacing: 3px;
+  position: absolute;
+  top: 25%;
+}
+.subscribe_description{
+  color: white;
+  font-size: 1.1em;
+  letter-spacing: 2px;
+  position: absolute;
+  top: 55%;
+}
+.subscribe_button{
+  display: block;
+  text-decoration: none;
+  width: 270px;
+  height: 50px;
+  background-color: #ef4e91;
+  color: white;
+  font-weight: 700;
+  font-size: 2em;
+  text-align: center;
+  padding-top: 3px;
+  border: 1px solid white;
+  border-radius: 5px;
+  float: right;
+  margin-top: 60px;
+}
+.collection{
+  width: 1220px;
+  margin: 0 auto;
+}
+.collection_header{
+  width: 100%;
+  position: relative;
+}
+.collection_head{
+  font-size: 0.6em;
+  letter-spacing: 5px;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 100px;
+}
+.collection_bighead{
+  letter-spacing: 2px;
+  text-align: center;
+  margin-top: 10px;
+}
+.redstripe{
+  width: 35px;
+  height: 2px;
+  background-color: #f36ca2;
+  position: absolute;
+  left: 50%;
+  margin-top: 20px;
+}
+.collection_text{
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  color: #696969;
+  text-align: center;
+  margin: 0 auto;
+  width: 80%;
+  margin-top: 50px;
+  font-size: 0.9em;
+  letter-spacing: 1px;
+  margin-bottom: 80px;
+}
+.product{
+  width: 23%;
+  float: left;
+  margin-right: 2%;
+  margin-bottom: 2%;
+  position: relative;
+}
+.product_image{
+  width: 100%;
+}
+.product_right{
+  margin-right: 0%;
+}
+.product_description{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0%;
+  text-align: center;
+  background-color: rgba(239, 78, 145, 0.5);
+  display: none;
+  padding-top: 210px;
+}
+.product:hover .product_description{
+  display: block;
+  cursor: pointer;
+}
+.product_name, .product_cost{
+  color: white;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+.product_cost{
+  margin-top: 40px;
+}
+.collection_footer{
+  background-color: #f9f9f9;
+  width: 100%;
+  height: 140px;
+  clear: both;
+}
+.collection_wrap{
+  width: 1220px;
+  margin: 0 auto;
+  padding: 50px 0;
+}
+.question, .collection_view, .collection_look{
+  font-weight: 700;
+  letter-spacing: 2px;
+  font-size: 0.9em;
+  display: inline-block;
+  font-family: 'Montserrat', sans-serif;
+}
+.question{
+  margin-left: 20px;
+  font-weight: 500;
+}
+.collection_view, .collection_look{
+  font-size: 0.6em;
+  width: 160px;
+  float: right;
+}
+.collection_view{
+  border-bottom: 2px solid #747474;
+  padding-bottom: 14px;
+  margin-right: 40px;
+}
+.collection_look{
+  border-top: 2px solid #747474;
+  padding-top: 14px;
+  margin-right: 22px;
+}
+.news{
+  width: 100%;
+  text-align: center;
+  margin-top: 40px;
+  font-family: 'Montserrat', sans-serif;
+  position: relative;
+}
+.news_description{
+  margin-top: 20px;
+  font-style: italic;
+  color: #747474;
+  font-family: 'Quicksand', sans-serif;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+}
+.pinkstripe{
+  height: 2px;
+  width: 66px;
+  position: absolute;
+  left: 48%;
+  top: 120%;
+  background-color: #f166a0;
+}
+.news_block{
+  margin-top: 110px;
+}
+.news_first, .news_second, .news_third{
+  position: relative;
+  width: 25%;
+  float: left;
+}
+.news_image{
+  width: 100%;
+}
+.datetime{
+  position: absolute;
+  bottom: 30%;
+  width: 72px;
+  height: 66px;
+  background-color: #fef0eb;
+  cursor: pointer;
+}
+.read_more{
+  position: absolute;
+  bottom: 24%;
+  width: 72px;
+  height: 20px;
+  background-color: #ef4f87;
+  font-size: 0.7em;
+  text-align: center;
+  color: white;
+  font-weight: 700;
+  padding-top: 2px;
+  cursor: pointer;
+}
+.date{
+  color: #ef4f87;
+  text-align: center;
+  padding-top: 10px;
+  font-size: 2em;
+  font-weight: 700;
+}
+.mounth{
+  text-align: center;
+  margin-top: -7px;
+  font-size: 0.9em;
+  letter-spacing: 1px;
+}
+.news_subscribe{
+  text-align: center;
+}
+.news_subscribe_title{
+  margin-top: 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1em;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+.news_author{
+  margin-top: 15px;
+  font-size: 0.8em;
+  color: #bbbbbb;
+}
+.news_next{
+  background-color: #ef4e91;
+  width: 25%;
+  float: left;
+  height: 232px;
+  position: relative;
+  cursor: pointer;
+}
+.fa-angle-right{
+  color: #f1689e;
+  font-size: 8em;
+  position: absolute;
+  top: 2%;
+  left: 45%;
+}
+.see_more{
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  letter-spacing: 8px;
+  font-size: 0.8em;
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 10px;
+}
+.in{
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  color: white;
+  font-size: 1.1em;
+  letter-spacing: 2px;
+}
+.our_blog{
+  color: white;
+  text-align: center;
+  font-family: 'Quicksand', sans-serif;
+  font-style: italic;
+  margin-left: 5px;
+}
