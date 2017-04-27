@@ -2,33 +2,69 @@
 <html>
 <head>
   <title>Gorman</title>
-  <link href="https://fonts.googleapis.com/css?family=Quicksand:400,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Quicksand:400,500,600,700" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,600,700" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Raleway:700" rel="stylesheet">
+  <link rel="stylesheet" href="magnific-popup/magnific-popup.css">
   <link rel="stylesheet" href="css/font-awesome.min.css">
   <link rel="stylesheet" href="css/stylesheet.css">
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="magnific-popup/jquery.magnific-popup.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      // Get the modal
+      var modal = document.getElementById('myModal');
+      // Get the button that opens the modal
+      var i = 0;
+      for (i = 1; i <= 8; i++) {
+        var btn = document.getElementById('myProduct'+i+'');
+          btn.onclick = function() {
+            modal.style.display = "block";
+          }
+        }
+
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function(event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+          }
+        }
+        $('.minus').click(function () {
+          var $amount = $("#amount_to_add");
+          var count = parseInt($amount.text()) - 1;
+          count = count < 1 ? 1 : count;
+          $amount.text(count);
+          return false;
+        });
+        $('.plus').click(function () {
+          var $amount = $("#amount_to_add");
+          $amount.text(parseInt($amount.text()) + 1);
+          return false;
+        });
+      });
+    </script>
 </head>
 <body>
   <div class="wrap">
-    <div class="header">
+    <div class="header" id="home">
       <div class="authentication">
         <p class="register">Register</p>
         <p class="login">Login</p>
       </div>
       <h1 class="logo">gorman</h1>
-      <img class="search" src="images/search.png" alt="search">
+      <a href="#"><img class="search" src="images/search.png" alt="search"></a>
       <nav class="navigation">
-        <p class="nav_item">HOME</p>
-        <p class="nav_item">SHOP</p>
-        <p class="nav_item">LOOKBOOK</p>
-        <p class="nav_item">BLOG</p>
-        <p class="nav_item">CONTACT</p>
+        <a href="#home" class="nav_item">HOME</a>
+        <a href="#shop" class="nav_item">SHOP</a>
+        <a href="#lookbook" class="nav_item">LOOKBOOK</a>
+        <a href="#blog" class="nav_item">BLOG</a>
+        <a href="#contact" class="nav_item">CONTACT</a>
       </nav>
 
     </div>
     <div class="stripe"></div>
-    <div class="main">
+    <div class="main" id="shop">
       <h2 class="main_head">Autumn 2017</h2>
       <p class="main_description">Sed ut perspiciatis unde omnis iste natus error sit laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore.</p>
       <a href="#" class="main_button">Shop Now</a>
@@ -41,63 +77,63 @@
         <a href="#" class="subscribe_button">SHOP NOW</a>
       </div>
     </div>
-    <div class="collection">
+    <div class="collection" id="lookbook">
       <div class="collection_header">
         <h4 class="collection_head">LOREM IPSUM DOLOR</h3>
         <h3 class="collection_bighead">SED DO EIUSMOD TEMPOR</h3>
         <div class="redstripe"></div>
         <p class="collection_text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p>
       </div>
-      <div class="product">
+      <div class="product" id="myProduct1">
         <img class="product_image" src="images/lookbook1.jpg" alt="women_dress">
         <div class="product_description">
           <p class="product_name">PRODUCT NAME</p>
           <p class="product_cost">$199.00</p>
         </div>
       </div>
-      <div class="product">
+      <div class="product" id="myProduct2">
         <img class="product_image" src="images/lookbook2.jpg" alt="women_dress">
         <div class="product_description">
           <p class="product_name">PRODUCT NAME</p>
           <p class="product_cost">$199.00</p>
         </div>
       </div>
-      <div class="product">
+      <div class="product" id="myProduct3">
         <img class="product_image" src="images/lookbook3.jpg" alt="women_dress">
         <div class="product_description">
           <p class="product_name">PRODUCT NAME</p>
           <p class="product_cost">$199.00</p>
         </div>
       </div>
-      <div class="product">
+      <div class="product" id="myProduct4">
         <img class="product_image product_right" src="images/lookbook4.jpg" alt="women_dress">
         <div class="product_description">
           <p class="product_name">PRODUCT NAME</p>
           <p class="product_cost">$199.00</p>
         </div>
       </div>
-      <div class="product">
+      <div class="product" id="myProduct5">
         <img class="product_image" src="images/lookbook5.jpg" alt="women_dress">
         <div class="product_description">
           <p class="product_name">PRODUCT NAME</p>
           <p class="product_cost">$199.00</p>
         </div>
       </div>
-      <div class="product">
+      <div class="product" id="myProduct6">
         <img class="product_image" src="images/lookbook6.jpg" alt="women_dress">
         <div class="product_description">
           <p class="product_name">PRODUCT NAME</p>
           <p class="product_cost">$199.00</p>
         </div>
       </div>
-      <div class="product">
+      <div class="product" id="myProduct7">
         <img class="product_image" src="images/lookbook7.jpg" alt="women_dress">
         <div class="product_description">
           <p class="product_name">PRODUCT NAME</p>
           <p class="product_cost">$199.00</p>
         </div>
       </div>
-      <div class="product">
+      <div class="product" id="myProduct8">
         <img class="product_image product_right" src="images/lookbook8.jpg" alt="women_dress">
         <div class="product_description">
           <p class="product_name">PRODUCT NAME</p>
@@ -105,6 +141,7 @@
         </div>
       </div>
     </div>
+
     <div class="collection_footer">
       <div class="collection_wrap">
         <img class="pencil" src="images/pencil.png" alt="pencil">
@@ -113,7 +150,7 @@
         <p class="collection_view">VIEW COLLECTION&nbsp;&nbsp; +</p>
       </div>
     </div>
-    <div class="news">
+    <div class="news" id="blog">
       <h2 class="news_title">OUR NEWS<span class="pink_dot">.</span></h2>
       <p class="news_description">We share our best ideas in our blog</p>
       <div class="pinkstripe"></div>
@@ -167,9 +204,96 @@
         <p class="in">IN<span class="our_blog">Our Blog</p>
       </div>
     </div>
-    <div class="contacts">
-      call
+    <div class="contacts" id="contact">
+      <div class="contacts_wrap">
+        <div class="contacts_block">
+          <div class="call_us">
+            <p class="call_us_text">CALL US</p>
+            <p class="call_us_number">07 3201 3201</p>
+          </div>
+          <i class="fa fa-phone-square" aria-hidden="true"></i>
+          <div class="adress">
+            <p class="call_us_text">ADDRESS</p>
+            <p class="adress_name">1King Street, City Name, State</p>
+          </div>
+          <i class="fa fa-envelope" aria-hidden="true"></i>
+          <div class="message">
+            <p class="call_us_text">SAY HELLO</p>
+            <p class="e-mail">hello@brandname.com</p>
+          </div>
+          <i class="fa fa-map-marker" aria-hidden="true"></i>
+        </div>
+        <div class="feedback">
+          <form class="form_feedback" action="index.html" method="post">
+            <input class="form_name" type="text" name="get_name" value="" placeholder="Name">
+            <label class="label_message" for="message">Message</label>
+            <input class="form_email" type="e-mail" name="get_email" value="" placeholder="Email">
+            <textarea class="form_message" name="message"></textarea>
+            <button class="feedback_button" type="button" name="button">SEND</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="footer_wrap">
+        <div class="footer_shop">
+          <h6 class="footer_shop_title">SHOP</h6>
+          <a href="#" class=footer_shop_text>Woman</a>
+          <a href="#" class=footer_shop_text>Shoes</a>
+          <a href="#" class=footer_shop_text>Accessories</a>
+          <a href="#" class=footer_shop_text>Decor</a>
+        </div>
+        <div class="footer_website">
+          <h6 class="footer_website_title">WEBSITE</h6>
+          <a href="#" class=footer_website_text>Terms of Use</a>
+          <a href="#" class=footer_website_text>Privacy Policy</a>
+          <a href="#" class=footer_website_text>Copyright Policy</a>
+          <a href="#" class=footer_website_text>Support</a>
+        </div>
+        <div class="footer_about">
+          <h6 class="footer_about_title">ABOUT</h6>
+          <a href="#" class=footer_about_text>Company</a>
+          <a href="#" class=footer_about_text>Shipping info</a>
+          <a href="#" class=footer_about_text>Jobs</a>
+          <a href="#" class=footer_about_text>Contact</a>
+        </div>
+        <p class="signature">&copy;GORMAN | MELBOURNE</p>
+      </div>
+    </div>
+  </div>
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-item">
+        <div class="modal-left">
+          <h2 class="modal-title">FESTIVAL DRESS</h2>
+          <p class="modal-id">PRODUCT ID: 2648</p>
+          <p class="modal-description">- heavy weight cotton jersey dress</p>
+          <p class="modal-description">- boat neck</p>
+          <p class="modal-description">- relaxed fit</p>
+          <p class="modal-description">- grey melange base</p>
+          <p class="modal-description">- finished above knee</p>
+          <div class="number">
+            <p class="qty">QTY</p>
+            <a href="#">
+               <p class="addition_text">
+              <span id="amount_to_add">1</span>
+              <p class="minus"><i class="fa fa-caret-down" aria-hidden="true"></i></p>
+              <p class="plus"><i class="fa fa-caret-up" aria-hidden="true"></i></p>
+              </p>
+            </a>
 
+          </div>
+        <p class="availability">AVAILABILITY: <span class="in-stock">IN STOCK</span></p>
+        <a class="mini-product" href="#"><img src="images/mini-modal1.jpg" alt="minisize of product"></a>
+        <a class="mini-product" href="#"><img src="images/mini-modal2.jpg" alt="minisize of product"></a>
+        <a class="mini-product" href="#"><img src="images/mini-modal3.jpg" alt="minisize of product"></a>
+        <button class="button-buy" type="button" name="button">BUY NOW FOR $169</button>
+        <button class="button-heart" type="button" name="button"><i class="fa fa-heart-o" aria-hidden="true"></i></button>
+        </div>
+        <div class="modal-right">
+          <img class="modal-model" src="images/modal.jpg" alt="model">
+        </div>
+      </div>
     </div>
   </div>
 </body>
