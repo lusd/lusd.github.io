@@ -285,15 +285,15 @@ h1, h2, h3, h4, h5, h6, p{
 }
 .news_first, .news_second, .news_third{
   position: relative;
-  width: 25%;
+  width: 100%;
   float: left;
-}
+  }
 .news_image{
   width: 100%;
 }
 .datetime{
   position: absolute;
-  bottom: 30%;
+  bottom: 29%;
   width: 72px;
   height: 66px;
   background-color: #fef0eb;
@@ -301,7 +301,7 @@ h1, h2, h3, h4, h5, h6, p{
 }
 .read_more{
   position: absolute;
-  bottom: 24%;
+  bottom: 23%;
   width: 72px;
   height: 20px;
   background-color: #ef4f87;
@@ -342,7 +342,7 @@ h1, h2, h3, h4, h5, h6, p{
 }
 .news_next{
   background-color: #ef4e91;
-  width: 25%;
+  width: 100%;
   float: left;
   height: 232px;
   position: relative;
@@ -682,4 +682,7 @@ h1, h2, h3, h4, h5, h6, p{
 }
 .modal-model{
   width: 100%;
+}
+@media only screen and (max-width: 500px){
+
 }

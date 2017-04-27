@@ -6,11 +6,12 @@
   <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,600,700" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Raleway:700" rel="stylesheet">
-  <link rel="stylesheet" href="magnific-popup/magnific-popup.css">
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
   <link rel="stylesheet" href="css/font-awesome.min.css">
   <link rel="stylesheet" href="css/stylesheet.css">
   <script src="js/jquery-3.2.1.min.js"></script>
-  <script src="magnific-popup/jquery.magnific-popup.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
   <script>
     $(document).ready(function() {
       // Get the modal
@@ -41,6 +42,25 @@
           var $amount = $("#amount_to_add");
           $amount.text(parseInt($amount.text()) + 1);
           return false;
+        });
+        $(".owl-carousel").owlCarousel({
+          loop: true,
+          width: 300,
+          repsonsiveClass: true,
+          responsive:{
+            0:{
+              items: 1,
+              nav: true
+            },
+            600:{
+              items: 2,
+              nav: true
+            },
+            1220:{
+              items: 4,
+              nav: true
+            }
+          }
         });
       });
     </script>
@@ -155,8 +175,8 @@
       <p class="news_description">We share our best ideas in our blog</p>
       <div class="pinkstripe"></div>
     </div>
-    <div class="news_block">
-      <div class="news_first">
+    <div class="news_block owl-carousel owl-theme">
+      <div class="news_first item">
         <img class="news_image" src="images/news1.jpg" alt="first_news">
         <div class="datetime">
           <p class="date">10</p>
@@ -170,7 +190,7 @@
           <p class="news_author">Posted by John Doe</p>
         </div>
       </div>
-      <div class="news_second">
+      <div class="news_second item">
         <img class="news_image" src="images/news2.jpg" alt="first_news">
         <div class="datetime">
           <p class="date">09</p>
@@ -184,7 +204,7 @@
           <p class="news_author">Posted by Sam Deen</p>
         </div>
       </div>
-      <div class="news_third">
+      <div class="news_third item">
           <img class="news_image" src="images/news3.jpg" alt="first_news">
           <div class="datetime">
             <p class="date">03</p>
@@ -198,7 +218,7 @@
             <p class="news_author">Posted by Rose Sweetbox</p>
           </div>
         </div>
-      <div class="news_next">
+      <div class="news_next item">
         <p class="see_more">SEE MORE</p>
         <i class="fa fa-angle-right" aria-hidden="false"></i>
         <p class="in">IN<span class="our_blog">Our Blog</p>
