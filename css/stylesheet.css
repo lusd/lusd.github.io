@@ -12,6 +12,10 @@ h1, h2, h3, h4, h5, h6, p{
   margin: 0;
   padding: 0;
 }
+.wrap{
+  width: 100%;
+  height: 100%;
+}
 .header{
   width: 1220px;
   margin: 0 auto;
@@ -68,13 +72,14 @@ h1, h2, h3, h4, h5, h6, p{
 }
 .main_head{
   font-weight: 400;
-  font-size: 3.5em;
+  font-size: 5em;
   letter-spacing: 3px;
   position: absolute;
   top: 35%;
 }
 .main_dress{
   position: absolute;
+  display: block;
   top: 0%;
   right: -10%;
   width: 777px;
@@ -140,8 +145,9 @@ h1, h2, h3, h4, h5, h6, p{
   padding-top: 3px;
   border: 1px solid white;
   border-radius: 5px;
-  float: right;
-  margin-top: 60px;
+  position: absolute;
+  top: 40%;
+  right: 2%;
 }
 .collection{
   width: 1220px;
@@ -384,7 +390,6 @@ h1, h2, h3, h4, h5, h6, p{
   width: 100%;
   background-color: #141414;
   padding: 200px 0;
-  float: left;
 }
 .contacts_wrap{
   width: 1220px;
@@ -392,9 +397,12 @@ h1, h2, h3, h4, h5, h6, p{
 }
 .contacts_block{
   width: 300px;
-  margin: 0 auto;
   float: left;
   position: relative;
+}
+.feedback{
+  float: left;
+  width: 920px;
 }
 .call_us, .adress, .message{
   width: 300px;
@@ -520,9 +528,10 @@ h1, h2, h3, h4, h5, h6, p{
   margin: 0 auto;
 }
 .footer_shop, .footer_website, .footer_about, .signature{
-  width: 300px;
+  width: 24%;
   display: inline-block;
   margin-bottom: 30px;
+  text-align: center;
 }
 .footer_shop_title, .footer_website_title, .footer_about_title{
   color: #868686;
@@ -538,6 +547,9 @@ h1, h2, h3, h4, h5, h6, p{
   color: #868686;
   font-weight: 500;
   margin-bottom: 5px;
+}
+.signature{
+
 }
 .modal{
   display: none; /* Hidden by default */
@@ -559,8 +571,7 @@ h1, h2, h3, h4, h5, h6, p{
 .modal-item{
   width: 850px;
   height: 650px;
-  margin: 55px 87px;
-
+  margin: 55px auto;
 }
 .modal-left, .modal-right{
   width: 425px;
@@ -652,8 +663,14 @@ h1, h2, h3, h4, h5, h6, p{
 .in-stock{
   color: #18ab12;
 }
+.modal-small-images{
+  width: 100%;
+  margin: 0 auto;
+}
 .mini-product{
-  margin-left: 40px;
+  margin-left: 10%;
+  width: 30%;
+
 }
 .button-buy{
   height: 40px;
@@ -683,6 +700,176 @@ h1, h2, h3, h4, h5, h6, p{
 .modal-model{
   width: 100%;
 }
-@media only screen and (max-width: 500px){
-
+/*MEDIA QUERIES*/
+@media screen and (max-width: 1024px) {
+  .wrap{
+    overflow-x: hidden;
+  }
+  .header{
+    width: 100%;
+  }
+  .login, .register{
+    font-size: 1em;
+    top: 10px;
+    right: 70px;
+  }
+  .login{
+    right: 180px;
+  }
+  .nav_item{
+    margin-right: 0.5em;
+  }
+  .main_head{
+    top: 160px;
+    letter-spacing: 2px;
+    font-size: 40px;
+  }
+  .main_button{
+    top: 340px;
+  }
+  .main{
+    width: 100%;
+    height: auto;
+    min-height: 528px;
+  }
+  .main_dress{
+    width: 380px;
+  }
+  .subscribe{
+    width: 100%;
+  }
+  .subscribe_wrap{
+    width: 100%;
+  }
+  .subscribe_head{
+    position: inherit;
+    text-align: center;
+    top: 10%;
+  }
+  .subscribe_description{
+    position: inherit;
+    text-align: center;
+    top: 10%;
+  }
+  .subscribe_button{
+    float: none;
+    position: inherit;
+    margin: 0 auto;
+    margin-top: -40px;
+  }
+  .collection{
+    width: 100%;
+  }
+  .product{
+    width: 31%;
+  }
+  .collection_footer{
+    width: 100%;
+  }
+  .collection_wrap{
+    width: 100%;
+    padding: 30px 0;
+  }
+  .question{
+    margin-top: 35px;
+  }
+  .collection_view{
+    clear: both;
+    float: right;
+    margin-right: 22px;
+    margin-top: 10px;
+  }
+  .news{
+    width: 100%;
+  }
+  .news_block{
+    width: 100%;
+    margin-bottom: 50px;
+  }
+  .contacts{
+    padding: 150px 0;
+    width: 100%;
+  }
+  .contacts_wrap{
+    width: 700px;
+    margin: 0 auto;
+  }
+  .contacts_block{
+    width: 300px;
+  }
+  .feedback{
+    width: 400px;
+    float: left;
+  }
+  .call_us, .adress, .message{
+    margin-bottom: 45px;
+  }
+  .form_feedback{
+    width: 400px;
+    position: absolute;
+  }
+  .form_name, .form_email{
+    width: 290px;
+    margin-top: 0px;
+    float: left;
+    margin-left: 30px;
+  }
+  .form_email{
+    margin-top: 65px;
+  }
+  .form_message{
+    display: block;
+    float: left;
+    width: 290px;
+    margin-top: 40px;
+    margin-left: 30px;
+  }
+  .label_message{
+    display: none;
+    position: absolute;
+    top: 120px;
+  }
+  .feedback_button{
+    width: 400px;
+    margin: 30px 0 0 -145px;
+  }
+  .footer{
+    width: 100%;
+  }
+  .footer_wrap{
+    width: 100%;
+    margin: 0 auto;
+  }
+  .footer_shop, .footer_website, .footer_about{
+    width: 32%;
+  }
+  .signature{
+    display: block;
+    margin: 0 auto;
+  }
+  .modal{
+    width: 100%;
+    height: 100%;
+  }
+  .modal-content{
+    width: 100%;
+    height: 100%;
+  }
+  .modal-item{
+    width: 80%;
+    height: 90%;
+  }
+  .modal-left, .modal-right{
+    width: 50%;
+    height: 100%;
+  }
+  .modal-title{
+    margin-top: 40px;
+  }
+  .modal-model{
+    height: 90%;
+  }
+  .availability{
+    width: 100px;
+  }
 }
