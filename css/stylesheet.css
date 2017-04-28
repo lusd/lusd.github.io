@@ -318,6 +318,10 @@ h1, h2, h3, h4, h5, h6, p{
   padding-top: 2px;
   cursor: pointer;
 }
+.read_more_link{
+  color: white;
+  text-decoration: none;
+}
 .date{
   color: #ef4f87;
   text-align: center;
@@ -325,7 +329,7 @@ h1, h2, h3, h4, h5, h6, p{
   font-size: 2em;
   font-weight: 700;
 }
-.mounth{
+.month{
   text-align: center;
   margin-top: -7px;
   font-size: 0.9em;
@@ -474,10 +478,6 @@ h1, h2, h3, h4, h5, h6, p{
   margin-left: 60px;
   color: #ababab;
 }
-.form_name:focus, .form_email:focus{
-  border: 2px solid #262626;
-  border-radius: 2px;
-}
 .form_email{
   margin-top: -10px;
 }
@@ -572,7 +572,8 @@ h1, h2, h3, h4, h5, h6, p{
   width: 850px;
   height: 650px;
   margin: 55px auto;
-}
+  position: relative;
+  }
 .modal-left, .modal-right{
   width: 425px;
   height: 100%;
@@ -699,6 +700,13 @@ h1, h2, h3, h4, h5, h6, p{
 }
 .modal-model{
   width: 100%;
+}
+.fa-window-close-o{
+  font-size: 2em;
+  color: grey;
+  position: absolute;
+  top: -0.5%;
+  right: 0%;
 }
 /*MEDIA QUERIES*/
 @media screen and (max-width: 1024px) {

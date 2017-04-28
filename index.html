@@ -24,7 +24,12 @@
             modal.style.display = "block";
           }
         }
-
+      // Get the <span> element that closes the modal
+      var span = document.getElementsByClassName("close")[0];
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function() {
+      modal.style.display = "none";
+}
       // When the user clicks anywhere outside of the modal, close it
       window.onclick = function(event) {
         if (event.target == modal) {
@@ -180,10 +185,10 @@
         <img class="news_image" src="images/news1.jpg" alt="first_news">
         <div class="datetime">
           <p class="date">10</p>
-          <p class="mounth">march</p>
+          <p class="month">march</p>
         </div>
         <div class="read_more">
-          READ MORE
+          <a class="read_more_link" href="#">READ MORE</a>
         </div>
         <div class="news_subscribe">
           <h3 class="news_subscribe_title">LOREM IPSUM DOLOR</h3>
@@ -194,10 +199,10 @@
         <img class="news_image" src="images/news2.jpg" alt="first_news">
         <div class="datetime">
           <p class="date">09</p>
-          <p class="mounth">march</p>
+          <p class="month">march</p>
         </div>
         <div class="read_more">
-          READ MORE
+          <a class="read_more_link" href="#">READ MORE</a>
         </div>
         <div class="news_subscribe">
           <h3 class="news_subscribe_title">ET VERO EOS ET</h3>
@@ -208,10 +213,10 @@
           <img class="news_image" src="images/news3.jpg" alt="first_news">
           <div class="datetime">
             <p class="date">03</p>
-            <p class="mounth">march</p>
+            <p class="month">march</p>
           </div>
           <div class="read_more">
-            READ MORE
+            <a class="read_more_link" href="#">READ MORE</a>
           </div>
           <div class="news_subscribe">
             <h3 class="news_subscribe_title">CASCADING CRYSTALS</h3>
@@ -222,6 +227,48 @@
         <p class="see_more">SEE MORE</p>
         <i class="fa fa-angle-right" aria-hidden="false"></i>
         <p class="in">IN<span class="our_blog">Our Blog</p>
+      </div>
+      <div class="news_fifth item">
+        <img class="news_image" src="images/news5.jpg" alt="first_news">
+        <div class="datetime">
+          <p class="date">11</p>
+          <p class="month">march</p>
+        </div>
+        <div class="read_more">
+          <a class="read_more_link" href="http://www.gormanshop.com.au/guide-dogs-australia-gorman">READ MORE</a>
+        </div>
+        <div class="news_subscribe">
+          <h3 class="news_subscribe_title">GUIDE DOGS AUSTRALIA</h3>
+          <p class="news_author">Posted by Lisa Gorman</p>
+        </div>
+      </div>
+      <div class="news_sixth item">
+        <img class="news_image" src="images/news6.jpg" alt="first_news">
+        <div class="datetime">
+          <p class="date">12</p>
+          <p class="month">march</p>
+        </div>
+        <div class="read_more">
+          <a class="read_more_link" href="http://www.gormanshop.com.au/bride-wolfe-gorman">READ MORE</a>
+        </div>
+        <div class="news_subscribe">
+          <h3 class="news_subscribe_title">BRIDE &amp; WOLFE</h3>
+          <p class="news_author">Posted by Miranda Moreira</p>
+        </div>
+      </div>
+      <div class="news_seventh item">
+        <img class="news_image" src="images/news7.jpg" alt="first_news">
+        <div class="datetime">
+          <p class="date">13</p>
+          <p class="month">march</p>
+        </div>
+        <div class="read_more">
+          <a class="read_more_link" href="http://www.gormanshop.com.au/Kitsu-x-gorman-16">READ MORE</a>
+        </div>
+        <div class="news_subscribe">
+          <h3 class="news_subscribe_title">KITSU</h3>
+          <p class="news_author">Posted by Jessica Maree</p>
+        </div>
       </div>
     </div>
     <div class="contacts" id="contact">
@@ -258,24 +305,24 @@
       <div class="footer_wrap">
         <div class="footer_shop">
           <h6 class="footer_shop_title">SHOP</h6>
-          <a href="#" class=footer_shop_text>Woman</a>
-          <a href="#" class=footer_shop_text>Shoes</a>
-          <a href="#" class=footer_shop_text>Accessories</a>
-          <a href="#" class=footer_shop_text>Decor</a>
+          <a href="http://www.gormanshop.com.au/aw17.html" class=footer_shop_text>Woman</a>
+          <a href="http://www.gormanshop.com.au/shoes.html" class=footer_shop_text>Shoes</a>
+          <a href="http://www.gormanshop.com.au/accessories.html" class=footer_shop_text>Accessories</a>
+          <a href="http://www.gormanshop.com.au/homeware.html" class=footer_shop_text>Decor</a>
         </div>
         <div class="footer_website">
           <h6 class="footer_website_title">WEBSITE</h6>
-          <a href="#" class=footer_website_text>Terms of Use</a>
-          <a href="#" class=footer_website_text>Privacy Policy</a>
+          <a href="http://www.gormanshop.com.au/tell-us-what-you-think.html/" class=footer_website_text>Terms of Use</a>
+          <a href="http://gormanshop.com.au/privacy-policy" class=footer_website_text>Privacy Policy</a>
           <a href="#" class=footer_website_text>Copyright Policy</a>
-          <a href="#" class=footer_website_text>Support</a>
+          <a href="http://www.gormanshop.com.au/customer-support/ " class=footer_website_text>Support</a>
         </div>
         <div class="footer_about">
           <h6 class="footer_about_title">ABOUT</h6>
-          <a href="#" class=footer_about_text>Company</a>
-          <a href="#" class=footer_about_text>Shipping info</a>
-          <a href="#" class=footer_about_text>Jobs</a>
-          <a href="#" class=footer_about_text>Contact</a>
+          <a href="http://www.gormanshop.com.au/aboutus/" class=footer_about_text>Company</a>
+          <a href="http://www.gormanshop.com.au/need-a-little-help/" class=footer_about_text>Shipping info</a>
+          <a href="http://gormanshop.com.au/customer-support/#answer1" class=footer_about_text>Jobs</a>
+          <a href="http://www.gormanshop.com.au/careers/" class=footer_about_text>Contact</a>
         </div>
         <p class="signature">&copy;GORMAN | MELBOURNE</p>
       </div>
@@ -313,6 +360,7 @@
         </div>
         <div class="modal-right">
           <img class="modal-model" src="images/modal.jpg" alt="model">
+          <i class="fa fa-window-close-o close" aria-hidden="true"></i>
         </div>
       </div>
     </div>
