@@ -32,6 +32,7 @@ h1, h2, h3, h4, h5, h6, p{
   position: absolute;
   top: 7%;
   right: 13%;
+  text-decoration: none;
 }
 .register{
   right: 3%;
@@ -959,7 +960,7 @@ h1, h2, h3, h4, h5, h6, p{
     width: 100%;
     height: auto;
     min-height: 528px;
-    padding: 0 20px;
+    padding: 0 40px;
   }
   .main_dress{
     width: 379px;
@@ -989,6 +990,15 @@ h1, h2, h3, h4, h5, h6, p{
     position: inherit;
     margin: 0 auto;
     margin-top: -60px;
+  }
+  .collection_head{
+    font-size: 2em;
+  }
+  .collection_bighead{
+    font-size: 3em;
+  }
+  .collection_text{
+    font-size: 2em;
   }
   .collection{
     width: 100%;
@@ -1189,6 +1199,7 @@ h1, h2, h3, h4, h5, h6, p{
     height: 100%;
   }
   .modal-item{
+    margin-top: 35%;
     width: 90%;
     height: 50%;
   }
