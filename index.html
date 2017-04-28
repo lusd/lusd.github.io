@@ -51,13 +51,31 @@
         $(".owl-carousel").owlCarousel({
           loop: true,
           width: 300,
+          responsive:{
+            0:{
+              items: 1,
+              nav: true
+            },
+            790:{
+              items: 2,
+              nav: true
+            },
+            1220:{
+              items: 4,
+              nav: true
+            }
+          }
+        });
+        $(".owl-carousel2").owlCarousel({
+          loop: true,
+          width: 300,
           repsonsiveClass: true,
           responsive:{
             0:{
               items: 1,
               nav: true
             },
-            600:{
+            790:{
               items: 2,
               nav: true
             },
@@ -86,7 +104,6 @@
         <a href="#blog" class="nav_item">BLOG</a>
         <a href="#contact" class="nav_item">CONTACT</a>
       </nav>
-
     </div>
     <div class="stripe"></div>
     <div class="main" id="shop">
@@ -102,20 +119,20 @@
         <a href="#" class="subscribe_button">SHOP NOW</a>
       </div>
     </div>
+    <div class="collection_header">
+      <h4 class="collection_head">LOREM IPSUM DOLOR</h3>
+      <h3 class="collection_bighead">SED DO EIUSMOD TEMPOR</h3>
+      <div class="redstripe"></div>
+      <p class="collection_text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p>
+    </div>
     <div class="collection" id="lookbook">
-      <div class="collection_header">
-        <h4 class="collection_head">LOREM IPSUM DOLOR</h3>
-        <h3 class="collection_bighead">SED DO EIUSMOD TEMPOR</h3>
-        <div class="redstripe"></div>
-        <p class="collection_text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p>
-      </div>
-      <div class="product" id="myProduct1">
-        <img class="product_image" src="images/lookbook1.jpg" alt="women_dress">
-        <div class="product_description">
-          <p class="product_name">PRODUCT NAME</p>
-          <p class="product_cost">$199.00</p>
+        <div class="product" id="myProduct1">
+          <img class="product_image" src="images/lookbook1.jpg" alt="women_dress">
+          <div class="product_description">
+            <p class="product_name">PRODUCT NAME</p>
+            <p class="product_cost">$199.00</p>
+          </div>
         </div>
-      </div>
       <div class="product" id="myProduct2">
         <img class="product_image" src="images/lookbook2.jpg" alt="women_dress">
         <div class="product_description">

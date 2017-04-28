@@ -460,11 +460,12 @@ h1, h2, h3, h4, h5, h6, p{
 }
 .feedback{
   width: 920px;
-  padding-top: 10px;
   float: left;
 }
 .form_feedback{
   color: #ababab;
+  margin-top: -10px;
+  float: left;
 }
 .form_name, .form_email{
   font-family: 'Montserrat', sans-serif;
@@ -547,9 +548,6 @@ h1, h2, h3, h4, h5, h6, p{
   color: #868686;
   font-weight: 500;
   margin-bottom: 5px;
-}
-.signature{
-
 }
 .modal{
   display: none; /* Hidden by default */
@@ -708,13 +706,14 @@ h1, h2, h3, h4, h5, h6, p{
   top: -0.5%;
   right: 0%;
 }
-/*MEDIA QUERIES*/
+/*MEDIA QUERIES FOR TABLETS*/
 @media screen and (max-width: 1024px) {
   .wrap{
     overflow-x: hidden;
   }
   .header{
     width: 100%;
+    padding-left: 20px;
   }
   .login, .register{
     font-size: 1em;
@@ -739,6 +738,7 @@ h1, h2, h3, h4, h5, h6, p{
     width: 100%;
     height: auto;
     min-height: 528px;
+    padding: 0 20px;
   }
   .main_dress{
     width: 380px;
@@ -776,7 +776,7 @@ h1, h2, h3, h4, h5, h6, p{
   }
   .collection_wrap{
     width: 100%;
-    padding: 30px 0;
+    padding: 30px 20px;;
   }
   .question{
     margin-top: 35px;
@@ -793,6 +793,9 @@ h1, h2, h3, h4, h5, h6, p{
   .news_block{
     width: 100%;
     margin-bottom: 50px;
+  }
+  .news_next{
+    height: 312px;
   }
   .contacts{
     padding: 150px 0;
@@ -814,7 +817,7 @@ h1, h2, h3, h4, h5, h6, p{
   }
   .form_feedback{
     width: 400px;
-    position: absolute;
+    float: left;
   }
   .form_name, .form_email{
     width: 290px;
@@ -866,6 +869,328 @@ h1, h2, h3, h4, h5, h6, p{
   .modal-item{
     width: 80%;
     height: 90%;
+  }
+  .modal-left, .modal-right{
+    width: 50%;
+    height: 100%;
+  }
+  .modal-title{
+    margin-top: 40px;
+  }
+  .modal-model{
+    height: 90%;
+  }
+  .availability{
+    width: 100px;
+  }
+}
+/*MEDIA QUERIES FOR PHONES*/
+@media screen and (max-device-width: 480px){
+  .wrap{
+    overflow-x: hidden;
+  }
+  .header{
+    width: 100%;
+    padding-top: 0px;
+    height: 18em;
+  }
+  .login, .register{
+    font-size: 2em;
+    position: inherit;
+    margin: 0 auto;
+    float: none;
+    display: inline-block;
+    padding: 0 auto;
+    width: 28%;
+  }
+  .login{
+    margin-left: 20%;
+  }
+  .register{
+    margin-left: 20%;
+  }
+  .logo{
+    width: 100%;
+    text-align: center;
+    font-size: 6em;
+    line-height: 2em;
+  }
+  .navigation{
+    float: none;
+    width: 90%;
+    margin: 0 auto;
+  }
+  .nav_item{
+    width: 20%;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    margin-left: 10%;
+    font-size: 1.5em;
+    letter-spacing: 0;
+  }
+  .nav_item[href="#blog"]{
+    width: 20%;
+    margin-left:25%
+  }
+  .nav_item[href="#contact"]{
+    width: 20%;
+    margin-left: 8%;
+  }
+  .search{
+    position: absolute;
+    top: 36%;
+    width: 3em;
+    left: 85%;
+    margin: 0 auto;
+  }
+  .main_head{
+    top: 2%;
+    letter-spacing: 2px;
+    font-size: 60px;
+  }
+  .main_description{
+    font-size: 2em;
+    top: 19%;
+  }
+  .main_button{
+    top: 70%;
+  }
+  .main{
+    width: 100%;
+    height: auto;
+    min-height: 528px;
+    padding: 0 20px;
+  }
+  .main_dress{
+    width: 379px;
+  }
+  .subscribe{
+    width: 100%;
+    height: 250px;
+  }
+  .subscribe_wrap{
+    width: 100%;
+    height: 250px;
+  }
+  .subscribe_head{
+    position: inherit;
+    text-align: center;
+    top: 10%;
+    font-size: 3em;
+  }
+  .subscribe_description{
+    position: inherit;
+    text-align: center;
+    top: 10%;
+    font-size: 2em;
+  }
+  .subscribe_button{
+    float: none;
+    position: inherit;
+    margin: 0 auto;
+    margin-top: -60px;
+  }
+  .collection{
+    width: 100%;
+  }
+  .product{
+    width: 45%;
+    margin-left: 2%;
+  }
+  .collection_footer{
+    width: 100%;
+    height: 250px;
+  }
+  .collection_wrap{
+    width: 100%;
+    padding: 10px 20px;
+    }
+  .pencil{
+    width: 60px;
+    height: 60px;
+    margin-left: 20px;
+  }
+  .question{
+    font-size: 2em;
+    width: 80%;
+    margin-left: 50px;
+  }
+  .collection_view{
+    clear: both;
+    float: none;
+    margin-right: 22px;
+    margin-top: 10px;
+    font-size: 1.2em;
+    width: 320px;
+    display: block;
+    margin: 0 auto;
+  }
+  .collection_look{
+    float: none;
+    font-size: 1.2em;
+    width: 320px;
+    display: block;
+    margin: 20px auto;
+  }
+  .news{
+    width: 100%;
+  }
+  .news_block{
+    width: 100%;
+    margin-bottom: 50px;
+    height: 600px;
+  }
+  .news_next{
+    height: 475px;
+  }
+  .datetime{
+    width: 200px;
+    height: 160px;
+    bottom: 20%;
+  }
+  .read_more{
+    width: 200px;
+    height: 40px;
+    bottom: 13%;
+  }
+  .date{
+    font-size: 4em;
+  }
+  .month{
+    font-size: 2em;
+  }
+  .read_more_link{
+    font-size: 2em;
+  }
+  .fa-angle-right{
+    top: 0%;
+    font-size: 16em;
+  }
+  .see_more{
+    font-size: 3em;
+    margin-top: 210px;
+  }
+  .in{
+    font-size: 3.5em;
+  }
+  .contacts{
+    padding: 150px 0;
+    width: 100%;
+  }
+  .contacts_wrap{
+    width: 95%;
+    margin: 0 auto;
+  }
+  .contacts_block{
+    margin: 0 auto;
+  }
+  .feedback{
+    width: 400px;
+    float: left;
+    height: 100%:
+  }
+  .call_us, .adress, .message{
+    margin-bottom: 45px;
+  }
+  .call_us_text{
+    font-size: 1.6em;
+  }
+  .call_us_number{
+    font-size: 1.8em;
+  }
+  .adress{
+    margin-top: 20px;
+  }
+  .adress_name{
+    font-size: 1.8em;
+  }
+  .message{
+    margin-top: 80px;
+  }
+  .e-mail{
+    font-size: 1.4em;
+  }
+  .fa-envelope{
+    top: 45%;
+  }
+  .fa-map-marker{
+    top: 80%;
+  }
+  .form_feedback{
+    width: 400px;
+    float: left;
+    margin-top: 1px;
+  }
+  .form_name, .form_email{
+    width: 340px;
+    margin-top: 0px;
+    float: left;
+    margin-left: 30px;
+    font-size: 1.6em;
+  }
+  .form_email{
+    margin-top: 95px;
+  }
+  .form_message{
+    display: block;
+    float: left;
+    width: 340px;
+    margin-top: 60px;
+    margin-left: 30px;
+  }
+  .label_message{
+    display: none;
+    position: absolute;
+    top: 120px;
+  }
+  .feedback_button{
+    width: 400px;
+    margin: 30px 0 0 -145px;
+  }
+  .footer{
+    width: 100%;
+    height: 700px;
+  }
+  .footer_wrap{
+    width: 100%;
+    margin: 0 auto;
+  }
+  .footer_shop, .signature, .footer_website, .footer_about{
+    width: 49%;
+  }
+  .footer_shop_title{
+    font-size: 2em;
+  }
+  .footer_shop_text{
+    font-size: 1.7em;
+  }
+  .footer_website_title{
+    font-size: 2em;
+  }
+  .footer_website_text{
+    font-size: 1.7em;
+  }
+  .footer_about_title{
+    font-size: 2em;
+  }
+  .footer_about_text{
+    font-size: 1.7em;
+  }
+  .signature{
+    display: inline-block;
+    margin: 0 auto;
+  }
+  .modal{
+    width: 100%;
+    height: 100%;
+  }
+  .modal-content{
+    width: 100%;
+    height: 100%;
+  }
+  .modal-item{
+    width: 90%;
+    height: 50%;
   }
   .modal-left, .modal-right{
     width: 50%;
