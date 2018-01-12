@@ -1,386 +1,249 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE hmtl>
+<html lang="en">
 <head>
-  <title>Gorman</title>
-  <link href="https://fonts.googleapis.com/css?family=Quicksand:400,500,600,700" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,600,700" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Raleway:700" rel="stylesheet">
-  <link rel="stylesheet" href="css/owl.carousel.min.css">
-  <link rel="stylesheet" href="css/owl.theme.default.min.css">
-  <link rel="stylesheet" href="css/font-awesome.min.css">
-  <link rel="stylesheet" href="css/stylesheet.css">
-  <script src="js/jquery-3.2.1.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-  <script>
-    $(document).ready(function() {
-      // Get the modal
-      var modal = document.getElementById('myModal');
-      // Get the button that opens the modal
-      var i = 0;
-      for (i = 1; i <= 8; i++) {
-        var btn = document.getElementById('myProduct'+i+'');
-          btn.onclick = function() {
-            modal.style.display = "block";
-          }
-        }
-      // Get the <span> element that closes the modal
-      var span = document.getElementsByClassName("close")[0];
-      // When the user clicks on <span> (x), close the modal
-      span.onclick = function() {
-      modal.style.display = "none";
-}
-      // When the user clicks anywhere outside of the modal, close it
-      window.onclick = function(event) {
-        if (event.target == modal) {
-          modal.style.display = "none";
-          }
-        }
-        $('.minus').click(function () {
-          var $amount = $("#amount_to_add");
-          var count = parseInt($amount.text()) - 1;
-          count = count < 1 ? 1 : count;
-          $amount.text(count);
-          return false;
-        });
-        $('.plus').click(function () {
-          var $amount = $("#amount_to_add");
-          $amount.text(parseInt($amount.text()) + 1);
-          return false;
-        });
-        $(".owl-carousel").owlCarousel({
-          loop: true,
-          width: 300,
-          responsive:{
-            0:{
-              items: 1,
-              nav: true
-            },
-            790:{
-              items: 2,
-              nav: true
-            },
-            1220:{
-              items: 4,
-              nav: true
-            }
-          }
-        });
-        $(".owl-carousel2").owlCarousel({
-          loop: true,
-          width: 300,
-          repsonsiveClass: true,
-          responsive:{
-            0:{
-              items: 1,
-              nav: true
-            },
-            790:{
-              items: 2,
-              nav: true
-            },
-            1220:{
-              items: 4,
-              nav: true
-            }
-          }
-        });
-      });
-    </script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600|Roboto:400,500,700,400i,700i,500i" rel="stylesheet" type="text/css"/>
+  <link rel="stylesheet" href="css/stylesheet.css" type="text/css"/>
+  <title>Nuvus</title>
 </head>
 <body>
   <div class="wrap">
-    <div class="header" id="home">
-      <div class="authentication">
-        <a href="#" class="register">Register</a>
-        <a href="#" class="login">Login</a>
-      </div>
-      <h1 class="logo">gorman</h1>
-      <a href="#"><img class="search" src="images/search.png" alt="search"></a>
-      <nav class="navigation">
-        <a href="#home" class="nav_item">HOME</a>
-        <a href="#shop" class="nav_item">SHOP</a>
-        <a href="#lookbook" class="nav_item">LOOKBOOK</a>
-        <a href="#blog" class="nav_item">BLOG</a>
-        <a href="#contact" class="nav_item">CONTACT</a>
-      </nav>
-    </div>
-    <div class="stripe"></div>
-    <div class="main" id="shop">
-      <h2 class="main_head">Autumn 2017</h2>
-      <p class="main_description">Sed ut perspiciatis unde omnis iste natus error sit laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore.</p>
-      <a href="#" class="main_button">Shop Now</a>
-      <img class="main_dress" src="images/main-dress.jpg" alt="bigdress">
-    </div>
-    <div class="subscribe">
-      <div class="subscribe_wrap">
-        <h2 class="subscribe_head">50% OFF FLASH SALE</h2>
-        <p class="subscribe_description">in a store and online, for a limited time only, t&amp;cs apply </p>
-        <a href="#" class="subscribe_button">SHOP NOW</a>
-      </div>
-    </div>
-    <div class="collection_header">
-      <h4 class="collection_head">LOREM IPSUM DOLOR</h3>
-      <h3 class="collection_bighead">SED DO EIUSMOD TEMPOR</h3>
-      <div class="redstripe"></div>
-      <p class="collection_text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p>
-    </div>
-    <div class="collection" id="lookbook">
-        <div class="product" id="myProduct1">
-          <img class="product_image" src="images/lookbook1.jpg" alt="women_dress">
-          <div class="product_description">
-            <p class="product_name">PRODUCT NAME</p>
-            <p class="product_cost">$199.00</p>
-          </div>
-        </div>
-      <div class="product" id="myProduct2">
-        <img class="product_image" src="images/lookbook2.jpg" alt="women_dress">
-        <div class="product_description">
-          <p class="product_name">PRODUCT NAME</p>
-          <p class="product_cost">$199.00</p>
+    <header class="header">
+      <div class="header-inner">
+        <a href="" class="header-logo">
+          <img src="img/minilogoheader.png" alt="minilogoheader">
+        </a>
+        <div class="header-nav">
+          <ul>
+            <li><a href="#"><span>Solution</span></a></li>
+            <li><a href="#"><span>Token sale</span></a></li>
+            <li><a href="#"><span>Roadmap</span></a></li>
+            <li><a href="#"><span>Team</span></a></li>
+            <li><a href="#"><span>White Paper</span></a></li>
+            <li><a href="https://t.me/nuvusblockchain"><span>Telegram</span></a></li>
+          </ul>
         </div>
       </div>
-      <div class="product" id="myProduct3">
-        <img class="product_image" src="images/lookbook3.jpg" alt="women_dress">
-        <div class="product_description">
-          <p class="product_name">PRODUCT NAME</p>
-          <p class="product_cost">$199.00</p>
-        </div>
+    </header> <!--end header-->
+    <div class="banner">
+      <div class="banner-logo">
+        <img src="img/banner-logo.png" alt="nuvus blockchain logo">
       </div>
-      <div class="product" id="myProduct4">
-        <img class="product_image product_right" src="images/lookbook4.jpg" alt="women_dress">
-        <div class="product_description">
-          <p class="product_name">PRODUCT NAME</p>
-          <p class="product_cost">$199.00</p>
-        </div>
+      <div class="banner-title">
+        <h1>Merging the two fastest growing industries:<h1/>
+        <h1>Cannabis & Blockchain.</h1>
       </div>
-      <div class="product" id="myProduct5">
-        <img class="product_image" src="images/lookbook5.jpg" alt="women_dress">
-        <div class="product_description">
-          <p class="product_name">PRODUCT NAME</p>
-          <p class="product_cost">$199.00</p>
+    </div> <!-- end .banner -->
+    <div class="joinus">
+      <div class="joinus-inner">
+        <div class="joinus-left">
+          <button class="telegram-but" type="button" name="button">Join us on Telegram</button>
         </div>
-      </div>
-      <div class="product" id="myProduct6">
-        <img class="product_image" src="images/lookbook6.jpg" alt="women_dress">
-        <div class="product_description">
-          <p class="product_name">PRODUCT NAME</p>
-          <p class="product_cost">$199.00</p>
-        </div>
-      </div>
-      <div class="product" id="myProduct7">
-        <img class="product_image" src="images/lookbook7.jpg" alt="women_dress">
-        <div class="product_description">
-          <p class="product_name">PRODUCT NAME</p>
-          <p class="product_cost">$199.00</p>
-        </div>
-      </div>
-      <div class="product" id="myProduct8">
-        <img class="product_image product_right" src="images/lookbook8.jpg" alt="women_dress">
-        <div class="product_description">
-          <p class="product_name">PRODUCT NAME</p>
-          <p class="product_cost">$199.00</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="collection_footer">
-      <div class="collection_wrap">
-        <img class="pencil" src="images/pencil.png" alt="pencil">
-        <p class="question">UT ENIM AD MINIMA VENIAM?</p>
-        <p class="collection_look">LOOK BOOK</p>
-        <p class="collection_view">VIEW COLLECTION&nbsp;&nbsp; +</p>
-      </div>
-    </div>
-    <div class="news" id="blog">
-      <h2 class="news_title">OUR NEWS<span class="pink_dot">.</span></h2>
-      <p class="news_description">We share our best ideas in our blog</p>
-      <div class="pinkstripe"></div>
-    </div>
-    <div class="news_block owl-carousel owl-theme">
-      <div class="news_first item">
-        <img class="news_image" src="images/news1.jpg" alt="first_news">
-        <div class="datetime">
-          <p class="date">10</p>
-          <p class="month">march</p>
-        </div>
-        <div class="read_more">
-          <a class="read_more_link" href="#">READ MORE</a>
-        </div>
-        <div class="news_subscribe">
-          <h3 class="news_subscribe_title">LOREM IPSUM DOLOR</h3>
-          <p class="news_author">Posted by John Doe</p>
-        </div>
-      </div>
-      <div class="news_second item">
-        <img class="news_image" src="images/news2.jpg" alt="first_news">
-        <div class="datetime">
-          <p class="date">09</p>
-          <p class="month">march</p>
-        </div>
-        <div class="read_more">
-          <a class="read_more_link" href="#">READ MORE</a>
-        </div>
-        <div class="news_subscribe">
-          <h3 class="news_subscribe_title">ET VERO EOS ET</h3>
-          <p class="news_author">Posted by Sam Deen</p>
-        </div>
-      </div>
-      <div class="news_third item">
-          <img class="news_image" src="images/news3.jpg" alt="first_news">
-          <div class="datetime">
-            <p class="date">03</p>
-            <p class="month">march</p>
-          </div>
-          <div class="read_more">
-            <a class="read_more_link" href="#">READ MORE</a>
-          </div>
-          <div class="news_subscribe">
-            <h3 class="news_subscribe_title">CASCADING CRYSTALS</h3>
-            <p class="news_author">Posted by Rose Sweetbox</p>
-          </div>
-        </div>
-      <div class="news_next item">
-        <p class="see_more">SEE MORE</p>
-        <i class="fa fa-angle-right" aria-hidden="false"></i>
-        <p class="in">IN<span class="our_blog">Our Blog</p>
-      </div>
-      <div class="news_fifth item">
-        <img class="news_image" src="images/news5.jpg" alt="first_news">
-        <div class="datetime">
-          <p class="date">11</p>
-          <p class="month">march</p>
-        </div>
-        <div class="read_more">
-          <a class="read_more_link" href="http://www.gormanshop.com.au/guide-dogs-australia-gorman">READ MORE</a>
-        </div>
-        <div class="news_subscribe">
-          <h3 class="news_subscribe_title">GUIDE DOGS AUSTRALIA</h3>
-          <p class="news_author">Posted by Lisa Gorman</p>
-        </div>
-      </div>
-      <div class="news_sixth item">
-        <img class="news_image" src="images/news6.jpg" alt="first_news">
-        <div class="datetime">
-          <p class="date">12</p>
-          <p class="month">march</p>
-        </div>
-        <div class="read_more">
-          <a class="read_more_link" href="http://www.gormanshop.com.au/bride-wolfe-gorman">READ MORE</a>
-        </div>
-        <div class="news_subscribe">
-          <h3 class="news_subscribe_title">BRIDE &amp; WOLFE</h3>
-          <p class="news_author">Posted by Miranda Moreira</p>
-        </div>
-      </div>
-      <div class="news_seventh item">
-        <img class="news_image" src="images/news7.jpg" alt="first_news">
-        <div class="datetime">
-          <p class="date">13</p>
-          <p class="month">march</p>
-        </div>
-        <div class="read_more">
-          <a class="read_more_link" href="http://www.gormanshop.com.au/Kitsu-x-gorman-16">READ MORE</a>
-        </div>
-        <div class="news_subscribe">
-          <h3 class="news_subscribe_title">KITSU</h3>
-          <p class="news_author">Posted by Jessica Maree</p>
-        </div>
-      </div>
-    </div>
-    <div class="contacts" id="contact">
-      <div class="contacts_wrap">
-        <div class="contacts_block">
-          <div class="call_us">
-            <p class="call_us_text">CALL US</p>
-            <p class="call_us_number">07 3201 3201</p>
-          </div>
-          <i class="fa fa-phone-square" aria-hidden="true"></i>
-          <div class="adress">
-            <p class="call_us_text">ADDRESS</p>
-            <p class="adress_name">1King Street, City Name, State</p>
-          </div>
-          <i class="fa fa-envelope" aria-hidden="true"></i>
-          <div class="message">
-            <p class="call_us_text">SAY HELLO</p>
-            <p class="e-mail">hello@brandname.com</p>
-          </div>
-          <i class="fa fa-map-marker" aria-hidden="true"></i>
-        </div>
-        <div class="feedback">
-          <form class="form_feedback" action="index.html" method="post">
-            <input class="form_name" type="text" name="get_name" value="" placeholder="Name">
-            <label class="label_message" for="message">Message</label>
-            <input class="form_email" type="e-mail" name="get_email" value="" placeholder="Email">
-            <textarea class="form_message" name="message"></textarea>
-            <button class="feedback_button" type="button" name="button">SEND</button>
+        <div class="joinus-right">
+          <form class="whitelist" action="" method="post">
+            <input type="text" name="" value="" placeholder="Enter your email">
+            <button type="button" name="button">Join Whitelist</button>
           </form>
         </div>
       </div>
-    </div>
-    <div class="footer">
-      <div class="footer_wrap">
-        <div class="footer_shop">
-          <h6 class="footer_shop_title">SHOP</h6>
-          <a href="http://www.gormanshop.com.au/aw17.html" class=footer_shop_text>Woman</a>
-          <a href="http://www.gormanshop.com.au/shoes.html" class=footer_shop_text>Shoes</a>
-          <a href="http://www.gormanshop.com.au/accessories.html" class=footer_shop_text>Accessories</a>
-          <a href="http://www.gormanshop.com.au/homeware.html" class=footer_shop_text>Decor</a>
-        </div>
-        <div class="footer_website">
-          <h6 class="footer_website_title">WEBSITE</h6>
-          <a href="http://www.gormanshop.com.au/tell-us-what-you-think.html/" class=footer_website_text>Terms of Use</a>
-          <a href="http://gormanshop.com.au/privacy-policy" class=footer_website_text>Privacy Policy</a>
-          <a href="#" class=footer_website_text>Copyright Policy</a>
-          <a href="http://www.gormanshop.com.au/customer-support/ " class=footer_website_text>Support</a>
-        </div>
-        <div class="footer_about">
-          <h6 class="footer_about_title">ABOUT</h6>
-          <a href="http://www.gormanshop.com.au/aboutus/" class=footer_about_text>Company</a>
-          <a href="http://www.gormanshop.com.au/need-a-little-help/" class=footer_about_text>Shipping info</a>
-          <a href="http://gormanshop.com.au/customer-support/#answer1" class=footer_about_text>Jobs</a>
-          <a href="http://www.gormanshop.com.au/careers/" class=footer_about_text>Contact</a>
-        </div>
-        <p class="signature">&copy;GORMAN | MELBOURNE</p>
+    </div> <!--end .joinis -->
+    <div class="graph">
+      <div class="graph-inner">
+        <h2>GLOBAL EXCHANGE PLATFORM BY NUVUS PROTOCOL</h2>
+        <p>Nuvus Blockchain is formed to build a global ecosystem called “Global Exchange Platform” for data, supply chain verification & industry wide global exchanges of services & products using distributive ledger technologies and trustless trust platforms for the agricultural industry initially focusing on the cannabis industry. Our mission involves introducing a trustless verification system on all supply chain & business transactions in the cannabis industry, providing growers, processors, distributors, retailers, doctors and users full transparency into the supply chain, from seed to user distribution, with decentralized private & public blockchain verification at every step. This will provide total transparency & auditability to all industry participants adding significant value to the industry.</p>
+        <h2>OPPORTUNITY IS HUGE. THE INDUSTRY OVERVIEW</h2>
+        <img src="img/pic1.png" alt="the graph">
       </div>
-    </div>
-  </div>
-  <div id="myModal" class="modal">
-    <div class="modal-content">
-      <div class="modal-item">
-        <div class="modal-left">
-          <h2 class="modal-title">FESTIVAL DRESS</h2>
-          <p class="modal-id">PRODUCT ID: 2648</p>
-          <p class="modal-description">- heavy weight cotton jersey dress</p>
-          <p class="modal-description">- boat neck</p>
-          <p class="modal-description">- relaxed fit</p>
-          <p class="modal-description">- grey melange base</p>
-          <p class="modal-description">- finished above knee</p>
-          <div class="number">
-            <p class="qty">QTY</p>
-            <a href="#">
-               <p class="addition_text">
-              <span id="amount_to_add">1</span>
-              <p class="minus"><i class="fa fa-caret-down" aria-hidden="true"></i></p>
-              <p class="plus"><i class="fa fa-caret-up" aria-hidden="true"></i></p>
-              </p>
-            </a>
-          </div>
-        <p class="availability">AVAILABILITY: <span class="in-stock">IN STOCK</span></p>
-        <div class="modal-small-images">
-          <a class="mini-product" href="#"><img src="images/mini-modal1.jpg" alt="minisize of product"></a>
-          <a class="mini-product" href="#"><img src="images/mini-modal2.jpg" alt="minisize of product"></a>
-          <a class="mini-product" href="#"><img src="images/mini-modal3.jpg" alt="minisize of product"></a>
+    </div> <!--end .graph-->
+    <div class="problem-set">
+      <div class="problem-set-inner">
+        <h2>PROBLEMS IN CANNABIS INDUSTRY</h2>
+        <div class="problem-set-block">
+          <img class="problem-set-picture" src="img/icon1.png" alt="">
+          <p class="problem-set-text">LACK OF TRACEABILITY</p>
         </div>
-        <button class="button-buy" type="button" name="button">BUY NOW FOR $169</button>
-        <button class="button-heart" type="button" name="button"><i class="fa fa-heart-o" aria-hidden="true"></i></button>
+        <div class="problem-set-block">
+          <img class="problem-set-picture" src="img/icon2.png" alt="">
+          <p class="problem-set-text">LACK OF AUDITABILITY</p>
         </div>
-        <div class="modal-right">
-          <img class="modal-model" src="images/modal.jpg" alt="model">
-          <i class="fa fa-window-close-o close" aria-hidden="true"></i>
+        <div class="problem-set-block">
+          <img class="problem-set-picture" src="img/icon3.png" alt="">
+          <p class="problem-set-text">DISPARATE CENTRAL LEDGERS</p>
+        </div>
+        <div class="problem-set-block">
+          <img class="problem-set-picture" src="img/icon4.png" alt="">
+          <p class="problem-set-text">LACK OF CONSENSUS</p>
+        </div>
+        <div class="problem-set-block">
+          <img class="problem-set-picture" src="img/icon5.png" alt="">
+          <p class="problem-set-text">LACK OF CHAIN OF CUSTODY</p>
+        </div>
+        <div class="problem-set-block">
+          <img class="problem-set-picture" src="img/icon6.png" alt="">
+          <p class="problem-set-text">LACK OF TRUST</p>
+        </div>
+        <div class="problem-set-block">
+          <img class="problem-set-picture" src="img/icon7.png" alt="">
+          <p class="problem-set-text">LACK OF STANDARDS</p>
+        </div>
+        <div class="problem-set-block">
+          <img class="problem-set-picture" src="img/icon8.png" alt="">
+          <p class="problem-set-text">LACK OF COMPLIANCE</p>
         </div>
       </div>
+    </div> <!--End .problem-set-->
+    <div class="problem-solving">
+      <h2>SOLVING THE INDUSTRY CHALLENGES - NUVUS PROTOCOL</h2>
+      <span>TRUSTLESS VERIFICATION SYSTEM ON ALL SUPPLY CHAIN
+            TRANSATIONS IN THE CANNABIS INDUSTRY</span>
+    </div> <!-- End .problem-solving-->
+    <div class="nuvus-protocol">
+      <div class="nuvus-protocol-image">
+        <img src="img/pic2-1.jpg" alt="nuvus protocol antenna">
+      </div>
+      <div class="nuvus-protocol-text">
+        <p>Ecosystem called Nuvus Protocol which will be based on public and permission based private Blockchain technology using IBM’s Hyperledger.</p>
+        <p>Our system will ensure compliance standards are adhered to at each level of the cycle. Patients, doctors, researchers and regulators want to ensure that the product that is bought and the claims made by the producers are genuine.</p>
+      </div>
+    </div> <!--End .nuvus-protocol-->
+    <div class="advantages">
+      <div class="block-wrap">
+        <div class="block1">
+          <h3>DISTRIBUTED LEDGERS</h3>
+          <p>A distributed ledger is a set of communication protocols that enable
+            administratively decentralized, replicated databases. Distributed ledgers can
+            provide an efficient and secure infrastructure for the issuance and exchange of
+            digital assets. Their security, democratized control, and automation can have a
+            transformational-impact on industries ranging from capital markets to global trade</p>
+        </div>
+        <div class="block2">
+          <h3>SECURITY</h3>
+          <p>Cryptographically secured and
+            Byzantine fault tolerant by design.
+            Blockchain ushers in a new era of
+            security in a time where perimeter
+            security and authoritative control are no
+            longer viable security models.</p>
+        </div>
+        <div class="block3">
+          <h3>AUDITABILITY</h3>
+          <p>Blockchain provides a shared,
+            immutable log of every activity on the
+            system, enabling improved activity
+            auditability and traceability of the
+            provenance and history of an asset.</p>
+        </div>
+        <div class="block4">
+          <h3>AUTOMATION</h3>
+          <p>Smart contracts can securely automate
+            and link existing business processes.
+            When designed with blockchain
+            input/output oracles they can be used
+            to connect disparate systems.</p>
+        </div>
+      </div>
+    </div> <!-- End .distributed ledgers-->
+    <div class="cognetix-article">
+      <h2>THE POWER OF COGNETIX NODES</h2>
     </div>
-  </div>
+    <div class="cognetix-description">
+      <p>Data acquisition & management software called CognetiX (nodes) which together with Oracles
+        will unify amorphous data from all sources and package them for inclusion into the Nuvus
+        blockchain ecosystem svia the Nuvus Protocol.</p>
+    </div>
+    <div class="cognetix-goals">
+      <div class="cognetix-goal-inner">
+        <div class="cognetix-goal-blocks">
+          <h3>CURRENT STATE</h3>
+          <p>Our current version of Cognetix includes a strong
+            predictive data analytics engine and capabilities
+            to collect all types of data from any database
+            source.
+            Software controls every aspect of a controlled
+            environment agriculture grow facility. Every
+            harvest is tracked, documented and available in
+            visible format both in real time and historically.</p>
+        </div>
+        <div class="cognetix-goal-blocks">
+          <h3>NEXT STEP</h3>
+          <p>CognetiX™ will be expanded to collect verified
+            data for all transactions from seed to patient.
+            CognetiX™ allows various computer systems to
+            be integrated through a cultivator’s
+            infrastructure. Using API connecting software
+            packages, CognetiX ™ will allow all computer
+            systems to be monitored with a smartphone
+            application and the robust hardware of integrated
+            servers or cloud-based apparatuses.</p>
+        </div>
+        <div class="cognetix-goal-blocks last-goal-block">
+          <h3>OUR GOAL</h3>
+          <p>By recording the various data points including
+            chain of custody, traceability of the products,
+            supply chain verification, a protocol can be built
+            around the data points ensuring consistent &
+            trusted parameters. Data sets will be housed in
+            permissioned or public blockchain that is
+            available to all stake holders.</p>
+        </div>
+      </div>
+    </div> <!--End .cognetix-goals-->
+    <div class="cognetix-features">
+      <div class="cognetix-features-inner">
+        <div class="cognetix-features-left">
+          <h4>Suite of Data Collection Capabilities</h4>
+          <img src="img/pic5.png" alt="">
+        </div>
+        <div class="cognetix-features-right">
+          <h4>Supported on Multiple Devices and Platforms</h4>
+          <img src="img/pic6.jpg" alt="">
+        </div>
+        <h2>nuvus protocol</h2>
+      </div>
+    </div> <!--End .cognetix-features-->
+    <div class="nuvus-flowchart">
+      <img src="img/pic7.png" alt="nuvus protocol flowchart">
+    </div>
+    <div class="nuvus-advantages">
+      <div class="nuvus-advantages-article">
+        <h2>WHAT NUVUS PROTOCOL WILL BRING TO THE INDUSTRY</h2>
+      </div>
+      <div class="nuvus-advantages-list">
+        <div class="nuvus-advantages-block">
+          <img src="img/icon9.png" alt="">
+          <p>INCREASED TRANSPARENCY</p>
+        </div>
+        <div class="nuvus-advantages-block">
+          <img src="img/icon9.png" alt="">
+          <p>ECONOMICAL TRANSACTIONS</p>
+        </div>
+        <div class="nuvus-advantages-block">
+          <img src="img/icon9.png" alt="">
+          <p>SPEEDS UP PROCESSES</p>
+        </div>
+        <div class="nuvus-advantages-block">
+          <img src="img/icon9.png" alt="">
+          <p>CREATES TRUSTLESS TRUST</p>
+        </div>
+        <div class="nuvus-advantages-block">
+          <img src="img/icon9.png" alt="">
+          <p>PRIVATE OFF-CHAIN TRANSACTION</p>
+        </div>
+        <div class="nuvus-advantages-block">
+          <img src="img/icon9.png" alt="">
+          <p>UNIVERSAL EXCHANGE PLATFORM</p>
+        </div>
+        <div class="nuvus-advantages-block">
+          <img src="img/icon9.png" alt="">
+          <p>DEMOCRATIC GOVERNANCE</p>
+        </div>
+        <div class="nuvus-advantages-block">
+          <img src="img/icon9.png" alt="">
+          <p>COMPLIANCE WITH THE LOCAL GOVERNMENTS</p>
+        </div>
+      </div>
+    </div><!--End .nuvus-advantages-->
+  </div> <!--End .wrap-->
 </body>
 </html>
