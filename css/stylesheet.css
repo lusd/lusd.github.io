@@ -1064,7 +1064,7 @@ footer{
   text-decoration: none;
   color: white;
 }
-nav{
+.navigation{
   display: none;
   visibility: hidden;
 }

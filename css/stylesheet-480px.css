@@ -156,7 +156,7 @@
   background: #dd5713;
   height: 30px;
   padding: 0 15px;
-  line-height: 30px;s
+  line-height: 30px;
 }
 .graph{
   width: 100%;
@@ -310,7 +310,6 @@
   border-left: 5px solid #f15a29;
   padding: 0 10px;
 }
-.
 .block-wrap h3{
   color: white;
   font-size: 25px;
@@ -1109,7 +1108,7 @@ footer{
   display: none;
   visibility: hidden;
 }
-nav{
+.navigation{
   visibility: visible;
   display: block;
 }
