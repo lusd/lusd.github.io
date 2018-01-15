@@ -1112,9 +1112,9 @@ footer{
   visibility: visible;
   display: block;
 }
-#menuToggle a{
+#menu li a{
   text-decoration: none;
-  color: #232323;
+  color: white;
   transition: color 0.3s ease;
 }
 #menuToggle a:hover{
@@ -1179,7 +1179,7 @@ footer{
 #menu{
   position: absolute;
   width: 300px;
-  margin: -100px 0 0 -50px;
+  margin: -100px 0 0 -5%;
   padding: 50px;
   padding-top: 125px;
   background: #00325a;
