@@ -19,12 +19,13 @@
   margin: 0 auto;
 }
 .header-logo img{
-  display: block;
+  display: none;
+  visibility: hidden;
   max-width: 100px;
   display: inline;
   vertical-align: middle;
-  height: auto;
-  width: auto;
+  height: 0;
+  width: 0;
   max-height: 100%;
   outline: 0;
 }
@@ -88,26 +89,31 @@
 }
 .joinus{
   width: 100%;
-  height: 125px;
+  height: auto;
   background-color: #00213b;
 }
 .joinus-inner{
-  width: 70%;
+  width: 80%;
   height: 100%;
   margin: 0 auto;
 }
 .joinus-left, .joinus-right{
-  width: 50%;
+  width: 100%;
   height: 100%;
   padding: 40px 10px;
-  float: left;
+  float: none;
+}
+.joinus-right{
+  padding-top: 0;
 }
 .whitelist{
   display: block;
-  width: 35%;
+  width: 100%;
+  float: none;
 }
 .telegram-but{
   display: block;
+  margin: 0 auto;
   background-color: #dd5713;
   border: 0px;
   border-radius: 5px;
@@ -126,8 +132,9 @@
 }
 .whitelist input{
   display: block;
+  margin: 0 auto;
   height: 45px;
-  width: 299%;
+  width: 400px;
   border: 0px;
   border-radius: 5px;
   font-family: 'Roboto', sans-serif;
@@ -135,6 +142,7 @@
   font-weight: 400;
   letter-spacing: 1px;
   padding-left: 15px;
+  float: none;
 }
 .whitelist button{
   display: block;
@@ -151,13 +159,13 @@
   line-height: 30px;
   float: left;
   margin-top: -37px;
-  margin-left: 150%;
+  margin-left: 60%;
 }
 .graph{
   width: 100%;
 }
 .graph-inner{
-  width: 70%;
+  width: 90%;
   margin: 0 auto;
   padding-bottom: 40px;
 }
@@ -188,7 +196,7 @@
   background-color: #f9f9f9;
 }
 .problem-set-inner{
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
 }
 .problem-set-inner h2{
@@ -251,18 +259,19 @@
   padding: 40px 0;
 }
 .nuvus-protocol-image{
-  width: 50%;
-  float: left;
+  width: 100%;
+  float: none;
 }
 .nuvus-protocol-image img{
   display: block;
   width: 100%;
 }
 .nuvus-protocol-text{
-  width: 49%;
-  float: left;
+  width: 90%;
+  margin: 0 auto;
+  float: none;
   padding-top: 20px;
-  padding-left: 1%;;
+  padding-left: 0%;;
 }
 .nuvus-protocol-text p{
   color: #161616;
@@ -278,7 +287,7 @@
   height: auto;
 }
 .block-wrap{
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
   padding: 25px 0;
 }
@@ -358,17 +367,24 @@
 }
 .cognetix-goal-blocks{
   background-color: white;
-  width: 32%;
-  min-height: 350px;
+  width: 48%;
+  min-height: 400px;
   height: auto;
   float: left;
   border: 5px solid #f15a29;
-  margin-right: 2%;
-  padding: 0 10px
-
+  margin-right: 4%;
+  padding: 0 10px;
+}
+.second-goal-block{
+  margin-right: 0;
+  margin-bottom: 4%;
 }
 .last-goal-block{
+  clear: both;
   margin-right: 0;
+  float: none;
+  margin: 0 auto;
+  min-height: 350px;
 }
 .cognetix-goal-blocks h3{
   color: #f15a29;
@@ -435,7 +451,7 @@
   padding-bottom: 30px;
 }
 .nuvus-flowchart img{
-  width: 65%;
+  width: 100%;
   height: auto;
   display: block;
   margin: 0 auto;
@@ -445,6 +461,8 @@
 }
 .nuvus-advantages-article h2{
   color: #f15a29;
+  width: 90%;
+  margin: 0 auto;
   text-align: center;
   padding: 45px 0;
   font-family: 'Roboto', sans-serif;
@@ -453,9 +471,9 @@
   font-size: 36px;
 }
 .nuvus-advantages-list{
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
-  height: 600px;
+  height: 550px;
   display: block;
   position: relative;
 }
@@ -507,7 +525,7 @@
   font-size: 36px;
 }
 .token-inner{
-  width: 95%;
+  width: 100%;
   margin: 0 auto;
 }
 .token-inner img{
@@ -515,28 +533,32 @@
   width: 30%;
   height: auto;
   float: left;
+  margin-left: 5%;
 }
 .token-description{
-  width: 70%;
+  width: 60%;
   float: left;
   height: 150px;
 }
 .token-description p{
  font-family: 'Open Sans', sans-serif;
- font-size: 16px;
- font-weight: 600;
+ font-size: 18px;
+ font-weight: 500;
+ letter-spacing: 0px;
  width: 90%;
  margin: 0 auto;
 }
 .token-why{
   background: #e5e5e6;
-  width: 70%;
-  float: left;
+  clear: both;
+  width: 100%;
+  float: none;
   height: auto;
 }
 .token-why-inner{
   width: 90%;
   margin: 0 auto;
+  padding-bottom: 20px;
 }
 .token-why h3{
   padding: 20px 0;
@@ -576,7 +598,7 @@
 }
 .token-workflow h3{
   padding: 0;
-  text-align: left;
+  text-align: center;
   font-size: 30px;
   color: #f15a29;
   font-family: 'Roboto', sans-serif;
@@ -588,8 +610,9 @@
   margin-bottom: 5px;
 }
 .token-workflow-inner{
-  width: 70%;
+  width: 90%;
   margin: 0 auto;
+  padding-bottom: 20px;
 }
 .token-workflow img{
   display: block;
@@ -614,8 +637,8 @@
 }
 .token-sale-table{
   width: 100%;
-  min-height: 1000px;
   height: auto;
+  padding-bottom: 30px;
   position: relative;
   background-color: #62656f;
   z-index: -2;
@@ -634,13 +657,19 @@
   z-index: -1;
 }
 .token-sale-table-inner{
-  width: 65%;
+  width: 90%;
   margin: 0 auto;
   padding-top: 50px;
 }
+.token-sale-table-bigblock{
+  height: 50px;
+  width: 100%;
+  margin-bottom: 7px;
+  clear: both;
+}
 .token-sale-leftblock{
   width: 40%;
-  height: 50px;
+  height: 100%;
   background: #e5e5e6;
   border: 0;
   border-radius: 5px;
@@ -648,9 +677,11 @@
   padding-left: 15px;
   float: left;
   margin-bottom: 7px;
+  display: flex;
+  align-items: center;
 }
 .token-sale-leftblock span{
-  line-height: 50px;
+  line-height: 25px;
   font-size: 18px;
   font-weight: 700;
   font-family: 'Roboto', sans-serif;
@@ -658,7 +689,7 @@
 }
 .token-sale-rightblock{
   width: 55%;
-  height: 50px;
+  height: 100%;
   background: #f7f7f7;
   border: 0;
   border-radius: 5px;
@@ -667,9 +698,11 @@
   float: left;
   margin-left: 5%;
   margin-bottom: 7px;
+  display: flex;
+  align-items: center;
 }
 .token-sale-rightblock span{
-  line-height: 50px;
+  line-height: 25px;
   font-size: 18px;
   font-weight: 400;
   font-family: 'Roboto', sans-serif;
@@ -680,7 +713,7 @@
   padding-bottom: 10px;
 }
 .token-presale-inner{
-  width: 60%;
+  width: 90%;
   margin: 0 auto;
 }
 .token-presale-inner h3, .token-presale-inner h4{
@@ -745,6 +778,7 @@
 }
 .token-diagram{
   width: 100%;
+  margin: 0 auto;
   min-height: 350px;
   height: auto;
   background-color: #e7e8e9;
@@ -755,9 +789,14 @@
 .token-diagram img{
   display: block;
   height: auto;
-  width: 50%;
-  float: left;
+  width: 90%;
+  float: none;
   margin: 0 auto;
+  margin-left: 3%;
+}
+.token-diagram img:nth-child(2){
+  margin-left: 10%;
+  width: 85%;
 }
 .future-roadmap{
   width: 100%;
@@ -788,23 +827,26 @@
   text-align: center;
 }
 .team-inner{
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
 }
 .team-member{
-  width: 32%;
+  width: 48%;
   float: left;
-  margin-left: 2%;
+  margin-left: 4%;
   padding: 5px;
   height: auto;
 }
-.team-member:nth-child(1), .team-member:nth-child(5){
+.team-member:nth-child(2), .team-member:nth-child(5), .team-member:nth-child(7){
   margin: 0;
 }
 .team-member:nth-child(9){
   float: none;
   clear: both;
   margin: 0 auto;
+}
+.clear1{
+  clear: none;
 }
 .team-member img{
   display: block;
@@ -849,30 +891,35 @@
   text-align: center;
 }
 .advisor-inner{
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
 }
 .advisor-member{
-  width: 32%;
+  width: 48%;
   float: left;
-  margin-left: 2%;
+  margin-left: 4%;
   padding: 5px;
   height: auto;
 }
-.advisor-member:nth-child(1), .advisor-member:nth-child(5){
+.advisor-member:nth-child(1), .advisor-member:nth-child(3){
   margin: 0;
 }
 .advisor-member:nth-child(5){
-  margin-left: 16%;
+  margin-left: 0%;
+}
+.advisor-member:nth-child(6){
+  float: none;
+  margin: 0 auto;
 }
 .contacts{
   width: 100%;
   background-color: #f9f9f9;
-  height: 720px;
+  height: auto;
 }
 .contacts-inner{
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
+  padding-bottom: 40px;
 }
 .contacts h2{
   color: #f15a29;
@@ -884,8 +931,9 @@
   text-align: center;
 }
 .contacts-form{
-  width: 50%;
-  float: left;
+  width: 100%;
+  float: none;
+  margin: 0 auto;
 }
 .contacts-form-wrapper{
   width: 300px;
@@ -940,8 +988,9 @@
   transition: 0.15s ease-in-out;
 }
 .contacts-social-links{
-  width: 50%;
-  float: left;
+  width: 100%;
+  float: none;
+  margin: 0 auto;
 }
 .contacts-social-links p{
   width: 200px;
@@ -1008,7 +1057,7 @@
 }
 .technologies{
   width: 100%;
-  height: 230px;
+  height: auto;
 }
 .technologies-inner{
   width: 80%;
@@ -1032,6 +1081,7 @@
   float: left;
   margin-left: 3%;
   margin-top: 70px;
+  margin-bottom: 40px;
 }
 footer{
   background: #00182c;

@@ -132,7 +132,7 @@
   display: block;
   height: 45px;
   margin: 0 auto;
-  width: 90%;
+  width: 290%;
   border: 0px;
   border-radius: 5px;
   font-family: 'Roboto', sans-serif;
@@ -140,14 +140,12 @@
   font-weight: 600;
   letter-spacing: 1px;
   padding-left: 15px;
-  position: absolute;
 }
 .whitelist button{
   display: block;
-  position: relative;
   bottom: 5%;
   left: 55%;
-  width: 40%;
+  width: 110px;
   color: white;
   border: 0px;
   border-radius: 3px;
@@ -157,6 +155,9 @@
   height: 30px;
   padding: 0 15px;
   line-height: 30px;
+  float: left;
+  margin-top: -37px;
+  margin-left: 190%;
 }
 .graph{
   width: 100%;
@@ -672,9 +673,6 @@
 }
 .token-sale-leftblock span{
   line-height: 25px;
-  display: block;
-  height: auto;
-  vertical-align: middle;
   font-size: 18px;
   font-weight: 700;
   font-family: 'Roboto', sans-serif;
@@ -889,10 +887,10 @@
   padding: 5px;
   height: auto;
 }
-.advisor-member:nth-child(1), .advisor-member:nth-child(4){
+.advisor-member:nth-child(1), .advisor-member:nth-child(5){
   margin: 0;
 }
-.advisor-member:nth-child(4){
+.advisor-member:nth-child(5){
   margin-left: 0%;
 }
 .contacts{
