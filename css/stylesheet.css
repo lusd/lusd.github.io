@@ -104,7 +104,7 @@
 }
 .whitelist{
   display: block;
-  width: 35%;
+  width: 100%;
 }
 .telegram-but{
   display: block;
@@ -127,7 +127,7 @@
 .whitelist input{
   display: block;
   height: 45px;
-  width: 299%;
+  width: 400px;
   border: 0px;
   border-radius: 5px;
   font-family: 'Roboto', sans-serif;
@@ -149,9 +149,8 @@
   height: 30px;
   padding: 0 15px;
   line-height: 30px;
-  float: left;
   margin-top: -37px;
-  margin-left: 150%;
+  margin-left: 270px;
 }
 .graph{
   width: 100%;
@@ -171,7 +170,7 @@
   font-size: 36px;
 }
 .graph-inner p{
-  text-align: center;
+  text-align: justify;
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   line-height: 25px;
@@ -271,6 +270,7 @@
   font-size: 20px;
   line-height: 33px;
   margin-bottom: 20px;
+  text-align: justify;
 }
 .advantages{
   background-color: #62656f;
@@ -288,9 +288,11 @@
   margin: 0 auto;
   border-left: 5px solid #f15a29;
   padding-left: 10px;
+  text-align: justify;
 }
 .block2, .block3, .block4{
   width: 30%;
+  text-align: justify;
   height: auto;
   margin-top: 25px;
   float: left;
@@ -334,6 +336,7 @@
   height: auto;
 }
 .cognetix-description p{
+  text-align: justify;
   width: 60%;
   margin: 0 auto;
   padding: 25px 0;
@@ -380,6 +383,7 @@
 }
 .cognetix-goal-blocks p{
   color: #161616;
+  text-align: justify;
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   line-height: 24px;
@@ -519,7 +523,8 @@
 .token-description{
   width: 70%;
   float: left;
-  height: 150px;
+  height: auto;
+  text-align: justify;
 }
 .token-description p{
  font-family: 'Open Sans', sans-serif;
@@ -548,6 +553,7 @@
   font-size: 16px;
   line-height: 27px;
   font-weight: 400;
+  text-align: justify;
 }
 .token-economy{
   width: 100%;
@@ -563,6 +569,7 @@
 }
 .token-economy p{
   font-family: 'Open Sans', sans-serif;
+  text-align: justify;
   font-size: 17px;
   font-weight: 600;
   width: 88%;
@@ -823,6 +830,7 @@
 }
 .team-member-description, .advisor-description{
   font-family: 'Open Sans', sans-serif;
+  text-align: justify;
   font-size: 16px;
   line-height: 26px;
   color: #161616;
@@ -1077,4 +1085,49 @@ footer{
 .navigation{
   display: none;
   visibility: hidden;
+}
+.pager{
+  width: 100%;
+  height: auto;
+  background: #f7f7f7;
+}
+.pager h2{
+  width: 80%;
+  margin: 0 auto;
+  text-align: left;
+  padding: 30px 0;
+  font-size: 25px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  color: #3c3e44;
+  line-height: 32px;
+}
+.download{
+  width: 100%;
+  height: auto;
+}
+.download-inner{
+  width: 80%;
+  margin: 0 auto;
+  padding: 45px 0 25px;
+}
+.download-inner a{
+  display: block;
+  margin-bottom: 20px;
+  text-decoration: none;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  line-height: 26px;
+  color: #dd5713;
+}
+.download-span-two{
+  font-weight: 600;
+}
+.download-inner a:hover{
+  text-decoration: underline;
+}
+.hovered{
+  background-color: #22a5e1;
+  border-radius: 3px;
+  padding: 2px 0 4px;
 }

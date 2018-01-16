@@ -132,7 +132,7 @@
   display: block;
   height: 45px;
   margin: 0 auto;
-  width: 290%;
+  width: 100%;
   border: 0px;
   border-radius: 5px;
   font-family: 'Roboto', sans-serif;
@@ -157,7 +157,7 @@
   line-height: 30px;
   float: left;
   margin-top: -37px;
-  margin-left: 190%;
+  margin-left: 65%;
 }
 .graph{
   width: 100%;
@@ -177,7 +177,7 @@
   font-size: 36px;
 }
 .graph-inner p{
-  text-align: center;
+  text-align: justify;
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   line-height: 25px;
@@ -1064,18 +1064,20 @@ footer{
   width: 100%;
   height: auto;
   color: white;
+  padding-bottom: 30px;
 }
 .footer-inner{
   width: 90%;
   margin: 0 auto;
+  padding-top: 5px;
 }
 .footer-inner p{
   font-family: 'Roboto', sans-serif;
   width: 100%;
-  margin-top: 58px;
   float: none;
   text-align: center;
-  font-size: 21px;
+  margin-top: 20px;
+  font-size: 19px;
   line-height: 34px;
 }
 .footer-waitlist-button{
