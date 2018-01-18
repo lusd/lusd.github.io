@@ -119,12 +119,12 @@
   padding: 12px 32px;
   color: white;
 }
-.telegram-but:hover, .whitelist button:hover{
+.telegram-but:hover, .whitelist-button:hover{
   background: #fa7d49;
   cursor: pointer;
   transition: 0.25s ease-in-out;
 }
-.whitelist input{
+.whitelist-input{
   display: block;
   height: 45px;
   width: 400px;
@@ -136,7 +136,8 @@
   letter-spacing: 1px;
   padding-left: 15px;
 }
-.whitelist button{
+.whitelist-button{
+  clear: both;
   display: block;
   color: white;
   border: 0px;
