@@ -1246,3 +1246,25 @@ footer{
      -moz-border-radius: 4px;
           border-radius: 4px;
 }
+.countdown-alt-1 .dd,
+.countdown-alt-1 .hh-1,
+.countdown-alt-1 .hh-2,
+.countdown-alt-1 .mm-1,
+.countdown-alt-1 .mm-2,
+.countdown-alt-1 .ss-1,
+.countdown-alt-1 .ss-2{
+  font-size: 50px;
+  padding: 5px 0px;
+}
+.countdown-alt-1 .dd{
+  padding: 5px 10px;
+}
+.countdown-alt-1 .hh-1,
+.countdown-alt-1 .hh-2,
+.countdown-alt-1 .mm-1,
+.countdown-alt-1 .mm-2,
+.countdown-alt-1 .ss-1,
+.countdown-alt-1 .ss-2 {
+    width: 50px;
+    max-width: 50px;
+}

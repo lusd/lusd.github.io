@@ -1137,6 +1137,7 @@ footer{
 #form-messages{
   font-family: 'Roboto', sans-serif;
 }
+/* CSS for contact form submit button message from server*/
 .success {
   padding: 1em;
   margin-bottom: 0.75rem;
@@ -1158,4 +1159,73 @@ footer{
   -webkit-border-radius: 4px;
      -moz-border-radius: 4px;
           border-radius: 4px;
+}
+/* CSS for count timer */
+.time{
+  width: 100%;
+  height: auto;
+  background: #00203c;
+}
+
+.time time{
+  text-align: center;
+}
+.countdown-alt-1 {
+    display: block;
+    font-size: 0;  /* Hack for inline and inline-block extra markup generated spaces */
+    margin: 0 0;
+    color: #002f5b;
+    padding: 20px 0 20px;
+}
+.countdown-alt-1 .item {
+    position: relative;
+}
+.countdown-alt-1 .dd,
+.countdown-alt-1 .hh-1,
+.countdown-alt-1 .hh-2,
+.countdown-alt-1 .mm-1,
+.countdown-alt-1 .mm-2,
+.countdown-alt-1 .ss-1,
+.countdown-alt-1 .ss-2 {
+    font-family: 'Righteous', sans-serif;
+    font-style: bold;
+    color: #111;
+    background: #F6F6F6;
+    border-radius: 10px;
+    display: inline-block;
+    font-size: 60px;
+    margin: 1px 2px;
+    min-width: 40px;
+    padding: 5px 0px;
+    text-align: center;
+}
+.countdown-alt-1 .dd{
+  padding: 5px 15px;
+}
+.countdown-alt-1 .hh-1,
+.countdown-alt-1 .hh-2,
+.countdown-alt-1 .mm-1,
+.countdown-alt-1 .mm-2,
+.countdown-alt-1 .ss-1,
+.countdown-alt-1 .ss-2 {
+    width: 60px;
+    max-width: 60px;
+}
+.countdown-alt-1 .label {
+    font-family: 'Roboto', sans-serif;
+    text-transform: capitalize;
+    background: #F6F6F6;
+    border-radius: 5px;
+    font-size: 12px;
+    margin: 1px 2px;
+    padding: 2px 5px;
+    position: absolute;
+    left: 0;
+    bottom: -44px;
+}
+.countdown-alt-1 .separator-dd,
+.countdown-alt-1 .separator {
+    color: #FFF;
+    font-size: 40px;
+    position: relative;
 }
