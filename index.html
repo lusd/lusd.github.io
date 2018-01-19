@@ -9,7 +9,7 @@
   <link rel="stylesheet" media="screen and (max-width: 480px)" href="css/stylesheet-480px.css">
   <link rel="stylesheet" media="screen and (min-width: 481px) and (max-width: 768px)" href="css/stylesheet-768px.css">
   <script src="js/jquery-3.2.1.min.js"></script>
-  <script type="text/javascript" src="js/contact.js"></script>
+  <script src="js/contact.js"></script>
   <title>Nuvus</title>
 
 </head>
@@ -64,10 +64,10 @@
           <button class="telegram-but" type="button" name="button">Join us on Telegram</button>
         </div>
         <div class="joinus-right">
-          <form class="whitelist" action="https://nuvus.us17.list-manage.com/subscribe/post?u=d84528748f5d000766483b68f&id=735f182cb2" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-            <input class="whitelist-input" type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Enter email address" required>
+          <form class="whitelist validate" action="https://nuvus.us17.list-manage.com/subscribe/post?u=d84528748f5d000766483b68f&id=735f182cb2" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank" novalidate>
+            <input class="whitelist-input email" type="email" value="" name="EMAIL" id="mce-EMAIL" placeholder="Enter email address" required>
             <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_d84528748f5d000766483b68f_735f182cb2" tabindex="-1" value=""></div>
-            <div class="clear"><input class="whitelist-button" type="submit" name="subscribe" value="Join Whitelist" id="mc-embedded-subscribe" class="button"></div>
+            <div class="clear"><input class="whitelist-button button" type="submit" name="subscribe" value="Join Whitelist" id="mc-embedded-subscribe"></div>
           </form>
         </div>
       </div>
@@ -657,7 +657,7 @@
             <input class="contacts-subject contacts-form-input" type="text" id="subject" name="subject" value="">
             <p>Your Message</p>
             <textarea class="contacts-message" name="message" id="message"></textarea>
-            <input class="contacts-form-button" type="submit" value="Send"></input>
+            <input class="contacts-form-button" type="submit" value="Send">
             <div id="form-messages"></div>
         </div>
         </form>
