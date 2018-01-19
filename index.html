@@ -8,7 +8,10 @@
   <link rel="stylesheet" href="css/stylesheet.css" type="text/css"/>
   <link rel="stylesheet" media="screen and (max-width: 480px)" href="css/stylesheet-480px.css">
   <link rel="stylesheet" media="screen and (min-width: 481px) and (max-width: 768px)" href="css/stylesheet-768px.css">
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="js/contact.js"></script>
   <title>Nuvus</title>
+
 </head>
 <body>
   <div class="wrap">
@@ -644,17 +647,18 @@
     <div class="contacts">
       <h2>CONTACT US</h2>
       <div class="contacts-inner">
-        <form class="contacts-form">
+        <form id="form" class="contacts-form" method="post" action="send_email.php">
           <div class="contacts-form-wrapper">
             <p>Your Name (required)</p>
-            <input class="contacts-name" type="text" name="name" value="" required>
+            <input class="contacts-name contacts-form-input" type="text" id="name" name="name" value="" required>
             <p>Your Email (required)</p>
-            <input class="contacts-email" type="email" name="contacts_email" value="" required>
+            <input class="contacts-email contacts-form-input" type="email" id="email" name="email" value="" required>
             <p>Subject</p>
-            <input class="contacts-subject" type="text" name="subject" value="">
+            <input class="contacts-subject contacts-form-input" type="text" id="subject" name="subject" value="">
             <p>Your Message</p>
-            <textarea class="contacts-message"></textarea>
-            <div class="contacts-form-button">Send</div>
+            <textarea class="contacts-message" name="message" id="message"></textarea>
+            <input class="contacts-form-button" type="submit" value="Send"></input>
+            <div id="form-messages"></div>
         </div>
         </form>
         <div class="contacts-social-links">
@@ -673,6 +677,7 @@
             </div>
           </a>
         </div>
+        <div class="clear"></div>
       </div>
     </div> <!--End .contacts-->
     <div class="technologies">

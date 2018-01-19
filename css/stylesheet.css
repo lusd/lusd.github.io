@@ -877,7 +877,8 @@
 .contacts{
   width: 100%;
   background-color: #f9f9f9;
-  height: 720px;
+  height: auto;
+  padding-bottom: 30px;
 }
 .contacts-inner{
   width: 80%;
@@ -895,6 +896,7 @@
 .contacts-form{
   width: 50%;
   float: left;
+  height: auto;
 }
 .contacts-form-wrapper{
   width: 300px;
@@ -909,7 +911,7 @@
   font-family: 'Open Sans', sans-serif;
   margin: 0 auto;
 }
-.contacts-form input{
+.contacts-form-input{
   margin: 10px auto 15px;
   width: 300px;
   height: 40px;
@@ -1131,4 +1133,29 @@ footer{
   background-color: #22a5e1;
   border-radius: 3px;
   padding: 2px 0 4px;
+}
+#form-messages{
+  font-family: 'Roboto', sans-serif;
+}
+.success {
+  padding: 1em;
+  margin-bottom: 0.75rem;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  color: #468847;
+  background-color: #dff0d8;
+  border: 1px solid #d6e9c6;
+  -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+          border-radius: 4px;
+}
+.error {
+  padding: 1em;
+  margin-bottom: 0.75rem;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  color: #b94a48;
+  background-color: #f2dede;
+  border: 1px solid rgba(185, 74, 72, 0.3);
+  -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+          border-radius: 4px;
 }
