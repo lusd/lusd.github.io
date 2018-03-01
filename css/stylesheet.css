@@ -479,8 +479,8 @@ Connect end
   padding: 20px 0;
 }
 .resources-item{
-  width: 200px;
-  height: 280px;
+  width: 220px;
+  height: 310px;
   display: flex;
   flex-direction: column;
   margin: 0 15px;
@@ -492,9 +492,10 @@ Connect end
 .resources-item-block{
   display: flex;
   flex-direction: column;
-  height: 140px;
+  height: 155px;
   align-items: center;
   box-shadow: 0 0 27px 5px rgba(0, 0, 0, 0.1);
+  padding: 0 7px;
 }
 .resources-item-title{
   color: var(--dark-blue);
