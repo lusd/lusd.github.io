@@ -423,6 +423,7 @@ template {
 }
 .button:hover{
   background-color: var(--hover-blue);
+  cursor: pointer;
 }
 .link{
   color: var(--light-blue);
@@ -852,7 +853,7 @@ template {
   margin-right: 20px;
 }
 #college-matches, #free-signup-scnd{
-  width: 180px;
+  width: 190px;
 }
 .testimonials-text span{
   font-weight: 600;
@@ -889,9 +890,7 @@ template {
 }
 .footer-item-link:hover{
   color: var(--light-blue);
-}
-.footer-item-link:visited{
-  color: #fff;
+  cursor: pointer;
 }
 /* Footer END
 ============================================================================= */
@@ -983,6 +982,9 @@ template {
     text-align: center;
     font-size: 1.5em;
   }
+  .subtitle-text{
+    font-size: 1.1em;
+  }
   @media (max-aspect-ratio: 16/9) {
     .video-foreground { width: auto; left: 0; }
   }
@@ -998,6 +1000,7 @@ template {
   .get-matched-image{
     width: 90%;
     margin-left: 10%;
+    margin-top: 30px;
   }
   .connect{
     flex-wrap: wrap;
@@ -1011,6 +1014,7 @@ template {
   }
   .cta-title{
     font-size: 1.8em;
+    line-height: 35px;
     padding: 0 10px;
   }
   .header-h2{
