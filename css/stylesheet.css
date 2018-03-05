@@ -424,6 +424,17 @@ template {
 .button:hover{
   background-color: var(--hover-blue);
 }
+.link{
+  color: var(--light-blue);
+  text-decoration: none;
+  cursor: pointer;
+}
+.link:hover{
+  color: var(--hover-blue);
+}
+.link:visited{
+  color: var(--hover-blue);
+}
 /* Stylesheet END
 ============================================================================= */
 /* HEADER START
@@ -659,17 +670,6 @@ template {
   margin-right: 10px;
   color: var(--light-blue);
 }
-.link{
-  color: var(--light-blue);
-  text-decoration: none;
-  cursor: pointer;
-}
-.link:hover{
-  color: var(--hover-blue);
-}
-.link:visited{
-  color: var(--hover-blue);
-}
 /* Connect end
 ============================================================================= */
 /* 1st CTA
@@ -706,7 +706,6 @@ template {
 .video{
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   padding: 60px 0;
   background-color: var(--light-bg);
@@ -715,30 +714,34 @@ template {
   width: 854px;
   height: 480px;
   margin-top: 40px;
-  background-image: url(../img/video.png);
-  background-size: cover;
-  background-repeat: no-repeat;
   border: none;
   box-shadow: 0 0 60px rgba(0, 0, 0, 0.2);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  position: relative;
 }
 #video-play-button{
   border: none;
   outline: none;
   background-color: rgba(0, 0, 0, 0);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-40px, -40px);
 }
 .video-play-icon{
   color: var(--light-blue);
-  border-radius: 40px;
-  box-shadow: 0 0 0px 5px var(--light-blue) inset, 0 0 0px 40px rgba(255, 255, 255, 1) inset, 0 0 0px 10px rgba(255, 255, 255, 0.2);
+  border-radius: 100px;
+  box-shadow: 0 0 0px 10px var(--light-blue) inset, 0 0 0px 60px rgba(255, 255, 255, 1) inset, 0 0 0px 10px rgba(255, 255, 255, 0.2);
   padding: 0;
   margin: 0;
 }
 .video-play-icon:hover{
   color: var(--hover-blue);
-  box-shadow: 0 0 0px 5px var(--hover-blue) inset, 0 0 0px 40px rgba(255, 255, 255, 1) inset, 0 0 0px 10px rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 0px 5px var(--hover-blue) inset, 0 0 0px 60px rgba(255, 255, 255, 1) inset, 0 0 0px 10px rgba(255, 255, 255, 0.2);
+}
+#video-content img{
+  display: block;
+  width: 100%;
+  height: auto;
 }
 /* VIDEO section END
 ============================================================================= */
@@ -882,6 +885,7 @@ template {
 .footer-item-link{
   margin-top: 0;
   text-decoration: none;
+  text-align: left;
 }
 .footer-item-link:hover{
   color: var(--light-blue);
@@ -952,10 +956,129 @@ template {
 }
 /* Bottom Bar END
 ============================================================================= */
-/* Media querries START
+/* MOBILE Media querries START
 ============================================================================= */
 @media screen and (max-width: 599px){
-  .header-navigation{
+  .header-navigation, .subheader{
+    display: none;
+  }
+  .regular-text-white{
+    font-size: 1em;
+  }
+  .video-foreground iframe {
+    max-width: 599px;
+    width: 100%;
+    height: 200px;
+  }
+  .video-foreground::after{
+    max-width: 599px;
+    width: 100%;
+    height: 200px;
+  }
+  .vid-info{
+    top: 20%;
+    padding: 0;
+  }
+  .header-h1{
+    text-align: center;
+    font-size: 1.5em;
+  }
+  @media (max-aspect-ratio: 16/9) {
+    .video-foreground { width: auto; left: 0; }
+  }
+  .get-matched{
+    margin-top: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .get-matched-block{
+    padding: 0;
+    width: 90%;
+  }
+  .get-matched-image{
+    width: 90%;
+    margin-left: 10%;
+  }
+  .connect{
+    flex-wrap: wrap;
+  }
+  .connect-image{
+    width: 90%;
+    align-self: flex-start;
+  }
+  .cta{
+    text-align: center;
+  }
+  .cta-title{
+    font-size: 1.8em;
+    padding: 0 10px;
+  }
+  .header-h2{
+    text-align: center;
+    font-size: 1.8em;
+  }
+  .video{
+    padding: 40px 0 0;
+  }
+  #video-content{
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .resources{
+    padding: 0;
+  }
+  .resources-block{
+    flex-wrap: wrap;
+  }
+  .resources-item{
+    margin-bottom: 30px;
+  }
+  .small-text{
+    font-size: 1em;
+    margin-top: 5px;
+  }
+  .testimonials{
+    background: var(--light-bg);
+    justify-content: center;
+    display: flex;
+  }
+  .testimonials-block{
+    background: var(--light-bg);
+    -webkit-transform: skew(0);
+    width: 100%;
+    padding: 15px 10px;
+  }
+  .testimonials-text{
+    -webkit-transform: skew(0);
+    text-align: center;
+    margin: 10px 0;
+    text-align: justify;
+    padding: 0 5px;
+  }
+  .buttons-block{
+    -webkit-transform: skew(0);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+  }
+  #college-matches{
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+  .footer{
+    padding: 20px 5px;
+  }
+  .footer-container{
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .footer-item{
+    margin: 0 5px;
+  }
+  .bottom-bar{
     display: none;
   }
 }
