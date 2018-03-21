@@ -530,6 +530,7 @@ textarea{
   border: none;
   box-shadow: 0 0 1px rgba(0,0,0,0.4);
 }
+
 .lift-inspection-date{
   border-top: 2px solid black;
   border-right: 2px solid black;
@@ -697,6 +698,8 @@ textarea{
   padding-bottom: 4px;
   line-height: 34px;
   background: yellow;
+  display: flex;
+  align-items: center;
 }
 .lift-drive label{
   margin-left: 6%;
@@ -707,6 +710,12 @@ textarea{
 }
 .lift-drive-title{
   font-weight: bold;
+  width: 28%;
+}
+.lift-drive-block{
+  width: 18%;
+  display: flex;
+  align-items: center;
 }
 .identify{
   display: flex;
@@ -913,7 +922,7 @@ textarea{
   margin-left: 1%;
 }
 .lane-other2{
-  width: 35%;
+  width: 50%;
 }
 .lane-title-small{
   width: 20%;
@@ -1001,6 +1010,9 @@ textarea{
 .lane-other2{
   padding: 4px 0;
 }
+.lane-oil-other{
+  width: 80%;
+}
 .lane-item-text-venting{
   width: 30%;
   text-align: center;
@@ -1046,4 +1058,83 @@ textarea{
 }
 .inspection-input{
   width: 80%;
+}
+.other-wrap{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+@media only screen and (max-width: 1200px){
+  .wrap{
+    width: 95%;
+  }
+  .lift-inspection-wrap{
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .lift-drive{
+    flex-wrap: wrap;
+  }
+  .surface-lift{
+    width: 100%;
+    border-right: 0;
+  }
+  .inground-lift{
+    width: 100%;
+  }
+  .lane{
+    min-height: 40px;
+    height: auto;
+  }
+  .other-wrap{
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+  .lane-three-name{
+    margin-left: 5%;
+  }
+  .lane-three-button{
+    margin-left: 8%;
+  }
+  .lane-button-wrap{
+    width: 100%;
+    padding: 5px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+  .lane-title-middle{
+    width: 90%;
+    text-align: center;
+  }
+  .lane-other2{
+    width: 80%;
+  }
+  .lane-title-small{
+    width: 60%;
+    text-align: center;
+  }
+  .lane-title-not-small{
+    width: 50%;
+    text-align: center;
+  }
+  .lane-title-extra-small{
+    width: 20%;
+  }
+  .lane-identify-year{
+    width: 20%;
+  }
+  .lane-title-middle-smaller{
+    width: 90%;
+  }
+  .lane-title-small-media{
+    width: 90%;
+  }
+  .lane-equivalent-identify2{
+    width: 100%;
+  }
 }
