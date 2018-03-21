@@ -361,11 +361,15 @@ textarea{
 .wrap{
   max-width: 1200px;
   width: 80%;
+  display: -ms-flexbox;
   display: flex;
   margin: 0 auto;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-direction: column;
+      flex-direction: column;
 }
 .title{
   font-size: 40px;
@@ -382,8 +386,10 @@ textarea{
 }
 .lift-inspection-wrap{
   width: 100%;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
   border-bottom: 4px solid black;
 }
 .img-logo{
@@ -393,9 +399,12 @@ textarea{
 }
 .lift-inspection{
   width: 500px;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   margin-right: 10px;
 }
 .lift-inspection-block{
@@ -404,8 +413,10 @@ textarea{
 }
 .form-inspection{
   padding: 5px 0;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: flex-end;
+  -ms-flex-pack: end;
+      justify-content: flex-end;
 }
 .form-inspection span{
   width: 100px;
@@ -432,13 +443,17 @@ textarea{
   margin: 5px 0;
 }
 .lift-failed{
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
   border-bottom: 2px solid black;
 }
 .lift-passed{
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
 }
 .lift-failed p, .lift-passed p{
   line-height: 40px;
@@ -506,24 +521,29 @@ textarea{
   height: 10px;
   border: solid white;
   border-width: 0 3px 3px 0;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 .lift-inspection-container{
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-align: center;
+      align-items: center;
 }
 .input-textarea{
   width: 80%;
   box-shadow: 0 0 1px rgba(0,0,0,0.4);
 }
 .lift-inspection-signature{
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
 }
 .input-line{
   outline: none;
@@ -535,9 +555,12 @@ textarea{
   border-top: 2px solid black;
   border-right: 2px solid black;
   width: 100%;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
 }
 .lift-inspection-date p{
   width: 120px;
@@ -547,8 +570,10 @@ textarea{
   width: 100%;
 }
 .date-inspection-initials{
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
+  -ms-flex-direction: row;
+      flex-direction: row;
   width: 100%;
   border-top: 2px solid black;
 }
@@ -564,9 +589,12 @@ textarea{
   border-bottom: 4px solid black;
 }
 .location-name-lane, .inspector-lane, .lift-lane, .lift-drive{
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
   padding: 10px 15px 0;
 }
 .location-name-lane span{
@@ -698,8 +726,10 @@ textarea{
   padding-bottom: 4px;
   line-height: 34px;
   background: yellow;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -ms-flex-align: center;
+      align-items: center;
 }
 .lift-drive label{
   margin-left: 6%;
@@ -714,27 +744,36 @@ textarea{
 }
 .lift-drive-block{
   width: 18%;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -ms-flex-align: center;
+      align-items: center;
 }
 .identify{
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   line-height: 34px;
   border-bottom: 4px solid black;
   background-color: #d8e4bc;
 }
 .surface-lift{
   width: 49%;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   border-right: 4px solid black;
   border-bottom: 2px solid black;
 }
 .surface-lift-column1{
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -ms-flex-direction: column;
+      flex-direction: column;
   width: 40%;
   margin-top: 10px;
 }
@@ -745,6 +784,7 @@ textarea{
   font-weight: 600;
 }
 .surface-lift-lane{
+  display: -ms-flexbox;
   display: flex;
   margin-bottom: 10px;
 }
@@ -763,16 +803,21 @@ textarea{
   margin-left: 30%;
 }
 .surface-lift-column2{
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -ms-flex-direction: column;
+      flex-direction: column;
   width: 60%;
   margin-top: 10px;
 }
 .inground-lift{
   width: 50%;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   border-bottom: 2px solid black;
   padding-right: 0.5%;
 }
@@ -786,8 +831,10 @@ textarea{
 .inground-subtitle-wrap{
   width: 100%;
   text-align: center;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
   border-bottom: 1px solid black;
   font-weight: bold;
 }
@@ -839,6 +886,7 @@ textarea{
 }
 .aloim{
   width: 100%;
+  display: -ms-flexbox;
   display: flex;
   background: #ddd;
   border-bottom: 3px solid black;
@@ -846,7 +894,8 @@ textarea{
 .aloim-title{
   width: 10%;
   text-align: center;
-  align-self: center;
+  -ms-flex-item-align: center;
+      align-self: center;
   text-transform: uppercase;
   font-weight: bold;
 }
@@ -860,14 +909,19 @@ textarea{
 }
 .aloim-checkbox-title{
   width: 20%;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-align: center;
+      align-items: center;
 }
 .lane{
   height: 40px;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -ms-flex-align: center;
+      align-items: center;
   border-bottom: 1px solid black;
   font-size: 15px;
 }
@@ -886,9 +940,12 @@ textarea{
 }
 .lane-checkbox-wrap{
   width: 20%;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
 }
 .checkbox-color{
   width: 33.333%;
@@ -910,10 +967,13 @@ textarea{
   width: 50%;
 }
 .lane-button-wrap{
+  display: -ms-flexbox;
   display: flex;
   width: 40%;
-  align-items: center;
-  justify-content: space-around;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 .lane-three-button{
   margin-left: 3%;
@@ -963,9 +1023,12 @@ textarea{
 }
 .lane-capacity{
   width: 35%;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
+  -ms-flex-pack: end;
+      justify-content: flex-end;
+  -ms-flex-align: center;
+      align-items: center;
   font-weight: bold;
 }
 .lane-item-number{
@@ -987,9 +1050,12 @@ textarea{
 }
 .lane-lowering-wrap{
   width: 40%;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
+  -ms-flex-pack: end;
+      justify-content: flex-end;
+  -ms-flex-align: center;
+      align-items: center;
 }
 .lane-lowering{
   width: 45%;
@@ -1018,7 +1084,8 @@ textarea{
   text-align: center;
 }
 .lane-venting-type{
-  justify-content: flex-start;
+  -ms-flex-pack: start;
+      justify-content: flex-start;
   width: 70%;
 }
 .lane-venting-name{
@@ -1037,21 +1104,28 @@ textarea{
 }
 .signature-bottom-wrap{
   margin-top: 50px;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: space-around;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   width: 80%;
   margin-bottom: 50px;
 }
 .signature-initials, .signature-date{
   width: 30%;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -ms-flex-align: center;
+      align-items: center;
 }
 .signature-inspection{
   width: 40%;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -ms-flex-align: center;
+      align-items: center;
 }
 .initials-input, .date-input, .inspection-input{
   padding: 4px 0;
@@ -1060,20 +1134,26 @@ textarea{
   width: 80%;
 }
 .other-wrap{
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: space-around;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 @media only screen and (max-width: 1200px){
   .wrap{
     width: 95%;
   }
   .lift-inspection-wrap{
-    flex-wrap: wrap;
-    justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: center;
+        justify-content: center;
   }
   .lift-drive{
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
   .surface-lift{
     width: 100%;
@@ -1089,9 +1169,12 @@ textarea{
   .other-wrap{
     width: 100%;
     margin-top: 10px;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: nowrap;
-    align-items: center;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -ms-flex-align: center;
+        align-items: center;
   }
   .lane-three-name{
     margin-left: 5%;
@@ -1102,10 +1185,14 @@ textarea{
   .lane-button-wrap{
     width: 100%;
     padding: 5px 0;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    flex-wrap: wrap;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    -ms-flex-pack: start;
+        justify-content: flex-start;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
   .lane-title-middle{
     width: 90%;
@@ -1137,4 +1224,7 @@ textarea{
   .lane-equivalent-identify2{
     width: 100%;
   }
+}
+.killer{
+  transition: 1s;
 }
