@@ -409,7 +409,7 @@ textarea{
 }
 .form-inspection span{
   width: 100px;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: bold;
 }
 .input-underline{
@@ -988,4 +988,62 @@ textarea{
 .lane-title-one{
   width: 90%;
   margin-left: 10%;
+}
+.lane-item-text-oil{
+  width: 30%;
+}
+.lane-oil-type{
+  width: 60%;
+}
+.lane-oil-name{
+  margin-right: -5%;
+}
+.lane-other2{
+  padding: 4px 0;
+}
+.lane-item-text-venting{
+  width: 30%;
+  text-align: center;
+}
+.lane-venting-type{
+  justify-content: flex-start;
+  width: 70%;
+}
+.lane-venting-name{
+  margin-left: 5%;
+  margin-right: 10%;
+}
+.aloim-top-border{
+  border-top: 3px solid black;
+}
+.lane-last-lane{
+  border-bottom: none;
+}
+.wrap-note{
+  font-size: 15px;
+  text-align: center;
+}
+.signature-bottom-wrap{
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 80%;
+  margin-bottom: 50px;
+}
+.signature-initials, .signature-date{
+  width: 30%;
+  display: flex;
+  align-items: center;
+}
+.signature-inspection{
+  width: 40%;
+  display: flex;
+  align-items: center;
+}
+.initials-input, .date-input, .inspection-input{
+  padding: 4px 0;
+}
+.inspection-input{
+  width: 80%;
 }

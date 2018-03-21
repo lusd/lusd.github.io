@@ -14,7 +14,7 @@
           <img src="img/logo.png" alt="logo" class="img-logo">
           <div class="lift-inspection">
             <div class="lift-inspection-block">
-              <div class="form-inspection" action="" method="post">
+              <div class="form-inspection">
                 <label for="inspection">
                   <span>Inspection #</span><input class="input-underline" type="text" name="inspection" value="">
                 </label>
@@ -25,17 +25,18 @@
               <div class="lift-failed">
                 <p>Lift Failed (Label not applied to lift)</p>
                 <label class="checkbox-container radiobutton">
-                  <input class="checkbox" type="checkbox">
+                  <input class="checkbox" name="1" type="radio">
                   <span class="checkbox-custom"></span>
                 </label>
               </div>
               <div class="lift-passed">
                 <p>Lift Passed (Label applied to lift)</p>
                 <label class="checkbox-container radiobutton checkbox-container-green">
-                  <input class="checkbox" type="checkbox">
+                  <input class="checkbox" name="1" type="radio">
                   <span class="checkbox-custom"></span>
                 </label>
               </div>
+              </form>
             </div>
             <div class="lift-inspection-block">
               <div class="lift-inspection-container">
@@ -44,7 +45,7 @@
                 <div class="lift-inspection-signature">
                   <div class="lift-inspection-date">
                     <p>Date Label Applied:</p>
-                    <input class="input-line" type="text" name="date-label-applied" value="">
+                    <input class="input-line" type="date" name="date-label-applied" value="">
                   </div>
                   <div class="date-inspection-initials">
                     <p>Inspector Initials:</p>
@@ -78,7 +79,7 @@
             <span>Owner/Shop Manager Signature:</span>
             <input class="input-underline name-lane3-input" type="text" name="inspector name" value="">
             <label for="date">Date</label>
-            <input class="input-underline name-lane3-input2" type="text" name="date" value="">
+            <input class="input-underline name-lane3-input2" type="date" name="date" value="">
           </div>
         </div><!--END location-name-->
         <div class="inspector">
@@ -104,7 +105,7 @@
             <span>Inspector Signature:</span>
             <input class="input-underline inspector-lane5" type="text" name="inspector-signature" value="">
             <label for="ali-inspector-id">Date of Inspection</label>
-            <input class="input-underline inspector-lane6" name="date-of-inspection" value="">
+            <input class="input-underline inspector-lane6" name="date-of-inspection" type="date" value="">
           </div>
         </div><!--END inspector-->
         <div class="lift">
@@ -128,12 +129,12 @@
             <span>Certified Lift <span class="lift-small-text">(i.e. Gold Label)</span></span>
             <label class="lift-label-no" for="lift-no">No</label>
             <label class="button-container radiobutton">
-              <input class="checkbox" type="checkbox">
+              <input class="checkbox" name="2" type="radio">
               <s class="checkbox-custom"></s>
             </label>
             <label class="lift-label-yes" for="lift-no">Yes</label>
             <label class="button-container radiobutton">
-              <input class="checkbox" type="checkbox">
+              <input class="checkbox" name="2" type="radio">
               <s class="checkbox-custom"></s>
             </label>
             <label class="sertification-serial" for="sertification-serial">Certification Serial #</label>
@@ -143,22 +144,22 @@
         <div class="lift-drive">
           <span class="lift-drive-title">Lift Drive Type (Check One):</span>
           <label class="button-container radiobutton">
-            <input class="checkbox" type="checkbox">
+            <input class="checkbox" name="3" type="radio">
             <s class="checkbox-custom"></s>
           </label>
           <span class="lift-drive-type">Hydraulic</span>
           <label class="button-container radiobutton">
-            <input class="checkbox" type="checkbox">
+            <input class="checkbox" name="3" type="radio">
             <s class="checkbox-custom"></s>
           </label>
           <span class="lift-drive-type">Hydraulically Driven Mechanical</span>
           <label class="button-container radiobutton">
-            <input class="checkbox" type="checkbox">
+            <input class="checkbox" name="3" type="radio">
             <s class="checkbox-custom"></s>
           </label>
           <span class="lift-drive-type">Mechanical</span>
           <label class="button-container radiobutton">
-            <input class="checkbox" type="checkbox">
+            <input class="checkbox" name="3" type="radio">
             <s class="checkbox-custom"></s>
           </label>
           <span class="lift-drive-type">Pneumatic</span>
@@ -186,7 +187,7 @@
                   <input class="checkbox" type="checkbox">
                   <s class="checkbox-custom"></s>
                 </label>
-                <input class="input-line surface-lift-post" type="text" name="" value="">
+                <input class="input-line surface-lift-post" type="number" name="" value="">
                 <span class="surface-lift-type">-post</span>
               </div>
               <div class="surface-lift-lane">
@@ -225,7 +226,7 @@
                   <s class="checkbox-custom"></s>
                 </label>
                 <span class="surface-lift-type">Mobile Column - # of Units</span>
-                <input class="input-line surface-lift-units" type="text" name="" value="">
+                <input class="input-line surface-lift-units" type="number" name="" value="">
               </div>
             </div>
           </div>
@@ -317,15 +318,15 @@
           <span class="lane-title-large">Record location of manufacturer's or generic instructions & confirm they are available to all operators.</span>
           <div class="lane-checkbox-wrap">
             <label class="checkbox-color radiobutton grey">
-              <input class="checkbox" type="checkbox">
+              <input class="checkbox" name="4" type="radio">
               <s class="checkbox-custom"></s>
             </label>
             <label class="checkbox-color radiobutton red">
-              <input class="checkbox" type="checkbox">
+              <input class="checkbox" name="4" type="radio">
               <s class="checkbox-custom"></s>
             </label>
             <label class="checkbox-color radiobutton green">
-              <input class="checkbox" type="checkbox">
+              <input class="checkbox" name="4" type="radio">
               <s class="checkbox-custom"></s>
             </label>
           </div>
@@ -385,15 +386,15 @@
           <span class="lane-title-large">Record location of generic safety instructions & confirm they are available to all operators.</span>
           <div class="lane-checkbox-wrap">
             <label class="checkbox-color radiobutton grey">
-              <input class="checkbox" type="checkbox">
+              <input class="checkbox" name="5" type="radio">
               <s class="checkbox-custom"></s>
             </label>
             <label class="checkbox-color radiobutton red">
-              <input class="checkbox" type="checkbox">
+              <input class="checkbox" name="5" type="radio">
               <s class="checkbox-custom"></s>
             </label>
             <label class="checkbox-color radiobutton green">
-              <input class="checkbox" type="checkbox">
+              <input class="checkbox" name="5" type="radio">
               <s class="checkbox-custom"></s>
             </label>
           </div>
@@ -454,15 +455,15 @@
           <span class="lane-title-large">Record location & verify current edition of lifting point information & confirm availability to all operators.</span>
           <div class="lane-checkbox-wrap">
             <label class="checkbox-color radiobutton grey">
-              <input class="checkbox" type="checkbox">
+              <input class="checkbox" name="6" type="radio">
               <s class="checkbox-custom"></s>
             </label>
             <label class="checkbox-color radiobutton red">
-              <input class="checkbox" type="checkbox">
+              <input class="checkbox" name="6" type="radio">
               <s class="checkbox-custom"></s>
             </label>
             <label class="checkbox-color radiobutton green">
-              <input class="checkbox" type="checkbox">
+              <input class="checkbox" name="6" type="radio">
               <s class="checkbox-custom"></s>
             </label>
           </div>
@@ -527,15 +528,15 @@
           <span class="lane-title-large">Check accessibility, confirm readability & appropriate lift safety labeling or placarding, report deficiencies</span>
           <div class="lane-checkbox-wrap">
             <label class="checkbox-color radiobutton grey">
-              <input class="checkbox" type="checkbox">
+              <input class="checkbox" name="7" type="radio">
               <s class="checkbox-custom"></s>
             </label>
             <label class="checkbox-color radiobutton red">
-              <input class="checkbox" type="checkbox">
+              <input class="checkbox" name="7" type="radio">
               <s class="checkbox-custom"></s>
             </label>
             <label class="checkbox-color radiobutton green">
-              <input class="checkbox" type="checkbox">
+              <input class="checkbox" name="7" type="radio">
               <s class="checkbox-custom"></s>
             </label>
           </div>
@@ -597,15 +598,15 @@
           </div>
           <div class="lane-checkbox-wrap">
             <label class="checkbox-color radiobutton grey">
-              <input class="checkbox" type="checkbox">
+              <input class="checkbox" name="8" type="radio">
               <s class="checkbox-custom"></s>
             </label>
             <label class="checkbox-color radiobutton red">
-              <input class="checkbox" type="checkbox">
+              <input class="checkbox" name="8" type="radio">
               <s class="checkbox-custom"></s>
             </label>
             <label class="checkbox-color radiobutton green">
-              <input class="checkbox" type="checkbox">
+              <input class="checkbox" name="8" type="radio">
               <s class="checkbox-custom"></s>
             </label>
           </div>
@@ -615,15 +616,15 @@
           <span class="lane-title-large">Record nameplate information on Inspection Certificate.</span>
           <div class="lane-checkbox-wrap">
             <label class="checkbox-color radiobutton grey">
-              <input class="checkbox" type="checkbox">
+              <input class="checkbox" name="9" type="radio">
               <s class="checkbox-custom"></s>
             </label>
             <label class="checkbox-color radiobutton red">
-              <input class="checkbox" type="checkbox">
+              <input class="checkbox" name="9" type="radio">
               <s class="checkbox-custom"></s>
             </label>
             <label class="checkbox-color radiobutton green">
-              <input class="checkbox" type="checkbox">
+              <input class="checkbox" name="9" type="radio">
               <s class="checkbox-custom"></s>
             </label>
           </div>
@@ -634,15 +635,15 @@
             egress, report deficiencies.</span>
           <div class="lane-checkbox-wrap">
             <label class="checkbox-color radiobutton grey">
-              <input class="checkbox" type="checkbox">
+              <input class="checkbox" name="10" type="radio">
               <s class="checkbox-custom"></s>
             </label>
             <label class="checkbox-color radiobutton red">
-              <input class="checkbox" type="checkbox">
+              <input class="checkbox" name="10" type="radio">
               <s class="checkbox-custom"></s>
             </label>
             <label class="checkbox-color radiobutton green">
-              <input class="checkbox" type="checkbox">
+              <input class="checkbox" name="10" type="radio">
               <s class="checkbox-custom"></s>
             </label>
           </div>
@@ -657,15 +658,15 @@
             misuse, abuse, permanent deformation or cracks.</span>
           <div class="lane-checkbox-wrap">
             <label class="checkbox-color radiobutton grey">
-              <input class="checkbox" type="checkbox">
+              <input class="checkbox" name="11" type="radio">
               <s class="checkbox-custom"></s>
             </label>
             <label class="checkbox-color radiobutton red">
-              <input class="checkbox" type="checkbox">
+              <input class="checkbox" name="11" type="radio">
               <s class="checkbox-custom"></s>
             </label>
             <label class="checkbox-color radiobutton green">
-              <input class="checkbox" type="checkbox">
+              <input class="checkbox" name="11" type="radio">
               <s class="checkbox-custom"></s>
             </label>
           </div>
@@ -679,15 +680,15 @@
           <span class="lane-title-large">Examine electrical components, wiring & confirm appropriate electrical component labeling.</span>
           <div class="lane-checkbox-wrap">
             <label class="checkbox-color radiobutton grey">
-              <input class="checkbox" type="checkbox">
+              <input class="checkbox" name="12" type="radio">
               <s class="checkbox-custom"></s>
             </label>
             <label class="checkbox-color radiobutton red">
-              <input class="checkbox" type="checkbox">
+              <input class="checkbox" name="12" type="radio">
               <s class="checkbox-custom"></s>
             </label>
             <label class="checkbox-color radiobutton green">
-              <input class="checkbox" type="checkbox">
+              <input class="checkbox" name="12" type="radio">
               <s class="checkbox-custom"></s>
             </label>
           </div>
@@ -717,15 +718,15 @@
             neutral, or off, when released.</span>
           <div class="lane-checkbox-wrap">
             <label class="checkbox-color radiobutton grey">
-              <input class="checkbox" type="checkbox">
+              <input class="checkbox" name="13" type="radio">
               <s class="checkbox-custom"></s>
             </label>
             <label class="checkbox-color radiobutton red">
-              <input class="checkbox" type="checkbox">
+              <input class="checkbox" name="13" type="radio">
               <s class="checkbox-custom"></s>
             </label>
             <label class="checkbox-color radiobutton green">
-              <input class="checkbox" type="checkbox">
+              <input class="checkbox" name="13" type="radio">
               <s class="checkbox-custom"></s>
             </label>
           </div>
@@ -739,15 +740,15 @@
           <span class="lane-title-large"> On lifts using runways, check to ensure proper operation of all features present, report deficiencies</span>
           <div class="lane-checkbox-wrap">
             <label class="checkbox-color radiobutton grey">
-              <input class="checkbox" type="checkbox">
+              <input class="checkbox" name="14" type="radio">
               <s class="checkbox-custom"></s>
             </label>
             <label class="checkbox-color radiobutton red">
-              <input class="checkbox" type="checkbox">
+              <input class="checkbox" name="14" type="radio">
               <s class="checkbox-custom"></s>
             </label>
             <label class="checkbox-color radiobutton green">
-              <input class="checkbox" type="checkbox">
+              <input class="checkbox" name="14" type="radio">
               <s class="checkbox-custom"></s>
             </label>
           </div>
@@ -794,15 +795,15 @@
           <span class="lane-title-large">Check the telescoping stops are functioning as intended, report improper function or excessive wear</span>
           <div class="lane-checkbox-wrap">
             <label class="checkbox-color radiobutton grey">
-              <input class="checkbox" type="checkbox">
+              <input class="checkbox" name="15" type="radio">
               <s class="checkbox-custom"></s>
             </label>
             <label class="checkbox-color radiobutton red">
-              <input class="checkbox" type="checkbox">
+              <input class="checkbox" name="15" type="radio">
               <s class="checkbox-custom"></s>
             </label>
             <label class="checkbox-color radiobutton green">
-              <input class="checkbox" type="checkbox">
+              <input class="checkbox" name="15" type="radio">
               <s class="checkbox-custom"></s>
             </label>
           </div>
@@ -816,15 +817,15 @@
           <span class="lane-title-large">On lifts requiring swing arm restraints, report improper function and/or excessive wear or damage.</span>
           <div class="lane-checkbox-wrap">
             <label class="checkbox-color radiobutton grey">
-              <input class="checkbox" type="checkbox">
+              <input class="checkbox" name="16" type="radio">
               <s class="checkbox-custom"></s>
             </label>
             <label class="checkbox-color radiobutton red">
-              <input class="checkbox" type="checkbox">
+              <input class="checkbox" name="16" type="radio">
               <s class="checkbox-custom"></s>
             </label>
             <label class="checkbox-color radiobutton green">
-              <input class="checkbox" type="checkbox">
+              <input class="checkbox" name="16" type="radio">
               <s class="checkbox-custom"></s>
             </label>
           </div>
@@ -838,15 +839,15 @@
           <span class="lane-title-large"> Check all fastening devices for tightness, report deficiencies.</span>
           <div class="lane-checkbox-wrap">
             <label class="checkbox-color radiobutton grey">
-              <input class="checkbox" type="checkbox">
+              <input class="checkbox" name="17" type="radio">
               <s class="checkbox-custom"></s>
             </label>
             <label class="checkbox-color radiobutton red">
-              <input class="checkbox" type="checkbox">
+              <input class="checkbox" name="17" type="radio">
               <s class="checkbox-custom"></s>
             </label>
             <label class="checkbox-color radiobutton green">
-              <input class="checkbox" type="checkbox">
+              <input class="checkbox" name="17" type="radio">
               <s class="checkbox-custom"></s>
             </label>
           </div>
@@ -876,15 +877,15 @@
           <span class="lane-title-large">Check exposed surfaces & edges, report burrs, sharp edges or excessive corrosion.</span>
           <div class="lane-checkbox-wrap">
             <label class="checkbox-color radiobutton grey">
-              <input class="checkbox" type="checkbox">
+              <input class="checkbox" name="18" type="radio">
               <s class="checkbox-custom"></s>
             </label>
             <label class="checkbox-color radiobutton red">
-              <input class="checkbox" type="checkbox">
+              <input class="checkbox" name="18" type="radio">
               <s class="checkbox-custom"></s>
             </label>
             <label class="checkbox-color radiobutton green">
-              <input class="checkbox" type="checkbox">
+              <input class="checkbox" name="18" type="radio">
               <s class="checkbox-custom"></s>
             </label>
           </div>
@@ -899,15 +900,15 @@
             excessive wear or damage.</span>
           <div class="lane-checkbox-wrap">
             <label class="checkbox-color radiobutton grey">
-              <input class="checkbox" type="checkbox">
+              <input class="checkbox" name="19" type="radio">
               <s class="checkbox-custom"></s>
             </label>
             <label class="checkbox-color radiobutton red">
-              <input class="checkbox" type="checkbox">
+              <input class="checkbox" name="19" type="radio">
               <s class="checkbox-custom"></s>
             </label>
             <label class="checkbox-color radiobutton green">
-              <input class="checkbox" type="checkbox">
+              <input class="checkbox" name="19" type="radio">
               <s class="checkbox-custom"></s>
             </label>
           </div>
@@ -935,15 +936,15 @@
           <span class="lane-title-large">On lifts employing adapters, check condition & proper operation, report deficiencies.</span>
           <div class="lane-checkbox-wrap">
             <label class="checkbox-color radiobutton grey">
-              <input class="checkbox" type="checkbox">
+              <input class="checkbox" name="20" type="radio">
               <s class="checkbox-custom"></s>
             </label>
             <label class="checkbox-color radiobutton red">
-              <input class="checkbox" type="checkbox">
+              <input class="checkbox" name="20" type="radio">
               <s class="checkbox-custom"></s>
             </label>
             <label class="checkbox-color radiobutton green">
-              <input class="checkbox" type="checkbox">
+              <input class="checkbox" name="20" type="radio">
               <s class="checkbox-custom"></s>
             </label>
           </div>
@@ -981,15 +982,15 @@
             touchdown (Lowering speed shall not exceed 20 feet per minute).</span>
           <div class="lane-checkbox-wrap">
             <label class="checkbox-color radiobutton grey">
-              <input class="checkbox" type="checkbox">
+              <input class="checkbox" name="21" type="radio">
               <s class="checkbox-custom"></s>
             </label>
             <label class="checkbox-color radiobutton red">
-              <input class="checkbox" type="checkbox">
+              <input class="checkbox" name="21" type="radio">
               <s class="checkbox-custom"></s>
             </label>
             <label class="checkbox-color radiobutton green">
-              <input class="checkbox" type="checkbox">
+              <input class="checkbox" name="21" type="radio">
               <s class="checkbox-custom"></s>
             </label>
           </div>
@@ -1011,15 +1012,15 @@
           <span class="lane-title-large">Check all points requiring lubrication (Use manufacturer guidelines whenever possible).</span>
           <div class="lane-checkbox-wrap">
             <label class="checkbox-color radiobutton grey">
-              <input class="checkbox" type="checkbox">
+              <input class="checkbox" name="22" type="radio">
               <s class="checkbox-custom"></s>
             </label>
             <label class="checkbox-color radiobutton red">
-              <input class="checkbox" type="checkbox">
+              <input class="checkbox" name="22" type="radio">
               <s class="checkbox-custom"></s>
             </label>
             <label class="checkbox-color radiobutton green">
-              <input class="checkbox" type="checkbox">
+              <input class="checkbox" name="22" type="radio">
               <s class="checkbox-custom"></s>
             </label>
           </div>
@@ -1041,15 +1042,15 @@
             by running the lift through its full excursion.</span>
           <div class="lane-checkbox-wrap">
             <label class="checkbox-color radiobutton grey">
-              <input class="checkbox" type="checkbox">
+              <input class="checkbox" name="23" type="radio">
               <s class="checkbox-custom"></s>
             </label>
             <label class="checkbox-color radiobutton red">
-              <input class="checkbox" type="checkbox">
+              <input class="checkbox" name="23" type="radio">
               <s class="checkbox-custom"></s>
             </label>
             <label class="checkbox-color radiobutton green">
-              <input class="checkbox" type="checkbox">
+              <input class="checkbox" name="23" type="radio">
               <s class="checkbox-custom"></s>
             </label>
           </div>
@@ -1066,15 +1067,15 @@
           <span class="lane-title-large">On lifts incorporating working platforms, railings & stairways, report any deficiencies.</span>
           <div class="lane-checkbox-wrap">
             <label class="checkbox-color radiobutton grey">
-              <input class="checkbox" type="checkbox">
+              <input class="checkbox" name="24" type="radio">
               <s class="checkbox-custom"></s>
             </label>
             <label class="checkbox-color radiobutton red">
-              <input class="checkbox" type="checkbox">
+              <input class="checkbox" name="24" type="radio">
               <s class="checkbox-custom"></s>
             </label>
             <label class="checkbox-color radiobutton green">
-              <input class="checkbox" type="checkbox">
+              <input class="checkbox" name="24" type="radio">
               <s class="checkbox-custom"></s>
             </label>
           </div>
@@ -1096,15 +1097,15 @@
           <span class="lane-title-large">On lifts incorporating overhead structures, verify the safety shut-off functions properly.</span>
           <div class="lane-checkbox-wrap">
             <label class="checkbox-color radiobutton grey">
-              <input class="checkbox" type="checkbox">
+              <input class="checkbox" name="25" type="radio">
               <s class="checkbox-custom"></s>
             </label>
             <label class="checkbox-color radiobutton red">
-              <input class="checkbox" type="checkbox">
+              <input class="checkbox" name="25" type="radio">
               <s class="checkbox-custom"></s>
             </label>
             <label class="checkbox-color radiobutton green">
-              <input class="checkbox" type="checkbox">
+              <input class="checkbox" name="25" type="radio">
               <s class="checkbox-custom"></s>
             </label>
           </div>
@@ -1118,15 +1119,15 @@
           <span class="lane-title-large">Inspect all chains & wire ropes, report excessive slack (use manufacturer guidelines whenever possible).</span>
           <div class="lane-checkbox-wrap">
             <label class="checkbox-color radiobutton grey">
-              <input class="checkbox" type="checkbox">
+              <input class="checkbox" name="26" type="radio">
               <s class="checkbox-custom"></s>
             </label>
             <label class="checkbox-color radiobutton red">
-              <input class="checkbox" type="checkbox">
+              <input class="checkbox" name="26" type="radio">
               <s class="checkbox-custom"></s>
             </label>
             <label class="checkbox-color radiobutton green">
-              <input class="checkbox" type="checkbox">
+              <input class="checkbox" name="26" type="radio">
               <s class="checkbox-custom"></s>
             </label>
           </div>
@@ -1156,15 +1157,15 @@
           <span class="lane-title-large">Check the tracking & level winding of wire ropes & chains, report deficiencies.</span>
           <div class="lane-checkbox-wrap">
             <label class="checkbox-color radiobutton grey">
-              <input class="checkbox" type="checkbox">
+              <input class="checkbox" name="27" type="radio">
               <s class="checkbox-custom"></s>
             </label>
             <label class="checkbox-color radiobutton red">
-              <input class="checkbox" type="checkbox">
+              <input class="checkbox" name="27" type="radio">
               <s class="checkbox-custom"></s>
             </label>
             <label class="checkbox-color radiobutton green">
-              <input class="checkbox" type="checkbox">
+              <input class="checkbox" name="27" type="radio">
               <s class="checkbox-custom"></s>
             </label>
           </div>
@@ -1186,15 +1187,15 @@
           <span class="lane-title-large">Check all potential pinch points & report those that are unprotected by appropriate guards or instructions.</span>
           <div class="lane-checkbox-wrap">
             <label class="checkbox-color radiobutton grey">
-              <input class="checkbox" type="checkbox">
+              <input class="checkbox" name="28" type="radio">
               <s class="checkbox-custom"></s>
             </label>
             <label class="checkbox-color radiobutton red">
-              <input class="checkbox" type="checkbox">
+              <input class="checkbox" name="28" type="radio">
               <s class="checkbox-custom"></s>
             </label>
             <label class="checkbox-color radiobutton green">
-              <input class="checkbox" type="checkbox">
+              <input class="checkbox" name="28" type="radio">
               <s class="checkbox-custom"></s>
             </label>
           </div>
@@ -1209,15 +1210,15 @@
             deficiencies.</span>
           <div class="lane-checkbox-wrap">
             <label class="checkbox-color radiobutton grey">
-              <input class="checkbox" type="checkbox">
+              <input class="checkbox" name="29" type="radio">
               <s class="checkbox-custom"></s>
             </label>
             <label class="checkbox-color radiobutton red">
-              <input class="checkbox" type="checkbox">
+              <input class="checkbox" name="29" type="radio">
               <s class="checkbox-custom"></s>
             </label>
             <label class="checkbox-color radiobutton green">
-              <input class="checkbox" type="checkbox">
+              <input class="checkbox" name="29" type="radio">
               <s class="checkbox-custom"></s>
             </label>
           </div>
@@ -1231,15 +1232,15 @@
           <span class="lane-title-large">Report water in sub-floor pits or enclosures.</span>
           <div class="lane-checkbox-wrap">
             <label class="checkbox-color radiobutton grey">
-              <input class="checkbox" type="checkbox">
+              <input class="checkbox" name="30" type="radio">
               <s class="checkbox-custom"></s>
             </label>
             <label class="checkbox-color radiobutton red">
-              <input class="checkbox" type="checkbox">
+              <input class="checkbox" name="30" type="radio">
               <s class="checkbox-custom"></s>
             </label>
             <label class="checkbox-color radiobutton green">
-              <input class="checkbox" type="checkbox">
+              <input class="checkbox" name="30" type="radio">
               <s class="checkbox-custom"></s>
             </label>
           </div>
@@ -1254,15 +1255,15 @@
             lift.</span>
           <div class="lane-checkbox-wrap">
             <label class="checkbox-color radiobutton grey">
-              <input class="checkbox" type="checkbox">
+              <input class="checkbox" name="31" type="radio">
               <s class="checkbox-custom"></s>
             </label>
             <label class="checkbox-color radiobutton red">
-              <input class="checkbox" type="checkbox">
+              <input class="checkbox" name="31" type="radio">
               <s class="checkbox-custom"></s>
             </label>
             <label class="checkbox-color radiobutton green">
-              <input class="checkbox" type="checkbox">
+              <input class="checkbox" name="31" type="radio">
               <s class="checkbox-custom"></s>
             </label>
           </div>
@@ -1277,15 +1278,15 @@
             moved when loaded.</span>
           <div class="lane-checkbox-wrap">
             <label class="checkbox-color radiobutton grey">
-              <input class="checkbox" type="checkbox">
+              <input class="checkbox" name="32" type="radio">
               <s class="checkbox-custom"></s>
             </label>
             <label class="checkbox-color radiobutton red">
-              <input class="checkbox" type="checkbox">
+              <input class="checkbox" name="32" type="radio">
               <s class="checkbox-custom"></s>
             </label>
             <label class="checkbox-color radiobutton green">
-              <input class="checkbox" type="checkbox">
+              <input class="checkbox" name="32" type="radio">
               <s class="checkbox-custom"></s>
             </label>
           </div>
@@ -1294,20 +1295,34 @@
           <span class="lane-title-comments">Comments:</span>
           <input class="input-lane lane-comments" type="text" name="lane-other" value="">
         </div><!-- END lane-->
+        <div class="aloim aloim-top-border">
+          <div class="aloim-title">
+            aloim
+          </div>
+          <div class="aloim-description">
+            <span>Hydraulic Lifts & Hydraulically Driven Mechanical Lifts - Appendix, D, ALOIM:2008(R2013)
+              Refer to sections 5.6.3 & 5.6.5 ALOIM:Current Edition for lifts covered under this section</span>
+          </div>
+          <div class="aloim-checkbox-title">
+            <span>N/A</span>
+            <span>Pass</span>
+            <span>Fail</span>
+          </div>
+        </div><!-- END aloim-->
         <div class="lane lane-border">
           <span class="lane-number">5.6.3.1</span>
           <span class="lane-title-large">Check all accessible piping, tubing, hose, valves & fittings and review lift oil consumption records.</span>
           <div class="lane-checkbox-wrap">
             <label class="checkbox-color radiobutton grey">
-              <input class="checkbox" type="checkbox">
+              <input class="checkbox" name="33" type="radio">
               <s class="checkbox-custom"></s>
             </label>
             <label class="checkbox-color radiobutton red">
-              <input class="checkbox" type="checkbox">
+              <input class="checkbox" name="33" type="radio">
               <s class="checkbox-custom"></s>
             </label>
             <label class="checkbox-color radiobutton green">
-              <input class="checkbox" type="checkbox">
+              <input class="checkbox" name="33" type="radio">
               <s class="checkbox-custom"></s>
             </label>
           </div>
@@ -1319,7 +1334,521 @@
           <span class="lane-item-number">Item 2.</span>
           <span class="lane-item-text">Report any hydraulic or air leaks</span>
         </div><!--END lane-->
+        <div class="lane">
+          <span class="lane-item-number">Item 3.</span>
+          <span class="lane-item-text lane-item-text-oil">Record Oil Type:</span>
+          <div class="lane-button-wrap lane-oil-type">
+            <span class="lane-three-name lane-oil-name">ATF</span>
+            <label class="lane-three-button radiobutton">
+              <input class="checkbox" type="checkbox">
+              <s class="checkbox-custom"></s>
+            </label>
+            <span class="lane-three-name lane-oil-name">Hydr. Oil</span>
+            <label class="lane-three-button radiobutton">
+              <input class="checkbox" type="checkbox">
+              <s class="checkbox-custom"></s>
+            </label>
+            <span class="lane-three-name">Other:</span>
+            <input class="input-underline lane-other2" type="text" name="lane-other" value="">
+          </div>
+        </div><!--END lane-->
+        <div class="lane">
+          <span class="lane-title-comments">Comments:</span>
+          <input class="input-lane lane-comments" type="text" name="lane-other" value="">
+        </div><!-- END lane-->
+        <div class="lane lane-border">
+          <span class="lane-number">5.6.3.2</span>
+          <span class="lane-title-large">Operate lift through full travel & observe if lift travels smoothly while raising & lowering.</span>
+          <div class="lane-checkbox-wrap">
+            <label class="checkbox-color radiobutton grey">
+              <input class="checkbox" name="34" type="radio">
+              <s class="checkbox-custom"></s>
+            </label>
+            <label class="checkbox-color radiobutton red">
+              <input class="checkbox" name="34" type="radio">
+              <s class="checkbox-custom"></s>
+            </label>
+            <label class="checkbox-color radiobutton green">
+              <input class="checkbox" name="34" type="radio">
+              <s class="checkbox-custom"></s>
+            </label>
+          </div>
+        </div><!--END lane-->
+        <div class="lane">
+          <span class="lane-item-number">Item 1.</span>
+          <span class="lane-item-text">Inspect plunger, piston rod or ram, report gouges, scoring,
+            corrosion, pitting, cracks or other blemishes</span>
+          <span class="lane-item-number">Item 2.</span>
+          <span class="lane-item-text">If the lift is equipped with an air exhaust valve, report the
+            presence of oil mist when lowering</span>
+        </div><!--END lane-->
+        <div class="lane">
+          <span class="lane-title-comments">Comments:</span>
+          <input class="input-lane lane-comments" type="text" name="lane-other" value="">
+        </div><!-- END lane-->
+        <div class="lane lane-border">
+          <span class="lane-number">5.6.3.3</span>
+          <span class="lane-title-large">With lift loaded, stop the load at midpoint of travel & observe, report slow drift or any leakage.</span>
+          <div class="lane-checkbox-wrap">
+            <label class="checkbox-color radiobutton grey">
+              <input class="checkbox" name="35" type="radio">
+              <s class="checkbox-custom"></s>
+            </label>
+            <label class="checkbox-color radiobutton red">
+              <input class="checkbox" name="35" type="radio">
+              <s class="checkbox-custom"></s>
+            </label>
+            <label class="checkbox-color radiobutton green">
+              <input class="checkbox" name="35" type="radio">
+              <s class="checkbox-custom"></s>
+            </label>
+          </div>
+        </div><!--END lane-->
+        <div class="lane">
+          <span class="lane-title-comments">Comments:</span>
+          <input class="input-lane lane-comments" type="text" name="lane-other" value="">
+        </div><!-- END lane-->
+        <div class="lane lane-border">
+          <span class="lane-number">5.6.3.4</span>
+          <span class="lane-title-large">Check with operator to ascertain any unusual operating characteristics such as lift rises over night or not
+            lifting rated load capacity.</span>
+          <div class="lane-checkbox-wrap">
+            <label class="checkbox-color radiobutton grey">
+              <input class="checkbox" name="36" type="radio">
+              <s class="checkbox-custom"></s>
+            </label>
+            <label class="checkbox-color radiobutton red">
+              <input class="checkbox" name="36" type="radio">
+              <s class="checkbox-custom"></s>
+            </label>
+            <label class="checkbox-color radiobutton green">
+              <input class="checkbox" name="36" type="radio">
+              <s class="checkbox-custom"></s>
+            </label>
+          </div>
+        </div><!--END lane-->
+        <div class="lane">
+          <span class="lane-title-comments">Comments:</span>
+          <input class="input-lane lane-comments" type="text" name="lane-other" value="">
+        </div><!-- END lane-->
+        <div class="lane lane-border">
+          <span class="lane-number">5.6.3.5</span>
+          <span class="lane-title-large">On lifts which incorporate floor/trench covers, verify presence and proper operation.</span>
+          <div class="lane-checkbox-wrap">
+            <label class="checkbox-color radiobutton grey">
+              <input class="checkbox" name="37" type="radio">
+              <s class="checkbox-custom"></s>
+            </label>
+            <label class="checkbox-color radiobutton red">
+              <input class="checkbox" name="37" type="radio">
+              <s class="checkbox-custom"></s>
+            </label>
+            <label class="checkbox-color radiobutton green">
+              <input class="checkbox" name="37" type="radio">
+              <s class="checkbox-custom"></s>
+            </label>
+          </div>
+        </div><!--END lane-->
+        <div class="lane">
+          <span class="lane-title-comments">Comments:</span>
+          <input class="input-lane lane-comments" type="text" name="lane-other" value="">
+        </div><!-- END lane-->
+        <div class="lane lane-border">
+          <span class="lane-number">5.6.3.6</span>
+          <span class="lane-title-large">On air-oil lifts check for low oil control or shut-off device, report absence of controlled access to air-oil tank.</span>
+          <div class="lane-checkbox-wrap">
+            <label class="checkbox-color radiobutton grey">
+              <input class="checkbox" name="38" type="radio">
+              <s class="checkbox-custom"></s>
+            </label>
+            <label class="checkbox-color radiobutton red">
+              <input class="checkbox" name="38" type="radio">
+              <s class="checkbox-custom"></s>
+            </label>
+            <label class="checkbox-color radiobutton green">
+              <input class="checkbox" name="38" type="radio">
+              <s class="checkbox-custom"></s>
+            </label>
+          </div>
+        </div><!--END lane-->
+        <div class="lane">
+          <span class="lane-title-comments">Comments:</span>
+          <input class="input-lane lane-comments" type="text" name="lane-other" value="">
+        </div><!-- END lane-->
+        <div class="lane lane-border">
+          <span class="lane-number">5.6.3.7</span>
+          <span class="lane-title-large">Confirm cylinder has means to vent trapped air & record venting type.</span>
+          <div class="lane-checkbox-wrap">
+            <label class="checkbox-color radiobutton grey">
+              <input class="checkbox" name="39" type="radio">
+              <s class="checkbox-custom"></s>
+            </label>
+            <label class="checkbox-color radiobutton red">
+              <input class="checkbox" name="39" type="radio">
+              <s class="checkbox-custom"></s>
+            </label>
+            <label class="checkbox-color radiobutton green">
+              <input class="checkbox" name="39" type="radio">
+              <s class="checkbox-custom"></s>
+            </label>
+          </div>
+        </div><!--END lane-->
+        <div class="lane">
+          <span class="lane-item-text lane-item-text-venting">Record Venting Type:</span>
+          <div class="lane-button-wrap lane-venting-type">
+            <label class="lane-three-button radiobutton">
+              <input class="checkbox" type="checkbox">
+              <s class="checkbox-custom"></s>
+            </label>
+            <span class="lane-three-name lane-venting-name">Manual</span>
+            <label class="lane-three-button radiobutton">
+            <input class="checkbox" type="checkbox">
+            <s class="checkbox-custom"></s>
+            </label>
+            <span class="lane-three-name lane-venting-name">Self-Bleeding</span>
+          </div>
+        </div><!--END lane-->
+        <div class="lane">
+          <span class="lane-title-comments">Comments:</span>
+          <input class="input-lane lane-comments" type="text" name="lane-other" value="">
+        </div><!-- END lane-->
+        <div class="lane lane-border">
+          <span class="lane-number">5.6.3.8</span>
+          <span class="lane-title-large">Confirm presence of rotation prevention device on single post lifts.</span>
+          <div class="lane-checkbox-wrap">
+            <label class="checkbox-color radiobutton grey">
+              <input class="checkbox" name="40" type="radio">
+              <s class="checkbox-custom"></s>
+            </label>
+            <label class="checkbox-color radiobutton red">
+              <input class="checkbox" name="40" type="radio">
+              <s class="checkbox-custom"></s>
+            </label>
+            <label class="checkbox-color radiobutton green">
+              <input class="checkbox" name="40" type="radio">
+              <s class="checkbox-custom"></s>
+            </label>
+          </div>
+        </div><!--END lane-->
+        <div class="lane">
+          <span class="lane-title-comments">Comments:</span>
+          <input class="input-lane lane-comments" type="text" name="lane-other" value="">
+        </div><!-- END lane-->
+        <div class="lane lane-border">
+          <span class="lane-number">5.6.3.9</span>
+          <span class="lane-title-large">On lifts utilizing pumping units, confirm adequacy of oil level at fully raised position, report cavitation, oil
+            foaming or oil contamination. </span>
+          <div class="lane-checkbox-wrap">
+            <label class="checkbox-color radiobutton grey">
+              <input class="checkbox" name="41" type="radio">
+              <s class="checkbox-custom"></s>
+            </label>
+            <label class="checkbox-color radiobutton red">
+              <input class="checkbox" name="41" type="radio">
+              <s class="checkbox-custom"></s>
+            </label>
+            <label class="checkbox-color radiobutton green">
+              <input class="checkbox" name="41" type="radio">
+              <s class="checkbox-custom"></s>
+            </label>
+          </div>
+        </div><!--END lane-->
+        <div class="lane">
+          <span class="lane-title-comments">Comments:</span>
+          <input class="input-lane lane-comments" type="text" name="lane-other" value="">
+        </div><!-- END lane-->
+        <div class="lane lane-border">
+          <span class="lane-number">5.6.3.10</span>
+          <span class="lane-title-large">Verify presence of hydraulic relief valve & check integrity of tamper resistant seal, report broken seal or
+            evidence of tampering.</span>
+          <div class="lane-checkbox-wrap">
+            <label class="checkbox-color radiobutton grey">
+              <input class="checkbox" name="42" type="radio">
+              <s class="checkbox-custom"></s>
+            </label>
+            <label class="checkbox-color radiobutton red">
+              <input class="checkbox" name="42" type="radio">
+              <s class="checkbox-custom"></s>
+            </label>
+            <label class="checkbox-color radiobutton green">
+              <input class="checkbox" name="42" type="radio">
+              <s class="checkbox-custom"></s>
+            </label>
+          </div>
+        </div><!--END lane-->
+        <div class="lane">
+          <span class="lane-title-comments">Comments:</span>
+          <input class="input-lane lane-comments" type="text" name="lane-other" value="">
+        </div><!-- END lane-->
+        <div class="aloim aloim-top-border">
+          <div class="aloim-title">
+            aloim
+          </div>
+          <div class="aloim-description">
+            <span>Mechanical lifts & Hydraulically Driven Mechanical Lifts - Appendix, E, ALOIM:2008(R2013)
+              Refer to sections 5.6.4 & 5.6.5 ALOIM:Current Edition for lifts covered under this section</span>
+          </div>
+          <div class="aloim-checkbox-title">
+            <span>N/A</span>
+            <span>Pass</span>
+            <span>Fail</span>
+          </div>
+        </div><!-- END aloim-->
+        <div class="lane lane-border">
+          <span class="lane-number">5.6.4.1</span>
+          <span class="lane-title-large">Check the slack suspension wire rope or slack suspension chain sensing system, report the absence of
+            such system or improper operation.</span>
+          <div class="lane-checkbox-wrap">
+            <label class="checkbox-color radiobutton grey">
+              <input class="checkbox" name="43" type="radio">
+              <s class="checkbox-custom"></s>
+            </label>
+            <label class="checkbox-color radiobutton red">
+              <input class="checkbox" name="43" type="radio">
+              <s class="checkbox-custom"></s>
+            </label>
+            <label class="checkbox-color radiobutton green">
+              <input class="checkbox" name="43" type="radio">
+              <s class="checkbox-custom"></s>
+            </label>
+          </div>
+        </div><!--END lane-->
+        <div class="lane">
+          <span class="lane-title-comments">Comments:</span>
+          <input class="input-lane lane-comments" type="text" name="lane-other" value="">
+        </div><!-- END lane-->
+        <div class="lane lane-border">
+          <span class="lane-number">5.6.4.2</span>
+          <span class="lane-title-large">Check the operation of screw drive systems, check for proper lubrication & excessive wear.</span>
+          <div class="lane-checkbox-wrap">
+            <label class="checkbox-color radiobutton grey">
+              <input class="checkbox" name="44" type="radio">
+              <s class="checkbox-custom"></s>
+            </label>
+            <label class="checkbox-color radiobutton red">
+              <input class="checkbox" name="44" type="radio">
+              <s class="checkbox-custom"></s>
+            </label>
+            <label class="checkbox-color radiobutton green">
+              <input class="checkbox" name="44" type="radio">
+              <s class="checkbox-custom"></s>
+            </label>
+          </div>
+        </div><!--END lane-->
+        <div class="lane">
+          <span class="lane-item-number">Item 1.</span>
+          <span class="lane-item-text">Report excessive wear on main load nuts by following
+            manufacturers recommended inspection procedures</span>
+          <span class="lane-item-number">Item 2.</span>
+          <span class="lane-item-text">Report the presence of metal filings or particles in lubricant</span>
+        </div><!--END lane-->
+        <div class="lane">
+          <span class="lane-title-comments">Comments:</span>
+          <input class="input-lane lane-comments" type="text" name="lane-other" value="">
+        </div><!-- END lane-->
+        <div class="lane lane-border">
+          <span class="lane-number">5.6.4.3</span>
+          <span class="lane-title-large">Check screw drive systems for proper operation of the follower or safety nut (refer to manufacturer
+            recommended procedures), report deficiencies.</span>
+          <div class="lane-checkbox-wrap">
+            <label class="checkbox-color radiobutton grey">
+              <input class="checkbox" name="46" type="radio">
+              <s class="checkbox-custom"></s>
+            </label>
+            <label class="checkbox-color radiobutton red">
+              <input class="checkbox" name="46" type="radio">
+              <s class="checkbox-custom"></s>
+            </label>
+            <label class="checkbox-color radiobutton green">
+              <input class="checkbox" name="46" type="radio">
+              <s class="checkbox-custom"></s>
+            </label>
+          </div>
+        </div><!--END lane-->
+        <div class="lane">
+          <span class="lane-item-number">Item 1.</span>
+          <span class="lane-item-text">Ensure that the electrical shut-off switch is operative (if
+            included)</span>
+          <span class="lane-item-number">Item 2.</span>
+          <span class="lane-item-text">Check for the presence & proper operation of any other drive
+            nut failure warning device</span>
+        </div><!--END lane-->
+        <div class="lane">
+          <span class="lane-title-comments">Comments:</span>
+          <input class="input-lane lane-comments" type="text" name="lane-other" value="">
+        </div><!-- END lane-->
+        <div class="lane lane-border">
+          <span class="lane-number">5.6.4.4</span>
+          <span class="lane-title-large">Run the lift through its full cycle & check for shutoff at top & bottom of travel, check the operation of
+            multiple screw systems (refer to manufacturer recommended procedures), report deficiencies.</span>
+          <div class="lane-checkbox-wrap">
+            <label class="checkbox-color radiobutton grey">
+              <input class="checkbox" name="47" type="radio">
+              <s class="checkbox-custom"></s>
+            </label>
+            <label class="checkbox-color radiobutton red">
+              <input class="checkbox" name="47" type="radio">
+              <s class="checkbox-custom"></s>
+            </label>
+            <label class="checkbox-color radiobutton green">
+              <input class="checkbox" name="47" type="radio">
+              <s class="checkbox-custom"></s>
+            </label>
+          </div>
+        </div><!--END lane-->
+        <div class="lane">
+          <span class="lane-item-number">Item 1.</span>
+          <span class="lane-item-text">Observe the operation of the synchronization of multiple screw
+            systems whether it be mechanical or electrical</span>
+          <span class="lane-item-number">Item 2.</span>
+          <span class="lane-item-text">Check operation of device which provides for shutdown in the
+            event of malfunction of any of the screw systems</span>
+        </div><!--END lane-->
+        <div class="lane">
+          <span class="lane-title-comments">Comments:</span>
+          <input class="input-lane lane-comments" type="text" name="lane-other" value="">
+        </div><!-- END lane-->
+        <div class="aloim aloim-top-border">
+          <div class="aloim-title">
+            aloim
+          </div>
+          <div class="aloim-description">
+            <span>Pneumatic Lifts - Appendix, F, ALOIM:2008(R2013))<br>
+              Refer to section 5.6.6 ALOIM:Current Edition for lifts covered under this section</span>
+          </div>
+          <div class="aloim-checkbox-title">
+            <span>N/A</span>
+            <span>Pass</span>
+            <span>Fail</span>
+          </div>
+        </div><!-- END aloim-->
+        <div class="lane lane-border">
+          <span class="lane-number">5.6.6.1</span>
+          <span class="lane-title-large">Check all accessible piping, tubing, cylinders, air bags, hoses, valves, fittings & report any leaks.</span>
+          <div class="lane-checkbox-wrap">
+            <label class="checkbox-color radiobutton grey">
+              <input class="checkbox" name="48" type="radio">
+              <s class="checkbox-custom"></s>
+            </label>
+            <label class="checkbox-color radiobutton red">
+              <input class="checkbox" name="48" type="radio">
+              <s class="checkbox-custom"></s>
+            </label>
+            <label class="checkbox-color radiobutton green">
+              <input class="checkbox" name="48" type="radio">
+              <s class="checkbox-custom"></s>
+            </label>
+          </div>
+        </div><!--END lane-->
+        <div class="lane">
+          <span class="lane-title-comments">Comments:</span>
+          <input class="input-lane lane-comments" type="text" name="lane-other" value="">
+        </div><!-- END lane-->
+        <div class="lane lane-border">
+          <span class="lane-number">5.6.6.2</span>
+          <span class="lane-title-large">With lift loaded, stop the load at midpoint of travel & observe, report slow drift or any leakage.</span>
+          <div class="lane-checkbox-wrap">
+            <label class="checkbox-color radiobutton grey">
+              <input class="checkbox" name="49" type="radio">
+              <s class="checkbox-custom"></s>
+            </label>
+            <label class="checkbox-color radiobutton red">
+              <input class="checkbox" name="49" type="radio">
+              <s class="checkbox-custom"></s>
+            </label>
+            <label class="checkbox-color radiobutton green">
+              <input class="checkbox" name="49" type="radio">
+              <s class="checkbox-custom"></s>
+            </label>
+          </div>
+        </div><!--END lane-->
+        <div class="lane">
+          <span class="lane-title-comments">Comments:</span>
+          <input class="input-lane lane-comments" type="text" name="lane-other" value="">
+        </div><!-- END lane-->
+        <div class="lane lane-border">
+          <span class="lane-number">5.6.6.3</span>
+          <span class="lane-title-large">Check with operator to ascertain any unusual operating characteristics such as lift rises over night or not
+            lifting rated load capacity.</span>
+          <div class="lane-checkbox-wrap">
+            <label class="checkbox-color radiobutton grey">
+              <input class="checkbox" name="50" type="radio">
+              <s class="checkbox-custom"></s>
+            </label>
+            <label class="checkbox-color radiobutton red">
+              <input class="checkbox" name="50" type="radio">
+              <s class="checkbox-custom"></s>
+            </label>
+            <label class="checkbox-color radiobutton green">
+              <input class="checkbox" name="50" type="radio">
+              <s class="checkbox-custom"></s>
+            </label>
+          </div>
+        </div><!--END lane-->
+        <div class="lane">
+          <span class="lane-title-comments">Comments:</span>
+          <input class="input-lane lane-comments" type="text" name="lane-other" value="">
+        </div><!-- END lane-->
+        <div class="lane lane-border">
+          <span class="lane-number">5.6.6.4</span>
+          <span class="lane-title-large">Confirm presence of pressure regulator in supply line, report deficiencies.</span>
+          <div class="lane-checkbox-wrap">
+            <label class="checkbox-color radiobutton grey">
+              <input class="checkbox" name="51" type="radio">
+              <s class="checkbox-custom"></s>
+            </label>
+            <label class="checkbox-color radiobutton red">
+              <input class="checkbox" name="51" type="radio">
+              <s class="checkbox-custom"></s>
+            </label>
+            <label class="checkbox-color radiobutton green">
+              <input class="checkbox" name="51" type="radio">
+              <s class="checkbox-custom"></s>
+            </label>
+          </div>
+        </div><!--END lane-->
+        <div class="lane">
+          <span class="lane-title-comments">Comments:</span>
+          <input class="input-lane lane-comments" type="text" name="lane-other" value="">
+        </div><!-- END lane-->
+        <div class="lane lane-border">
+          <span class="lane-number">5.6.6.5</span>
+          <span class="lane-title-large">Inspect cylinders, air bag or bellows for damage.</span>
+          <div class="lane-checkbox-wrap">
+            <label class="checkbox-color radiobutton grey">
+              <input class="checkbox" name="vasya" type="radio">
+              <s class="checkbox-custom"></s>
+            </label>
+            <label class="checkbox-color radiobutton red">
+              <input class="checkbox" name="vasya" type="radio">
+              <s class="checkbox-custom"></s>
+            </label>
+            <label class="checkbox-color radiobutton green">
+              <input class="checkbox" name="vasya" type="radio">
+              <s class="checkbox-custom"></s>
+            </label>
+          </div>
+        </div><!--END lane-->
+        <div class="lane lane-last-lane">
+          <span class="lane-title-comments">Comments:</span>
+          <input class="input-lane lane-comments" type="text" name="lane-other" value="">
+        </div><!-- END lane-->
       </div><!-- END Main container-->
+      <span class="wrap-note">Note: Identify any adjustments made or any parts/documents provided or replaced during or as a result of the inspection.</span>
+      <div class="signature-bottom-wrap">
+        <div class="signature-initials">
+          <span>Initials</span>
+          <input class="input-underline initials-input" type="text" name="signature-initials" value="">
+        </div>
+        <div class="signature-date">
+          <span>Date</span>
+          <input class="input-underline date-input" type="date" name="signature-date" value="">
+        </div>
+        <div class="signature-inspection">
+          <span>Inspection#</span>
+          <input class="input-underline inspection-input" type="text" name="signature-initials" value="">
+        </div>
+      </div>
     </div><!--END wrap-->
   </body>
 </html>
