@@ -1,1 +1,1 @@
-Just a example of my work. 
+Just an example of my work. 
