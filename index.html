@@ -2,229 +2,274 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:500,600,900&amp;subset=latin-ext" rel="stylesheet">
+    <link href="css/sm-core-css.css" rel="stylesheet">
+    <link href="css/sm-clean.css" rel="stylesheet">
     <link rel="stylesheet" href="css/stylesheet.css">
-    <link rel="stylesheet" href="css/fontawesome-all.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese" rel="stylesheet">
-    <title>Homepage</title>
+    <script src="https://use.fontawesome.com/4ee0375632.js"></script>
+    <title>Emporio Diamante</title>
   </head>
   <body>
     <div class="wrap">
-      <header class="header">
-        <label>
-        <div class="header-top">
-          <a href="#"><img src="img/logo.png" class="img-logo" alt="Site logo CONNECTLAX"></a>
-            <input type="checkbox" class="checkbox">
-            <span class="menu">
-              <span class="hamburger"></span>
-            </span>
-            <ul class="header-navigation">
-              <a href="#"><li class="subtitle-text">College Matches</li></a>
-              <a href="#"><li class="subtitle-text">Find Recruits</li></a>
-              <a href="#"><li class="subtitle-text">Get Recruited</li></a>
-              <a href="#"><li class="subtitle-text">Event Video</li></a>
-            </ul>
-          <button id="login" class="subtitle-text">LOG IN</button>
-          <button id="signup" class="subtitle-text">SIGN UP</button>
+      <!--Header start-->
+      <div class="container-fluid header-logo">
+        <div class="row no-gutters">
+          <div class="col d-flex justify-content-center">
+            <img class="main-logo" src="img/main-logo.png" alt="Emporio Diamante logo">
+          </div>
         </div>
-        <div class="subheader">
-          <div class="subheader-triangle"></div>
-          <ul>
-            <a href="#"><li class="subheader-text">Lessons</li></a>
-            <li>&#183;</li>
-            <a href="#"><li class="subheader-text">Guide</li></a>
-            <li>&#183;</li>
-            <a href="#"><li class="subheader-text">Events</li></a>
-            <li>&#183;</li>
-            <a href="#"><li class="subheader-text">Newsletter</li></a>
-            <li>&#183;</li>
-            <a href="#"><li class="subheader-text">Club Management</li></a>
-            <li>&#183;</li>
-            <a href="#"><li class="subheader-text">Help</li></a>
-          </ul>
-        </div>
+      </div>
+      <div class="container-fluid navigation">
+        <!-- Mobile menu toggle button (hamburger/arrow icon) -->
+        <input id="main-menu-state" type="checkbox"/>
+        <label class="main-menu-btn" for="main-menu-state">
+          <span class="main-menu-btn-icon"></span>
         </label>
-      </header>
-      <div class="banner">
-          <div class="video-foreground">
-            <iframe src="https://www.youtube.com/embed/g3Qtshfw67Q?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&playlist=g3Qtshfw67Q" frameborder="0" allowfullscreen></iframe>
-          </div>
-          <div class="vid-info">
-            <h1 class="header-h1 vid-info-item">Get Recruited to the Right School</h1>
-            <p class="subtitle-text vid-info-item">Find your college match and connect with coaches</p>
-            <div class="vid-info-item">
-              <button id="watch-demo" class="button">watch demo<i class="fas fa-play-circle fa-lg"></i></button>
-              <button id="free-signup" class="button">free sign up<i class="fas fa-user-plus fa-lg"></i></button>
+        <ul id="main-menu" class="sm sm-mytheme navigation-list">
+          <li class="list-item list-board-right"><a class="list-item-link text-style" href="collection.html">NOS COLLECTIONS<i class="fa fa-angle-right fa-2x burger-menu-arrow"></i></a>
+            <ul class="menu-dropdown text-style">
+              <li><a class="menu-dropdown-list menu-top-item" href="#">Collection 1</a>
+                <ul class="submenu-dropdown">
+                  <li><a class="submenu-dropdown-list menu-top-item" href="#">Collection 1</a></li>
+                  <li><a class="submenu-dropdown-list" href="#">Collection 2</a></li>
+                  <li><a class="submenu-dropdown-list" href="#">Collection 3</a></li>
+                  <li><a class="submenu-dropdown-list menu-bot-item" href="#">Collection 4</a></li>
+                </ul>
+              </li>
+              <li><a class="menu-dropdown-list" href="#">Collection 2</a></li>
+              <li><a class="menu-dropdown-list" href="#">Collection 3</a></li>
+              <li><a class="menu-dropdown-list menu-bot-item" href="#">Collection 4</a></li>
+            </ul>
+          </li>
+          <li class="list-item list-board-right"><a class="list-item-link text-style" href="#">BAGUES<i class="fa fa-angle-right fa-2x burger-menu-arrow"></i></a>
+            <ul class="menu-dropdown text-style">
+              <li><a class="menu-dropdown-list menu-top-item" href="#">Collection 1</a></li>
+              <li><a class="menu-dropdown-list" href="#">Collection 2</a></li>
+              <li><a class="menu-dropdown-list" href="#">Collection 3</a></li>
+              <li><a class="menu-dropdown-list menu-bot-item" href="#">Collection 4</a></li>
+            </ul>
+          </li>
+          <li class="list-item list-board-right"><a class="list-item-link text-style" href="#">BOUCLES D'OREILLES<i class="fa fa-angle-right fa-2x burger-menu-arrow"></i></a>
+            <ul class="menu-dropdown text-style">
+              <li><a class="menu-dropdown-list menu-top-item" href="#">Collection 1</a></li>
+              <li><a class="menu-dropdown-list" href="#">Collection 2</a></li>
+              <li><a class="menu-dropdown-list" href="#">Collection 3</a></li>
+              <li><a class="menu-dropdown-list menu-bot-item" href="#">Collection 4</a></li>
+            </ul>
+          </li>
+          <li class="list-item list-board-right"><a class="list-item-link text-style" href="#">BCOLLIERS<i class="fa fa-angle-right fa-2x burger-menu-arrow"></i></a>
+            <ul class="menu-dropdown text-style">
+              <li><a class="menu-dropdown-list menu-top-item" href="#">Collection 1</a></li>
+              <li><a class="menu-dropdown-list" href="#">Collection 2</a></li>
+              <li><a class="menu-dropdown-list" href="#">Collection 3</a></li>
+              <li><a class="menu-dropdown-list menu-bot-item" href="#">Collection 4</a></li>
+            </ul>
+          </li>
+          <li class="list-item list-board-right"><a class="list-item-link text-style" href="#">BRACELETS<i class="fa fa-angle-right fa-2x burger-menu-arrow"></i></a>
+            <ul class="menu-dropdown text-style">
+              <li><a class="menu-dropdown-list menu-top-item" href="#">Collection 1</a></li>
+              <li><a class="menu-dropdown-list" href="#">Collection 2</a></li>
+              <li><a class="menu-dropdown-list" href="#">Collection 3</a></li>
+              <li><a class="menu-dropdown-list menu-bot-item" href="#">Collection 4</a></li>
+            </ul>
+          </li>
+          <li class="list-item"><a class="list-item-link text-style" href="emporio-diamante.html">EMPORIO DIAMANTE<i class="fa fa-angle-right fa-2x burger-menu-arrow"></i></a>
+            <ul class="menu-dropdown text-style">
+              <li><a class="menu-dropdown-list menu-top-item" href="#">Collection 1</a></li>
+              <li><a class="menu-dropdown-list" href="#">Collection 2</a></li>
+              <li><a class="menu-dropdown-list" href="#">Collection 3</a></li>
+              <li><a class="menu-dropdown-list menu-bot-item" href="#">Collection 4</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <!--Header end-->
+      <div class="container-fluid main-banner no-padding">
+        <div class="row no-gutters">
+          <div class="col-12 col-md-5 order-2 order-md-1 d-flex justify-content-center align-items-center no-padding">
+            <div class="banner-text-block">
+              <h1 class="big-title banner-text-title">Donner vie aux bijoux</h1>
+              <p class="banner-text-item texte">De tous temps, le diamant à été la source de rêve et de désir.
+                 Pour Emporio Diamante, rien ne vaut une telle inspiration afin d’atteindre les sommets de la beauté et de la maitrise.</p>
             </div>
           </div>
-      </div>
-      <div class="get-matched">
-        <div class="get-matched-block">
-          <p class="lght-blue-sub">compare > 1,500 teams and</p>
-          <h2 class="header-h2">get matched to colleges</h2>
-          <p class="regular-text-black">Find colleges that fit you both on and off the field and get access to every college coach.</p>
-          <p class="regular-text-black">Showcase your game online and get recruited by college coaches 365 days a year.</p>
-          <button id="get-matched-button" class="button">find my matches <i class="fas fa-search fa-lg"></i></button>
+          <div class="col-12 col-md-7 order-1 order-md-2">
+            <img class="main-banner-image" src="img/lady-1.jpg" alt="">
+          </div>
         </div>
-        <img src="img/laptop.png" class="get-matched-image" alt="laptop macbook image">
-      </div>
-      <div class="connect">
-        <img src="img/desktop.png" class="connect-image" alt="desktop mac image">
-        <div class="connect-block">
-          <p class="lght-blue-sub">create your recruiting profile and</p>
-          <h2 class="header-h2">connect with coaches</h2>
-          <p class="regular-text-black"><i class="fas fa-check fa-lg"></i>Track when coaches open your email and click profile</p>
-          <p class="regular-text-black"><i class="fas fa-check fa-lg"></i>Access to every college coach with built-in messaging</p>
-          <p class="regular-text-black"><i class="fas fa-check fa-lg"></i>Unlimited video uploads + $100 professional highlights</p>
-          <p class="regular-text-black"><i class="fas fa-check fa-lg"></i>Simplify the process, track activity and coach interaction</p>
-          <p class="regular-text-black"><i class="fas fa-check fa-lg"></i>List your profile in <a class="link" href="#">Recruit Finder</a> and coach dashboards</p>
-        </div>
-      </div>
-      <div class="cta">
-        <h3 class="cta-title">Looking for Game Film?</h3>
-        <p class="regular-text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        <button id="cta-button" class="button">view event packages<i class="fas fa-play-circle fa-lg"></i></button>
-      </div>
-      <div class="video">
-        <h2 class="header-h2">How We Help Recruits</h2>
-        <div id="video-content">
-          <img src="img/video.png" alt="">
-          <button id="video-play-button"><i class="fas fa-play-circle fa-5x video-play-icon"></i></button>
-        </div>
-      </div>
-      <div class="cta second-cta">
-        <h3 class="cta-title">Are You a Club Team Coach?</h3>
-        <p class="cta-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        <button id="second-cta-button" class="button">view team solutions<i class="fas fa-play-circle fa-lg"></i></button>
-      </div>
-      <div class="resources">
-        <h3 class="resources-subtitle lght-blue-sub">our resources help</h3>
-        <h2 class="resources-title header-h2">simplify the recruiting process</h2>
-        <div class="resources-block">
-          <div class="resources-item">
-            <img class="resources-item-image" src="img/item1.png" alt="coach gives 2 kids private lessons">
-            <div class="resources-item-block">
-              <div class="resource-item-icon">
-                <i class="fas fa-users fa-2x"></i>
+      </div> <!--End main-banner-->
+      <div class="container-fluid slider no-padding slider-bottom-line">
+        <div id="carousel-main-page" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#carousel-main-page" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-main-page" data-slide-to="1"></li>
+            <li data-target="#carousel-main-page" data-slide-to="2"></li>
+            <li data-target="#carousel-main-page" data-slide-to="3"></li>
+            <li data-target="#carousel-main-page" data-slide-to="4"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item slide-one active">
+              <div class="row w-100">
+                <div class="col-12 col-md-7">
+                  <img class="slider-image-one" src="img/slider-1.png" alt="city of vienna, bride, wedding-ring">
+                </div>
+                <div class="col-12 col-md-5 d-flex justify-content-center align-items-center">
+                  <div class="slider-1-block">
+                    <h4 class="little-title slider-little-title">World of Vows Collection</h4>
+                    <h2 class="red-title slider-red-title">BAGUES DE FIANÇAILLES POUR UN MOMENT INOUBLIABLE</h2>
+                    <p class="slider-little-text texte">Passer d’une promesse à un engagement ne consiste pas uniquement à offrir ce qu’il y a de plus beau. Il faut d’abord choisir entre c’est innombrables splendeurs de bagues.</p>
+                    <div class="slider-button button d-flex align-items-center justify-content-center">Découvrez<span class="mobile-invisible"> la collection</span></div>
+                  </div>
+                </div>
               </div>
-              <h3 class="subtitle-text-blue">private lessons</h3>
-              <p class="small-text">Completely free service for players and coaches. Find a coach in your community
-                  and elevate your game.</p>
             </div>
-          </div>
-          <div class="resources-item">
-            <img class="resources-item-image" src="img/item2.png" alt="3 mobile phones with lacrosse training background">
-            <div class="resources-item-block">
-              <div class="resource-item-icon">
-                <i class="fas fa-address-book fa-2x"></i>
+            <div class="carousel-item slide-two">
+              <div class="w-100 row">
+                <div class="col-12 col-md-5 order-2 order-md-1 d-flex justify-content-center align-items-center no-padding">
+                  <div class="slider-2-block">
+                    <h4 class="little-title slider-little-title">Nos Bagues</h4>
+                    <h2 class="red-title slider-red-title">L’EXPRESSION D’UNE ÉLÉGANCE EXQUISE ET IMMUABLE</h2>
+                    <p class="slider-little-text texte">Un cercle qui dessine l’infini. Un anneau qui raconte l’amour et retrace les souvenirs. Un bijou qui incarne un lien d’affection et qui marque le début d’un voyage. Un accesoire intemporel et d’exception qui revêt nos doigts d’une émotion nouvelle.</p>
+                    <div class="slider-button button slider-button-2 d-flex align-items-center justify-content-center">Découvrez<span class="mobile-invisible"> toutes nos bagues</span></div>
+                  </div>
+                </div>
+                <div class="col-12 col-md-7 order-1 order-md-2 no-padding">
+                  <div class="slider-two-image-block">
+                    <img class="slider-two-ring" src="img/ring-2.png" alt="green ring">
+                    <img class="slider-two-lady" src="img/lady-2.jpg" alt="lady in green dress">
+                    <div class="rectangle-red"></div>
+                    <div class="rectangle-border"></div>
+                  </div>
+                </div>
               </div>
-              <h3 class="subtitle-text-blue">recruit guide</h3>
-              <p class="small-text">Free recruiting guide with practical tips for simplifying the process and
-                featuring yourself to college coaches.</p>
             </div>
-          </div>
-          <div class="resources-item">
-            <img class="resources-item-image" src="img/item3.png" alt="lacrosse game">
-            <div class="resources-item-block">
-              <div class="resource-item-icon">
-                <i class="fas fa-list-ul fa-2x"></i>
+            <div class="carousel-item slide-three">
+              <div class="w-100 row">
+                <div class="col-12 col-md-7 no-padding">
+                  <div class="slider-three-image-block">
+                    <img class="slider-three-girls" src="img/girls.png" alt="two pretty girls">
+                    <img class="slider-three-boucle" src="img/boucle.png" alt="two boucles">
+                  </div>
+                </div>
+                <div class="col-12 col-md-5 d-flex flex-column justify-content-center align-items-start no-padding">
+                  <div class="slider-3-block">
+                    <h4 class="little-title slider-little-title">Nos Boucles d’oreilles</h4>
+                    <h2 class="red-title slider-red-title">L’ATOUT CHIC PAR EXCELLENCE</h2>
+                    <p class="slider-little-text texte">Les boucles d’oreilles se déclinent à l’infini dans leur style et dans leur forme, pour habiller vos oreilles de manière élégante et sublimer votre visage</p>
+                    <div class="slider-button button slider-button-3 d-flex align-items-center justify-content-center">Découvrez<span class="mobile-invisible"> toutes nos boucles d’oreilles</span></div>
+                  </div>
+                  <img class="slider-three-castle" src="img/castle.png" alt="antient castle">
+                </div>
               </div>
-              <h3 class="subtitle-text-blue">event directory</h3>
-              <p class="small-text">Search America's largest lacrosse directory to find showcases, tournaments,
-                camps and clinics near you.</p>
             </div>
-          </div>
-          <div class="resources-item">
-            <img class="resources-item-image" src="img/item4.png" alt="highfive">
-            <div class="resources-item-block">
-              <div class="resource-item-icon">
-                <i class="fab fa-youtube fa-2x"></i>
+            <div class="carousel-item slide-four">
+              <div class="w-100 row">
+                <div class="col-12 col-md-5 order-2 order-md-1 d-flex justify-content-center align-items-center no-padding">
+                  <div class="slider-4-block">
+                    <h4 class="little-title slider-little-title">Nos Pendantifs</h4>
+                    <h2 class="red-title slider-red-title">UN ORNEMENT AUSSI GRACIEUX QU’AUDACIEUX</h2>
+                    <p class="slider-little-text texte">Une chaîne qui vous entoure de sa poésie, de sa force et de son énergie. Gardien d’une histoire et d’une signification singulière qu’il dépose sur votre cou, ce bijou captive, inspire et séduit. Un objet d’art empreint de mystère qui expose votre individualité et exalte votre féminité en habillant la tenue la plus simple comme la plus sophistiqué.</p>
+                    <div class="slider-button button slider-button-4 d-flex align-items-center justify-content-center">Découvrez<span class="mobile-invisible"> tous nos colliers</span></div>
+                  </div>
+                </div>
+                <div class="col-12 col-md-7 order-1 order-md-2 no-padding">
+                  <div class="slider-four-image-block">
+                    <img class="slider-four-lady" src="img/lady-3.png" alt="lady and jewelry">
+                  </div>
+                </div>
               </div>
-              <h3 class="subtitle-text-blue">video newsletter</h3>
-              <p class="small-text">Learn about colleges, get training tips and recruiting advice via lacrosse
-                videos. All content, no ads.</p>
+            </div>
+            <div class="carousel-item slide-five">
+              <div class="w-100 row">
+                <div class="col-12 col-md-7 no-padding">
+                  <div class="slider-five-image-block">
+                    <img class="slider-five-lady" src="img/lady-4.png" alt="lady in red">
+                    <img class="slider-five-bracelet" src="img/bracelet.png" alt="bracelet">
+                  </div>
+                </div>
+                <div class="col-12 col-md-5 no-padding slider-5-wrap">
+                  <div class="slider-5-block">
+                    <h4 class="little-title slider-little-title">Nos Bracelets</h4>
+                    <h2 class="red-title slider-red-title">LÉGÈRETÉ ET ÉLÉGANCE</h2>
+                    <p class="slider-little-text texte">Donnez de l’éclat à vos tenues de toutes saisons en optant pour le bracelet Emporio Diamante. Finement ciselé, aux allures orientales, version folk, d’inspiration bohème, ou simple chaîne en or ou argenté, ornée de pierres précieuses.</p>
+                    <div class="slider-button button slider-button-5 d-flex align-items-center justify-content-center">Découvrez<span class="mobile-invisible"> tous nos bracelets</span></div>
+                  </div>
+                  <img class="slider-five-tower" src="img/tower.png" alt="tower">
+                </div>
+              </div>
+            </div>
+          </div><!--END carousel inner-->
+          <a class="carousel-control-prev" href="#carousel-main-page" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carousel-main-page" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div><!--END carousel-->
+      </div><!--END carousel container-->
+      <div class="footer container-fluid">
+        <div class="row">
+          <div class="col-12 col-md-7 order-2 order-md-1">
+            <div class="row">
+              <div class="col-md-4 d-flex flex-column justify-content-start align-items-start">
+                <h5 class="texte footer-title-element mobile-invisible">NOS PRODUITS</h5>
+                <ul class="footer-list mobile-invisible">
+                  <a class="footer-list-link" href="#"><li class="texte footer-list-item">Bagues</li></a>
+                  <a class="footer-list-link" href="#"><li class="texte footer-list-item">Boucles d’oreilles</li></a>
+                  <a class="footer-list-link" href="#"><li class="texte footer-list-item">Colliers</li></a>
+                  <a class="footer-list-link" href="#"><li class="texte footer-list-item">Bracelets</li></a>
+                </ul>
+              </div>
+              <div class="col-md-4 d-flex flex-column justify-content-start align-items-start">
+                <h5 class="texte footer-title-element mobile-invisible">EMPORIO DIAMANTE</h5>
+                <ul class="footer-list mobile-invisible">
+                  <a class="footer-list-link" href="#"><li class="texte footer-list-item">Notre histoire</li></a>
+                </ul>
+              </div>
+              <div class="col-12 col-md-4 d-flex flex-column justify-content-start align-items-start">
+                <h5 class="texte footer-title-element">SERVICE CLIENT</h5>
+                <ul class="footer-list">
+                  <a class="footer-list-link" href="#"><li class="texte footer-list-item">Guide des tailles</li></a>
+                  <a class="footer-list-link" href="#"><li class="texte footer-list-item">Nous contacter</li></a>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-5 order-1 order-md-2 d-flex flex-column justify-content-start align-items-start">
+            <h5 class="texte footer-title-element">SUIVEZ-NOUS</h5>
+            <p class="texte footer-text mobile-invisible">
+              <span class="footer-text-red">Newsletter Emporio Diamante</span><br>
+              Abonnez-vous et soyez informé(e) des news et des offres en avant-première :
+            </p>
+            <div class="button-email button mobile-invisible">
+              Saisissez votre adresse email<span class="button-vertical-stick"></span><i class="button-angle-right fa fa-angle-right fa-2x"></i>
+            </div>
+            <div class="social-buttons d-flex justify-content-around align-items-center">
+              <a class="social-links" href="#"><i class="fa facebook-icon fa-2x fa-facebook-f"></i></a>
+              <a class="social-links" href="#"><i class="fa twitter-icon fa-2x fa-twitter"></i></a>
+              <a class="social-links" href="#"><i class="fa instagram-icon fa-2x fa-instagram"></i></a>
             </div>
           </div>
         </div>
-      </div>
-      <div class="testimonials">
-        <div class="testimonials-block">
-          <p class="testimonials-text regular-text-black">“I wanted to submit a note of appreciation - the matching service in your
-            site helped my son research teams and schools he was not familiar with, and led him to a great D1 program
-            with a terrific business school. He connected with the coach who came to several of his tournaments over
-            the summer, and we scheduled a visit. After weighing his options and touring several programs, he made a
-            verbal commitment last month. ConnectLAX is a great resource!""</p>
-          <p class="testimonials-text regular-text-black"><span>- Kim Bishop</span>, mother of <a href="#" class="link">Brent Bishop, Mercer</a> D1 commits</p>
-          <div class="buttons-block">
-            <button class="button" id="college-matches">college matches<i class="fas fa-stopwatch fa-lg"></i></button>
-            <button class="button" id="free-signup-scnd">free sign up<i class="fas fa-user-plus fa-lg"></i></button>
-          </div>
-        </div>
-      </div>
-      <div class="instagram-section">
-      </div>
-      <div class="footer">
-        <div class="footer-container">
-          <div class="footer-item">
-            <h4 class="footer-menu-text">Colleges</h4>
-            <a class="footer-item-link regular-text-white" href="#">Matching Service</a>
-            <a class="footer-item-link regular-text-white" href="#">Full Directory</a>
-            <a class="footer-item-link regular-text-white" href="#">Coach Contact</a>
-          </div>
-          <div class="footer-item">
-            <h4 class="footer-menu-text">Recruits</h4>
-            <a class="footer-item-link regular-text-white" href="#">Recruit Profiles</a>
-            <a class="footer-item-link regular-text-white" href="#">Recruiting Guide</a>
-            <a class="footer-item-link regular-text-white" href="#">Find Recruits</a>
-          </div>
-          <div class="footer-item">
-            <h4 class="footer-menu-text">Coaches</h4>
-            <a class="footer-item-link regular-text-white" href="#">Club Teams</a>
-            <a class="footer-item-link regular-text-white" href="#">Event Directory</a>
-            <a class="footer-item-link regular-text-white" href="#">College Coaches</a>
-          </div>
-          <div class="footer-item">
-            <h4 class="footer-menu-text">Lessons</h4>
-            <a class="footer-item-link regular-text-white" href="#">Join As Instructor</a>
-            <a class="footer-item-link regular-text-white" href="#">Find Instructor</a>
-            <a class="footer-item-link regular-text-white" href="#">Player Safety</a>
-          </div>
-          <div class="footer-item">
-            <h4 class="footer-menu-text">Video</h4>
-            <a class="footer-item-link regular-text-white" href="#">Highlight Videos</a>
-            <a class="footer-item-link regular-text-white" href="#">Older Game Film</a>
-            <a class="footer-item-link regular-text-white" href="#">Filming Service</a>
-          </div>
-          <div class="footer-item">
-            <h4 class="footer-menu-text">Company</h4>
-            <a class="footer-item-link regular-text-white" href="#">Contact Us / FAQ</a>
-            <a class="footer-item-link regular-text-white" href="#">Company Mission</a>
-            <a class="footer-item-link regular-text-white" href="#">Interns / Filmers</a>
-          </div>
-        </div>
-      </div>
-      <div class="bottom-bar">
-        <div class="bottom-bar-copyright">
-          <p class="subheader-text">&copy; Copyright 2018. ConnectLAX</p>
-        </div>
-        <div class="bottom-triangle">
-        </div>
-        <div class="bottom-bar-links">
-          <ul class="bottom-bar-privacy">
-            <a class="link"><li>Privacy Policy</li></a>
-            <li>|</li>
-            <a class="link"><li>Terms of Use</li></a>
-            <li>|</li>
-            <a class="link"><li>Admin</li></a>
-          </ul>
-          <ul class="bottom-bar-social">
-            <a class="link"><li><i class="fab fa-facebook"></i></li></a>
-            <a class="link"><li><i class="fab fa-twitter"></i></li></a>
-            <a class="link"><li><i class="fab fa-instagram"></i></li></a>
-            <a class="link"><li><i class="fab fa-youtube fa-youtube2"></i></li></a>
-          </ul>
-        </div>
-      </div>
-    </div>
+      </div><!--END footer-->
+    </div><!--END wrap-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+    <script src="js/jquery.smartmenus.js"></script>
+    <script>
+      $(document).ready(function() {
+        $(function() {
+          $('#main-menu').smartmenus({
+            keepHighlighted: true
+          });
+        });
+      });
+    </script>
   </body>
 </html>
