@@ -402,7 +402,7 @@ body{
   color: white;
   line-height: 36px;
   width: 88.5%;
-  padding-left: 6.5%;
+  padding-left: 8%;
 }
 .main-block-red{
   width: 11.6%;
@@ -618,6 +618,9 @@ body{
 .header-banner-mobile{
   display: none;
 }
+.form-control{
+  border-radius: 0;
+}
 @media only screen and (max-width: 1023.98px){
   .header-top{
     min-width: 0;
@@ -797,9 +800,6 @@ body{
   }
   .main-block-form-text{
     color: #1d1d1b;
-  }
-  .main-block-form .form-control{
-    border-radius: 0;
   }
   .carousel-item{
     background-position: 70%;
@@ -1846,6 +1846,9 @@ body{
   width: 60%;
   min-width: 1024px;
   max-width: 1140px;
+}
+.result-block-form .form-control{
+  border-radius: none;
 }
 .result-block-form{
   width: 100%;
