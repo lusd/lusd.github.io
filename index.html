@@ -5,264 +5,333 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:500,600,900&amp;subset=latin-ext" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i&amp;subset=latin-ext" rel="stylesheet">
+    <link rel="stylesheet" href="css/scroll-down.css">
+    <link rel="stylesheet" href="css/stylesheet.css">
     <link href="css/sm-core-css.css" rel="stylesheet">
     <link href="css/sm-clean.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/stylesheet.css">
     <script src="https://use.fontawesome.com/4ee0375632.js"></script>
-    <title>Emporio Diamante</title>
+    <title>Home</title>
   </head>
   <body>
-    <div class="wrap">
-      <!--Header start-->
-      <div class="container-fluid header-logo">
-        <div class="row no-gutters">
-          <div class="col d-flex justify-content-center">
-            <img class="main-logo" src="img/main-log.png" alt="Emporio Diamante logo">
+    <div class="home-wrap">
+      <div class="home-header">
+        <div class="header-container-top">
+          <div class="header-top">
+            <img class="header-logo" src="img/logo.png" alt="France Estate Services logo">
+            <div class="header-contact">
+              <p class="header-contact-text">Vragen of contact?</p>
+              <p class="header-contact-number">070-360 5101</p>
+            </div>
+          </div>
+        </div>
+        <div class="header-container-navigation">
+          <div class="header-navigation" id="navbar">
+            <div class="header-navigation-wrap">
+              <div class="navigation">
+                <!-- Mobile menu toggle button (hamburger) -->
+                <input id="main-menu-state" type="checkbox">
+                <label class="main-menu-btn" for="main-menu-state">
+                  <span class="main-menu-btn-icon"></span>
+                </label>
+                <ul id="main-menu" class="sm sm-mytheme navigation-list">
+                  <li class="menu-mobile-list-item">
+                    <div class="menu-mobile-list-contact">+31 (0)70-360 5101</div>
+                    <div class="menu-mobile-list-language">
+                      <img class="language-icons" src="img/dutch-flag.png" alt="dutch language button">
+                      <img class="language-icons" src="img/english-flag.png" alt="english language button">
+                      <img class="language-icons" src="img/france-flag.png" alt="france language button">
+                    </div>
+                  </li>
+                  <li class="menu-list-item"><a class="menu-list-link menu-list-link-blue" href="index.html">home</a></li>
+                  <li class="menu-list-item"><a class="menu-list-link" href="over-ons.html">over ons</a></li>
+                  <li class="menu-list-item"><a class="menu-list-link" href="http://fes.onderconstructie.com/service.html">diensten</a>
+                    <ul class="submenu-dropdown">
+                      <li class="submenu-list-item"><a href="service.html">Aankoop</a></li>
+                      <li class="submenu-list-item"><a href="service.html">Verkoop</a></li>
+                      <li class="submenu-list-item"><a href="service.html">Persoonlijk advies</a></li>
+                      <li class="submenu-list-item"><a href="service.html">Juridisch advies</a></li>
+                      <li class="submenu-list-item"><a href="service.html">Specifieke services</a></li>
+                    </ul>
+                  </li>
+                  <li class="menu-list-item"><a class="menu-list-link" href="http://fes.onderconstructie.com/properties.html">aanbod</a></li>
+                  <li class="menu-list-item"><a class="menu-list-link" href="#">tips</a></li>
+                  <li class="menu-list-item"><a class="menu-list-link" href="#">nieuws</a></li>
+                  <li class="menu-list-item"><a class="menu-list-link menu-list-link-last" href="contact.html">contact</a></li>
+                </ul>
+              </div>
+              <div class="header-buttons-wrap">
+                <div class="social-buttons">
+                  <i class="fa fa-facebook-square"></i>
+                </div>
+                <div class="language-buttons">
+                  <img class="language-icons" src="img/dutch-flag.png" alt="dutch language button">
+                  <img class="language-icons" src="img/english-flag.png" alt="english language button">
+                  <img class="language-icons" src="img/france-flag.png" alt="france language button">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="header-banner container-fluid slider no-gutters">
+            <div id="carousel-main-page" class="carousel slide" data-ride="carousel">
+              <ol class="carousel-indicators">
+                <li data-target="#carousel-main-page" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-main-page" data-slide-to="1"></li>
+                <li data-target="#carousel-main-page" data-slide-to="2"></li>
+              </ol>
+              <div class="carousel-inner">
+                <div class="carousel-item slide-one active">
+                  <h1 class="slider-title">De beste kennis van de Franse vastgoedmarkt</h1>
+                </div>
+                <div class="carousel-item slide-two">
+                  <h1 class="slider-title">De beste kennis van de Franse vastgoedmarkt</h1>
+                </div>
+                <div class="carousel-item slide-three">
+                  <h1 class="slider-title">De beste kennis van de Franse vastgoedmarkt</h1>
+                </div>
+              </div>
+            </div>
+          </div>
+          <section class="header-banner-mobile" id="parallax-one">
+            <h1 class="header-banner-mobile-title">De beste kennis van de Franse vastgoedmarkt</h1>
+            <a class="ct-btn-scroll ct-js-btn-scroll" href="#section2"><img alt="Arrow Down Icon" src="img/arrow-down-1.png"></a>
+          </section>
+          <div class="current-page-wrap">
+            <div class="current-page">
+              Home >
+            </div>
+          </div>
+        </div>
+      </div><!--END header-->
+      <div class="home-main">
+        <div class="main-wrap">
+          <div class="main-row-one">
+            <div class="main-block order-1 order-lg-1">
+              <img class="main-block-image" src="img/top-photo.jpg" alt="townhouse">
+              <div class="main-block-title">
+                <div class="main-block-title-text">
+                  Uw Franse huis verkopen
+                </div>
+                <div class="main-block-red"></div>
+              </div>
+              <div class="main-block-text">
+                To di derupiet pror am, nam ut delis dolectem ario. Ut ommoluptat eatessitius sit. To di derupiet pror am, nam ut delis dolectem ario. Ut ommoluptat eatessitius sit, accum, sit eaturibus
+                <br> <a href="#" class="main-block-text-red">Lees meer >></a>
+              </div>
+            </div>
+            <div class="main-block order-2 order-lg-2">
+              <img class="main-block-image" src="img/top-photo2.jpg" alt="city with port">
+              <div class="main-block-title">
+                <div class="main-block-title-text">
+                  Een huis in Frankrijk kopen
+                </div>
+                <div class="main-block-red"></div>
+              </div>
+              <div class="main-block-text">
+                To di derupiet pror am, nam ut delis dolectem ario. Ut ommoluptat eatessitius sit. To di derupiet pror am, nam ut delis dolectem ario. Ut ommoluptat eatessitius sit, accum, sit eaturibus
+                <br> <a href="#" class="main-block-text-red">Lees meer >></a>
+              </div>
+            </div>
+            <section class="main-block main-block-container order-0 order-lg-3" id="section2">
+              <div class="main-block-form-title">
+                Zoek een huis in Frankrijk
+              </div>
+              <div class="main-block-form-link">
+                Bekijk ons totale aanbod >>
+              </div>
+              <div class="main-block-form-text">
+                Zoek
+              </div>
+              <form class="main-block-form">
+                <div class="form-group">
+                  <select class="form-control" id="form-group-select">
+                    <option>Plaats / Regio</option>
+                    <option>Plaats / Regio</option>
+                    <option>Plaats / Regio</option>
+                    <option>Plaats / Regio</option>
+                    <option>Plaats / Regio</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <select class="form-control" id="form-group-select">
+                    <option>Prijs van €</option>
+                    <option>Prijs van €</option>
+                    <option>Prijs van €</option>
+                    <option>Prijs van €</option>
+                    <option>Prijs van €</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <select class="form-control" id="form-group-select">
+                    <option>Prijs tot €</option>
+                    <option>Prijs tot €</option>
+                    <option>Prijs tot €</option>
+                    <option>Prijs tot €</option>
+                    <option>Prijs tot €</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <select class="form-control" id="form-group-select">
+                    <option>Type woning</option>
+                    <option>Type woning</option>
+                    <option>Type woning</option>
+                    <option>Type woning</option>
+                    <option>Type woning</option>
+                  </select>
+                </div>
+                <div class="main-block-button-wrap">
+                  <button type="submit" class="main-block-button" name="button">Zoek</button>
+                </div>
+              </form>
+            </section>
+            <div class="main-block main-block-double order-4">
+              <div class="main-block-double-image">
+                <img class="main-double-image" src="img/image-left.png" alt="flags on wall">
+              </div>
+              <div class="main-block-double-text-block">
+                <div class="main-block-double-title">
+                  Een huis kopen of verkopen<br>
+                  in Frankrijk met Nederlandse experts
+                </div>
+                <div class="main-block-double-text">
+                  De geur van lavendel in de Provence. De indrukwekkende rotskusten van Normandië. De prachtige kastelen in de Loire. De zon, zee en strand van de Côte d’Azur. Frankrijk is een land met vele gezichten. En met een enorme aantrekkingskracht. Voor velen is het een droom dat heerlijke vakantiegevoel voor altijd vast te houden met een eigen huis in Frankrijk.
+                </div>
+              </div>
+            </div>
+            <div class="main-block order-5">
+              <img class="main-block-image" src="img/aanbond.jpg" alt="village">
+              <div class="main-block-title">
+                <div class="main-block-title-text">
+                  Aanbod
+                </div>
+                <div class="main-block-red"></div>
+              </div>
+              <div class="main-block-text">
+                To di derupiet pror am, nam ut delis dolectem ario. Ut ommoluptat eatessitius sit. To di derupiet pror am, nam ut delis dolectem ario. Ut ommoluptat eatessitius sit, accum, sit eaturibus
+                <br> <a href="#" class="main-block-text-red">Lees meer >></a>
+              </div>
+            </div>
+            <div class="main-block order-6">
+              <img class="main-block-image" src="img/map.jpg" alt="piece of map">
+              <div class="main-block-title">
+                <div class="main-block-title-text">
+                  Huis van de maand
+                </div>
+                <div class="main-block-red"></div>
+              </div>
+              <div class="main-block-text">
+                To di derupiet pror am, nam ut delis dolectem ario. Ut ommoluptat eatessitius sit. To di derupiet pror am, nam ut delis dolectem ario. Ut ommoluptat eatessitius sit, accum, sit eaturibus
+                <br> <a href="#" class="main-block-text-red">Lees meer >></a>
+              </div>
+            </div>
+            <div class="main-block order-7">
+              <img class="main-block-image" src="img/tips.jpg" alt="piece of newspaper">
+              <div class="main-block-title">
+                <div class="main-block-title-text">
+                  Tips
+                </div>
+                <div class="main-block-red"></div>
+              </div>
+              <div class="main-block-text">
+                To di derupiet pror am, nam ut delis dolectem ario. Ut ommoluptat eatessitius sit. To di derupiet pror am, nam ut delis dolectem ario. Ut ommoluptat eatessitius sit, accum, sit eaturibus
+                <br> <a href="#" class="main-block-text-red">Lees meer >></a>
+              </div>
+            </div>
+            <div class="main-block order-8">
+              <img class="main-block-image" src="img/nieuws.jpg" alt="road sign 'toutes directions'">
+              <div class="main-block-title">
+                <div class="main-block-title-text">
+                  Nieuws
+                </div>
+                <div class="main-block-red"></div>
+              </div>
+              <div class="main-block-text">
+                To di derupiet pror am, nam ut delis dolectem ario. Ut ommoluptat eatessitius sit. To di derupiet pror am, nam ut delis dolectem ario. Ut ommoluptat eatessitius sit, accum, sit eaturibus
+                <br> <a href="#" class="main-block-text-red">Lees meer >></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div><!--END home main-->
+      <div class="footer">
+        <div class="footer-wrap">
+          <div class="footer-container">
+            <img class="footer-image" src="img/footer-logo.png" alt="france estate services logo">
+            <div class="footer-block-text-one">
+              <address class="footer-text footer-address">
+                <span class="footer-text-bold">France Estate Services</span><br>
+                Nassaulaan 13<br>
+                2514 JS Den Haag
+              </address>
+              <address class="footer-text footer-address-none">070 360 5101<br>
+                <a class="footer-address-link" href="mailto:info@franceestateservices.nl">info@franceestateservices.nl</a>
+              </address>
+            </div>
+            <div class="footer-text-block-two">
+              <span class="footer-text-bold">Diensten</span>
+              <a class="footer-text-link" href="#">Aankoop</a>
+              <a class="footer-text-link" href="#">Verkoop</a>
+              <a class="footer-text-link" href="#">Persoonlijk advies</a>
+              <a class="footer-text-link" href="#">Juridisch advies</a>
+              <a class="footer-text-link" href="#">Specifieke services</a>
+            </div>
+            <div class="footer-text-block-three">
+              <a class="footer-text-link" href="#">Disclaimer</a>
+              <a class="footer-text-link" href="#">Privacy policy</a>
+              <a class="footer-text-link footer-text-link-noborder" href="#">Contac</a>
+              <i class="fa fa-facebook-square"></i>
+            </div>
           </div>
         </div>
       </div>
-      <div class="container-fluid navigation">
-        <!-- Mobile menu toggle button (hamburger/arrow icon) -->
-        <input id="main-menu-state" type="checkbox"/>
-        <label class="main-menu-btn" for="main-menu-state">
-          <span class="main-menu-btn-icon"></span>
-        </label>
-        <ul id="main-menu" class="sm sm-mytheme navigation-list">
-          <li class="list-item list-board-right"><a class="list-item-link text-style" href="collection.html">NOS COLLECTIONS<i class="fa fa-angle-right fa-2x burger-menu-arrow"></i></a>
-            <ul class="menu-dropdown text-style">
-              <li><a class="menu-dropdown-list menu-top-item" href="#">Collection 1</a>
-                <ul class="submenu-dropdown">
-                  <li><a class="submenu-dropdown-list menu-top-item" href="#">Collection 1</a></li>
-                  <li><a class="submenu-dropdown-list" href="#">Collection 2</a></li>
-                  <li><a class="submenu-dropdown-list" href="#">Collection 3</a></li>
-                  <li><a class="submenu-dropdown-list menu-bot-item" href="#">Collection 4</a></li>
-                </ul>
-              </li>
-              <li><a class="menu-dropdown-list" href="#">Collection 2</a></li>
-              <li><a class="menu-dropdown-list" href="#">Collection 3</a></li>
-              <li><a class="menu-dropdown-list menu-bot-item" href="#">Collection 4</a></li>
-            </ul>
-          </li>
-          <li class="list-item list-board-right"><a class="list-item-link text-style" href="#">BAGUES<i class="fa fa-angle-right fa-2x burger-menu-arrow"></i></a>
-            <ul class="menu-dropdown text-style">
-              <li><a class="menu-dropdown-list menu-top-item" href="#">Collection 1</a></li>
-              <li><a class="menu-dropdown-list" href="#">Collection 2</a></li>
-              <li><a class="menu-dropdown-list" href="#">Collection 3</a></li>
-              <li><a class="menu-dropdown-list menu-bot-item" href="#">Collection 4</a></li>
-            </ul>
-          </li>
-          <li class="list-item list-board-right"><a class="list-item-link text-style" href="#">BOUCLES D'OREILLES<i class="fa fa-angle-right fa-2x burger-menu-arrow"></i></a>
-            <ul class="menu-dropdown text-style">
-              <li><a class="menu-dropdown-list menu-top-item" href="#">Collection 1</a></li>
-              <li><a class="menu-dropdown-list" href="#">Collection 2</a></li>
-              <li><a class="menu-dropdown-list" href="#">Collection 3</a></li>
-              <li><a class="menu-dropdown-list menu-bot-item" href="#">Collection 4</a></li>
-            </ul>
-          </li>
-          <li class="list-item list-board-right"><a class="list-item-link text-style" href="#">BCOLLIERS<i class="fa fa-angle-right fa-2x burger-menu-arrow"></i></a>
-            <ul class="menu-dropdown text-style">
-              <li><a class="menu-dropdown-list menu-top-item" href="#">Collection 1</a></li>
-              <li><a class="menu-dropdown-list" href="#">Collection 2</a></li>
-              <li><a class="menu-dropdown-list" href="#">Collection 3</a></li>
-              <li><a class="menu-dropdown-list menu-bot-item" href="#">Collection 4</a></li>
-            </ul>
-          </li>
-          <li class="list-item list-board-right"><a class="list-item-link text-style" href="#">BRACELETS<i class="fa fa-angle-right fa-2x burger-menu-arrow"></i></a>
-            <ul class="menu-dropdown text-style">
-              <li><a class="menu-dropdown-list menu-top-item" href="#">Collection 1</a></li>
-              <li><a class="menu-dropdown-list" href="#">Collection 2</a></li>
-              <li><a class="menu-dropdown-list" href="#">Collection 3</a></li>
-              <li><a class="menu-dropdown-list menu-bot-item" href="#">Collection 4</a></li>
-            </ul>
-          </li>
-          <li class="list-item"><a class="list-item-link text-style" href="emporio-diamante.html">EMPORIO DIAMANTE<i class="fa fa-angle-right fa-2x burger-menu-arrow"></i></a>
-          </li>
-        </ul>
-      </div>
-      <!--Header end-->
-      <div class="container-fluid main-banner no-padding">
-        <div class="row no-gutters">
-          <div class="col-12 col-md-5 order-2 order-md-1 d-flex justify-content-center align-items-center no-padding">
-            <div class="banner-text-block">
-              <h1 class="big-title banner-text-title">Donner vie aux bijoux</h1>
-              <p class="banner-text-item texte">De tous temps, le diamant à été la source de rêve et de désir.
-                 Pour Emporio Diamante, rien ne vaut une telle inspiration afin d’atteindre les sommets de la beauté et de la maitrise.</p>
-            </div>
-          </div>
-          <div class="col-12 col-md-7 order-1 order-md-2">
-            <img class="main-banner-image" src="img/lady-1.jpg" alt="">
-          </div>
-        </div>
-      </div> <!--End main-banner-->
-      <div class="container-fluid slider no-padding slider-bottom-line">
-        <div id="carousel-main-page" class="carousel slide" data-ride="carousel">
-          <ol class="carousel-indicators">
-            <li data-target="#carousel-main-page" data-slide-to="0" class="active"></li>
-            <li data-target="#carousel-main-page" data-slide-to="1"></li>
-            <li data-target="#carousel-main-page" data-slide-to="2"></li>
-            <li data-target="#carousel-main-page" data-slide-to="3"></li>
-            <li data-target="#carousel-main-page" data-slide-to="4"></li>
-          </ol>
-          <div class="carousel-inner">
-            <div class="carousel-item slide-one active">
-              <div class="row w-100">
-                <div class="col-12 col-md-7">
-                  <img class="slider-image-one" src="img/slider-1.png" alt="city of vienna, bride, wedding-ring">
-                </div>
-                <div class="col-12 col-md-5 d-flex justify-content-center align-items-center">
-                  <div class="slider-1-block">
-                    <h4 class="little-title slider-little-title">World of Vows Collection</h4>
-                    <h2 class="red-title slider-red-title">BAGUES DE FIANÇAILLES POUR UN MOMENT INOUBLIABLE</h2>
-                    <p class="slider-little-text texte">Passer d’une promesse à un engagement ne consiste pas uniquement à offrir ce qu’il y a de plus beau. Il faut d’abord choisir entre c’est innombrables splendeurs de bagues.</p>
-                    <div class="slider-button button d-flex align-items-center justify-content-center">Découvrez<span class="mobile-invisible"> la collection</span></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-item slide-two">
-              <div class="w-100 row">
-                <div class="col-12 col-md-5 order-2 order-md-1 d-flex justify-content-center align-items-center no-padding">
-                  <div class="slider-2-block">
-                    <h4 class="little-title slider-little-title">Nos Bagues</h4>
-                    <h2 class="red-title slider-red-title">L’EXPRESSION D’UNE ÉLÉGANCE EXQUISE ET IMMUABLE</h2>
-                    <p class="slider-little-text texte">Un cercle qui dessine l’infini. Un anneau qui raconte l’amour et retrace les souvenirs. Un bijou qui incarne un lien d’affection et qui marque le début d’un voyage. Un accesoire intemporel et d’exception qui revêt nos doigts d’une émotion nouvelle.</p>
-                    <div class="slider-button button slider-button-2 d-flex align-items-center justify-content-center">Découvrez<span class="mobile-invisible"> toutes nos bagues</span></div>
-                  </div>
-                </div>
-                <div class="col-12 col-md-7 order-1 order-md-2 no-padding">
-                  <div class="slider-two-image-block">
-                    <img class="slider-two-ring" src="img/ring-2.png" alt="green ring">
-                    <img class="slider-two-lady" src="img/lady-2.jpg" alt="lady in green dress">
-                    <div class="rectangle-red"></div>
-                    <div class="rectangle-border"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-item slide-three">
-              <div class="w-100 row">
-                <div class="col-12 col-md-7 no-padding">
-                  <div class="slider-three-image-block">
-                    <img class="slider-three-girls" src="img/girls.png" alt="two pretty girls">
-                    <img class="slider-three-boucle" src="img/boucle.png" alt="two boucles">
-                  </div>
-                </div>
-                <div class="col-12 col-md-5 d-flex flex-column justify-content-center align-items-start no-padding">
-                  <div class="slider-3-block">
-                    <h4 class="little-title slider-little-title">Nos Boucles d’oreilles</h4>
-                    <h2 class="red-title slider-red-title">L’ATOUT CHIC PAR EXCELLENCE</h2>
-                    <p class="slider-little-text texte">Les boucles d’oreilles se déclinent à l’infini dans leur style et dans leur forme, pour habiller vos oreilles de manière élégante et sublimer votre visage</p>
-                    <div class="slider-button button slider-button-3 d-flex align-items-center justify-content-center">Découvrez<span class="mobile-invisible"> toutes nos boucles d’oreilles</span></div>
-                  </div>
-                  <img class="slider-three-castle" src="img/castle.png" alt="antient castle">
-                </div>
-              </div>
-            </div>
-            <div class="carousel-item slide-four">
-              <div class="w-100 row">
-                <div class="col-12 col-md-5 order-2 order-md-1 d-flex justify-content-center align-items-center no-padding">
-                  <div class="slider-4-block">
-                    <h4 class="little-title slider-little-title">Nos Pendantifs</h4>
-                    <h2 class="red-title slider-red-title">UN ORNEMENT AUSSI GRACIEUX QU’AUDACIEUX</h2>
-                    <p class="slider-little-text texte">Une chaîne qui vous entoure de sa poésie, de sa force et de son énergie. Gardien d’une histoire et d’une signification singulière qu’il dépose sur votre cou, ce bijou captive, inspire et séduit. Un objet d’art empreint de mystère qui expose votre individualité et exalte votre féminité en habillant la tenue la plus simple comme la plus sophistiqué.</p>
-                    <div class="slider-button button slider-button-4 d-flex align-items-center justify-content-center">Découvrez<span class="mobile-invisible"> tous nos colliers</span></div>
-                  </div>
-                </div>
-                <div class="col-12 col-md-7 order-1 order-md-2 no-padding">
-                  <div class="slider-four-image-block">
-                    <img class="slider-four-lady" src="img/lady-3.png" alt="lady and jewelry">
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-item slide-five">
-              <div class="w-100 row">
-                <div class="col-12 col-md-7 no-padding">
-                  <div class="slider-five-image-block">
-                    <img class="slider-five-lady" src="img/lady-4.png" alt="lady in red">
-                    <img class="slider-five-bracelet" src="img/bracelet.png" alt="bracelet">
-                  </div>
-                </div>
-                <div class="col-12 col-md-5 no-padding slider-5-wrap">
-                  <div class="slider-5-block">
-                    <h4 class="little-title slider-little-title">Nos Bracelets</h4>
-                    <h2 class="red-title slider-red-title">LÉGÈRETÉ ET ÉLÉGANCE</h2>
-                    <p class="slider-little-text texte">Donnez de l’éclat à vos tenues de toutes saisons en optant pour le bracelet Emporio Diamante. Finement ciselé, aux allures orientales, version folk, d’inspiration bohème, ou simple chaîne en or ou argenté, ornée de pierres précieuses.</p>
-                    <div class="slider-button button slider-button-5 d-flex align-items-center justify-content-center">Découvrez<span class="mobile-invisible"> tous nos bracelets</span></div>
-                  </div>
-                  <img class="slider-five-tower" src="img/tower.png" alt="tower">
-                </div>
-              </div>
-            </div>
-          </div><!--END carousel inner-->
-          <a class="carousel-control-prev" href="#carousel-main-page" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a class="carousel-control-next" href="#carousel-main-page" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-          </a>
-        </div><!--END carousel-->
-      </div><!--END carousel container-->
-      <div class="footer container-fluid">
-        <div class="row">
-          <div class="col-12 col-md-7 order-2 order-md-1">
-            <div class="row">
-              <div class="col-md-4 d-flex flex-column justify-content-start align-items-start">
-                <h5 class="texte footer-title-element mobile-invisible">NOS PRODUITS</h5>
-                <ul class="footer-list mobile-invisible">
-                  <a class="footer-list-link" href="#"><li class="texte footer-list-item">Bagues</li></a>
-                  <a class="footer-list-link" href="#"><li class="texte footer-list-item">Boucles d’oreilles</li></a>
-                  <a class="footer-list-link" href="#"><li class="texte footer-list-item">Colliers</li></a>
-                  <a class="footer-list-link" href="#"><li class="texte footer-list-item">Bracelets</li></a>
-                </ul>
-              </div>
-              <div class="col-md-4 d-flex flex-column justify-content-start align-items-start">
-                <h5 class="texte footer-title-element mobile-invisible">EMPORIO DIAMANTE</h5>
-                <ul class="footer-list mobile-invisible">
-                  <a class="footer-list-link" href="#"><li class="texte footer-list-item">Notre histoire</li></a>
-                </ul>
-              </div>
-              <div class="col-12 col-md-4 d-flex flex-column justify-content-start align-items-start">
-                <h5 class="texte footer-title-element">SERVICE CLIENT</h5>
-                <ul class="footer-list">
-                  <a class="footer-list-link" href="#"><li class="texte footer-list-item">Guide des tailles</li></a>
-                  <a class="footer-list-link" href="#"><li class="texte footer-list-item">Nous contacter</li></a>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-md-5 order-1 order-md-2 d-flex flex-column justify-content-start align-items-start">
-            <h5 class="texte footer-title-element">SUIVEZ-NOUS</h5>
-            <p class="texte footer-text mobile-invisible">
-              <span class="footer-text-red">Newsletter Emporio Diamante</span><br>
-              Abonnez-vous et soyez informé(e) des news et des offres en avant-première :
-            </p>
-            <div class="button-email button mobile-invisible">
-            <input class="email-input" type="email" name="email" placeholder="Saisissez votre adresse email">
-            <span class="button-vertical-stick"></span><i class="button-angle-right fa fa-angle-right fa-2x"></i>
-            </div>
-            <div class="social-buttons d-flex justify-content-around align-items-center">
-              <a class="social-links" href="#"><i class="fa facebook-icon fa-2x fa-facebook-f"></i></a>
-              <a class="social-links" href="#"><i class="fa twitter-icon fa-2x fa-twitter"></i></a>
-              <a class="social-links" href="#"><i class="fa instagram-icon fa-2x fa-instagram"></i></a>
-            </div>
-          </div>
-        </div>
-      </div><!--END footer-->
-    </div><!--END wrap-->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
     <script src="js/jquery.smartmenus.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.7.0/jquery.matchHeight-min.js"></script>
+    <script>
+    // When the user scrolls the page, execute myFunction
+      window.onscroll = function() {myFunction()};
+
+      // Get the navbar
+      var navbar = document.getElementById("navbar");
+
+      // Get the offset position of the navbar
+      var sticky = navbar.offsetTop;
+
+      // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+      function myFunction() {
+      if (window.pageYOffset >= sticky) {
+      navbar.classList.add("sticky")
+      } else {
+      navbar.classList.remove("sticky");
+      }
+      }
+    </script>
     <script>
       $(document).ready(function() {
         $(function() {
           $('#main-menu').smartmenus({
-            keepHighlighted: true
+            keepHighlighted: true,
+            markCurrentItem: true
           });
+        });
+        $(function() {
+          $('.main-block').matchHeight();
+        });
+      });
+      $(document).ready(function(){
+        $("a").on('click', function(event) {
+          if (this.hash !== "") {
+            event.preventDefault();
+            var hash = this.hash;
+            $('html, body').animate({
+              scrollTop: $(hash).offset().top
+            }, 800, function(){
+              window.location.hash = hash;
+            });
+          }
         });
       });
     </script>
