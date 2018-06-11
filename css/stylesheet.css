@@ -449,6 +449,9 @@ body{
   -ms-flex-direction: column;
       flex-direction: column;
 }
+.main-block-form .form-control{
+  background-image: linear-gradient(to top, #ececec, #fff);
+}
 .main-block-form select{
   font-size: 14px;
   font-weight: 300;
@@ -846,6 +849,7 @@ body{
     border: none;
     margin-bottom: 60px;
     margin-top: 20px;
+    padding: 0;
   }
   .footer{
     background: linear-gradient(to bottom, #eaeaea, #fff);
@@ -2040,6 +2044,9 @@ body{
 }
 .result-block-form option{
   width: 100%;
+}
+.result-block-form .form-control{
+  background-image: linear-gradient(to top, #ececec, #fff);
 }
 @media only screen and (min-width: 768px) and (max-width: 1023.98px){
   .result-main-wrap{
