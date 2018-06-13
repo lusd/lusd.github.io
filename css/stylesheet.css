@@ -653,10 +653,12 @@ body{
   .sticky-mobile ~ .header-container-navigation{
     padding-top: 115px;
   }
-  
+
   .sticky-mobile ~ .header-container-navigation .navigation {
     position: fixed;
     top: 115px;
+    left: 0;
+    right: 0;
     background: #fff;
     width: 100%;
     z-index: 1090;
@@ -664,7 +666,6 @@ body{
   }
   .sticky-mobile ~ .header-container-navigation .main-menu-btn {
     position: relative;
-    overflow: inherit;
   }
   .header-navigation{
     border-bottom: 0;
