@@ -851,11 +851,11 @@ body{
 
 @media only screen and (max-width: 767.98px){
   .sticky-mobile ~ .header-container-navigation .navigation {
-    position: fixed;
     top: 96px;
     background: #fff;
     width: 100%;
     z-index: 1090;
+    -webkit-overflow-scrolling: touch;
   }
   .header-logo {
     height: 83px;
