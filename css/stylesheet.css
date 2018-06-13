@@ -649,6 +649,9 @@ body{
     border-bottom: 1px solid #c0c0c0;
     padding-bottom: 4px;
   }
+  .sticky-mobile ~ .header-container-navigation{
+    padding-top: 115px;
+  }
   .sticky-mobile ~ .header-container-navigation .navigation {
     position: fixed;
     top: 115px;
@@ -859,6 +862,9 @@ body{
   }
   .header-logo {
     height: 83px;
+  }
+  .sticky-mobile ~ .header-container-navigation{
+    padding-top: 95px;
   }
   .submenu-list-item-link {
     padding-right: 10px;
