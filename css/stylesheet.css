@@ -661,8 +661,7 @@ body{
     background: #fff;
     width: 100%;
     z-index: 1090;
-    -webkit-overflow-scrolling: touch;
-    overflow-y: visible;
+    transform: translate3d(0,0,0);
   }
   .sticky-mobile ~ .header-container-navigation .main-menu-btn {
     position: relative;
