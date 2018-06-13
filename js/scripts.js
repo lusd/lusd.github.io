@@ -1,6 +1,7 @@
 
   // When the user scrolls the page, execute myFunction
   window.onscroll = function() {myFunction()};
+  window.ontouchstart = function() {myFunction()};
 
   // Get the navbar
   var navbar = document.getElementById("navbar");
@@ -28,6 +29,7 @@
       navbar.classList.remove("sticky");
     }
   }
+
 
   $(document).ready(function() {
     $(function() {
@@ -65,5 +67,3 @@
       $('.properties-match-height').matchHeight();
     });
   });
-
-  

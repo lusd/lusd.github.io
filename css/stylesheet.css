@@ -1364,6 +1364,9 @@ body{
   border-bottom: 1px solid #c0c0c0;
   width: 100%;
 }
+.sticky ~ .header-banner{
+  padding-top: 33px;
+}
 @media (min-width: 1024px) and (max-width: 1139.98px){
   .current-page-properties{
     width: 100%;
