@@ -649,6 +649,7 @@ body{
     z-index: 1090;
     border-bottom: 1px solid #c0c0c0;
     padding-bottom: 4px;
+    transform: translate3d(0,0,0);
   }
   .sticky-mobile ~ .header-container-navigation{
     padding-top: 115px;
@@ -661,7 +662,6 @@ body{
     background: #fff;
     width: 100%;
     z-index: 1090;
-    transform: translate3d(0,0,0);
   }
   .sticky-mobile ~ .header-container-navigation .main-menu-btn {
     position: relative;
