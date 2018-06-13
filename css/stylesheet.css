@@ -653,6 +653,7 @@ body{
   .sticky-mobile ~ .header-container-navigation{
     padding-top: 115px;
   }
+  
   .sticky-mobile ~ .header-container-navigation .navigation {
     position: fixed;
     top: 115px;
