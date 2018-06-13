@@ -657,7 +657,7 @@ body{
     z-index: 1090;
   }
   .sticky-mobile ~ .header-container-navigation .main-menu-btn {
-    position: fixed;
+    position: relative;
   }
   .header-navigation{
     border-bottom: 0;
