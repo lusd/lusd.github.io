@@ -285,7 +285,7 @@ body{
   }
 }
 .main-menu-btn {
-  position: absolute;
+  position: relative;
   width: 28px;
   height: 33px;
   right: 0;
@@ -655,6 +655,9 @@ body{
     background: #fff;
     width: 100%;
     z-index: 1090;
+  }
+  .sticky-mobile ~ .header-container-navigation .main-menu-btn {
+    position: fixed;
   }
   .header-navigation{
     border-bottom: 0;
