@@ -622,6 +622,7 @@ body{
 .form-control{
   border-radius: 0;
 }
+
 @media (min-width: 1024px) and (max-width: 1139.98px){
   .header-top{
     width: 100%;
@@ -648,8 +649,6 @@ body{
     z-index: 1090;
     border-bottom: 1px solid #c0c0c0;
     padding-bottom: 4px;
-    overflow: hidden;
-      -webkit-overflow-scrolling: touch;
   }
   .sticky-mobile ~ .header-container-navigation{
     padding-top: 115px;
@@ -660,9 +659,11 @@ body{
     background: #fff;
     width: 100%;
     z-index: 1090;
+    overflow: inherit;
   }
   .sticky-mobile ~ .header-container-navigation .main-menu-btn {
     position: relative;
+    overflow: inherit;
   }
   .header-navigation{
     border-bottom: 0;
