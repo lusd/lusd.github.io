@@ -285,10 +285,10 @@ body{
   }
 }
 .main-menu-btn {
-  position: relative;
-  float: right;
+  position: absolute;
   width: 28px;
   height: 33px;
+  right: 0;
   text-indent: 33px;
   white-space: nowrap;
   overflow: hidden;
