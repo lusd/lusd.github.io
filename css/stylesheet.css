@@ -647,30 +647,12 @@ body{
     background: #fff;
     width: 100%;
     z-index: 1090;
-    border-bottom: 1px solid #c0c0c0;
-    padding-bottom: 4px;
-    transform: translate3d(0,0,0);
   }
   .sticky-mobile ~ .header-container-navigation{
     padding-top: 115px;
   }
-  .sticky-mobile ~ .header-container-navigation .navigation {
-    position: fixed;
-    top: 115px;
-    left: 0;
-    right: 0;
-    background: #fff;
-    width: 100%;
-    z-index: 1090;
-    transform: translate3d(0,0,0);
-  }
-  .sticky-mobile ~ .header-container-navigation .main-menu-btn {
-    position: relative;
-  }
   .header-navigation{
     border-bottom: 0;
-  }
-  .sticky-mobile ~ .header-container-navigation .header-banner-mobile {
   }
   .header-top{
     min-width: 0;
@@ -863,7 +845,6 @@ body{
     background: #fff;
     width: 100%;
     z-index: 1090;
-    -webkit-overflow-scrolling: touch;
   }
   .header-logo {
     height: 83px;
@@ -1361,7 +1342,7 @@ body{
   margin-left: 15px;
   text-align: center;
 }
-.sticky {
+.sticky{
   position: fixed;
   top: 0;
   z-index: 1090;
@@ -1369,7 +1350,7 @@ body{
   border-bottom: 1px solid #c0c0c0;
   width: 100%;
 }
-.sticky ~ .header-banner{
+.sticky-padding{
   padding-top: 33px;
 }
 @media (min-width: 1024px) and (max-width: 1139.98px){

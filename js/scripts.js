@@ -1,9 +1,6 @@
 
   // When the user scrolls the page, execute myFunction
-  window.onscroll = function() {myFunction()};
-  window.ontouchstart = function() {myFunction()
-    true
-  };
+  window.onscroll = function() {checkPosition()};
 
   // Get the navbar
   var navbar = document.getElementById("navbar");
@@ -14,7 +11,32 @@
   var stickymobile = mobile.offsetTop;
 
   // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
-  function myFunction() {
+  function checkPosition() {
+    if (window.matchMedia('(max-width: 1023px)').matches) {
+          if (window.pageYOffset >= stickymobile){
+            mobile.classList.add("sticky-mobile")
+          } else{
+            mobile.classList.remove("sticky-mobile");
+          }
+        if(window.pageYOffset == 0) {
+          mobile.classList.remove("sticky-mobile");
+        }
+    } else {
+          if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky");
+            stickyPadding.classList.add("sticky-padding")
+          } else {
+            navbar.classList.remove("sticky");
+            stickyPadding.classList.remove("sticky-padding");
+
+          }
+        if(window.pageYOffset == 0) {
+          navbar.classList.remove("sticky");
+          stickyPadding.classList.remove("sticky-padding");
+        }
+      }
+    }
+/*function myFunction() {
     if (window.pageYOffset >= sticky) {
       navbar.classList.add("sticky")
     } else {
@@ -31,7 +53,7 @@
       navbar.classList.remove("sticky");
     }
   }
-
+*/
 
   $(document).ready(function() {
     $(function() {

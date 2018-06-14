@@ -13,19 +13,19 @@
     <script src="https://use.fontawesome.com/4ee0375632.js"></script>
     <title>Home</title>
   </head>
-  <body>
+  <body id="body">
     <div class="home-wrap">
       <div class="home-header">
-        <div class="header-container-top" id="mobile">
-          <div class="header-top">
-            <img class="header-logo" src="img/logo.png" alt="France Estate Services logo">
-            <div class="header-contact">
-              <p class="header-contact-text">Vragen of contact?</p>
-              <p class="header-contact-number">070-360 5101</p>
+        <div class="logo-navigation-wrap" id="mobile">
+          <div class="header-container-top" >
+            <div class="header-top">
+              <img class="header-logo" src="img/logo.png" alt="France Estate Services logo">
+              <div class="header-contact">
+                <p class="header-contact-text">Vragen of contact?</p>
+                <p class="header-contact-number">070-360 5101</p>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="header-container-navigation">
           <div class="header-navigation" id="navbar">
             <div class="header-navigation-wrap">
               <div class="navigation">
@@ -72,6 +72,8 @@
               </div>
             </div>
           </div>
+        </div>
+        <div class="header-container-navigation" id="stickyPadding">
           <div class="header-banner container-fluid slider no-gutters">
             <div id="carousel-main-page" class="carousel slide" data-ride="carousel">
               <ol class="carousel-indicators">
@@ -291,6 +293,5 @@
     <script src="js/jquery.smartmenus.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.7.0/jquery.matchHeight-min.js"></script>
     <script src="js/scripts.js"></script>
-
   </body>
 </html>
