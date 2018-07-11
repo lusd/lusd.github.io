@@ -33,7 +33,7 @@ body{
   word-spacing: 2px;
 }
 .wrap{
-  margin: 0 auto;
+  margin: 30 auto;
   width: 1190px;
   height: 1684px;
   box-shadow: 0 0 5px 0px;
@@ -588,6 +588,6 @@ body{
   }
   .wrap{
     margin: 0 auto;
-    height: 1680px;
+    height: 1681px;
   }
 }
