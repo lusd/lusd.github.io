@@ -12,9 +12,9 @@ document.getElementById('addLike').addEventListener("click", function(){
 document.getElementById('getYear').innerHTML = new Date().getFullYear();
 // When the user scrolls the page, execute myFunction
 window.onscroll = function(){ checkPosition()};
+var sticky = sidebar.offsetTop;
 function checkPosition(){
     if (window.matchMedia('(min-width: 1023px)').matches){
-        var sticky = sidebar.offsetTop;
         var navbar = document.getElementById("sidebar");
         if (window.pageYOffset >= sticky) {
             sidebar.classList.add("sticky");
