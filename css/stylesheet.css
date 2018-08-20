@@ -11,7 +11,7 @@ body{
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  transition: 1s;
+  transition: 0.5s;
 }
 .wrap{
   height: 100%;
@@ -33,6 +33,7 @@ body{
 .radar__logo--image{
   height: 31px;
   width: 254px;
+  z-index: 1025;
 }
 .radar__logo--title{
   height: 84px;
@@ -58,4 +59,71 @@ body{
   color: white;
   font-size: 48px;
   font-family: 'PT Sans', sans-serif;
+}
+.animate__text{
+  transition: 0.5s ease;
+}
+.radar__button{
+  text-transform: uppercase;
+  outline: none;
+  height: 100px;
+  width: 430px;
+  text-align: center;
+  font-size: 46px;
+  color: #7d7eab;
+  background-color: rgba(125, 126, 171, 0.2);
+  border-radius: 50px;
+  border: solid 4px #7d7eab;
+  margin-top: 221px;
+  font-family: 'PT Sans', sans-serif;
+  z-index: 1026;
+  transition: 0.5s;
+}
+.footer{
+  display: flex;
+  justify-content: center;
+}
+#radarCircle {
+  width: 1200px;
+  height: 1200px;
+  position: relative;
+  background-size: 1200px 1200px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -600px;
+  margin-top: -600px;
+}
+#radarCircle .pointer {
+  position: absolute;
+  z-index: 1024;
+  left: 10.5820106%;
+  right: 10.5820106%;
+  top: 10.5820106%;
+  bottom: 50%;
+  will-change: transform;
+  transform-origin: 50% 100%;
+  border-radius: 50% 50% 50% 50% / 100% 100% 0 0;
+  background-image: linear-gradient(-90deg, rgba(113, 221, 254, 1), rgba(88, 152, 198, 0) 50%, rgba(0,0,0,0) 100%),
+                    linear-gradient(10deg, rgba(0, 0, 0, 0) 0%, rgba(196, 205, 225, 0) 10%, rgba(88, 152, 198, 0.25) 25%, rgba(88, 152, 198, 0.9) 100%);
+  clip-path: polygon(100% 0%, 100% 80%, 50% 100%, 0 100%, 0 0);
+  animation: rotate360 6s infinite linear;
+}
+#radarCircle .pointer:after {
+  content: "";
+  display: none;
+  position: absolute;
+  width: 50%;
+  bottom: -1px;
+  border-top: 2px solid rgba(0, 231, 244, 0.8);
+  box-shadow: 0 0 3px rgba(0, 231, 244, 0.6);
+  border-radius: 9px;
+}
+@keyframes rotate360 {
+  0% {
+            transform: rotate(-360deg);
+  }
+  to {
+            transform: rotate(0deg);
+  }
 }
