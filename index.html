@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&amp;subset=latin-ext" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.rawgit.com/jgthms/minireset.css/master/minireset.css">
+    <script src="https://use.fontawesome.com/4ee0375632.js"></script>
     <link rel="stylesheet" href="css/stylesheet.css">
     <title>Thales</title>
   </head>
@@ -14,18 +15,50 @@
         <div id="radarCircle">
           <div class="pointer"></div>
         </div>
-        <img class="radar__logo--image" src="img/thales-logo.png" alt="Thales logo">
-        <img class="radar__logo--title" src="img/cycle.png" alt="The Radar Cycle">
-        <p class="radar__subtitle">THE PRODUCT LIFECYCLE</p>
-        <div class="radar__line"></div>
-        <span class="radar__text">imaginez votre équipement</span>
-        <span class="radar__text" id="app">{{txt}}</span>
+        <img v-bind:class="{ active: isActive, fadeOut: isFadeOut }" class="radar__logo__image" src="img/thales-logo.png" alt="Thales logo">
+        <img v-bind:class="{ active: isActive, fadeOut: isFadeOut }" class="radar__logo--title" src="img/cycle.png" alt="The Radar Cycle">
+        <p v-bind:class="{ active: isActive, fadeOut: isFadeOut }" class="radar__subtitle">THE PRODUCT LIFECYCLE</p>
+        <div v-bind:class="{ active: isActive, fadeOut: isFadeOut }" class="radar__line"></div>
+        <span v-bind:class="{ active: isActive, fadeOut: isFadeOut }" class="radar__text">imaginez votre équipement</span>
+        <span v-bind:class="{ active: isActive, fadeOut: isFadeOut }" class="radar__text" id="app">{{txt}}</span>
+        <div id="slider">
+          <div class="slide" id="firstSlide">
+            <div class="slider__animation">
+              <div class="slider__circle">
+              </div>
+              <img class="slider__image" src="img/Forme4.png" alt="">
+            </div>
+            <span class="slider__title">Mais avant, êtes-vous incollable  sur la pérennité des produits ? </span>
+            <div class="slider__line"></div>
+            <span class="slider__text">Fleurons de la technologie, les produits Thales évoluent rapidement et nécessitent un maintien constant afin de prévenir l’obsolescence des composants. <br></span>
+          </div>
+          <div class="slide" id="secondSlide">
+            <div class="slider__animation">
+              <div class="slider__circle slider__circle__two">
+              </div>
+              <img class="slider__image__second" src="img/Forme5.png" alt="">
+            </div>
+            <span class="slider__title">Mais avant, êtes-vous incollable  sur la pérennité des produits ? </span>
+            <div class="slider__line"></div>
+            <span class="slider__text">Perte de compétences du personnel opérationnel, maintenance et
+            évolution des outillages, tests pour les réparations, rupture d'approvisionnement sont autant d’éléments à anticiper grâce à la veille active de l’obsolescence.
+            </span>
+          </div>
+          <div class="slide" id="thirdSlide">
+          </div>
+          <button class="slider__prev" id="prev"><i class="fa fa-angle-left"></i></button>
+          <button class="slider__next" id="next"><i class="fa fa-angle-right"></i></button>
+        </div>
       </div>
       <div class="footer">
-        <button class="radar__button" id="radarBtn" type="button" disabled onclick="checkEnable()">Démarrer</button>
+        <button class="radar__button" id="radarBtn" type="button" disabled onclick="goSlider()">Démarrer</button>
+        <div id="slider__control">
+          <button id="sliderButtonOne" class="slider__control slider__control__active" onclick=sliderFirst()></button>
+          <button id="sliderButtonTwo" class="slider__control" onclick=sliderSecond()></button>
+          <button id="sliderButtonThree" class="slider__control"></button>
+        </div>
       </div>
     </div>
-
     <!-- development version, includes helpful console warnings -->
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="js/scripts.js"></script>

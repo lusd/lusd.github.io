@@ -36,21 +36,34 @@ function addLoadEvent(func) {
 }
 addLoadEvent(preloader);
 
+//Value for listening button demarrer;
+demarrerPressed = false;
 //Animate Background image to renew each 3s.
-var animateBg = (function(){
+ var animateBg = (function(){
   var i = 6;
+  var name = "Fond";
   var countStart = setInterval(function(){
+      if (demarrerPressed == true) {
+        name = "Fond-Flou";
+        i = 6;
+        demarrerPressed = false;
+      }
       i--;
-      if (i == 1) {clearInterval(countStart);}
-      document.getElementById('body').style.backgroundImage = "url('img/Fond" + i + ".jpg')";
+      if (i == 1) {
+        clearInterval(countStart);
+      }
+      document.getElementById('body').style.backgroundImage = "url('img/" + name + i + ".jpg')";
   }, 3000);
 })();
 
 //Creating Vue object
 var app = new Vue({
-  el: '#app',
+  el: '#radar',
   data: {
-    txt: 'toujours économique'
+    txt: 'toujours économique',
+    isActive : false,
+    isFadeOut : false,
+    isSliderActive : 1
   }
 })
 
@@ -84,12 +97,31 @@ var animateButton = (function(){
         btn.style.color = '#00b4dd';
         btn.disabled = false;
         btn.style.transform = 'scale(1.1)';
-    }, 18000);
+    }, 3000);
 })();
 
-function checkEnable(){
-  var bg = document.getElementById('body').style.backgroundImage;
-  if (bg == 'url("img/Fond1.jpg")') {
-    alert('I am alive');
-  }
+function goSlider(){
+    document.getElementById('body').style.backgroundImage = "url('img/Fond-Flou6.jpg')";
+    document.getElementById('radarBtn').style.opacity = 0;
+    app.isFadeOut = true;
+    demarrerPressed = true;
+    setInterval(function(){
+      document.getElementById('radarBtn').style.display = "none";
+      app.isActive = true;
+      document.getElementById('slider__control').style.display = "flex";
+      document.getElementById('slider__control').style.animationName = "slideToTop";
+      document.getElementById('slider').style.display = "block";
+    }, 500);
+}
+function sliderSecond(){
+  document.getElementById('firstSlide').style.display = "none";
+  document.getElementById('sliderButtonOne').style.background = "#364a93";
+  document.getElementById('secondSlide').style.display = "flex";
+  document.getElementById('sliderButtonTwo').style.background = "#c3d600";
+}
+function sliderFirst(){
+  document.getElementById('secondSlide').style.display = "none";
+  document.getElementById('sliderButtonTwo').style.background = "#364a93";
+  document.getElementById('firstSlide').style.display = "flex";
+  document.getElementById('sliderButtonOne').style.background = "#c3d600";
 }
