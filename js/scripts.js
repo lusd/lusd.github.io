@@ -8,11 +8,11 @@ function preloader() {
 				}
 			}
 			preload(
-				"img/Fond1.jpg",
-				"img/Fond2.jpg",
-				"img/Fond3.jpg",
-        "img/Fond4.jpg",
         "img/Fond5.jpg",
+        "img/Fond4.jpg",
+        "img/Fond3.jpg",
+        "img/Fond2.jpg",
+				"img/Fond1.jpg",
         "img/Fond-Flou1.jpg",
         "img/Fond-Flou2.jpg",
         "img/Fond-Flou3.jpg",
@@ -36,12 +36,14 @@ function addLoadEvent(func) {
 }
 addLoadEvent(preloader);
 
+
 //Value for listening button demarrer;
 demarrerPressed = false;
 //Animate Background image to renew each 3s.
  var animateBg = (function(){
   var i = 6;
   var name = "Fond";
+  document.getElementById('body').style.anmiationName = "bgAnimate";
   var countStart = setInterval(function(){
       if (demarrerPressed == true) {
         name = "Fond-Flou";
@@ -56,6 +58,7 @@ demarrerPressed = false;
   }, 3000);
 })();
 
+
 //Creating Vue object
 var app = new Vue({
   el: '#radar',
@@ -67,7 +70,8 @@ var app = new Vue({
   }
 })
 
-//Animate text on radar to change every 1.5s via Vue object; 2 times.
+
+//Animate text on radar to change every 1.5s;
 var animateTxt = (function animateTxt(){
     var arrTxt = ['toujours économique',
                 'toujours en avance',
@@ -78,6 +82,7 @@ var animateTxt = (function animateTxt(){
               ];
     var k = document.getElementById('app');
     var i = 1;
+    k.style.animationName = "customFade";
     var txtCountStart = setInterval(function(){
           k.innerHTML = arrTxt[i];
           if (i == 5) {
@@ -90,6 +95,7 @@ var animateTxt = (function animateTxt(){
         }, 1500);
 })();
 
+
 //Animate button then introduction page will load first loop;
 var animateButton = (function(){
     var animateButtonStart = setInterval(function(){
@@ -98,9 +104,11 @@ var animateButton = (function(){
         btn.style.color = '#00b4dd';
         btn.disabled = false;
         btn.style.transform = 'scale(1.1)';
-    }, 180);
+    }, 3000);
 })();
 
+
+//Change #Bienvenue to #Slider with animation.
 function goSlider(){
     document.getElementById('body').style.backgroundImage = "url('img/Fond-Flou6.jpg')";
     document.getElementById('radarBtn').style.opacity = 0;
@@ -114,6 +122,7 @@ function goSlider(){
     }, 500);
 }
 
+//disable auto looping carousel
 $('.carousel').carousel({
   interval: 0
 })

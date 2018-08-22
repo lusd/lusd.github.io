@@ -8,7 +8,7 @@ html, body{
 }
 body{
   background-image: url('../img/Fond6.jpg');
-  animation-name: bgAnimate;
+  animation-name: none;
   animation-duration: 3s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
@@ -16,24 +16,6 @@ body{
   background-repeat: no-repeat;
   background-size: cover;
   transition: background 0.5s;
-}
-@keyframes bgAnimate{
-  0%{
-    background-size: 100%;
-    background-position: center;
-    background-blend-mode: normal;
-    background-position: 50% 50%;
-  }
-  95%{
-    background-size: 115%;
-    background-position: 50% 50%;
-
-  }
-  100%{
-    background-size: 115%;
-    background-position: 50% 50%;
-    transition: 0;
-  }
 }
 .wrap{
   height: 100%;
@@ -88,34 +70,11 @@ body{
 .animate__text{
   transition: 0.5s ease;
 }
-@keyframes customFade {
-  0% {
-    opacity: 0;
-    -webkit-transform: translate3d(100%, 0, 0);
-    transform: translate3d(100%, 0, 0);
-  }
-  25% {
-    opacity: 1;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-  75% {
-    opacity: 1;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-  100% {
-    opacity: 0;
-    -webkit-transform: translate3d(-100%, 0, 0);
-    transform: translate3d(-100%, 0, 0);
-  }
-}
-
 .customFade{
-  animation: customFade 1.5s;
+  animation-name: none;
+  animation-duration: 1.5s;
   animation-iteration-count: infinite;
 }
-
 .radar__button{
   text-transform: uppercase;
   outline: none;
@@ -169,54 +128,7 @@ body{
   border-radius: 9px;
 }
 
-@keyframes rotate360 {
-  0% {
-            transform: rotate(-360deg);
-  }
-  to {
-            transform: rotate(0deg);
-  }
-}
-@keyframes slideToTop {
-  0% {
-      transform: translateY(100px);
-  }
-  to {
-      transform: translateY(0);
-  }
-}
-@keyframes circleAppears {
-  0% {
-      transform: scale(0.3);
-  }
-  to {
-      transform: scale(1);
-  }
-}
-@keyframes circleGetBigger {
-  0 % {
-    transform: scale(1);
-  }
-  to {
-    transform: scale(1.5);
-  }
-}
-@keyframes circleGetSmaller {
-  0% {
-    transform: scale(1.5);
-  }
-  to {
-    transform: scale(1);
-  }
-}
-@keyframes headerSlideDown {
-  0% {
-    transform: translate(0, -160px);
-  }
-  to {
-    transform: translate(0, 0);
-  }
-}
+
 .fade-enter-active, .fade-leave-active {
   transition: opacity .5s;
 }
@@ -414,4 +326,93 @@ body{
 }
 .header__image{
   margin-left: 83px;
+}
+
+@keyframes rotate360 {
+  0% {
+            transform: rotate(-360deg);
+  }
+  to {
+            transform: rotate(0deg);
+  }
+}
+@keyframes slideToTop {
+  0% {
+      transform: translateY(100px);
+  }
+  to {
+      transform: translateY(0);
+  }
+}
+@keyframes circleAppears {
+  0% {
+      transform: scale(0.3);
+  }
+  to {
+      transform: scale(1);
+  }
+}
+@keyframes circleGetBigger {
+  0 % {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.5);
+  }
+}
+@keyframes circleGetSmaller {
+  0% {
+    transform: scale(1.5);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+@keyframes headerSlideDown {
+  0% {
+    transform: translate(0, -160px);
+  }
+  to {
+    transform: translate(0, 0);
+  }
+}
+@keyframes bgAnimate{
+  0%{
+    background-size: 100%;
+    background-position: center;
+    background-blend-mode: normal;
+    background-position: 50% 50%;
+  }
+  95%{
+    background-size: 115%;
+    background-position: 50% 50%;
+
+  }
+  100%{
+    background-size: 115%;
+    background-position: 50% 50%;
+    transition: 0;
+  }
+}
+@keyframes customFade {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+  25% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  75% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
 }
