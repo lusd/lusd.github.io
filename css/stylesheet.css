@@ -8,10 +8,32 @@ html, body{
 }
 body{
   background-image: url('../img/Fond6.jpg');
+  animation-name: bgAnimate;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  transition: 0.5s;
+  transition: background 0.5s;
+}
+@keyframes bgAnimate{
+  0%{
+    background-size: 100%;
+    background-position: center;
+    background-blend-mode: normal;
+    background-position: 50% 50%;
+  }
+  95%{
+    background-size: 115%;
+    background-position: 50% 50%;
+
+  }
+  100%{
+    background-size: 115%;
+    background-position: 50% 50%;
+    transition: 0;
+  }
 }
 .wrap{
   height: 100%;
