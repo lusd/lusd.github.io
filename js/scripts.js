@@ -49,10 +49,10 @@ demarrerPressed = false;
         demarrerPressed = false;
       }
       i--;
-      if (i == 1) {
-        clearInterval(countStart);
-      }
       document.getElementById('body').style.backgroundImage = "url('img/" + name + i + ".jpg')";
+      if (i == 1) {
+        i = 7;
+      }
   }, 3000);
 })();
 
@@ -69,24 +69,25 @@ var app = new Vue({
 
 //Animate text on radar to change every 1.5s via Vue object; 2 times.
 var animateTxt = (function animateTxt(){
-    var i = 1;
-    var k = 0;
     var arrTxt = ['toujours économique',
-                  'toujours en avance',
-                  'toujours sécurisé',
-                  'toujours à jour',
-                  'toujours disponible',
-                  'toujours fonctionnel'
-                ];
+                'toujours en avance',
+                'toujours sécurisé',
+                'toujours à jour',
+                'toujours disponible',
+                'toujours fonctionnel'
+              ];
+    var k = document.getElementById('app');
+    var i = 1;
     var txtCountStart = setInterval(function(){
-        app.txt = arrTxt[i];
-        if (i == 5) {
-          if (k == 1) {clearInterval(txtCountStart);}
-          i = -1;
-          k++;
-        }
-        i++;
-      }, 1500);
+          k.innerHTML = arrTxt[i];
+          if (i == 5) {
+            i = -1;
+          }
+          if (!document.getElementById('bienvenue').style.display == 'none'){
+            clearInterval(txtCountStart);
+          }
+          i++;
+        }, 1500);
 })();
 
 //Animate button then introduction page will load first loop;
@@ -97,7 +98,7 @@ var animateButton = (function(){
         btn.style.color = '#00b4dd';
         btn.disabled = false;
         btn.style.transform = 'scale(1.1)';
-    }, 3000);
+    }, 180);
 })();
 
 function goSlider(){
@@ -108,20 +109,11 @@ function goSlider(){
     setInterval(function(){
       document.getElementById('radarBtn').style.display = "none";
       app.isActive = true;
-      document.getElementById('slider__control').style.display = "flex";
-      document.getElementById('slider__control').style.animationName = "slideToTop";
       document.getElementById('slider').style.display = "block";
+      document.getElementById('header').style.display = "flex";
     }, 500);
 }
-function sliderSecond(){
-  document.getElementById('firstSlide').style.display = "none";
-  document.getElementById('sliderButtonOne').style.background = "#364a93";
-  document.getElementById('secondSlide').style.display = "flex";
-  document.getElementById('sliderButtonTwo').style.background = "#c3d600";
-}
-function sliderFirst(){
-  document.getElementById('secondSlide').style.display = "none";
-  document.getElementById('sliderButtonTwo').style.background = "#364a93";
-  document.getElementById('firstSlide').style.display = "flex";
-  document.getElementById('sliderButtonOne').style.background = "#c3d600";
-}
+
+$('.carousel').carousel({
+  interval: 0
+})

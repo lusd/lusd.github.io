@@ -20,17 +20,18 @@ body{
 }
 .radar{
   width: 100%;
-  height: 70%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: flex-start;
 }
-.footer{
-  width: 100%;
-  height: 30%;
+.bienvenue{
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 633px;
 }
 .radar__logo__image{
   height: 31px;
@@ -65,6 +66,34 @@ body{
 .animate__text{
   transition: 0.5s ease;
 }
+@keyframes customFade {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+  25% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  75% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+.customFade{
+  animation: customFade 1.5s;
+  animation-iteration-count: infinite;
+}
+
 .radar__button{
   text-transform: uppercase;
   outline: none;
@@ -76,28 +105,28 @@ body{
   background-color: rgba(125, 126, 171, 0.2);
   border-radius: 50px;
   border: solid 4px #7d7eab;
-  margin-top: 221px;
+  margin-top: 150px;
+  padding: 0;
   font-family: 'PT Sans', sans-serif;
   z-index: 1026;
   transition: 0.5s ease-in-out;
 }
 #radarCircle {
-  width: 1200px;
-  height: 1200px;
+  width: 900px;
+  height: 900px;
   position: relative;
-  background-size: 1200px 1200px;
+  background-size: 900px 900px;
   position: absolute;
   left: 50%;
   top: 50%;
-  margin-left: -600px;
-  margin-top: -600px;
+  transform: translate(-50%, -50%);
 }
 #radarCircle .pointer {
   position: absolute;
   z-index: 1024;
-  left: 10.5820106%;
-  right: 10.5820106%;
-  top: 10.5820106%;
+  left: 0;
+  right: 0;
+  top: 0;
   bottom: 50%;
   will-change: transform;
   transform-origin: 50% 100%;
@@ -117,6 +146,7 @@ body{
   box-shadow: 0 0 3px rgba(0, 231, 244, 0.6);
   border-radius: 9px;
 }
+
 @keyframes rotate360 {
   0% {
             transform: rotate(-360deg);
@@ -131,7 +161,7 @@ body{
   }
   to {
       transform: translateY(0);
-  },
+  }
 }
 @keyframes circleAppears {
   0% {
@@ -141,12 +171,28 @@ body{
       transform: scale(1);
   }
 }
-@keyFrames circleGetBigger {
+@keyframes circleGetBigger {
   0 % {
     transform: scale(1);
   }
   to {
     transform: scale(1.5);
+  }
+}
+@keyframes circleGetSmaller {
+  0% {
+    transform: scale(1.5);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+@keyframes headerSlideDown {
+  0% {
+    transform: translate(0, -160px);
+  }
+  to {
+    transform: translate(0, 0);
   }
 }
 .fade-enter-active, .fade-leave-active {
@@ -155,7 +201,7 @@ body{
 .fade-enter, .fade-leave-to{
   opacity: 0;
 }
-.active{
+.active__bienvenue{
   display: none;
 }
 .fadeOut{
@@ -186,16 +232,28 @@ body{
   display: none;
   width: 100%;
   height: 100%;
-  margin-bottom: -133px;
   position: relative;
 }
-.slide{
+.slider{
   width: 100%;
   height: 100%;
+}
+.carousel{
+  height: 100%;
+}
+.slide__wrapper{
+  height: 100%;
   display: flex;
-  flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
-  justify-content: flex-end;
+  flex-direction: column;
+  padding-top: 600px;
+}
+.slide__wrapper__two{
+  padding-top: 355px;
+}
+.carousel-inner{
+  height: 100%;
 }
 .slider__title{
   color: #5dbfd4;
@@ -212,14 +270,16 @@ body{
   text-align: center;
 }
 .slider__animaton{
-  position: relative;
+  position: inherit;
   width: 100%;
 }
 .slider__circle{
   position: absolute;
-  top: 37%;
+  top: 535.5px;
+  top: calc(768px - 465px / 2) ;
+  left: 791.5px;
   left: calc(1024px - 465px / 2);
-  background-color: rgba(213, 223, 250, 0.32);
+  background-color: rgba(213, 223, 250, 0.15);
   width: 465px;
   height: 465px;
   display: flex;
@@ -233,12 +293,18 @@ body{
 .slider__circle__two{
   animation-name: circleGetBigger;
   animation-fill-mode: forwards;
+  animation-delay: 0.3s;
+}
+.slider__circle__three{
+  animation-name: circleGetSmaller;
+  animation-fill-mode: forwards;
+  animation-delay: 0.2s;
 }
 .slider__image{
-  margin-bottom: 75px;
+  margin-bottom: 104px;
 }
 .slider__image__second{
-  margin-bottom: 29px;
+  margin-bottom: 104px;
   margin-right: 24px;
 }
 .slider__line{
@@ -249,17 +315,81 @@ body{
   margin-bottom: 29px;
   margin-top: 24px;
 }
-#secondSlide, #thirdSlide{
-  display: none;
+.carousel-control-prev-icon, .carousel-control-next-icon{
+  width: 50px!important;
+  height: 50px!important;
 }
-.slider__prev, .slider__next{
-  position: absolute;
-  top: 50%;
-  left: 3%;
-  font-size: 6em;
+.slider__boxes{
+  width: 1628px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.slider__box{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  border: solid 4px #7d7eab;
+  background-color: rgba(213, 223, 250, 0.15);
+  border-radius: 10px;
+  width: 503px;
+  height: 262px;
+}
+.slider__box__text{
+  font-size: 36px;
+  color: #fff;
+  font-family: 'PT Sans', sans-serif;
+  line-height: 1.33;
+  text-align: center;
+}
+.slider__box__text--bigger{
+  font-size: 44px;
+  font-weight: bold;
+  line-height: 1.09;
+}
+.slider__box .fa-angle-down{
   color: #7d7eab;
 }
-.slider__next{
-  left: auto;
-  right: 3%;
+.carousel-indicators{
+  bottom: 64px!important;
+  animation-name: slideToTop;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+}
+.carousel-indicators li{
+  width: 144px!important;
+  height: 16px!important;
+  background-color: #364a93!important;
+}
+.carousel-indicators .active{
+  background-color: #c3d600!important;
+  width: 144px!important;
+  height: 16px!important;
+}
+.slider__box__first{
+  border-color: #c3d600;
+  background-color: rgba(195, 214, 0, 0.2);
+}
+.slider__box__first .slider__box__text{
+  color: #c3d600;
+}
+.slider__box__first .fa-angle-down{
+  color: #c3d600;
+}
+.header{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 160px;
+  background-color: #040c61;
+  display: none;
+  align-items: center;
+  animation-name: headerSlideDown;
+  animation-duration: 0.4s;
+  animation-iteration-count: 1;
+}
+.header__image{
+  margin-left: 83px;
 }
