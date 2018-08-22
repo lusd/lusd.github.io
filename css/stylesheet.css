@@ -15,6 +15,7 @@ body{
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  transition: background 0.5s;
 }
 .wrap{
   height: 100%;
@@ -390,7 +391,6 @@ body{
   100%{
     background-size: 115%;
     background-position: 50% 50%;
-    transition: 0;
   }
 }
 @keyframes customFade {

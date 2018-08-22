@@ -40,10 +40,10 @@ addLoadEvent(preloader);
 //Value for listening button demarrer;
 demarrerPressed = false;
 //Animate Background image to renew each 3s.
- var animateBg = (function(){
+var animateBg = (function(){
   var i = 6;
   var name = "Fond";
-  document.getElementById('body').style.anmiationName = "bgAnimate";
+  document.getElementById('body').style.animationName = "bgAnimate";
   var countStart = setInterval(function(){
       if (demarrerPressed == true) {
         name = "Fond-Flou";
