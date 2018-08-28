@@ -4,7 +4,7 @@
 html, body{
   margin: 0;
   width: 100%;
-  height: 100%
+  height: 100%;
 }
 body{
   background-image: url('../img/Fond6.jpg');
@@ -285,7 +285,7 @@ body{
   color: #7d7eab;
 }
 .carousel-indicators{
-  bottom: 64px!important;
+  bottom: 45px!important;
   animation-name: slideToTop;
   animation-duration: 0.5s;
   animation-iteration-count: 1;
