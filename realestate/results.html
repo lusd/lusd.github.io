@@ -14,7 +14,7 @@
   <body>
     <div class="home-wrap">
       <div class="home-header">
-        <div class="header-container-top">
+        <div class="header-container-top" id="mobile">
           <div class="header-top">
             <img class="header-logo" src="img/logo.png" alt="France Estate Services logo">
             <div class="header-contact">
@@ -70,7 +70,7 @@
               </div>
             </div>
           </div>
-          <div class="properties-header-banner container-fluid no-gutters">
+          <div class="properties-header-banner container-fluid no-gutters" id="headerOffsetTop">
             <div class="contact-header-banner-container">
               <h1 class="properties-slider-title">De beste kennis van de Franse vastgoedmarkt</h1>
             </div>
@@ -347,34 +347,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
     <script src="js/jquery.smartmenus.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.7.0/jquery.matchHeight-min.js"></script>
-    <script>
-    // When the user scrolls the page, execute myFunction
-      window.onscroll = function() {myFunction()};
+    <script src="js/custom.js"></script>
 
-      // Get the navbar
-      var navbar = document.getElementById("navbar");
-
-      // Get the offset position of the navbar
-      var sticky = navbar.offsetTop;
-
-      // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
-      function myFunction() {
-      if (window.pageYOffset >= sticky) {
-      navbar.classList.add("sticky")
-      } else {
-      navbar.classList.remove("sticky");
-      }
-      }
-    </script>
-    <script>
-      $(document).ready(function() {
-        $(function() {
-          $('#main-menu').smartmenus({
-            keepHighlighted: true,
-            markCurrentItem: true
-          });
-        });
-      });
-    </script>
   </body>
 </html>
