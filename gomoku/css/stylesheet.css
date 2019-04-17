@@ -1,0 +1,49 @@
+*, *::before, *::after{
+  box-sizing: border-box;
+}
+html, body{
+  width: 100%;
+  margin: 0;
+}
+#battlefield{
+  border: 1px solid rgb(254,250,203);
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+.wrap{
+  width: 602px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+}
+.numbers__column{
+  width: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  font-size: 22px;
+  line-height: 30px;
+  text-align: right;
+  font-family: Helvetica;
+  font-weight: 200;
+  color: #555;
+}
+.numbers__column span{
+  vertical-align: middle;
+}
+.numbers__row{
+  width: 570px;
+  display: flex;
+  margin-left: auto;
+}
+.numbers__row span{
+  display: block;
+  font-size: 20px;
+  font-family: Helvetica;
+  width: 30px;
+  text-align: center;
+  font-weight: 200;
+  color: #555;
+}
