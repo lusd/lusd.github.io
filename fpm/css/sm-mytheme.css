@@ -1,0 +1,251 @@
+.header{
+  width: 100%;
+  background: linear-gradient(to right, #276ba4 40%, #4e92cd 100%);
+  padding: 0 10.8%;
+  height: 73px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.header__logo{
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  height: 100%;
+}
+.header__image__link{
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  width: auto;
+  height: auto;
+}
+.header__image{
+  width: auto;
+  height: 56px;
+  margin-bottom: 3px;
+}
+.header__linear{
+  display: none;
+}
+.header__navigation{
+  min-width: 600px;
+  width: auto;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 10px;
+}
+/* Rules to style the menu in mobile view (collapsible mode) here... */
+@media only screen and (max-width: 1090px){
+  .header{
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    height: 94px;
+  }
+  .header__linear{
+    display: none;
+    width: 100%;
+    background: linear-gradient(to right,#276BA5 0%, #276BA5 10%, #4F93CD 90%, #4F93CD 100%);
+    height: 1px;
+    opacity: 1;
+  }
+  .header__navigation{
+    min-width: 29px;
+    display: flex;
+    width: 100%;
+  }
+  .header__logo{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 100%;
+  }
+  .header__image{
+    width: 300px;
+    height: auto;
+  }
+  .navigation__list{
+    display: none;
+  }
+  .navigation__list a{
+    color: white;
+    text-decoration: none;
+  }
+  /* hamburger icon */
+  .main__menu__btn{
+    margin-bottom: 0;
+    display: inline-block;
+  }
+  .main__menu__btn__icon, .main__menu__btn__icon:before, .main__menu__btn__icon:after {
+    position: absolute;
+    top: 45px;
+    left: 24px;
+    height: 2px;
+    width: 25px;
+    transition: all 0.25s;
+    background: white;
+    z-index: 1;
+  }
+  .main__menu__btn__icon:before {
+    content: '';
+    top: -7px;
+    left: 0;
+  }
+  .main__menu__btn__icon:after {
+    content: '';
+    top: 7px;
+    left: 0;
+  }
+}
+
+/* The Overlay (background) */
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 50;
+  left: 0;
+  top: 0;
+  background-color: #276ba4;
+  opacity: 0;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  transition: 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* Position the content inside the overlay */
+.overlay__content {
+  width: 100%;
+  text-align: left;
+  padding-left: 40px;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  display: block;
+  line-height: 33px;
+}
+
+/* Position the close button */
+.overlay .closebtn {
+  align-self: center;
+  font-size: 35px;
+  font-family: Helvetica, "Helvetica Neue", Arial, sans-serif;
+  line-height: 49px;
+  color: white;
+  margin-top: 5px;
+}
+
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media only screen and (max-height: 450px) {
+  .overlay a {font-size: 15px}
+  .overlay .closebtn {
+    font-size: 25px;
+  }
+  .overlay{
+    overflow-y: auto;
+  }
+}
+@media only screen and (min-width: 1091px) {
+  /* hide the button in desktop view */
+  .main__menu__btn {
+    position: absolute;
+    top: -99999px;
+  }
+}
+
+/* To make content in overlay centered for tablet devices */
+@media only screen and (min-width: 860px) and (max-width: 1090px){
+  .overlay__content {
+    width: 30%;
+    align-self: center;
+  }
+}
+
+@media only screen and (min-width: 1091px) {
+
+  /* Switch to desktop layout
+  -----------------------------------------------
+     These transform the menu tree from
+     collapsible to desktop (navbar + dropdowns)
+  -----------------------------------------------*/
+  /* start... (it's not recommended editing these rules) */
+  .sm-mytheme ul{position:absolute;width:auto;}
+  .sm-mytheme li{float: none;}
+  .sm-mytheme.sm-rtl li{float:right;}
+  .sm-mytheme ul li,.sm-mytheme.sm-rtl ul li,.sm-mytheme.sm-vertical li{float:none;}
+  .sm-mytheme a{white-space:nowrap;}
+  .sm-mytheme ul a,.sm-mytheme.sm-vertical a{white-space:normal;}
+  .sm-mytheme .sm-nowrap > li > a,.sm-mytheme .sm-nowrap > li > :not(ul) a{white-space:nowrap;}
+  /* ...end */
+
+  /* Rules to style the menu in desktop view here... */
+  .sm-mytheme{
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+  }
+  .sm-mytheme .navigation__list__item{
+    margin-right: 6.5%;
+    padding-bottom: 4px;
+    display: block;
+  }
+  .navigation__list a{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 22px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+  }
+  .navigation__link__image{
+    height: 8px;
+    width: auto;
+    margin-top: -4px;
+  }
+  .sm-mytheme .navigation__list__item__active a{
+    font-weight: 400;
+  }
+  .sm-mytheme .navigation__list__item .fa-sort-down{
+    color: white;
+    margin-left: 1px;
+    vertical-align: top;
+  }
+  .sm-mytheme .navigation__list__item:last-child{
+    margin-right: 0;
+  }
+  .sm-mytheme .submenu__dropdown{
+    background-color: #296ea7;
+    margin-top: 10px!important;
+    min-width: inherit!important;
+    left: -10px!important;
+    padding: 0;
+  }
+  .sm-mytheme .submenu__list__item a{
+    white-space: normal;
+    text-align: center;
+    font-size: 14px;
+  }
+  .sm-mytheme .submenu__list__item {
+    padding: 5px 18px;
+    border-bottom: 2px solid white;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 18px;
+  }
+  .sm-mytheme .submenu__list__item:last-child{
+    border-bottom: none;
+  }
+}
