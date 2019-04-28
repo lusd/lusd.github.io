@@ -25,6 +25,7 @@ body{
 }
 .home__introduction__title{
   color: #276ba4;
+  font-family: sans-serif;
   font-family: "Roboto", sans-serif;
   width: 550px;
   margin-top: 3.9%;
@@ -53,6 +54,7 @@ body{
 .home__introduction__text{
   width: 50%;
   margin-left: 52%;
+  font-family: sans-serif;
   font-family: "metallophile-sp8", sans-serif;
   line-height: 30px;
   font-size: 22px;
@@ -111,6 +113,7 @@ body{
   margin-bottom: 30px;
 }
 .home__text{
+  font-family: sans-serif;
   font-family: 'proxima-nova', sans-serif;
   font-size: 18px;
   font-weight: 300;
@@ -352,6 +355,11 @@ body{
 .home__research__block--mobile{
   display: none;
 }
+
+/* END Home page content section */
+
+/* START Footer section */
+
 .footer{
   width: 100%;
   background: linear-gradient(to right,#276BA5 40%,#4F93CD );
@@ -417,6 +425,11 @@ body{
 .footer__text__underline{
   text-decoration: underline;
 }
+
+/* END Footer section */
+
+/* START Home page media support for small laptops, tablets, and mobile */
+
 @media only screen and (max-width: 1090px){
   .home__introduction__wrap{
     background-position: right -45px top -15px;
@@ -823,3 +836,5 @@ body{
     padding: 0;
   }
 }
+
+/* END Home page media support */
