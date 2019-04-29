@@ -1,3 +1,7 @@
+$(document).ready(function() {
+    $("head").append('<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">');
+})
+
 $(function() {
   $('#main-menu').smartmenus();
 });
@@ -15,3 +19,16 @@ function closeNav() {
   document.getElementById("myNav").style.opacity = "0";
 }
 document.getElementById("header__menu__close").addEventListener('click', closeNav);
+
+// Changing src of logo image from desktop to mobile and versa.
+go();
+window.addEventListener('resize', go);
+function go(){
+  var el = document.getElementById("headerLogo");
+  if (window.screen.width > 860) {
+    el.src = "img/masterpage_logo_white.png";
+  }
+  else{
+    el.src = "img/old_logo_mobile.png"
+  }
+}

@@ -1,30 +1,47 @@
 .header{
   width: 100%;
+  background-color: #276ba4;
   background: linear-gradient(to right, #276ba4 40%, #4e92cd 100%);
-  padding: 0 10.8%;
   height: 73px;
+}
+/*  */
+.header__inner{
+  max-width: 1280px;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 75px;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-align: end;
+      align-items: flex-end;
 }
 .header__logo{
   width: 100%;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-end;
+  -ms-flex-pack: start;
+      justify-content: flex-start;
+  -ms-flex-align: end;
+      align-items: flex-end;
   height: 100%;
 }
 .header__image__link{
+  display: -ms-flexbox;
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-end;
+  -ms-flex-pack: start;
+      justify-content: flex-start;
+  -ms-flex-align: end;
+      align-items: flex-end;
   width: auto;
   height: auto;
 }
 .header__image{
   width: auto;
   height: 56px;
-  margin-bottom: 3px;
+  margin-bottom: 8px;
 }
 .header__linear{
   display: none;
@@ -32,35 +49,47 @@
 .header__navigation{
   min-width: 600px;
   width: auto;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: flex-end;
+  -ms-flex-pack: end;
+      justify-content: flex-end;
   padding-right: 10px;
 }
 /* Rules to style the menu in mobile view (collapsible mode) here... */
 @media only screen and (max-width: 1090px){
   .header{
-    justify-content: center;
-    flex-direction: column;
     position: relative;
     height: 94px;
+  }
+  .header__inner{
+    -ms-flex-pack: center;
+        justify-content: center;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    padding: 0;
   }
   .header__linear{
     display: none;
     width: 100%;
+    background-color: #276ba4;
     background: linear-gradient(to right,#276BA5 0%, #276BA5 10%, #4F93CD 90%, #4F93CD 100%);
     height: 1px;
     opacity: 1;
   }
   .header__navigation{
     min-width: 29px;
+    display: -ms-flexbox;
     display: flex;
     width: 100%;
   }
   .header__logo{
     width: 100%;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: flex-end;
+    -ms-flex-pack: center;
+        justify-content: center;
+    -ms-flex-align: end;
+        align-items: flex-end;
     height: 100%;
   }
   .header__image{
@@ -75,11 +104,7 @@
     text-decoration: none;
   }
   /* hamburger icon */
-  .main__menu__btn{
-    margin-bottom: 0;
-    display: inline-block;
-  }
-  .main__menu__btn__icon, .main__menu__btn__icon:before, .main__menu__btn__icon:after {
+  .main__menu__btn__icon1, .main__menu__btn__icon1:before, .main__menu__btn__icon1:after {
     position: absolute;
     top: 45px;
     left: 24px;
@@ -87,17 +112,19 @@
     width: 25px;
     transition: all 0.25s;
     background: white;
-    z-index: 1;
+    z-index: 5;
   }
-  .main__menu__btn__icon:before {
+  .main__menu__btn__icon1:before {
     content: '';
     top: -7px;
     left: 0;
+    z-index: 5;
   }
-  .main__menu__btn__icon:after {
+  .main__menu__btn__icon1:after {
     content: '';
     top: 7px;
     left: 0;
+    z-index: 5;
   }
 }
 
@@ -114,9 +141,12 @@
   overflow-x: hidden;
   overflow-y: hidden;
   transition: 0.25s ease;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: start;
+      justify-content: flex-start;
 }
 
 /* Position the content inside the overlay */
@@ -138,7 +168,8 @@
 
 /* Position the close button */
 .overlay .closebtn {
-  align-self: center;
+  -ms-flex-item-align: center;
+      align-self: center;
   font-size: 35px;
   font-family: Helvetica, "Helvetica Neue", Arial, sans-serif;
   line-height: 49px;
@@ -165,10 +196,23 @@
 }
 
 /* To make content in overlay centered for tablet devices */
-@media only screen and (min-width: 860px) and (max-width: 1090px){
+@media only screen and (min-width: 861px) and (max-width: 1090px){
   .overlay__content {
+    text-align: center;
+    padding-left: 0;
     width: 30%;
-    align-self: center;
+    -ms-flex-item-align: center;
+        align-self: center;
+  }
+}
+@media only screen and (max-width: 860px){
+  .overlay__content {
+    text-align: left;
+    padding-left: 0;
+    width: 100%;
+    max-width: 222px;
+    -ms-flex-item-align: center;
+        align-self: center;
   }
 }
 
@@ -191,9 +235,11 @@
 
   /* Rules to style the menu in desktop view here... */
   .sm-mytheme{
+    display: -ms-flexbox;
     display: flex;
     width: 100%;
-    justify-content: flex-end;
+    -ms-flex-pack: end;
+        justify-content: flex-end;
   }
   .sm-mytheme .navigation__list__item{
     margin-right: 6.5%;
@@ -207,6 +253,9 @@
     line-height: 22px;
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
+  }
+  .navigation__list a:hover{
+    color: #ddd;
   }
   .navigation__link__image{
     height: 8px;
@@ -240,9 +289,12 @@
     padding: 5px 18px;
     border-bottom: 2px solid white;
     height: 50px;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -ms-flex-pack: center;
+        justify-content: center;
+    -ms-flex-align: center;
+        align-items: center;
     line-height: 18px;
   }
   .sm-mytheme .submenu__list__item:last-child{
