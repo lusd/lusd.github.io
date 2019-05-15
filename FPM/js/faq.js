@@ -5,7 +5,6 @@ function fpmFaq(){
   for (i = 0; i < coll.length; i++) {
     coll[i].addEventListener("click", function() {
       this.classList.toggle("faq__collapsible__active");
-      console.log(this.classList);
       var image = this.getElementsByClassName("faq__collapsible__image");
       var content = this.nextElementSibling;
       if (content.style.maxHeight){

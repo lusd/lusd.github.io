@@ -11,9 +11,11 @@ function openModal(){
 }
 openModal();
 window.addEventListener('click', closeModal);
+document.getElementById('closeMedicalModal').addEventListener('click', closeModal);
 function closeModal(event){
   var modal = document.getElementById('medicalModal');
-  if (event.target == modal) {
+  var closeBtn = document.getElementById('closeMedicalModal');
+  if (event.target == modal || event.target == closeBtn) {
     modal.style.opacity = "0";
     function fadeOut() {
       modal.style.display = "none";

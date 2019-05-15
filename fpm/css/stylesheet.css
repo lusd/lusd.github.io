@@ -1763,10 +1763,10 @@ body{
 .science__lemon__text{
   background: #777778;
   font-style: italic;
-  font-size: 20px;
+  font-size: 18.5px;
   padding: 0 150px 60px;
   color: white;
-  font-family: "Proxima-nova", sans-serif;
+  font-family: sans-serif;
   font-weight: 500;
   margin-bottom: 0;
   line-height: 26px;
@@ -2059,6 +2059,9 @@ body{
   .science__relies__download__text{
     width: 85.52%;
   }
+  .science__emotion__bottom__lane{
+    margin-bottom: 50px;
+  }
 }
 @media only screen and (max-width: 490px){
   .science__lemon{
@@ -2149,6 +2152,9 @@ body{
   }
   .science_download_icon{
     width: 27px;
+  }
+  .science__lemon__text{
+    font-size: 18px;
   }
 }
 
@@ -2333,9 +2339,25 @@ body{
 .medical__modal__content{
   max-width: 737px;
   width: 100%;
+  position: relative;
 }
 .medical__modal__image{
   width: 100%;
+}
+.medical__modal__close{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 30px;
+  height: 30px;
+  line-height: 20px;
+  font-size: 20px;
+  color: white;
+  background-color: #276BA5;
+  border-bottom-left-radius: 10px;
+  border: 1px solid #ddd;
+  text-align: center;
+  display: none;
 }
 .medical__includes__middle{
   display: -ms-flexbox;
@@ -2855,6 +2877,9 @@ body{
   .medical_download__learn_icon{
     width: 27px;
   }
+  .medical__modal__close{
+    display: block;
+  }
 }
 @media only screen and (max-width: 490px){
   .medical__introduction__inner{
@@ -3077,8 +3102,9 @@ body{
     padding-top: 30px;
     padding-bottom: 0;
   }
-  .faq__question__desktop{
-    display: none;
+  .faq__content__flex{
+    max-width: 765px;
+    width: 100%;
   }
 }
 @media only screen and (max-width: 860px){
@@ -3094,6 +3120,15 @@ body{
   }
   .faq__bottom{
     padding: 30px 0 20px;
+  }
+  .faq__download__button{
+    margin-top: 30px;
+  }
+  .faq__question__desktop{
+    display: none;
+  }
+  .faq__content__flex .faq__text{
+    width: 100%;
   }
 }
 @media only screen and (max-width: 490px){
@@ -3113,6 +3148,9 @@ body{
   }
   .faq__bottom{
     padding-top: 10px;
+  }
+  .faq__subtitle{
+    text-align: center;
   }
 }
 
@@ -3598,13 +3636,13 @@ body{
   font-family: Georgia, Times, serif;
   font-size: 14px;
   margin-top: 50px;
+  outline: none;
 }
 .contact__button:hover{
   background: linear-gradient(to bottom,#8764CD ,#3A1794 50%);
 }
 
 /* START contact-us.html MEDIA support */
-
 
 @media only screen and (max-width: 1090px){
   .contact{
@@ -3628,6 +3666,7 @@ body{
   .contact__form__block{
     width: 390px;
     padding-left: 20px;
+    padding-top: 46px;
   }
 }
 @media only screen and (max-width: 900px){
@@ -3709,6 +3748,9 @@ body{
   .contact__form__block{
     max-width: 300px;
     width: 100%;
+  }
+  .contact__text__margin{
+    margin-top: 15px;
   }
 }
 
@@ -4371,8 +4413,8 @@ body{
   text-align: center;
   font-family: Georgia, Times, serif;
   font-size: 14px;
-  margin-top: 50px;
   margin-left: 30px;
+  margin-bottom: 50px;
 }
 .customer__button:hover{
   background: linear-gradient(to bottom,#8764CD ,#3A1794 50%);
