@@ -1,12 +1,14 @@
+// Loading bootstrap css file after whole page is loads
 $(document).ready(function() {
     $("head").append('<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">');
 })
 
+// Smartmenus plugin 
 $(function() {
   $('#main-menu').smartmenus();
 });
-/* Open when someone clicks on the span element */
 
+/* Open when someone clicks on the span element */
 function openNav() {
   document.getElementById("myNav").style.width = "100%";
   document.getElementById("myNav").style.opacity = "1";
@@ -29,6 +31,6 @@ function go(){
     el.src = "img/masterpage_logo_white.png";
   }
   else{
-    el.src = "img/old_logo_mobile.png"
+    el.src = "img/old_logo_mobile.png";
   }
 }

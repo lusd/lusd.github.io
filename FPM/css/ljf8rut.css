@@ -1,0 +1,116 @@
+/*
+ * The Typekit service used to deliver this font or fonts for use on websites
+ * is provided by Adobe and is subject to these Terms of Use
+ * http://www.adobe.com/products/eulas/tou_typekit. For font license
+ * information, see the list below.
+ *
+ * metallophile-sp8:
+ *   - http://typekit.com/eulas/0000000000000000000173c6
+ * proxima-nova:
+ *   - http://typekit.com/eulas/00000000000000003b9b3068
+ *   - http://typekit.com/eulas/00000000000000003b9b3067
+ *   - http://typekit.com/eulas/00000000000000003b9b3062
+ *   - http://typekit.com/eulas/00000000000000003b9b3060
+ * roboto:
+ *   - http://typekit.com/eulas/00000000000000003b9ad05f
+ *   - http://typekit.com/eulas/00000000000000003b9ad060
+ *   - http://typekit.com/eulas/00000000000000003b9ad059
+ *   - http://typekit.com/eulas/00000000000000003b9ad055
+ *   - http://typekit.com/eulas/00000000000000003b9ad05d
+ *   - http://typekit.com/eulas/00000000000000003b9ad05e
+ *   - http://typekit.com/eulas/00000000000000003b9ad05b
+ *
+ * © 2009-2019 Adobe Systems Incorporated. All Rights Reserved.
+ */
+/*{"last_published":"2019-04-25 13:17:16 UTC"}*/
+
+@import url("https://p.typekit.net/p.css?s=1&k=ljf8rut&ht=tk&f=139.174.175.5474.597.15498.15501.15505.15506.15508.15509.15510&a=7715332&app=typekit&e=css");
+
+@font-face {
+font-family:"proxima-nova";
+src:url("https://use.typekit.net/af/949f99/00000000000000003b9b3068/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff2"),url("https://use.typekit.net/af/949f99/00000000000000003b9b3068/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff"),url("https://use.typekit.net/af/949f99/00000000000000003b9b3068/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("opentype");
+font-style:normal;
+font-weight:700;
+font-display: fallback;
+}
+
+@font-face {
+font-family:"proxima-nova";
+src:url("https://use.typekit.net/af/f7d492/00000000000000003b9b3067/27/l?subset_id=2&fvd=i6&v=3") format("woff2"),url("https://use.typekit.net/af/f7d492/00000000000000003b9b3067/27/d?subset_id=2&fvd=i6&v=3") format("woff"),url("https://use.typekit.net/af/f7d492/00000000000000003b9b3067/27/a?subset_id=2&fvd=i6&v=3") format("opentype");
+font-style:italic;font-weight:600;
+font-display: fallback;
+}
+
+@font-face {
+font-family:"proxima-nova";
+src:url("https://use.typekit.net/af/705e94/00000000000000003b9b3062/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/705e94/00000000000000003b9b3062/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/705e94/00000000000000003b9b3062/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
+font-style:normal;font-weight:400;
+font-display: fallback;
+}
+
+@font-face {
+font-family:"proxima-nova";
+src:url("https://use.typekit.net/af/cebe0e/00000000000000003b9b3060/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3") format("woff2"),url("https://use.typekit.net/af/cebe0e/00000000000000003b9b3060/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3") format("woff"),url("https://use.typekit.net/af/cebe0e/00000000000000003b9b3060/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3") format("opentype");
+font-style:normal;font-weight:300;
+font-display: fallback;
+}
+
+@font-face {
+font-family:"metallophile-sp8";
+src:url("https://use.typekit.net/af/2df39b/0000000000000000000173c6/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i5&v=3") format("woff2"),url("https://use.typekit.net/af/2df39b/0000000000000000000173c6/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i5&v=3") format("woff"),url("https://use.typekit.net/af/2df39b/0000000000000000000173c6/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i5&v=3") format("opentype");
+font-style:italic;font-weight:500;
+font-display: fallback;
+}
+
+@font-face {
+font-family:"roboto";
+src:url("https://use.typekit.net/af/5e9c68/00000000000000003b9ad05f/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff2"),url("https://use.typekit.net/af/5e9c68/00000000000000003b9ad05f/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff"),url("https://use.typekit.net/af/5e9c68/00000000000000003b9ad05f/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("opentype");
+font-style:normal;font-weight:700;
+font-display: fallback;
+}
+
+@font-face {
+font-family:"roboto";
+src:url("https://use.typekit.net/af/e01918/00000000000000003b9ad060/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3") format("woff2"),url("https://use.typekit.net/af/e01918/00000000000000003b9ad060/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3") format("woff"),url("https://use.typekit.net/af/e01918/00000000000000003b9ad060/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3") format("opentype");
+font-style:italic;font-weight:700;
+font-display: fallback;
+}
+
+@font-face {
+font-family:"roboto";
+src:url("https://use.typekit.net/af/5be8cf/00000000000000003b9ad059/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("woff2"),url("https://use.typekit.net/af/5be8cf/00000000000000003b9ad059/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("woff"),url("https://use.typekit.net/af/5be8cf/00000000000000003b9ad059/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("opentype");
+font-style:italic;font-weight:400;
+font-display: fallback;
+}
+
+@font-face {
+font-family:"roboto";
+src:url("https://use.typekit.net/af/2794cc/00000000000000003b9ad055/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3") format("woff2"),url("https://use.typekit.net/af/2794cc/00000000000000003b9ad055/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3") format("woff"),url("https://use.typekit.net/af/2794cc/00000000000000003b9ad055/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3") format("opentype");
+font-style:normal;font-weight:300;
+font-display: fallback;
+}
+
+@font-face {
+font-family:"roboto";
+src:url("https://use.typekit.net/af/5be6ad/00000000000000003b9ad05d/27/l?subset_id=2&fvd=n5&v=3") format("woff2"),url("https://use.typekit.net/af/5be6ad/00000000000000003b9ad05d/27/d?subset_id=2&fvd=n5&v=3") format("woff"),url("https://use.typekit.net/af/5be6ad/00000000000000003b9ad05d/27/a?subset_id=2&fvd=n5&v=3") format("opentype");
+font-style:normal;font-weight:500;
+font-display: fallback;
+}
+
+@font-face {
+font-family:"roboto";
+src:url("https://use.typekit.net/af/812ca2/00000000000000003b9ad05e/27/l?subset_id=2&fvd=i5&v=3") format("woff2"),url("https://use.typekit.net/af/812ca2/00000000000000003b9ad05e/27/d?subset_id=2&fvd=i5&v=3") format("woff"),url("https://use.typekit.net/af/812ca2/00000000000000003b9ad05e/27/a?subset_id=2&fvd=i5&v=3") format("opentype");
+font-style:italic;font-weight:500;
+font-display: fallback;
+}
+
+@font-face {
+font-family:"roboto";
+src:url("https://use.typekit.net/af/acc12d/00000000000000003b9ad05b/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/acc12d/00000000000000003b9ad05b/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/acc12d/00000000000000003b9ad05b/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
+font-style:normal;font-weight:400;
+font-display: fallback;
+}
+
+.tk-proxima-nova { font-family: "proxima-nova",sans-serif; }
+.tkmetallophile-sp8 { font-family: "metallophile-sp8",sans-serif; }
+.tk-roboto { font-family: "roboto",sans-serif; }

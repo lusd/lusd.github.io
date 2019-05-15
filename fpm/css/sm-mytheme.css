@@ -84,6 +84,8 @@
   }
   .header__logo{
     width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-pack: center;
@@ -91,10 +93,12 @@
     -ms-flex-align: end;
         align-items: flex-end;
     height: 100%;
+    z-index: 1;
   }
   .header__image{
     width: 300px;
     height: auto;
+    margin-bottom: 8px;
   }
   .navigation__list{
     display: none;
@@ -108,26 +112,28 @@
     position: absolute;
     top: 45px;
     left: 24px;
-    height: 2px;
+    height: 20px;
     width: 25px;
     transition: all 0.25s;
-    background: white;
+    background: rgba(255,255,255,0);
+    border-top: 2px solid white;
     z-index: 5;
   }
   .main__menu__btn__icon1:before {
     content: '';
-    top: -7px;
-    left: 0;
-    z-index: 5;
+    top: -10px;
+    left: 0px;
+    bottom: -10px;
+    right: -10px;
   }
   .main__menu__btn__icon1:after {
     content: '';
-    top: 7px;
+    top: 6px;
     left: 0;
-    z-index: 5;
+    bottom: -10px;
+    right: -10px;
   }
 }
-
 /* The Overlay (background) */
 .overlay {
   height: 100%;
@@ -214,8 +220,19 @@
     -ms-flex-item-align: center;
         align-self: center;
   }
+  .header__image{
+    margin-bottom: 0;
+  }
+  .main__menu__btn__icon1{
+    top: 41px;
+  }
 }
-
+@media only screen and (max-width: 490px){
+  .main__menu__btn__icon1{
+    top: 40px;
+    left: 17px;
+  }
+}
 @media only screen and (min-width: 1091px) {
 
   /* Switch to desktop layout
@@ -256,6 +273,7 @@
   }
   .navigation__list a:hover{
     color: #ddd;
+    text-decoration: none;
   }
   .navigation__link__image{
     height: 8px;
