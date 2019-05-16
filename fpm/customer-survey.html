@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=0 user-scalable=no">
+    <link rel="preload" as="style" href="css/ljf8rut.css">
+    <link rel="preload" as="style" href="css/stylesheet.css">
+    <link rel="preload" as="style" href="css/sm-mytheme.css">
+    <link rel="preload" as="script" href="js/customer.js">
+    <link rel="stylesheet" href="css/ljf8rut.css">
+    <link rel="stylesheet" href='css/sm-mytheme.css'> <!-- sm-mytheme.css - here is custom header menu-->
+    <link rel="stylesheet" href="css/stylesheet.css">
+    <title>Customer Survey</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  </head>
+
+  <body>
+
+    <!-- START Header -->
+
+    <header class="header header__thanks">
+      <div class="header__inner">
+        <div class="header__logo">
+          <a class="header__image__link" href="index.html"><img id="headerLogo" class="header__image" src="img/masterpage_logo_white.png" alt="Flying Phobia Master, Fly with Ease and Comfort"></a>
+        </div>
+      </div>
+    </header>
+    <div class="header__linear"></div>
+
+    <!-- END Header -->
+
+    <!-- Start Main -->
+
+    <main class="customer">
+      <div class="customer__inner">
+        <h1 class="customer__title">Customer survey</h1>
+        <p class="customer__text">Thank you for choosing to participate in our customer survey.</p>
+        <p class="customer__text">We appreciate your time. In gratitude for your time, we will pay you $20 either as an Amazon gift card or directly into your PayPal account. We can also send you the money as a refund, directly to the payment method used when buying the program.</p>
+        <div class="customer__form__block">
+          <form class="customer__form" method="post">
+
+            <label class="customer__label" for="Name">Name:</label>
+            <input id="customerName" class="customer__form__input" type="text" name="Name" placeholder="Enter Name" value="" required oninput="checkName()">
+
+            <label class="customer__label" for="Email">Email:</label>
+            <input id="customerEmail" class="customer__form__input" type="email" name="Email" placeholder="Enter Email" value="" required oninput="checkEmail()">
+
+            <label class="customer__label" for="questionOne">1. What was the primary reason/feature that led you to choose the Flying Phobia Master program over other solutions (e.g., long-term solution, natural, quick, cheap)?</label>
+            <textarea class="customer__form__area" name="questionOne" rows="3" cols="80" placeholder="Enter Your Answer" value="" oninput="checkArea(this)"></textarea>
+
+            <label class="customer__label" for="questionTwo">2. What was the one thing that almost stopped you from buying our program?</label>
+            <textarea class="customer__form__area" name="questionTwo" rows="3" cols="80" placeholder="Enter Your Answer" value="" oninput="checkArea(this)"></textarea>
+
+            <label class="customer__label" for="questionThree">3. What is the primary motivator for treating your fear of flying (e.g., career travel, visiting family, travel, etc.)?</label>
+            <textarea class="customer__form__area" name="questionThree" rows="3" cols="80" placeholder="Enter Your Answer" value="" oninput="checkArea(this)"></textarea>
+
+            <label class="customer__label" for="questionFour">4. Is there anything missing on our site? Did you have any unanswered question about the product?</label>
+            <textarea class="customer__form__area" name="questionFour" rows="3" cols="80" placeholder="Enter Your Answer" value="" oninput="checkArea(this)"></textarea>
+
+            <p id="customerCheckboxQuestion" class="customer__checkbox__question">5. What is the underlying cause of your fear?</p>
+            <label class="customer__checkbox__group">Claustrophobia
+              <input class="customer__checkbox" type="checkbox" name="checkboxOne">
+              <span class="customer__custom__checkmark"></span>
+            </label>
+
+            <label class="customer__checkbox__group">Fear of having a panic attack while flying
+              <input class="customer__checkbox" type="checkbox" name="checkboxOne">
+              <span class="customer__custom__checkmark"></span>
+            </label>
+
+            <label class="customer__checkbox__group">Fear of having a lack of control while on a plane
+              <input class="customer__checkbox" type="checkbox" name="checkboxOne">
+              <span class="customer__custom__checkmark"></span>
+            </label>
+
+            <label class="customer__checkbox__group">Fear of turbulence
+              <input class="customer__checkbox" type="checkbox" name="checkboxOne">
+              <span class="customer__custom__checkmark"></span>
+            </label>
+
+            <label class="customer__checkbox__group">Other
+              <input class="customer__checkbox" type="checkbox" name="checkboxOne">
+              <span class="customer__custom__checkmark"></span>
+            </label>
+
+            <label class="customer__checkbox__group customer__checkbox--margin">Don’t know
+              <input class="customer__checkbox" type="checkbox" name="checkboxOne">
+              <span class="customer__custom__checkmark"></span>
+            </label>
+
+
+            <label class="customer__label" for="questionSix">6. What was your biggest concern before starting to search for a treatment for fear of flying?</label>
+            <textarea class="customer__form__area" name="questionSix" rows="3" cols="80" placeholder="Enter Your Answer" value="" oninput="checkArea(this)"></textarea>
+
+            <label class="customer__label" for="questionSeven">7. Did you try to overcome your fear with any other solutions before buying the program? If yes, which?</label>
+            <textarea class="customer__form__area" name="questionSeven" rows="3" cols="80" placeholder="Enter Your Answer" value="" oninput="checkArea(this)"></textarea>
+
+            <label class="customer__label" for="questionEight">8. Which of our competitors did you consider before choosing the Flying Phobia Master, and why did you choose us over the competitors?</label>
+            <textarea class="customer__form__area" name="questionEight" rows="3" cols="80" placeholder="Enter Your Answer" value="" oninput="checkArea(this)"></textarea>
+
+            <label class="customer__label" for="questionEight">9. Is there anything you’d like to add that could help us better explain our product on our website?</label>
+            <textarea class="customer__form__area" name="questionEight" rows="3" cols="80" placeholder="Enter Your Answer" oninput="checkArea(this)" value=""></textarea>
+
+            <input id="customerSubmit" class="customer__button" type="submit" value="Submit">
+          </form>
+        </div>
+      </div>
+
+    </main>
+
+    <!-- END Main -->
+
+    <!-- START Footer -->
+
+    <footer class="footer">
+      <div class="footer__inner">
+        <div class="footer__top">
+          <a class="footer__link" href="index.html">Home</a>
+          <a class="footer__link" href="#">Privacy Policy</a>
+          <a class="footer__link" href="#">Term of Use</a>
+          <a class="footer__link" href="contact-us.html">Contact Us</a>
+        </div>
+        <div class="footer__bottom">
+          <img class="footer__image" src="img/masterpage_logo_white.png" alt="Flying Phobia Master, Fly with Ease and Comfort">
+          <div class="footer__text__block">
+            <span class="footer__text__underline">Disclaimer:</span> Results may vary. Consult your physician before beginning any health program. The website's content and the content provided within the Flying Phobia Master Program is not a substitute for direct, personal, professional medical care and diagnosis ,is not intended to provide specific physical or mental health advice or any other advice whatsoever, and should not be relied upon in that regard. See our Terms of Use for more details.
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- END Footer -->
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="js/customer.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
