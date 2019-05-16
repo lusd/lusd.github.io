@@ -1,4 +1,4 @@
-function properties() {
+
   var slideIndex = 1;
   showSlides(slideIndex);
 
@@ -27,5 +27,3 @@ function properties() {
     }
     slides[slideIndex-1].style.display = "block";
   }
-}
-properties();
