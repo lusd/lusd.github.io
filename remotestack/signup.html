@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/remotestack.css?v1234567">
+    <title>Sign Up</title>
+  </head>
+  <body>
+    <div class="signup-wrap">
+      <div class="signup-header">
+        <div class="signup-header-logo">
+          <img class="signup-header-image" src="img/logo.png" alt="">
+        </div>
+        <div class="signup-header-text">
+          New to Remote Stack? Sign Up!
+        </div>
+      </div>
+      <div class="signup-container">
+        <div class="signup-main">
+          <div class="signup-with-block">
+            <div class="signup-with-title">
+              <div class="signup-with-line"></div>
+              <div class="signup-with-text">
+                  Sign Up With
+              </div>
+              <div class="signup-with-line"></div>
+            </div>
+            <div class="signup-with-buttons-block">
+              <div class="signup-with-linkedin">
+                <a class="signup-with-link" href="#" data-toggle="modal" data-target="#sign-in-linkedin">
+                  <div class="linkedin-logo">
+                    <i class="fa fa-linkedin"></i>
+                  </div>
+                  <div class="linkedin-text">
+                    LinkedIn
+                  </div>
+                </a>
+              </div>
+              <div class="sign-up-with-google">
+                <a class="signup-with-link" href="#" data-toggle="modal" data-target="#sign-in-google">
+                  <div class="google-plus-logo">
+                    <img class="google-plus-image" src="img/google-plus-logo.png" alt="google plus logo">
+                  </div>
+                  <div class="google-plus-text">
+                    Google
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div><!--END signup with block-->
+          <div class="signup-email-block">
+            <div class="signup-with-title">
+              <div class="signup-with-line"></div>
+              <div class="signup-with-text">
+                 Email Sign Up
+              </div>
+              <div class="signup-with-line"></div>
+            </div>
+            <div class="signup-email-form">
+              <form class="needs-validation signup-form" novalidate>
+                <div class="form-group">
+                  <input aria-label="Full Name" class="signup-form-input form-control form-control-lg" name="signup-full-name" type="name" required placeholder="Full Name">
+                </div>
+                <div class="form-group">
+                  <input aria-label="Email Adress" class="signup-form-input form-control form-control-lg" type="email" placeholder="Email Adress" required>
+                  <div class="invalid-feedback">
+                    Please enter valid email Address.
+                  </div>
+                </div>
+                <div class="form-group">
+                  <input aria-label="INVITE CODE" class="signup-form-input form-control form-control-lg" type="text" placeholder="INVITE CODE" required>
+                  <div class="invalid-feedback">
+                    Please enter INVITE CODE.
+                  </div>
+                </div>
+                <button class="signup-account-button btn" type="submit">
+                  Create Account
+                </button>
+                <div class="signup-account-subtext">
+                  <a class="signup-subtext-link" href="#" data-toggle="modal" data-target="#sign-in">Already have an account?</a>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="sign-in-linkedin" role="dialog" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content modal-signin-content">
+          <div class="modal-header modal-header-signin">
+            <img class="modal-header-logo" src="img/logo.png" alt="">
+            <button type="button" class="close modal-header-button" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body modal-body-sign">
+            <img class="sign-with-image" src="img/sign-with-logo.png" alt="user picture from linkedin">
+            <div class="sign-with-modal-text">
+              You have successfully signed in with LinkedIn as Mr. XYZ. <br>
+              Please enter invite code to continue with The Remote Work Stack.
+            </div>
+            <div class="signup-email-form signin-linkedin-form">
+              <form class="needs-validation signup-form" novalidate>
+                <div class="form-group">
+                  <input aria-label="INVITE CODE" class="signup-form-input form-control form-control-lg" type="text" placeholder="INVITE CODE" required>
+                  <div class="invalid-feedback">
+                    Please enter INVITE CODE.
+                  </div>
+                </div>
+                <button class="signin-modal-button-linkedin btn" type="submit">
+                  Continue
+                </button>
+                <div class="signup-account-subtext">
+                  <a class="signup-subtext-link" data-dismiss="modal" data-toggle="modal" data-target="#how-to-get-invite-code" href="#">Do not have an Invite Code?</a>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!--END modal-->
+    <div class="modal fade" id="sign-in-google" role="dialog" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content modal-signin-content">
+          <div class="modal-header modal-header-signin">
+            <img class="modal-header-logo" src="img/logo.png" alt="">
+            <button type="button" class="close modal-header-button" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body modal-body-sign">
+            <img class="sign-with-image" src="img/sign-with-logo.png" alt="user picture from linkedin">
+            <div class="sign-with-modal-text">
+              You have successfully signed in with Google Plus as Mr. XYZ. <br>
+              Please enter invite code to continue with The Remote Work Stack.
+            </div>
+            <div class="signup-email-form signin-linkedin-form">
+              <form class="needs-validation signup-form" novalidate>
+                <div class="form-group">
+                  <input aria-label="INVITE CODE" class="signup-form-input form-control form-control-lg" type="text" placeholder="INVITE CODE" required>
+                  <div class="invalid-feedback">
+                    Please enter INVITE CODE.
+                  </div>
+                </div>
+                <button class="signin-modal-button-linkedin btn" type="submit">
+                  Continue
+                </button>
+                <div class="signup-account-subtext">
+                  <a class="signup-subtext-link" data-dismiss="modal" aria-label="Close" data-toggle="modal" data-target="#how-to-get-invite-code" href="#">Do not have an Invite Code?</a>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!--END modal-->
+    <div class="modal fade" id="sign-in" role="dialog" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content modal-signin-content">
+          <div class="modal-header modal-header-signin">
+            <img class="modal-header-logo" src="img/logo.png" alt="">
+            <button type="button" class="close modal-header-button" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body modal-body-signin">
+            <div class="modal-signin-title">
+              Sign In
+            </div>
+            <div class="signup-with-buttons-block signin-with-modal-buttons">
+              <div class="signup-with-linkedin-modal">
+                <a class="signup-with-link" href="#" data-dismiss="modal" data-toggle="modal" data-target="#sign-in-linkedin">
+                  <div class="linkedin-logo">
+                    <i class="fa fa-linkedin"></i>
+                  </div>
+                  <div class="linkedin-text">
+                    LinkedIn
+                  </div>
+                </a>
+              </div>
+              <div class="sign-up-with-google-modal">
+                <a class="signup-with-link" href="#" data-dismiss="modal" data-toggle="modal" data-target="#sign-in-linkedin">
+                  <div class="google-plus-logo">
+                    <img class="google-plus-image" src="img/google-plus-logo.png" alt="google plus logo">
+                  </div>
+                  <div class="google-plus-text ">
+                    Google
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="signup-with-title signin-modal-title">
+              <div class="signup-with-line"></div>
+              <div class="signup-with-text">
+                  Or
+              </div>
+              <div class="signup-with-line"></div>
+            </div>
+            <div class="signup-email-form">
+              <form class="needs-validation signup-form" novalidate>
+                <div class="form-group">
+                  <input aria-label="Email Adress" class="signup-form-input form-control form-control-lg" type="email" placeholder="Email Adress" required>
+                  <div class="invalid-feedback">
+                    Please enter valid email adress.
+                  </div>
+                </div>
+                <div class="form-group">
+                  <input aria-label="INVITE CODE" class="signup-form-input form-control form-control-lg" type="text" placeholder="INVITE CODE" required>
+                  <div class="invalid-feedback">
+                    Please enter INVITE CODE.
+                  </div>
+                </div>
+                <button class="signin-modal-button btn" type="submit">
+                  Sign In
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!--END modal-->
+    <div class="modal fade" id="how-to-get-invite-code" role="dialog" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content modal-invite-content">
+          <div class="modal-header modal-header-signin">
+            <img class="modal-header-logo" src="img/logo.png" alt="">
+            <button type="button" class="close modal-header-button" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body modal-body-sign modal-body-invite">
+            <div class="modal-signin-title">
+              How to get an Invite Code?
+            </div>
+            <div class="sign-with-modal-text">
+              You need to be a customer of one of these products to get Invite Code.
+            </div>
+            <div class="modal-invite-gallery">
+              <a class="modal-invite-gallery-item modal-invite-link-doctor" href="#">
+                <img class="modal-invite-gallery-image" src="img/popup-doctor.png" alt="">
+              </a>
+              <a class="modal-invite-gallery-item modal-invite-link-freelancer"  href="#">
+                <img class="modal-invite-gallery-image modal-invite-freelancer-image" src="img/popup-freelancer.png" alt="">
+              </a>
+              <a class="modal-invite-gallery-item modal-invite-link-99design"  href="#">
+                 <img class="modal-invite-gallery-image modal-invite-99design-image" src="img/popup-99d.png" alt="">
+              </a>
+              <a class=" modal-invite-gallery-item modal-invite-link-upwork" href="#">
+                <img class="modal-invite-gallery-image modal-invite-upwork-image" src="img/popup-upwork.png" alt="">
+              </a>
+              <a class="modal-invite-gallery-item modal-invite-link-asana" href="#">
+                <img class="modal-invite-gallery-image modal-invite-asana-image" src="img/popup-asana.png" alt="">
+              </a>
+              <a class="modal-invite-gallery-item modal-invite-link-basecamp" href="#">
+                <img class="modal-invite-gallery-image" src="img/popup-basecamp.png" alt="">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!--END modal-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+    <script src="https://use.fontawesome.com/4ee0375632.js"></script>
+    <script>
+    (function() {
+      'use strict';
+      window.addEventListener('load', function() {
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.getElementsByClassName('needs-validation');
+        // Loop over them and prevent submission
+        var validation = Array.prototype.filter.call(forms, function(form) {
+          form.addEventListener('submit', function(event) {
+            if (form.checkValidity() === false) {
+              event.preventDefault();
+              event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+          }, false);
+        });
+      }, false);
+    })();
+    </script>
+  </body>
+</html>
