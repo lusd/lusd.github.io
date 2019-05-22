@@ -1,405 +1,405 @@
+
 let game = {
   draw: function(){
-    canvas = document.getElementById('battlefield').getContext('2d');
-    let isCross = true; // proveryat ochered' hoda
-    let fin = false; // proveryaet ne zakonchilas li igra
-    const size = 19; // razmer polya
-    let mas = new Array(size); // massive kletok
-    let x = 0; //x coordinate
-    let y = 0; //y coordinate
-    let moves = 0; // schetchik kolichetsva hodod
-    let potential = new Array(size); // massiv potencial'nih hodov
-
-    vesa = [ // Шаблоны весов
-      {w: 10000, p: ['xxxxx']},
-      {w: 1000, p: ['0xxxx0']},
-      {w: 750, p: ['xxxx0', '0xxxx']},
-      {w: 400, p: ['xx0xx', 'xxx0x', 'x0xxx']},
-      {w: 100, p: ['00xxx000', '000xxx00']},
-      {w: 80, p: ['00xxx00']},
-      {w: 75, p: ['0xxx00', '00xxx0']},
-      {w: 50, p: ['0xxx0', 'xxx00', '00xxx']},
-      {w: 25, p: ['0x0xx', 'xx0x0', 'x0xx0', '0xx0x', 'x00xx', 'xx00x']},
-      {w: 10, p: ['000xx000']},
-      {w: 7, p: ['00xx00']},
-      {w: 5, p: ['xx000', '000xx', '0xx00', '00xx0']},
-      {w: 3, p: ['0xx0']}
+    let canvas = document.getElementById('battlefield').getContext('2d');
+    let isCross = true; // turn to move
+    let isFin = false; // checking if game is win or lose.
+    let fieldSize = 19; // size of field (don't change)
+    let cellSize = 30; // size of 1 cell is 30px; (don't change)
+    let cells = new Array(fieldSize); // array of cells
+    let coordX = 0; //x coordinate
+    let coordY = 0; //y coordinate
+    let moveCount = 0; // counter of moves done
+    let potentials = new Array(fieldSize); // array of potential moves (+ 2 empty cells around the filled cells)
+    let weights = [ // object of weights with patterns
+      {weight: 10000, pattern: ['xxxxx']},
+      {weight: 5000, pattern: ['0xxxx0']},
+      {weight: 2500, pattern: ['xxxx0', '0xxxx']},
+      {weight: 1000, pattern: ['xx0xx', 'xxx0x', 'x0xxx']},
+      {weight: 600, pattern: ['00xxx000', '000xxx00']},
+      {weight: 500, pattern: ['00xxx00']},
+      {weight: 400, pattern: ['0xxx00', '00xxx0']},
+      {weight: 200, pattern: ['0xxx0', 'xxx00', '00xxx']},
+      {weight: 100, pattern: ['0x0xx', 'xx0x0', 'x0xx0', '0xx0x', 'x00xx', 'xx00x']},
+      {weight: 80, pattern: ['000xx000']},
+      {weight: 60, pattern: ['00xx00']},
+      {weight: 40, pattern: ['xx000', '000xx', '0xx00', '00xx0']},
+      {weight: 20, pattern: ['0xx0']}
     ];
-    //sozdaem massiv v massive
-    for (let i = 0; i < mas.length; i++){
-      mas[i] = new Array();
-      potential[i] = new Array();
+    // creating array of array
+    for (let i = 0; i < cells.length; i++){
+      cells[i] = new Array();
+      potentials[i] = new Array();
     };
-    // risuem setku. Vse kletki ravni 0.
-    // Vse kletki s "X" budut = 1;
-    // Vse kletki s "O" budut = 2;
-    for (let i = 0; i < size; i++){
-        for (let j = 0; j < size; j++){
+    // let's draw our battlefiled with canvas
+    for (let i = 0; i < fieldSize; i++){
+        for (let j = 0; j < fieldSize; j++){
             canvas.fillStyle = 'rgb(189,229,231)';
             canvas.strokeStyle = 'rgb(254,250,203)';
-            canvas.fillRect(j*30, i*30, 30, 30);
-            canvas.strokeRect(j*30, i*30, 30, 30);
-            mas[i][j] = 0;
+            canvas.fillRect(j * cellSize, i * cellSize, cellSize, cellSize);
+            canvas.strokeRect(j * cellSize, i * cellSize, cellSize, cellSize);
+            cells[i][j] = 0;
         }
     };
-    // massive mas sozdan
+    let battleField = document.getElementById('battlefield');
+    let battleFieldBlock = battleField.getBoundingClientRect();
 
-    //opredelyaem paru gloal'nih elementov
-    let element = document.getElementById('battlefield');
-    let box = element.getBoundingClientRect();
-    //first automove for X
-    mas[9][9] = 1;
-    potential[9][9] = 0;
-    for (let k = 0; k < 5 ; k++) {
-      for (let m = 0; m < 5; m++) {
-        if (9-2+k >= 0 && 9-2+k < 19 && 9-2+m >= 0 && 9-2+m < 19){
-          if (potential[9-2+k][9-2+m] != 0 && potential[9-2+k][9-2+m] != 1) {
-            potential[9-2+k][9-2+m] = 1;
+    //first forced AI move for X
+    let firstMoveCoord = Math.floor(fieldSize / 2);
+    cells[firstMoveCoord][firstMoveCoord] = 1;
+    let firstmove = battleField.getContext('2d');
+    firstmove.beginPath();
+    firstmove.moveTo(firstMoveCoord * cellSize + 5, firstMoveCoord * cellSize + 5);
+    firstmove.lineTo(firstMoveCoord * cellSize + 25, firstMoveCoord * cellSize + 25);
+    firstmove.moveTo(firstMoveCoord * cellSize + 25, firstMoveCoord * cellSize + 5);
+    firstmove.lineTo(firstMoveCoord * cellSize + 5, firstMoveCoord * cellSize + 25);
+    firstmove.strokeStyle = 'rgb(130,109,178)';
+    firstmove.stroke();
+    moveCount = moveCount + 1;
+    firstmove.fillStyle = '#777';
+    firstmove.fillText(moveCount, firstMoveCoord * cellSize, firstMoveCoord * cellSize + 8);
+    isCross = false;
+    potentials[firstMoveCoord][firstMoveCoord] = 0;
+    for (let i = 0; i < 5 ; i++) {
+      for (let j = 0; j < 5; j++) {
+        if ((firstMoveCoord - 2 + i) >= 0 && (firstMoveCoord - 2 + i) < fieldSize && (firstMoveCoord - 2 + j) >= 0 && (firstMoveCoord - 2 + j) < fieldSize){
+          if (potentials[firstMoveCoord - 2 + i][firstMoveCoord - 2 + j] != 0 && potentials[firstMoveCoord - 2 + i][firstMoveCoord - 2 + j] != 1) {
+            potentials[firstMoveCoord - 2 + i][firstMoveCoord - 2 + j] = 1;
           }
         }
       }
     }
-    firstmove = element.getContext('2d');
-    firstmove.beginPath();
-    firstmove.moveTo(9 * 30 + 5, 9 * 30 + 5);
-    firstmove.lineTo(9 * 30 + 25, 9 * 30 + 25);
-    firstmove.moveTo(9 * 30 + 25, 9 * 30 + 5);
-    firstmove.lineTo(9 * 30 + 5, 9 * 30 + 25);
-    firstmove.strokeStyle = 'rgb(130,109,178)';
-    firstmove.stroke();
-    moves = moves + 1;
-    firstmove.fillStyle = '#777';
-    firstmove.fillText(moves, 9 * 30, 9 * 30 + 8);
-    isCross = false;
-    //vse chto proishodit posle clicka pol'zovatelya.
-    // Zapolnyaem massiv potencial'nih hodov.
-    // 1 = kletka s potencial'nim hodom. radius 2 kletki.
-    // 0 = kletka v kotoruu uje hodili
-    // vse ostal'nie kletki = undefined.
 
-    element.addEventListener("click", function(e){
-      //proverka na konec igri.
-      if (fin == true){
+    // when user click's - checking of win, draw the O, AI move
+    let onClick = function(field){
+      if (isFin == true){ // if win
         return 0;
       }
-      //opredelyaem mesto clicka.
-      y = e.clientY;
-      x = e.clientX - box.left;
-      let i = Math.floor(y/30);
-      let j = Math.floor(x/30);
+      // get the coordinate of mouse click
+      coordY = field.clientY;
+      coordX = field.clientX - battleFieldBlock.left;
+      let cellY = Math.floor(coordY/cellSize);
+      let cellX = Math.floor(coordX/cellSize);
 
-      if (mas[i][j]==0 && isCross==false){
-        mas[i][j] = 2;
+      if (cells[cellY][cellX] == 0 && isCross == false){ // if cell is empty draw O
+        cells[cellY][cellX] = 2;
         isCross = true;
-        let ctx = element.getContext('2d');
+        let ctx = battleField.getContext('2d');
         ctx.beginPath();
-        ctx.arc(j * 30 + 15, i * 30 + 15, 10, 0, 2 * Math.PI);
+        ctx.arc(cellX * cellSize + 15, cellY * cellSize + 15, 10, 0, 2 * Math.PI);
         ctx.strokeStyle = 'rgb(239,144,121)';
         ctx.stroke();
-        moves = moves + 1;
+        moveCount = moveCount + 1;
         ctx.fillStyle = '#777';
-        ctx.fillText(moves, j * 30, i * 30 + 8);
-        potent(i, j);
+        ctx.fillText(moveCount, cellX * cellSize, cellY * cellSize + 8);
+        fillPotentials(cellY, cellX);
       }
-      //proverka na hod v tu kletku v kotoruu uje hodili.
-      else {
-        console.log('uje hodili suda');
+      else { // if cell is not empty return 0;
         return 0;
       }
-
-      function potent(w,z){
-        potential[w][z] = 0;
-        for (let k = 0; k < 5 ; k++) {
-          for (let m = 0; m < 5; m++) {
-            if (w-2+k >= 0 && w-2+k < 19 && z-2+m >= 0 && z-2+m < 19){
-              if (potential[w-2+k][z-2+m] != 0 && potential[w-2+k][z-2+m] != 1) {
-                potential[w-2+k][z-2+m] = 1;
+      // filling an array of potentials moves via function
+      function fillPotentials(potentY, potentX){
+        potentials[potentY][potentX] = 0;
+        for (let i = 0; i < 5 ; i++) {
+          for (let j = 0; j < 5; j++) {
+            if ((potentY - 2 + i) >= 0 && (potentY - 2 + i) < fieldSize && (potentX - 2 + j) >= 0 && (potentX - 2 + j) < fieldSize){
+              if (potentials[potentY - 2 + i][potentX - 2 + j] != 0 && potentials[potentY - 2 + i][potentX - 2 + j] != 1) {
+                potentials[potentY - 2 + i][potentX - 2 + j] = 1;
               }
             }
           }
         }
       };
-      //function proverki viigrisha
-      function Win(coordI,coordJ){
-        if (moves >= 9){
-          // v stroku
-          for (let k = 0; k < 5; k++){
+      //function of win check
+      function checkWin(winY, winX){
+        if (moveCount >= 9){ // if amount of moves >= 9 then do the function
+          // checking win row
+          for (let i = 0; i < 5; i++){
             if (
-              mas[coordI][coordJ-4+k] == mas[coordI][coordJ-3+k] &&
-              mas[coordI][coordJ-3+k] == mas[coordI][coordJ-2+k] &&
-              mas[coordI][coordJ-2+k] == mas[coordI][coordJ-1+k] &&
-              mas[coordI][coordJ-1+k] == mas[coordI][coordJ+k]){
-                let ctx = element.getContext('2d');
+              cells[winY][winX - 4 + i] == cells[winY][winX - 3 + i] &&
+              cells[winY][winX - 3 + i] == cells[winY][winX - 2 + i] &&
+              cells[winY][winX - 2 + i] == cells[winY][winX - 1 + i] &&
+              cells[winY][winX - 1 + i] == cells[winY][winX + i]){
+                let ctx = battleField.getContext('2d');
                 ctx.beginPath();
-                ctx.moveTo((coordJ-4+k)*30, coordI*30+15);
-                ctx.lineTo((coordJ+k)*30+30, coordI*30+15);
+                ctx.moveTo((winX - 4 + i) * cellSize, winY * cellSize + 15);
+                ctx.lineTo((winX + i) * cellSize + cellSize, winY * cellSize + 15);
                 ctx.strokeStyle = 'rgb(140, 89, 197)';
                 ctx.lineWidth = 2;
                 ctx.stroke();
-                fin = true;
+                isFin = true;
             }
-            // v stolbec
-            else if(coordI-4+k >= 0 && coordI+k < size &&
-              mas[coordI-4+k][coordJ] == mas[coordI-3+k][coordJ] &&
-              mas[coordI-3+k][coordJ] == mas[coordI-2+k][coordJ] &&
-              mas[coordI-2+k][coordJ] == mas[coordI-1+k][coordJ] &&
-              mas[coordI-1+k][coordJ] == mas[coordI+k][coordJ]){
-                let ctx = element.getContext('2d');
+            // checking win column
+            else if((winY - 4 + i) >= 0 && (winY + i) < fieldSize &&
+              cells[winY - 4 + i][winX] == cells[winY - 3 + i][winX] &&
+              cells[winY - 3 + i][winX] == cells[winY - 2 + i][winX] &&
+              cells[winY - 2 + i][winX] == cells[winY - 1 + i][winX] &&
+              cells[winY - 1 + i][winX] == cells[winY + i][winX]){
+                let ctx = battleField.getContext('2d');
                 ctx.beginPath();
-                ctx.moveTo(coordJ*30+15, (coordI-4+k)*30);
-                ctx.lineTo(coordJ*30+15, (coordI+k)*30 + 30);
+                ctx.moveTo(winX * cellSize + 15, (winY - 4 + i) * cellSize);
+                ctx.lineTo(winX * cellSize + 15, (winY + i) * cellSize + cellSize);
                 ctx.strokeStyle = 'rgb(140, 89, 197)';
                 ctx.lineWidth = 2;
                 ctx.stroke();
-                fin = true;
+                isFin = true;
             }
-            // po diagonali vverh levo - vniz vrpavo
-            else if (coordI-4+k >= 0 && coordJ+k < size && coordI+k < size &&
-              mas[coordI-4+k][coordJ-4+k] == mas[coordI-3+k][coordJ-3+k] &&
-              mas[coordI-3+k][coordJ-3+k] == mas[coordI-2+k][coordJ-2+k] &&
-              mas[coordI-2+k][coordJ-2+k] == mas[coordI-1+k][coordJ-1+k] &&
-              mas[coordI-1+k][coordJ-1+k] == mas[coordI+k][coordJ+k]){
-                let ctx = element.getContext('2d');
+            //checking win diagonal top left - bottom right
+            else if ((winY - 4 + i) >= 0 && (winX + i) < fieldSize && (winY + i) < fieldSize &&
+              cells[winY - 4 + i][winX - 4 + i] == cells[winY - 3 + i][winX - 3 + i] &&
+              cells[winY - 3 + i][winX - 3 + i] == cells[winY - 2 + i][winX - 2 + i] &&
+              cells[winY - 2 + i][winX - 2 + i] == cells[winY - 1 + i][winX - 1 + i] &&
+              cells[winY - 1 + i][winX - 1 + i] == cells[winY + i][winX + i]){
+                let ctx = battleField.getContext('2d');
                 ctx.beginPath();
-                ctx.moveTo((coordJ-4+k)*30, (coordI-4+k)*30);
-                ctx.lineTo((coordJ+k)*30 + 30, (coordI+k)*30 + 30);
+                ctx.moveTo((winX - 4 + i) * cellSize, (winY - 4 + i) * cellSize);
+                ctx.lineTo((winX + i) * cellSize + cellSize, (winY + i) * cellSize + cellSize);
                 ctx.strokeStyle = 'rgb(140, 89, 197)';
                 ctx.lineWidth = 2;
                 ctx.stroke();
-                fin = true;
+                isFin = true;
               }
-              // po diagonali vverh pravo - vniz vlevo
-              else if (coordI-4+k >= 0 && coordI+k < size &&
-                mas[coordI-4+k][coordJ+4-k] == mas[coordI-3+k][coordJ+3-k] &&
-                mas[coordI-3+k][coordJ+3-k] == mas[coordI-2+k][coordJ+2-k] &&
-                mas[coordI-2+k][coordJ+2-k] == mas[coordI-1+k][coordJ+1-k] &&
-                mas[coordI-1+k][coordJ+1-k] == mas[coordI+k][coordJ-k]){
-                  let ctx = element.getContext('2d');
+              // checking win diagonal bottom left - top right
+              else if ((winY - 4 + i) >= 0 && (winY + i) < fieldSize &&
+                cells[winY - 4 + i][winX + 4 - i] == cells[winY - 3 + i][winX + 3 - i] &&
+                cells[winY - 3 + i][winX + 3 - i] == cells[winY - 2 + i][winX + 2 - i] &&
+                cells[winY - 2 + i][winX + 2 - i] == cells[winY - 1 + i][winX + 1 - i] &&
+                cells[winY - 1 + i][winX + 1 - i] == cells[winY + i ][winX - i]){
+                  let ctx = battleField.getContext('2d');
                   ctx.beginPath();
-                  ctx.moveTo((coordJ+4-k)*30 + 30, (coordI-4+k)*30);
-                  ctx.lineTo((coordJ-k)*30, (coordI+k)*30 + 30);
+                  ctx.moveTo((winX + 4 - i) * cellSize + cellSize, (winY - 4 + i) * cellSize);
+                  ctx.lineTo((winX - i) * cellSize, (winY + i) * cellSize + cellSize);
                   ctx.strokeStyle = 'rgb(140, 89, 197)';
                   ctx.lineWidth = 2;
                   ctx.stroke();
-                  fin = true;
+                  isFin = true;
                 }
           }
-        }// konec proverki viigrisha
+        }// end of checkWin function
       };
-      // zapusk proverki viigrisha
-      Win(i, j);
-      console.log(moves,i,j);
+      checkWin(cellY, cellX);
+      console.log(moveCount, cellY, cellX);
 
       // AI turn to make his move
-
-      //sozdaem massiv vesov attacki i zaschiti.
-      let attack = new Array(size);
-      let defense = new Array(size);
-      for (let r = 0; r < attack.length; r++){
-        attack[r] = new Array();
-        defense[r] = new Array();
+      //let create arrays of attack and defense
+      let attackCells = new Array(fieldSize);
+      let defenseCells = new Array(fieldSize);
+      for (let i = 0; i < attackCells.length; i++){
+        attackCells[i] = new Array();
+        defenseCells[i] = new Array();
       };
-
       //Sravnivaem linii veson s liniyami potencial'nih hodov.
-      for (let o = 0; o < 19; o++){
-        for (let p = 0; p < 19; p++) {
-          if (potential[o][p] == 1){
-            //Chitaem vesa dlya atacki
+      // Let's compare weight rows with potential moves rows
+      for (let i = 0; i < fieldSize; i++){
+        for (let j = 0; j < fieldSize; j++) {
+          if (potentials[i][j] == 1){
+            //Counting weights for attack
             let dumbVstroku = new Array(8);
             let dumbVstolbec = new Array(8);
             let dumbDiagonalOne = new Array(8);
             let dumbDiagonalTwo = new Array(8);
             for (let k = 0; k < 9; k++) {
-              if (o-4+k >= 0 && o-4+k < 19 && p-4+k >= 0 && p-4+k < 19){
-                dumbVstroku[k] = mas[o][p-4+k];
-                dumbVstolbec[k] = mas[o-4+k][p];
-                dumbDiagonalOne[k] = mas[o-4+k][p-4+k];
+              if ((i - 4 + k) >= 0 && (i - 4 + k) < fieldSize && (j - 4 + k) >= 0 && (j - 4 + k) < fieldSize){
+                dumbVstroku[k] = cells[i][j-  4 + k];
+                dumbVstolbec[k] = cells[i - 4 + k][j];
+                dumbDiagonalOne[k] = cells[i - 4 + k][j - 4 + k];
               }
               else {
                 dumbVstroku[k] = 3;
                 dumbVstolbec[k] = 3;
                 dumbDiagonalOne[k] = 3;
               }
-              if (p-4+k >= 0 && p-4+k < 19 && o+4-k >= 0 && o+4-k < 19) {
-                dumbDiagonalTwo[k] = mas[o+4-k][p-4+k];
+              if ((j - 4 + k) >= 0 && (j - 4 + k) < fieldSize && (i + 4 - k) >= 0 && (i + 4 - k) < fieldSize) {
+                dumbDiagonalTwo[k] = cells[i + 4 - k][j - 4 + k];
               }
               else {
                 dumbDiagonalTwo[k] = 3;
               }
             };
-
-              dumbVstroku[4] = 1;
-              dumbVstolbec[4] = 1;
-              dumbDiagonalOne[4] = 1;
-              dumbDiagonalTwo[4] = 1;
-            // }
-            // Perevodim massiv v stroku.
+            //force move with to potential cell "X"
+            dumbVstroku[4] = 1;
+            dumbVstolbec[4] = 1;
+            dumbDiagonalOne[4] = 1;
+            dumbDiagonalTwo[4] = 1;
             let vstroku = dumbVstroku.join('');
             let vstolbec = dumbVstolbec.join('');
             let diagonalOne = dumbDiagonalOne.join('');
             let diagonalTwo = dumbDiagonalTwo.join('');
-            // Sravnivaen vesa shablonov s liniyami.
-
-            let maxAttack = 0; // maximal'niy ves dlya atacki.
-            let line = '';
-
-            //Sravnivaem vesa shablonov liniy dlya atacki cherez function Sravnenie()
-            function SravnenieAttack(naprav, ves, b){
-              for (let z of vesa){
-                for (let c of z.p){
-                  line = new RegExp(c.replace(/x/g, b));
-                  if (naprav.search(line) != -1){
-                    if (ves > 1){
-                     return maxAttack = maxAttack + z.w;
+            // Compare weights with pattern rows
+            let maxAttack = 0; // maximum weight for attack
+            let line = ''; // empty row
+            function compareAttack(direction, weight, cellValue){
+              for (let item of weights){
+                for (let value of item.pattern){
+                  line = new RegExp(value.replace(/x/g, cellValue)); // filling empty line with string
+                  if (direction.search(line) != -1){ // compare line with direction string
+                    if (weight > 1){
+                     return maxAttack = maxAttack + item.weight;
                     }
                     else{
-                      return maxAttack = z.w;
+                      return maxAttack = item.weight;
                     }
                   }
                 }
               }
             };
-            SravnenieAttack(vstroku, maxAttack, 1);
-            SravnenieAttack(vstolbec, maxAttack, 1);
-            SravnenieAttack(diagonalOne, maxAttack, 1);
-            SravnenieAttack(diagonalTwo, maxAttack, 1);
-
-            //Prisvaivaem massivu atacki maximal'noe znachenie
+            compareAttack(vstroku, maxAttack, 1);
+            compareAttack(vstolbec, maxAttack, 1);
+            compareAttack(diagonalOne, maxAttack, 1);
+            compareAttack(diagonalTwo, maxAttack, 1);
+            //assigment maximum attack weight value to maxAttack
             if (maxAttack > 1) {
-              attack[o][p] = maxAttack;
+              attackCells[i][j] = maxAttack;
             }
-
-            //
-            //Chitaem vesa dlya zashiti
+            //let's do same for defense
             for (let k = 0; k < 9; k++) {
-              if (o-4+k >= 0 && o-4+k < 19 && p-4+k >= 0 && p-4+k < 19){
-                dumbVstroku[k] = mas[o][p-4+k];
-                dumbVstolbec[k] = mas[o-4+k][p];
-                dumbDiagonalOne[k] = mas[o-4+k][p-4+k];
+              if ((i - 4 + k) >= 0 && (i - 4 + k) < fieldSize && (j - 4 + k) >= 0 && (j - 4 + k) < fieldSize){
+                dumbVstroku[k] = cells[i][j - 4 + k];
+                dumbVstolbec[k] = cells[i - 4 + k][j];
+                dumbDiagonalOne[k] = cells[i - 4 + k][j - 4 + k];
               }
               else {
                 dumbVstroku[k] = 3;
                 dumbVstolbec[k] = 3;
                 dumbDiagonalOne[k] = 3;
               }
-              if (p-4+k >= 0 && p-4+k < 19 && o+4-k >= 0 && o+4-k < 19) {
-                dumbDiagonalTwo[k] = mas[o+4-k][p-4+k];
+              if ((j - 4 + k) >= 0 && (j - 4 + k) < fieldSize && (i + 4 - k) >= 0 && (i + 4 - k) < fieldSize) {
+                dumbDiagonalTwo[k] = cells[i + 4 - k][j - 4 + k];
               }
               else {
                 dumbDiagonalTwo[k] = 3;
               }
             };
-            //hodim v potencial'nuu kletku nolikom
-
+            //focre move to cell with "O"
             dumbVstroku[4] = 2;
             dumbVstolbec[4] = 2;
             dumbDiagonalOne[4] = 2;
             dumbDiagonalTwo[4] = 2;
-
-            // Perevodim massiv v stroku.
             vstroku = dumbVstroku.join('');
             vstolbec = dumbVstolbec.join('');
             diagonalOne = dumbDiagonalOne.join('');
             diagonalTwo = dumbDiagonalTwo.join('');
-
-            let maxDefense = 0; // maximal'niy ves dlya zaschiti.
-            line = '';
-            //Function Defense
-            function SravnenieDefense(naprav, ves, b){
-              for (let z of vesa){
-                for (let c of z.p){
-                  line = new RegExp(c.replace(/x/g, b));
-                  if (naprav.search(line) != -1){
-                    if (ves > 1){
-                     return maxDefense = maxDefense + z.w;
+            // Compare weights with pattern rows
+            let maxDefense = 0; // maximum weight for defense
+            line = ''; // empty line
+            function compareDefense(direction, weight, cellValue){
+              for (let item of weights){
+                for (let value of item.pattern){
+                  line = new RegExp(value.replace(/x/g, cellValue)); // filling empty line with string
+                  if (direction.search(line) != -1){  // compare line with direction string
+                    if (weight > 1){
+                     return maxDefense = maxDefense + item.weight;
                     }
                     else{
-                      return maxDefense = z.w;
+                      return maxDefense = item.weight;
                     }
                   }
                 }
               }
             };
-            //zapuskaem function SravnenieDefense()
-            SravnenieDefense(vstroku, maxDefense, 2);
-            SravnenieDefense(vstolbec, maxDefense, 2);
-            SravnenieDefense(diagonalOne, maxDefense, 2);
-            SravnenieDefense(diagonalTwo, maxDefense, 2);
-
-              //Prisvaivaem massivu zaschiti maximal'noe znachenie
+            compareDefense(vstroku, maxDefense, 2);
+            compareDefense(vstolbec, maxDefense, 2);
+            compareDefense(diagonalOne, maxDefense, 2);
+            compareDefense(diagonalTwo, maxDefense, 2);
+            //assigment maximum attack weight value to maxDefense
             if (maxDefense > 1) {
-              defense[o][p] = maxDefense;
+              defenseCells[i][j] = maxDefense;
             }
 
           }
         }
       };
-
-      //Uznaem maximal'noe znachenie dlya atacki
-      let attackW = 0, attackX = 0, attackY = 0;
-      for (let k = 0; k < 19; k++){
-        for (let m = 0; m < 19; m++){
-          if (attack[k][m] > attackW){
-            attackW = attack[k][m];
-            attackX = m;
-            attackY = k;
-          }
-        }
-      };
-
-      //Uznaem maximal'noe znachenie dlya zaschiti
+      // let know the most bigger value of attackCells and defenseCells
       let defenseW = 0, defenseX = 0, defenseY = 0;
-      for (let k = 0; k < 19; k++){
-        for (let m = 0; m < 19; m++){
-          if (defense[k][m] > defenseW){
-            defenseW = defense[k][m];
-            defenseX = m;
-            defenseY = k;
+      for (let i = 0; i < fieldSize; i++){
+        for (let j = 0; j < fieldSize; j++){
+          if (defenseCells[i][j] > defenseW){
+            defenseW = defenseCells[i][j];
+            defenseX = j;
+            defenseY = i;
           }
         }
       };
-      console.log('Attack', attackW, attackY, attackX);
-      console.log('Defense', defenseW, defenseY, defenseX);
-      //Sravnivaem vesa shablonov liniy dlya zachiti
-
-      //sravnivaem atacku i zashitu, provodim hod AI.
-      if (attackW * 1.1 >= defenseW && fin == false){
-        mas[attackY][attackX] = 1;
+      let attackW = 0, attackX = 0, attackY = 0, attackMaxWCol = 0;
+      for (let i = 0; i < fieldSize; i++){
+        for (let j = 0; j < fieldSize; j++){
+          if (attackCells[i][j] == attackW){
+            attackMaxWCol = attackMaxWCol + 1;
+          }
+          if (attackCells[i][j] > attackW){
+            attackW = attackCells[i][j];
+            attackMaxWCol = 0;
+            attackX = j;
+            attackY = i;
+          }
+        }
+      };
+      //Let's make first moves of AI random
+      if (attackMaxWCol > 0) {
+        let min = 0;
+        let max = attackMaxWCol;
+        let random = Math.floor(Math.random() * attackMaxWCol);
+        let chetchik = 0;
+        let isLittleFin = false;
+        for (let i = 0; i < fieldSize; i++){
+          for (let j = 0; j < fieldSize; j++){
+            if (attackCells[i][j] == attackW && isLittleFin == false){
+              if (random == chetchik){
+                attackX = j;
+                attackY = i;
+                isLittleFin = true;
+              }
+              else{
+                chetchik = chetchik + 1;
+              }
+            }
+          }
+        }
+      }
+      //let's compare maximum value for attack with defense and choose the strategy
+      if (attackW * 1.1 >= defenseW && isFin == false){ // if attack * 1.1 > defense do attack move (note: 1.1 multiplier is used to make AI more aggessive, like people :'()
+        cells[attackY][attackX] = 1;
         isCross = false;
-        let ctx = element.getContext('2d');
+        let ctx = battleField.getContext('2d');
         ctx.beginPath();
-        ctx.moveTo(attackX * 30 + 5, attackY * 30 + 5);
-        ctx.lineTo(attackX * 30 + 25, attackY * 30 + 25);
-        ctx.moveTo(attackX * 30 + 25, attackY * 30 + 5);
-        ctx.lineTo(attackX * 30 + 5, attackY * 30 + 25);
+        ctx.moveTo(attackX * cellSize + 5, attackY * cellSize + 5);
+        ctx.lineTo(attackX * cellSize + 25, attackY * cellSize + 25);
+        ctx.moveTo(attackX * cellSize + 25, attackY * cellSize + 5);
+        ctx.lineTo(attackX * cellSize + 5, attackY * cellSize + 25);
         ctx.strokeStyle = 'rgb(130,109,178)';
         ctx.stroke();
-        moves = moves + 1;
+        moveCount = moveCount + 1;
         ctx.fillStyle = '#777';
-        ctx.fillText(moves, attackX * 30, attackY * 30 + 8);
-        Win(attackY, attackX);
-        potent(attackY, attackX);
-        console.log(moves, attackY, attackX);
+        ctx.fillText(moveCount, attackX * cellSize, attackY * cellSize + 8);
+        checkWin(attackY, attackX);
+        fillPotentials(attackY, attackX);
+        console.log(moveCount, attackY, attackX);
       }
-      else if(fin == false){
-        mas[defenseY][defenseX] = 1;
+      else if(isFin == false){ // defense move
+        cells[defenseY][defenseX] = 1;
         isCross = false;
-        let ctx = element.getContext('2d');
+        let ctx = battleField.getContext('2d');
         ctx.beginPath();
-        ctx.moveTo(defenseX * 30 + 5, defenseY * 30 + 5);
-        ctx.lineTo(defenseX * 30 + 25, defenseY * 30 + 25);
-        ctx.moveTo(defenseX * 30 + 25, defenseY * 30 + 5);
-        ctx.lineTo(defenseX * 30 + 5, defenseY * 30 + 25);
+        ctx.moveTo(defenseX * cellSize + 5, defenseY * cellSize + 5);
+        ctx.lineTo(defenseX * cellSize + 25, defenseY * cellSize + 25);
+        ctx.moveTo(defenseX * cellSize + 25, defenseY * cellSize + 5);
+        ctx.lineTo(defenseX * cellSize + 5, defenseY * cellSize + 25);
         ctx.strokeStyle = 'rgb(130,109,178)';
         ctx.stroke();
-        moves = moves + 1;
+        moveCount = moveCount + 1;
         ctx.fillStyle = '#777';
-        ctx.fillText(moves, defenseX * 30, defenseY * 30 + 8);
-        Win(defenseY, defenseX);
-        potent(defenseY, defenseX);
-        console.log(moves, defenseY, defenseX);
+        ctx.fillText(moveCount, defenseX * cellSize, defenseY * cellSize + 8);
+        checkWin(defenseY, defenseX);
+        fillPotentials(defenseY, defenseX);
+        console.log(moveCount, defenseY, defenseX);
       }
-    });
+    };
+    battleField = document.getElementById('battlefield');
+    battleField.addEventListener('click', onClick);
   }
 }
 game.draw();
+document.getElementById('newGame').addEventListener('click', newGame);
+function newGame(){
+  location.reload();
+}
