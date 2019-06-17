@@ -4,10 +4,11 @@ let isFin = false; // checking if game is win or lose.
 let fieldSize = 19; // size of field (don't change)
 let cellSize = 30; // size of 1 cell is 30px; (don't change)
 let cells = new Array(fieldSize); // array of cells
-let coordX = 0; //x coordinate
-let coordY = 0; //y coordinate
 let moveCount = 0; // counter of moves done
 let potentials = new Array(fieldSize); // array of potential moves (+ 2 empty cells around the filled cells)
+let maxDefense = 0; // maximum weight for defense
+let maxAttack = 0; // maximum weight for attack
+let line = ''; // empty row
 let weights = [ // object of weights with patterns
   {weight: 10000, pattern: ['xxxxx']},
   {weight: 5000, pattern: ['0xxxx0']},
@@ -44,17 +45,17 @@ let battleFieldBlock = battleField.getBoundingClientRect();
 //first forced AI move for X
 let firstMoveCoord = Math.floor(fieldSize / 2);
 cells[firstMoveCoord][firstMoveCoord] = 1;
-let firstmove = battleField.getContext('2d');
-firstmove.beginPath();
-firstmove.moveTo(firstMoveCoord * cellSize + 5, firstMoveCoord * cellSize + 5);
-firstmove.lineTo(firstMoveCoord * cellSize + 25, firstMoveCoord * cellSize + 25);
-firstmove.moveTo(firstMoveCoord * cellSize + 25, firstMoveCoord * cellSize + 5);
-firstmove.lineTo(firstMoveCoord * cellSize + 5, firstMoveCoord * cellSize + 25);
-firstmove.strokeStyle = 'rgb(130,109,178)';
-firstmove.stroke();
+let firstMove = battleField.getContext('2d');
+firstMove.beginPath();
+firstMove.moveTo(firstMoveCoord * cellSize + 5, firstMoveCoord * cellSize + 5);
+firstMove.lineTo(firstMoveCoord * cellSize + 25, firstMoveCoord * cellSize + 25);
+firstMove.moveTo(firstMoveCoord * cellSize + 25, firstMoveCoord * cellSize + 5);
+firstMove.lineTo(firstMoveCoord * cellSize + 5, firstMoveCoord * cellSize + 25);
+firstMove.strokeStyle = 'rgb(130,109,178)';
+firstMove.stroke();
 moveCount = moveCount + 1;
-firstmove.fillStyle = '#777';
-firstmove.fillText(moveCount, firstMoveCoord * cellSize, firstMoveCoord * cellSize + 8);
+firstMove.fillStyle = '#777';
+firstMove.fillText(moveCount, firstMoveCoord * cellSize, firstMoveCoord * cellSize + 8);
 isCross = false;
 potentials[firstMoveCoord][firstMoveCoord] = 0;
 for (let i = 0; i < 5 ; i++) {
@@ -66,126 +67,149 @@ for (let i = 0; i < 5 ; i++) {
     }
   }
 }
-
-// when user click's - if no win > draw the O, check win, AI move
-let onClick = function(field){
-  if (isFin == true){ // if win
-    return 0;
-  }
-  // get the coordinate of mouse click
-  coordY = field.clientY;
-  coordX = field.clientX - battleFieldBlock.left;
-  let cellY = Math.floor(coordY/cellSize);
-  let cellX = Math.floor(coordX/cellSize);
-
-  if (cells[cellY][cellX] == 0 && isCross == false){ // if cell is empty draw O
-    cells[cellY][cellX] = 2;
-    isCross = true;
-    let ctx = battleField.getContext('2d');
-    ctx.beginPath();
-    ctx.arc(cellX * cellSize + 15, cellY * cellSize + 15, 10, 0, 2 * Math.PI);
-    ctx.strokeStyle = 'rgb(239,144,121)';
-    ctx.stroke();
-    moveCount = moveCount + 1;
-    ctx.fillStyle = '#777';
-    ctx.fillText(moveCount, cellX * cellSize, cellY * cellSize + 8);
-    fillPotentials(cellY, cellX);
-  }
-  else { // if cell is not empty return 0;
-    return 0;
-  }
-  // filling an array of potentials moves via function
-  function fillPotentials(potentY, potentX){
-    potentials[potentY][potentX] = 0;
-    for (let i = 0; i < 5 ; i++) {
-      for (let j = 0; j < 5; j++) {
-        if ((potentY - 2 + i) >= 0 && (potentY - 2 + i) < fieldSize && (potentX - 2 + j) >= 0 && (potentX - 2 + j) < fieldSize){
-          if (potentials[potentY - 2 + i][potentX - 2 + j] != 0 && potentials[potentY - 2 + i][potentX - 2 + j] != 1) {
-            potentials[potentY - 2 + i][potentX - 2 + j] = 1;
-          }
+// filling an array of potentials moves via function
+function fillPotentials(potentY, potentX){
+  potentials[potentY][potentX] = 0;
+  for (let i = 0; i < 5 ; i++) {
+    for (let j = 0; j < 5; j++) {
+      if ((potentY - 2 + i) >= 0 && (potentY - 2 + i) < fieldSize && (potentX - 2 + j) >= 0 && (potentX - 2 + j) < fieldSize){
+        if (potentials[potentY - 2 + i][potentX - 2 + j] != 0 && potentials[potentY - 2 + i][potentX - 2 + j] != 1) {
+          potentials[potentY - 2 + i][potentX - 2 + j] = 1;
         }
       }
     }
-  };
-  //function of win check
-  function checkWin(winY, winX){
-    if (moveCount >= 9){ // if amount of moves >= 9 then do the function
-      // checking win row
-      for (let i = 0; i < 5; i++){
-        if (
-          cells[winY][winX - 4 + i] == cells[winY][winX - 3 + i] &&
-          cells[winY][winX - 3 + i] == cells[winY][winX - 2 + i] &&
-          cells[winY][winX - 2 + i] == cells[winY][winX - 1 + i] &&
-          cells[winY][winX - 1 + i] == cells[winY][winX + i]){
-            let ctx = battleField.getContext('2d');
-            ctx.beginPath();
-            ctx.moveTo((winX - 4 + i) * cellSize, winY * cellSize + 15);
-            ctx.lineTo((winX + i) * cellSize + cellSize, winY * cellSize + 15);
-            ctx.strokeStyle = 'rgb(140, 89, 197)';
-            ctx.lineWidth = 2;
-            ctx.stroke();
-            isFin = true;
-        }
-        // checking win column
-        else if((winY - 4 + i) >= 0 && (winY + i) < fieldSize &&
-          cells[winY - 4 + i][winX] == cells[winY - 3 + i][winX] &&
-          cells[winY - 3 + i][winX] == cells[winY - 2 + i][winX] &&
-          cells[winY - 2 + i][winX] == cells[winY - 1 + i][winX] &&
-          cells[winY - 1 + i][winX] == cells[winY + i][winX]){
-            let ctx = battleField.getContext('2d');
-            ctx.beginPath();
-            ctx.moveTo(winX * cellSize + 15, (winY - 4 + i) * cellSize);
-            ctx.lineTo(winX * cellSize + 15, (winY + i) * cellSize + cellSize);
-            ctx.strokeStyle = 'rgb(140, 89, 197)';
-            ctx.lineWidth = 2;
-            ctx.stroke();
-            isFin = true;
-        }
-        //checking win diagonal top left - bottom right
-        else if ((winY - 4 + i) >= 0 && (winX + i) < fieldSize && (winY + i) < fieldSize &&
-          cells[winY - 4 + i][winX - 4 + i] == cells[winY - 3 + i][winX - 3 + i] &&
-          cells[winY - 3 + i][winX - 3 + i] == cells[winY - 2 + i][winX - 2 + i] &&
-          cells[winY - 2 + i][winX - 2 + i] == cells[winY - 1 + i][winX - 1 + i] &&
-          cells[winY - 1 + i][winX - 1 + i] == cells[winY + i][winX + i]){
-            let ctx = battleField.getContext('2d');
-            ctx.beginPath();
-            ctx.moveTo((winX - 4 + i) * cellSize, (winY - 4 + i) * cellSize);
-            ctx.lineTo((winX + i) * cellSize + cellSize, (winY + i) * cellSize + cellSize);
-            ctx.strokeStyle = 'rgb(140, 89, 197)';
-            ctx.lineWidth = 2;
-            ctx.stroke();
-            isFin = true;
-          }
-          // checking win diagonal bottom left - top right
-          else if ((winY - 4 + i) >= 0 && (winY + i) < fieldSize &&
-            cells[winY - 4 + i][winX + 4 - i] == cells[winY - 3 + i][winX + 3 - i] &&
-            cells[winY - 3 + i][winX + 3 - i] == cells[winY - 2 + i][winX + 2 - i] &&
-            cells[winY - 2 + i][winX + 2 - i] == cells[winY - 1 + i][winX + 1 - i] &&
-            cells[winY - 1 + i][winX + 1 - i] == cells[winY + i ][winX - i]){
-              let ctx = battleField.getContext('2d');
-              ctx.beginPath();
-              ctx.moveTo((winX + 4 - i) * cellSize + cellSize, (winY - 4 + i) * cellSize);
-              ctx.lineTo((winX - i) * cellSize, (winY + i) * cellSize + cellSize);
-              ctx.strokeStyle = 'rgb(140, 89, 197)';
-              ctx.lineWidth = 2;
-              ctx.stroke();
-              isFin = true;
-            }
+  }
+};
+function checkWin(winY, winX){
+  if (moveCount >= 9){ // if amount of moves >= 9 then do the function
+    // checking win row
+    for (let i = 0; i < 5; i++){
+      let ctx = battleField.getContext('2d');
+      ctx.strokeStyle = 'rgb(140, 89, 197)';
+      ctx.lineWidth = 2;
+      if (
+        cells[winY][winX - 4 + i] == cells[winY][winX - 3 + i] &&
+        cells[winY][winX - 3 + i] == cells[winY][winX - 2 + i] &&
+        cells[winY][winX - 2 + i] == cells[winY][winX - 1 + i] &&
+        cells[winY][winX - 1 + i] == cells[winY][winX + i]){
+          ctx.moveTo((winX - 4 + i) * cellSize, winY * cellSize + 15);
+          ctx.lineTo((winX + i) * cellSize + cellSize, winY * cellSize + 15);
+          ctx.stroke();
+          isFin = true;
       }
-    }// end of checkWin function
-  };
-  checkWin(cellY, cellX);
-  console.log(moveCount, cellY, cellX);
-
-  // AI turn to make his move
-  //let create arrays of attack and defense
+      // checking win column
+      else if((winY - 4 + i) >= 0 && (winY + i) < fieldSize &&
+        cells[winY - 4 + i][winX] == cells[winY - 3 + i][winX] &&
+        cells[winY - 3 + i][winX] == cells[winY - 2 + i][winX] &&
+        cells[winY - 2 + i][winX] == cells[winY - 1 + i][winX] &&
+        cells[winY - 1 + i][winX] == cells[winY + i][winX]){
+          ctx.beginPath();
+          ctx.moveTo(winX * cellSize + 15, (winY - 4 + i) * cellSize);
+          ctx.lineTo(winX * cellSize + 15, (winY + i) * cellSize + cellSize);
+          ctx.stroke();
+          isFin = true;
+      }
+      //checking win diagonal top left - bottom right
+      else if ((winY - 4 + i) >= 0 && (winX + i) < fieldSize && (winY + i) < fieldSize &&
+        cells[winY - 4 + i][winX - 4 + i] == cells[winY - 3 + i][winX - 3 + i] &&
+        cells[winY - 3 + i][winX - 3 + i] == cells[winY - 2 + i][winX - 2 + i] &&
+        cells[winY - 2 + i][winX - 2 + i] == cells[winY - 1 + i][winX - 1 + i] &&
+        cells[winY - 1 + i][winX - 1 + i] == cells[winY + i][winX + i]){
+          ctx.beginPath();
+          ctx.moveTo((winX - 4 + i) * cellSize, (winY - 4 + i) * cellSize);
+          ctx.lineTo((winX + i) * cellSize + cellSize, (winY + i) * cellSize + cellSize);
+          ctx.stroke();
+          isFin = true;
+      }
+      // checking win diagonal bottom left - top right
+      else if ((winY - 4 + i) >= 0 && (winY + i) < fieldSize &&
+        cells[winY - 4 + i][winX + 4 - i] == cells[winY - 3 + i][winX + 3 - i] &&
+        cells[winY - 3 + i][winX + 3 - i] == cells[winY - 2 + i][winX + 2 - i] &&
+        cells[winY - 2 + i][winX + 2 - i] == cells[winY - 1 + i][winX + 1 - i] &&
+        cells[winY - 1 + i][winX + 1 - i] == cells[winY + i ][winX - i]){
+          ctx.beginPath();
+          ctx.moveTo((winX + 4 - i) * cellSize + cellSize, (winY - 4 + i) * cellSize);
+          ctx.lineTo((winX - i) * cellSize, (winY + i) * cellSize + cellSize);
+          ctx.stroke();
+          isFin = true;
+      }
+    }
+  }
+}
+// end of checkWin function
+function doAIMove(y,x){
+  cells[y][x] = 1;
+  isCross = false;
+  let ctx = battleField.getContext('2d');
+  let times = 20;
+  let countFirst = 0;
+  let countSecond = 0;
+  function drawXmove(){
+    ctx.beginPath();
+    ctx.strokeStyle = 'rgb(130,109,178)';
+    ctx.lineWidth = 1;
+    if (countFirst < times) {
+      ctx.moveTo(x * cellSize + 5 + countFirst, y * cellSize + 5 + countFirst);
+      countFirst = countFirst + 1;
+      ctx.lineTo(x * cellSize + 5 + countFirst, y * cellSize + 5 + countFirst);
+      ctx.stroke();
+    }
+    else {
+      ctx.moveTo(x * cellSize + 25 - countSecond , y * cellSize + 5 + countSecond);
+      countSecond = countSecond + 1;
+      ctx.lineTo(x * cellSize + 25 - countSecond, y * cellSize + 5 + countSecond);
+      ctx.stroke();
+    }
+  }
+  let timerIdTwo = setInterval(drawXmove, 5);
+  setTimeout(function() {
+    clearInterval(timerIdTwo);
+    moveCount = moveCount + 1;
+    ctx.fillStyle = '#777';
+    ctx.fillText(moveCount, x * cellSize, y * cellSize + 8);
+    checkWin(y, x);
+    fillPotentials(y, x);
+    console.log(moveCount, y, x);
+  }, 200);
+} // end doAIMove function
+function compareDefense(direction, weight, cellValue){
+  for (let item of weights){
+    for (let value of item.pattern){
+      line = new RegExp(value.replace(/x/g, cellValue)); // filling empty line with string
+      if (direction.search(line) != -1){  // compare line with direction string
+        if (weight > 1){
+         return maxDefense = maxDefense + item.weight;
+        }
+        else{
+          return maxDefense = item.weight;
+        }
+      }
+    }
+  }
+}
+function compareAttack(direction, weight, cellValue){
+  for (let item of weights){
+    for (let value of item.pattern){
+      line = new RegExp(value.replace(/x/g, cellValue)); // filling empty line with string
+      if (direction.search(line) != -1){ // compare line with direction string
+        if (weight > 1){
+         return maxAttack = maxAttack + item.weight;
+        }
+        else{
+          return maxAttack = item.weight;
+        }
+      }
+    }
+  }
+}
+function calcAIMove(){
+  // AI turn to make his move, let create arrays of attack and defense
   let attackCells = new Array(fieldSize);
   let defenseCells = new Array(fieldSize);
   for (let i = 0; i < attackCells.length; i++){
     attackCells[i] = new Array();
     defenseCells[i] = new Array();
   };
-  //Sravnivaem linii veson s liniyami potencial'nih hodov.
   // Let's compare weight rows with potential moves rows
   for (let i = 0; i < fieldSize; i++){
     for (let j = 0; j < fieldSize; j++) {
@@ -223,23 +247,7 @@ let onClick = function(field){
         let patternDiagOneString = patternDiagOneCells.join('');
         let patternDiagTwoString = patternDiagTwoCells.join('');
         // Compare weights with pattern rows
-        let maxAttack = 0; // maximum weight for attack
-        let line = ''; // empty row
-        function compareAttack(direction, weight, cellValue){
-          for (let item of weights){
-            for (let value of item.pattern){
-              line = new RegExp(value.replace(/x/g, cellValue)); // filling empty line with string
-              if (direction.search(line) != -1){ // compare line with direction string
-                if (weight > 1){
-                 return maxAttack = maxAttack + item.weight;
-                }
-                else{
-                  return maxAttack = item.weight;
-                }
-              }
-            }
-          }
-        };
+        maxAttack = 0;
         compareAttack(patternRowString, maxAttack, 1);
         compareAttack(patternColString, maxAttack, 1);
         compareAttack(patternDiagOneString, maxAttack, 1);
@@ -258,23 +266,7 @@ let onClick = function(field){
         patternDiagOneString = patternDiagOneCells.join('');
         patternDiagTwoString = patternDiagTwoCells.join('');
         // Compare weights with pattern rows
-        let maxDefense = 0; // maximum weight for defense
-        line = ''; // empty line
-        function compareDefense(direction, weight, cellValue){
-          for (let item of weights){
-            for (let value of item.pattern){
-              line = new RegExp(value.replace(/x/g, cellValue)); // filling empty line with string
-              if (direction.search(line) != -1){  // compare line with direction string
-                if (weight > 1){
-                 return maxDefense = maxDefense + item.weight;
-                }
-                else{
-                  return maxDefense = item.weight;
-                }
-              }
-            }
-          }
-        };
+        maxDefense = 0;
         compareDefense(patternRowString, maxDefense, 2);
         compareDefense(patternColString, maxDefense, 2);
         compareDefense(patternDiagOneString, maxDefense, 2);
@@ -334,43 +326,65 @@ let onClick = function(field){
     }
   }
   //let's compare maximum value for attack with defense and choose the strategy
-  if (attackW * 1.1 >= defenseW && isFin == false){ // if attack * 1.1 > defense do attack move (note: 1.1 multiplier is used to make AI more aggessive, like people :'()
-    cells[attackY][attackX] = 1;
-    isCross = false;
-    let ctx = battleField.getContext('2d');
-    ctx.beginPath();
-    ctx.moveTo(attackX * cellSize + 5, attackY * cellSize + 5);
-    ctx.lineTo(attackX * cellSize + 25, attackY * cellSize + 25);
-    ctx.moveTo(attackX * cellSize + 25, attackY * cellSize + 5);
-    ctx.lineTo(attackX * cellSize + 5, attackY * cellSize + 25);
-    ctx.strokeStyle = 'rgb(130,109,178)';
-    ctx.stroke();
-    moveCount = moveCount + 1;
-    ctx.fillStyle = '#777';
-    ctx.fillText(moveCount, attackX * cellSize, attackY * cellSize + 8);
-    checkWin(attackY, attackX);
-    fillPotentials(attackY, attackX);
-    console.log(moveCount, attackY, attackX);
+  if (attackW * 1.1 >= defenseW && isFin == false){ // if attack * 1.1 > defense do attack move
+   //(note: 1.1 multiplier is used to make AI more aggessive, like people :'()
+    doAIMove(attackY, attackX);
   }
   else if(isFin == false){ // defense move
-    cells[defenseY][defenseX] = 1;
-    isCross = false;
-    let ctx = battleField.getContext('2d');
-    ctx.beginPath();
-    ctx.moveTo(defenseX * cellSize + 5, defenseY * cellSize + 5);
-    ctx.lineTo(defenseX * cellSize + 25, defenseY * cellSize + 25);
-    ctx.moveTo(defenseX * cellSize + 25, defenseY * cellSize + 5);
-    ctx.lineTo(defenseX * cellSize + 5, defenseY * cellSize + 25);
-    ctx.strokeStyle = 'rgb(130,109,178)';
-    ctx.stroke();
-    moveCount = moveCount + 1;
-    ctx.fillStyle = '#777';
-    ctx.fillText(moveCount, defenseX * cellSize, defenseY * cellSize + 8);
-    checkWin(defenseY, defenseX);
-    fillPotentials(defenseY, defenseX);
-    console.log(moveCount, defenseY, defenseX);
+    doAIMove(defenseY, defenseX);
   }
-};
+}
+let onClick = function(field){
+  if (isFin == true){ // if win
+    console.log('Game Over');
+    return 0;
+  }
+  else{
+    // get the coordinate of mouse click
+    let cellY = Math.floor((field.clientY - battleFieldBlock.top)/cellSize);
+    let cellX = Math.floor((field.clientX - battleFieldBlock.left)/cellSize);
+    // User move, if clicked cell is empty: draw O
+    if (cells[cellY][cellX] == 0 && isCross == false){ //
+      cells[cellY][cellX] = 2;
+      isCross = true;
+      let ctx = battleField.getContext('2d');
+      ctx.beginPath();
+      ctx.strokeStyle = 'rgb(239,144,121)';
+      ctx.lineWidth = 1;
+      let times = 20;
+      let counter = 1;
+      let angle = (2 * Math.PI)/times;
+      let angleStart = 0;
+      function drawCircle(){
+          ctx.strokeStyle = 'rgb(239,15,121)';
+          ctx.lineWidth = 1;
+          ctx.beginPath();
+          ctx.arc(cellX * cellSize + 15, cellY * cellSize + 15, 10, angleStart, angle);
+          ctx.stroke();
+          counter = counter++;
+          angleStart = angle;
+          angle = angle + (2 * Math.PI)/times;
+      }
+      let timerId = setInterval(drawCircle, 10);
+      setTimeout(function() {
+        clearInterval(timerId);
+        moveCount = moveCount + 1;
+        ctx.fillStyle = '#777';
+        ctx.fillText(moveCount, cellX * cellSize, cellY * cellSize + 8);
+        fillPotentials(cellY, cellX);
+        checkWin(cellY, cellX);
+        console.log(moveCount, cellY, cellX);
+        calcAIMove();
+      }, 200);
+      // ctx.arc(cellX * cellSize + 15, cellY * cellSize + 15, 10, 0, 2 * Math.PI);
+      // ctx.stroke();
+    }
+    else { // if cell is not empty: return 0;
+      return 0;
+    }
+  }
+}; // end onClick().
+
 battleField = document.getElementById('battlefield');
 battleField.addEventListener('click', onClick);
 document.getElementById('newGame').addEventListener('click', newGame);

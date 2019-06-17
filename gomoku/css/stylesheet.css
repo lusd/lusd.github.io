@@ -4,6 +4,7 @@
 html, body{
   width: 100%;
   margin: 0;
+  height: 100%;
 }
 #battlefield{
   border: 1px solid rgb(254,250,203);
@@ -17,7 +18,9 @@ html, body{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
   margin: 0 auto;
+  height: 100%;
 }
 .numbers__column{
   width: 25px;
@@ -25,10 +28,10 @@ html, body{
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  font-size: 22px;
+  font-size: 20px;
   line-height: 30px;
   text-align: right;
-  font-family: Helvetica;
+  font-family: Helvetica, sans-serif;
   font-weight: 200;
   color: #555;
 }
@@ -44,9 +47,27 @@ html, body{
 .numbers__row span{
   display: block;
   font-size: 20px;
-  font-family: Helvetica;
+  font-family: Helvetica, sans-serif;
   width: 30px;
   text-align: center;
   font-weight: 200;
   color: #555;
+}
+.author{
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  font-size: 18px;
+  font-family: Roboto, Helvetica, sans-serif;
+  color: #777;
+  font-weight: 300;
+}
+.author__link{
+  opacity: 0.2;
+  color: #777;
+  text-decoration: none;
+}
+.author__link:hover{
+  opacity: 1;
+  transition: 0.2s;
 }
