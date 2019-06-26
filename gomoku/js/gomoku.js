@@ -141,36 +141,21 @@ function doAIMove(y,x){
   cells[y][x] = 1;
   isCross = false;
   let ctx = battleField.getContext('2d');
-  let times = 20;
-  let countFirst = 0;
-  let countSecond = 0;
-  function drawXmove(){
-    ctx.beginPath();
-    ctx.strokeStyle = 'rgb(130,109,178)';
-    ctx.lineWidth = 1;
-    if (countFirst < times) {
-      ctx.moveTo(x * cellSize + 5 + countFirst, y * cellSize + 5 + countFirst);
-      countFirst = countFirst + 1;
-      ctx.lineTo(x * cellSize + 5 + countFirst, y * cellSize + 5 + countFirst);
-      ctx.stroke();
-    }
-    else {
-      ctx.moveTo(x * cellSize + 25 - countSecond , y * cellSize + 5 + countSecond);
-      countSecond = countSecond + 1;
-      ctx.lineTo(x * cellSize + 25 - countSecond, y * cellSize + 5 + countSecond);
-      ctx.stroke();
-    }
-  }
-  let timerIdTwo = setInterval(drawXmove, 5);
-  setTimeout(function() {
-    clearInterval(timerIdTwo);
-    moveCount = moveCount + 1;
-    ctx.fillStyle = '#777';
-    ctx.fillText(moveCount, x * cellSize, y * cellSize + 8);
-    checkWin(y, x);
-    fillPotentials(y, x);
-    console.log(moveCount, y, x);
-  }, 200);
+  ctx.beginPath();
+  ctx.strokeStyle = 'rgb(130,109,178)';
+  ctx.lineWidth = 1;
+  ctx.moveTo(x * cellSize + 5, y * cellSize + 5) ;
+  ctx.lineTo(x * cellSize + 25, y * cellSize + 25);
+  ctx.stroke();
+  ctx.moveTo(x * cellSize + 25 , y * cellSize + 5);
+  ctx.lineTo(x * cellSize + 5, y * cellSize + 25);
+  ctx.stroke();
+  moveCount = moveCount + 1;
+  ctx.fillStyle = '#777';
+  ctx.fillText(moveCount, x * cellSize, y * cellSize + 8);
+  checkWin(y, x);
+  fillPotentials(y, x);
+  console.log(moveCount, y, x);
 } // end doAIMove function
 function compareDefense(direction, weight, cellValue){
   for (let item of weights){
@@ -351,31 +336,18 @@ let onClick = function(field){
       ctx.beginPath();
       ctx.strokeStyle = 'rgb(239,144,121)';
       ctx.lineWidth = 1;
-      let times = 20;
-      let counter = 1;
-      let angle = (2 * Math.PI)/times;
-      let angleStart = 0;
-      function drawCircle(){
-          ctx.strokeStyle = 'rgb(239,15,121)';
-          ctx.lineWidth = 1;
-          ctx.beginPath();
-          ctx.arc(cellX * cellSize + 15, cellY * cellSize + 15, 10, angleStart, angle);
-          ctx.stroke();
-          counter = counter++;
-          angleStart = angle;
-          angle = angle + (2 * Math.PI)/times;
-      }
-      let timerId = setInterval(drawCircle, 10);
-      setTimeout(function() {
-        clearInterval(timerId);
-        moveCount = moveCount + 1;
-        ctx.fillStyle = '#777';
-        ctx.fillText(moveCount, cellX * cellSize, cellY * cellSize + 8);
-        fillPotentials(cellY, cellX);
-        checkWin(cellY, cellX);
-        console.log(moveCount, cellY, cellX);
-        calcAIMove();
-      }, 200);
+      ctx.strokeStyle = 'rgb(239,15,121)';
+      ctx.lineWidth = 1;
+      ctx.beginPath();
+      ctx.arc(cellX * cellSize + 15, cellY * cellSize + 15, 10, 0, 2*Math.PI);
+      ctx.stroke();
+      moveCount = moveCount + 1;
+      ctx.fillStyle = '#777';
+      ctx.fillText(moveCount, cellX * cellSize, cellY * cellSize + 8);
+      fillPotentials(cellY, cellX);
+      checkWin(cellY, cellX);
+      console.log(moveCount, cellY, cellX);
+      calcAIMove();
       // ctx.arc(cellX * cellSize + 15, cellY * cellSize + 15, 10, 0, 2 * Math.PI);
       // ctx.stroke();
     }
