@@ -9,6 +9,7 @@ html {
 body {
   width: 100%;
   font-size: 62.5%;
+  margin: 0;
 }
 
 :root {
