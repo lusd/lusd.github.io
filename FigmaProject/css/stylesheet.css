@@ -549,7 +549,7 @@ body {
 
 .business {
   width: 100%;
-  background-image: url("./../img/business_BG.svg");
+  background-image: url("./../img/business_bg.svg");
   background-repeat: no-repeat;
   background-position: top;
   background-size: cover;
