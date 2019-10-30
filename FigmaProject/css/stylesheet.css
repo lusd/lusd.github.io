@@ -30,7 +30,7 @@ body {
   background-image: url("./../img/Hero_BG.svg");
   background-repeat: no-repeat;
   background-position: top;
-  background-size: contain;
+  background-size: cover;
   display: flex;
   flex-wrap: wrap;
 }
@@ -142,13 +142,18 @@ body {
   width: 100%;
   background-image: url("./../img/how_it_works_bg.png");
   background-repeat: no-repeat;
-  background-size: auto;
+  background-size: 100%;
   background-position: top;
   padding: 120px 9.72% 120px;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
 
+@media screen and (min-width: 1500px) {
+  .how {
+    padding: 13% 9.72% 13%;
+  }
 }
 
 .how__header {
@@ -247,7 +252,7 @@ body {
   background-image: url("./../img/helping_bg.svg");
   background-position: 45px top;
   background-repeat: no-repeat;
-  background-size: auto;
+  background-size: cover;
   padding-bottom: 125px;
 }
 
