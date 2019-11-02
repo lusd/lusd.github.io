@@ -1,0 +1,184 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+:root {
+  --aquamarine: #54c5a8;
+  --maintext: #637381;
+  --headtext: #212b35;
+  --dodgerblue: #3da9f8;
+}
+
+body {
+  width: 100%;
+  font-size: 62.5%;
+  margin: 0;
+  font-family: Karla, sans-serif;
+  line-height: 2.2em;
+}
+
+header {
+  width: 100%;
+  background: var(--aquamarine);
+  padding: 90px 0;
+  max-width: 1600px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+header h1{
+  font-size: 2.8em;
+  color: white;
+  text-align: center;
+  margin: 0;
+}
+
+.wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1600px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.head__section {
+  background: #f4f6f8;
+  padding: 90px 9.72%;
+  border-bottom: 1px solid #dfe3e8;
+  color: var(--headtext);
+  width: 100%;
+}
+
+.privacy__head__section {
+  background: #fff;
+}
+
+.head__section__inner {
+  max-width: 930px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.paragraph {
+  margin-bottom: 15px;
+  margin-top: 0;
+  font-size: 1.6em;
+  font-weight: 400;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.link {
+  color: var(--dodgerblue);
+}
+
+.border {
+  width: 100%;
+  background: #dfe3e8;
+  height: 1px;
+  margin: 40px 0;
+}
+
+.main__section__wrap {
+  padding: 0 9.72%;
+  width: 100%;
+}
+
+.main__section {
+  margin: 0 auto;
+  margin-bottom: 24px;
+  color: var(--maintext);
+  width: 100%;
+  max-width: 930px;
+}
+
+.first__section {
+  padding-top: 90px;
+}
+
+.main__section__inner {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header {
+  font-size: 2.5em;
+  font-weight: 400;
+  color: var(--headtext);
+}
+
+.content {
+  width: 60%;
+  margin-right: 5%;
+}
+
+.ordered__list {
+  margin: 0;
+  padding-left: 25px;
+  font-size: 1.6em;
+}
+
+.ordered__item {
+  margin-bottom: 8px;
+}
+
+.which__means {
+  width: 35%;
+}
+
+.which__means .paragraph {
+  font-weight: bold;
+}
+
+.which__means__header {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: var(--headtext);
+  font-size: 1.4em;
+}
+
+.unordered__list {
+  font-size: 1.6em;
+  font-weight: bold;
+  padding-left: 25px;
+}
+
+.unordered__item {
+  margin-bottom: 15px;
+}
+
+@media screen and (max-width: 767.98px) {
+  .head__section {
+    padding: 90px 5%;
+  }
+
+  .main__section__wrap   {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .main__section__inner {
+    flex-direction: column;
+  }
+
+  .content {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .which__means {
+    width: 100%;
+  }
+}
