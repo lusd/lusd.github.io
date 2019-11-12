@@ -180,24 +180,21 @@ body {
   margin-bottom: 20px;
 }
 
-.home__button {
-  outline: none;
-  border: none;
+.home__readMore {
   cursor: pointer;
-  background: #e7a632;
-  background: var(--golden);
   padding: 7px 7px 7px;
   transition: 0.15s;
-}
-
-.home__readMore {
+  border: none;
+  outline: none;
   color: #000;
   font-size: 2.2em;
   text-decoration: none;
   line-height: 1.25;
+  background-color: #e7a632;
+  background-color: var(--golden);
 }
 
-.home__button:hover {
+.home__readMore:hover {
   background: #fa9532;
 }
 
