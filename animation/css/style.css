@@ -1,0 +1,178 @@
+html, body {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+*:, *::before, *::after {
+  box-sizing: inherit;
+}
+
+.wrap {
+  width: 1024px;
+  margin: 500px auto 0;
+  position: relative;
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 400px;
+}
+
+.button__wrap{
+  width: 100%;
+  background: #465058;
+  display: flex;
+  justify-content: center;
+}
+
+.button {
+  margin-top: 10px;
+  margin-bottom: 100px;
+  cursor: pointer;
+}
+
+.planes{
+  position: relative;
+  background: #465058;
+  width: 100%;
+  padding-top: 20px;
+}
+
+.redPath {
+  width: 100%;
+  display: block;
+}
+
+.wrap .planes__header {
+  margin: 0;
+  color: #B5E0E3;
+  font-size: 20px;
+  text-transform: uppercase;
+  margin-left: 10%;
+  padding-top: 20px;
+  opacity: 0;
+  transform: translate(0, 50px);
+  transition: 1s ease;
+}
+
+.wrap .planes__text {
+  margin: 0;
+  color: white;
+  font-size: 30px;
+  margin-left: 10%;
+  opacity: 0;
+  transform: translate(0, 50px);
+  transition: 1s ease;
+}
+
+.redPlane {
+  position: absolute;
+  offset-path: path("M0,37s104.211,21.217,239.307,26.127,242.51-30.33,400.463-57.14c116.39-19.755,145.059-24.072,295.933,12.341,68.98,16.648,88.3,16.757,88.3,16.757");
+  offset-distance: 4%;
+  transform: rotate(-12.5deg);
+}
+
+.path1 {
+  position: absolute;
+  display: block;
+  top: 5px;
+}
+.plane1 {
+  top: 0;
+  offset-path: path("M757.43600,0s-73.05,58.606-149.792,72.5c-65.229,11.81-233.987,24.946-323.892,6.211s-283.444-72.943-283.444-72.943");
+  position: absolute;
+  offset-distance: 100%;
+  transform: rotate(-120deg);
+}
+
+.path2 {
+  position: absolute;
+  display: block;
+  top: 40px;
+  left: 40px;
+}
+.plane2 {
+  offset-distance: 100%;
+  position: absolute;
+  top: 35px;
+  left: 40px;
+  offset-path: path("M731.27700,0.353s-47.719,49.585-110.237,81.509-228.955,61.631-349.418,53.207c-175.07-12.243-271.27-128.325-271.27-128.325");
+  transform: rotate(-120deg);
+}
+
+
+.path3 {
+  position: absolute;
+  display: block;
+  top: 20px;
+  left: 50px;
+}
+.plane3 {
+  offset-distance: 100%;
+  position: absolute;
+  top: 15px;
+  left: 50px;
+  offset-path: path("M792.09,0.346s-30.944,47.15-108.759,71.59-320.453,8.6-435.9,17.517-247.136,33.526-247.136,33.526");
+  transform: rotate(-120deg);
+}
+
+.path4 {
+  position: absolute;
+  display: block;
+  top: 20px;
+  left: 0px;
+}
+.plane4 {
+  offset-distance: 100%;
+  position: absolute;
+  top: 15px;
+  offset-path: path("M909.63300,0.344s-14.186,22.74-51.239,62.616c-43.52,46.837-134.254,78.823-236.127,77.937s-179.023-25.838-310.709-25.334-311.258,41.74-311.258,41.74");
+  transform: rotate(-120deg);
+}
+
+.path5 {
+  position: absolute;
+  display: block;
+  top: 40px;
+  left: 0px;
+}
+.plane5 {
+  offset-distance: 100%;
+  position: absolute;
+  top: 35px;
+  transform: rotate(-120deg);
+  offset-path: path("M802.63900,0.349s-32.714,45.725-166.164,71.995c-140.818,27.721-293.613-23.386-360.139-38.829");
+}
+
+
+.animate {
+  animation: white-plane 2.1s ease;
+}
+.offsetDistance1 {
+  offset-distance: 1%;
+}
+.redPlaneAnimate {
+  animation: red-plane 2s ease;
+}
+.offsetDistance95 {
+  offset-distance: 95%;
+}
+
+
+@keyframes white-plane {
+  from {
+    offset-distance: 100%;
+  }
+  to {
+    offset-distance: 1%;
+  }
+}
+
+@keyframes red-plane {
+  from {
+    offset-distance: 5%;
+  }
+  to {
+    offset-distance: 95%;
+  }
+}

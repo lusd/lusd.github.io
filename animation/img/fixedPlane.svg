@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="89.411" height="57.212" viewBox="0 0 89.411 57.212">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.075" y1="-0.503" x2="1.026" y2="-0.503" gradientUnits="objectBoundingBox">
+      <stop offset="0.013" stop-color="#ed5157"/>
+      <stop offset="0.09" stop-color="#ee5a60" stop-opacity="0.941"/>
+      <stop offset="0.235" stop-color="#f07579" stop-opacity="0.792"/>
+      <stop offset="0.432" stop-color="#f59fa2" stop-opacity="0.549"/>
+      <stop offset="0.67" stop-color="#fbd9da" stop-opacity="0.216"/>
+      <stop offset="0.815" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="-0.012" y1="1.154" x2="1.028" y2="1.154" gradientUnits="objectBoundingBox">
+      <stop offset="0.013" stop-color="#ed5157"/>
+      <stop offset="0.108" stop-color="#ee5a60" stop-opacity="0.941"/>
+      <stop offset="0.286" stop-color="#f07579" stop-opacity="0.792"/>
+      <stop offset="0.528" stop-color="#f59fa2" stop-opacity="0.549"/>
+      <stop offset="0.822" stop-color="#fbd9da" stop-opacity="0.216"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <g id="Group_763" data-name="Group 763" transform="translate(-3587.372 -917.417)">
+    <g id="Group_762" data-name="Group 762">
+      <path id="Path_12780" data-name="Path 12780" d="M3601.453,917.417l-4.747,22.177-7.805,5.053,5.053,7.805-4.747,22.177,87.577-11.169Z" fill="#ed5157"/>
+      <path id="Path_12781" data-name="Path 12781" d="M3676.783,963.46,3588.9,944.647l5.053,7.805Z" fill="#903a5b"/>
+      <path id="Path_12782" data-name="Path 12782" d="M3588.9,944.647l7.805-5.053,80.077,23.865Z" fill="#e53b46"/>
+    </g>
+    <path id="Path_12783" data-name="Path 12783" d="M3589.206,974.629l87.577-11.169-82.829-11.008Z" fill="url(#linear-gradient)"/>
+    <path id="Path_12784" data-name="Path 12784" d="M3596.706,939.594l80.077,23.865-75.33-46.042Z" fill="url(#linear-gradient-2)"/>
+    <text id="differently" transform="translate(3614.295 967.656) rotate(-7.206)" fill="#fff" font-size="12" font-family="Helvetica"><tspan x="-25.907" y="0">differently</tspan></text>
+    <text id="think" transform="translate(3610.829 940.416) rotate(17.429)" fill="#fff" font-size="12" font-family="Helvetica"><tspan x="-12.674" y="0">think</tspan></text>
+  </g>
+</svg>
