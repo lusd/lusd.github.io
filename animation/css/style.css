@@ -1,14 +1,16 @@
-html, body {
-  margin: 0;
-  box-sizing: border-box;
-}
-
 *:, *::before, *::after {
   box-sizing: inherit;
 }
 
+html, body {
+  margin: 0;
+  box-sizing: border-box;
+  width: 100%;
+}
+
 .wrap {
-  width: 1024px;
+  max-width: 1024px;
+  width: 100%;
   margin: 500px auto 0;
   position: relative;
   padding-top: 10px;
@@ -16,6 +18,7 @@ html, body {
   flex-direction: column;
   align-items: center;
   padding-bottom: 400px;
+  background: #f1f4f4;
 }
 
 .button__wrap{
@@ -34,13 +37,9 @@ html, body {
 .planes{
   position: relative;
   background: #465058;
-  width: 100%;
   padding-top: 20px;
-}
-
-.redPath {
   width: 100%;
-  display: block;
+  padding-bottom: 150px;
 }
 
 .wrap .planes__header {
@@ -65,85 +64,91 @@ html, body {
   transition: 1s ease;
 }
 
+.red__plane__group {
+  position: relative;
+  width: 100%;
+  top: 30px;
+}
+
+.another__path {
+  position: absolute;
+  top: 0;
+  z-index: 0;
+}
+
 .redPlane {
   position: absolute;
-  offset-path: path("M0,37s104.211,21.217,239.307,26.127,242.51-30.33,400.463-57.14c116.39-19.755,145.059-24.072,295.933,12.341,68.98,16.648,88.3,16.757,88.3,16.757");
-  offset-distance: 4%;
-  transform: rotate(-12.5deg);
+  z-index: 1;
+  top: -55px;
+  left: -100px;
+  opacity: 0;
+}
+
+.redPath {
+  width: 100%;
+  margin: 0 auto;
+  display: block;
+  position: absolute;
+  top: 0;
 }
 
 .path1 {
   position: absolute;
-  display: block;
-  top: 5px;
+  top: 2px;
 }
 .plane1 {
-  top: 0;
-  offset-path: path("M757.43600,0s-73.05,58.606-149.792,72.5c-65.229,11.81-233.987,24.946-323.892,6.211s-283.444-72.943-283.444-72.943");
   position: absolute;
-  offset-distance: 100%;
-  transform: rotate(-120deg);
+  top: -30px;
+  left: -30px;
+}
+
+.plane {
+  width: 60px;
 }
 
 .path2 {
   position: absolute;
-  display: block;
-  top: 40px;
-  left: 40px;
+  top: 42px;
+  left: 0px;
 }
 .plane2 {
-  offset-distance: 100%;
   position: absolute;
-  top: 35px;
-  left: 40px;
-  offset-path: path("M731.27700,0.353s-47.719,49.585-110.237,81.509-228.955,61.631-349.418,53.207c-175.07-12.243-271.27-128.325-271.27-128.325");
-  transform: rotate(-120deg);
+  top: 10px;
+  left: -30px;
 }
-
 
 .path3 {
   position: absolute;
-  display: block;
   top: 20px;
   left: 50px;
 }
 .plane3 {
-  offset-distance: 100%;
   position: absolute;
-  top: 15px;
-  left: 50px;
-  offset-path: path("M792.09,0.346s-30.944,47.15-108.759,71.59-320.453,8.6-435.9,17.517-247.136,33.526-247.136,33.526");
-  transform: rotate(-120deg);
+  top: -11px;
+  left: 15px;
 }
 
 .path4 {
   position: absolute;
-  display: block;
   top: 20px;
   left: 0px;
 }
 .plane4 {
-  offset-distance: 100%;
   position: absolute;
-  top: 15px;
-  offset-path: path("M909.63300,0.344s-14.186,22.74-51.239,62.616c-43.52,46.837-134.254,78.823-236.127,77.937s-179.023-25.838-310.709-25.334-311.258,41.74-311.258,41.74");
-  transform: rotate(-120deg);
+  left: -32px;
+  top: -12px;
 }
 
 .path5 {
   position: absolute;
-  display: block;
   top: 40px;
   left: 0px;
 }
 .plane5 {
-  offset-distance: 100%;
   position: absolute;
-  top: 35px;
-  transform: rotate(-120deg);
-  offset-path: path("M802.63900,0.349s-32.714,45.725-166.164,71.995c-140.818,27.721-293.613-23.386-360.139-38.829");
+  top: 8px;
+  left: -32px;
 }
-
 
 .animate {
   animation: white-plane 2.1s ease;
@@ -174,5 +179,76 @@ html, body {
   }
   to {
     offset-distance: 95%;
+  }
+}
+
+@media only screen and (max-width: 1023.98px) {
+  .plane {
+    width: 40px;
+  }
+
+  .path {
+    width: 90%;
+    height: auto;
+  }
+
+  .path1 {
+    top: 1px;
+  }
+  .plane1 {
+    top: -20px;
+    left: -20px;
+  }
+
+  .path2 {
+    top: 41px;
+  }
+  .plane2 {
+    top: 20px;
+    left: -20px;
+  }
+
+  .path3 {
+    width: 80%;
+    left: 30px;
+  }
+  .plane3 {
+    top: 0px;
+    left: 5px;
+  }
+
+  .path4 {
+    width: 80%;
+  }
+  .plane4 {
+    left: -22px;
+    top: -2px;
+  }
+
+  .plane5 {
+    top: 18px;
+    left: -22px;
+  }
+  .planes {
+    padding-bottom: 100px;
+  }
+
+  @media only screen and (max-width: 420px) {
+    .planes {
+    padding-bottom: 66px;
+  }
+    }
+  .another__path {
+    width: 100%;
+    height: auto;
+  }
+  .redPlane {
+    width: 60px;
+    left: -60px;
+    top: -35px;
+  }
+  .redPath {
+    width: 100%:auto;
+    height: auto;
   }
 }
