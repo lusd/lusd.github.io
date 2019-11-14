@@ -39,6 +39,10 @@ html, body {
   padding-top: 20px;
   width: 100%;
   padding-bottom: 150px;
+  background-image: url('./../img/Group_855.png');
+  background-repeat: no-repeat;
+  background-position: -30% 40%;
+  background-size: contain;
 }
 
 .plane1__group {
