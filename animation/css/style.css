@@ -287,15 +287,16 @@ html, body {
   .redPlane {
     top: -37px;
   }
-}
-
-@media only screen and (min-width: 1600px) {
   .planes {
     padding-bottom: 250px;
   }
   .red__plane__group {
     top: 100px;
   }
+}
+
+@media only screen and (min-width: 1600px) {
+
   .redPlane {
     top: -29px;
   }
