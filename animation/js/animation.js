@@ -10,7 +10,7 @@ planesNode.forEach(plane => {
   return planes.push(plane)
 });
 
-const paths = [];
+let paths = [];
 planesPathsNode.forEach(path => {
   return paths.push(path);
 });
@@ -24,6 +24,7 @@ const endRedPlaneAnimation = () => {
 
 const startWhitePlanes = () => {
   for (var i = 0; i < planes.length; i++) {
+    planes[i].style.opacity = "1";
     var path = anime.path(paths[i]);
     anime({
       targets: planes[i],
@@ -60,7 +61,7 @@ const startWhitePlanes = () => {
     duration: 400,
     rotate: '12.5deg'
   });
-  
+
   tl.finished.then(endRedPlaneAnimation);
 }
 
@@ -74,6 +75,7 @@ const onbuttonClick = (e) => {
   header.style.transform = 'translate(0, 0px)';
   text.style.opacity = "1";
   text.style.transform = 'translate(0, 0px)';
+
 }
 
 button.addEventListener('click', onbuttonClick);

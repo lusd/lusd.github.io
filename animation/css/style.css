@@ -9,7 +9,6 @@ html, body {
 }
 
 .wrap {
-  max-width: 1024px;
   width: 100%;
   margin: 500px auto 0;
   position: relative;
@@ -40,6 +39,10 @@ html, body {
   padding-top: 20px;
   width: 100%;
   padding-bottom: 150px;
+}
+
+.plane1__group {
+  width: 100%;
 }
 
 .wrap .planes__header {
@@ -92,9 +95,20 @@ html, body {
   top: 0;
 }
 
+.path {
+}
+
+
+.another__path {
+  width: 100%;
+  height: auto;
+}
+
 .path1 {
   position: absolute;
   top: 2px;
+  width: 80%;
+  height: auto;
 }
 .plane1 {
   position: absolute;
@@ -104,12 +118,15 @@ html, body {
 
 .plane {
   width: 60px;
+  opacity: 0;
 }
 
 .path2 {
   position: absolute;
   top: 42px;
   left: 0px;
+  width: 85%;
+  height: auto;
 }
 .plane2 {
   position: absolute;
@@ -121,17 +138,22 @@ html, body {
   position: absolute;
   top: 20px;
   left: 50px;
+  width: 70%;
+  height: auto;
 }
 .plane3 {
   position: absolute;
   top: -11px;
   left: 15px;
+
 }
 
 .path4 {
   position: absolute;
   top: 20px;
   left: 0px;
+  width: 85%;
+  height: auto;
 }
 .plane4 {
   position: absolute;
@@ -143,6 +165,8 @@ html, body {
   position: absolute;
   top: 40px;
   left: 0px;
+  width: 90%;
+  height: auto;
 }
 .plane5 {
   position: absolute;
@@ -250,5 +274,40 @@ html, body {
   .redPath {
     width: 100%:auto;
     height: auto;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .redPlane {
+    top: -47px;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .redPlane {
+    top: -37px;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .planes {
+    padding-bottom: 250px;
+  }
+  .red__plane__group {
+    top: 100px;
+  }
+  .redPlane {
+    top: -29px;
+  }
+}
+@media only screen and (min-width: 1800px) {
+  .redPlane {
+    top: -20px;
+  }
+  .planes {
+    padding-bottom: 300px;
+  }
+  .red__plane__group {
+    top: 150px;
   }
 }
