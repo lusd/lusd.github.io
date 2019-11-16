@@ -9,7 +9,15 @@ tabs = [];
 tabsNode.forEach(tab => {
   tabs.push(tab);
 })
+const closeButtons = document.querySelectorAll('.tab__close');
+
+
 let prevTab;
+function toggleMenu(x) {
+  x.classList.toggle("change");
+  const menu = document.querySelector('.header__navigation');
+  menu.classList.toggle("active");
+}
 
 const toggleButton = (number) => {
   tabsButtons.map(button => {
@@ -62,4 +70,7 @@ const showTab = (button) => {
 
 tabsButtons.map(button => {
   button.addEventListener('click', showTab);
-})
+});
+closeButtons.forEach(button => {
+  button.addEventListener('click', showTab);
+});

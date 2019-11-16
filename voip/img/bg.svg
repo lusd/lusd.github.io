@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="583.097" height="788.271" viewBox="0 0 583.097 788.271">
+  <defs>
+    <filter id="Rectangle_39" x="394.421" y="79.296" width="188.677" height="292.087" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Rectangle_40" x="247.318" y="57.376" width="281.455" height="441.235" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-2"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Rectangle_41" x="0" y="0" width="497.505" height="788.271" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-3"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-3"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_15211" data-name="Group 15211" transform="translate(226.578 -2980.904)">
+    <g transform="matrix(1, 0, 0, 1, -226.58, 2980.9)" filter="url(#Rectangle_39)">
+      <rect id="Rectangle_39-2" data-name="Rectangle 39" width="66.414" height="270.456" rx="33.207" transform="translate(403.42 112.31) rotate(-24)" fill="#20baef" opacity="0.664"/>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, -226.58, 2980.9)" filter="url(#Rectangle_40)">
+      <rect id="Rectangle_40-2" data-name="Rectangle 40" width="102.421" height="417.687" rx="51.211" transform="translate(256.32 105.03) rotate(-24)" fill="#20baef" opacity="0.341"/>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, -226.58, 2980.9)" filter="url(#Rectangle_41)">
+      <rect id="Rectangle_41-2" data-name="Rectangle 41" width="186.439" height="760.159" rx="93.219" transform="translate(9 81.83) rotate(-24)" fill="#20baef" opacity="0.19"/>
+    </g>
+  </g>
+</svg>
