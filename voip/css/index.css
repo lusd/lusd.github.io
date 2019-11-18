@@ -49,6 +49,7 @@ h1,h2,h3,h4,h5,h6,p,ul,ol {
   --orange: #E8B300;
   --slategray: #707E81;
   --snow: #FCFCFC;
+  --ghost: #F7F7FC;
 }
 
 body {
@@ -68,6 +69,7 @@ body {
 }
 
 .header__navigation__wrap {
+  background: #364550;
   background: var(--darkgrey);
   display: flex;
   align-items: center;
@@ -97,6 +99,7 @@ body {
 }
 
 .header__navigation__phone {
+  color: #E8B300;
   color: var(--orange);
   font-size: 1.2em;
   text-transform: uppercase;
@@ -152,6 +155,7 @@ body {
   margin-left: 37.2px;
   display: flex;
   align-items: center;
+  color: #20baef;
   color: var(--deepsky);
   text-transform: uppercase;
   font-family: "Proxima Nova Bold";
@@ -167,10 +171,12 @@ body {
 }
 
 .header__tab__item:hover {
+  border-bottom: 4px solid #20baef;
   border-bottom: 4px solid var(--deepsky);
 }
 
 .header__tab__item.active {
+  border-bottom: 4px solid #20baef;
   border-bottom: 4px solid var(--deepsky);
 }
 
@@ -200,6 +206,7 @@ body {
   transform: translateY(-50px);
   transition: 0.25s;
   position: absolute;
+  background: #FCFCFC;
   background: var(--snow);
   padding-top: 95px;
   flex-direction: column;
@@ -228,6 +235,7 @@ body {
 }
 
 .tab__header {
+  color: #20baef;
   color: var(--deepsky);
   font-size: 2em;
   font-family: "Proxima Nova Black";
@@ -253,6 +261,7 @@ body {
 }
 
 .tab__content__header {
+  color: #707E81;
   color: var(--slategray);
   font-family: "Proxima Nova Bold";
   font-size: 2em;
@@ -261,6 +270,7 @@ body {
 
 .tab__content__text {
   font-size: 1.8em;
+  color: #707E81;
   color: var(--slategray);
   line-height: 22px;
 }
@@ -289,7 +299,9 @@ body {
 .tab__footer__button {
   line-height: 40px;
   display: block;
+  border: 1px solid #707E81;
   border: 1px solid var(--slategray);
+  color: #707E81;
   color: var(--slategray);
   text-transform: uppercase;
   text-decoration: none;
@@ -337,6 +349,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: #707E81;
   color: var(--slategray);
 }
 
@@ -388,6 +401,7 @@ body {
 .head__name {
   margin-top: 80px;
   font-size: 1.4em;
+  color: #20baef;
   color: var(--deepsky);
   font-family: "Proxima Nova Black";
   text-transform: uppercase;
@@ -397,6 +411,7 @@ body {
 .head__title {
   font-family: "Proxima Nova Bold";
   font-size: 5.4em;
+  color: #364550;
   color: var(--darkgrey);
   margin-bottom: 34px;
 }
@@ -404,6 +419,7 @@ body {
 .head__description {
   font-family: "Proxima Nova Light";
   font-size: 2.4em;
+  color: #707E81;
   color: var(--slategray);
   margin-bottom: 54px;
 }
@@ -411,6 +427,7 @@ body {
 .button__sub {
   height: 53px;
   border-radius: 30px;
+  background-color: #E8B300;
   background-color: var(--orange);
   color: white;
   text-decoration: none;
@@ -446,6 +463,7 @@ body {
 .head__footer {
   margin-top: 62px;
   background: #F7F7FC;
+  background: var(--ghost);
   width: 100%;
 }
 
@@ -504,6 +522,7 @@ body {
   margin-top: 33px;
   font-family: "Proxima Nova Bold";
   font-size: 1.4em;
+  color: #20baef;
   color: var(--deepsky);
   margin-bottom: 18px;
 }
@@ -511,6 +530,7 @@ body {
 .services__title {
   font-size: 3.1em;
   font-family: "Proxima Nova Bold";
+  color: #364550;
   color: var(--darkgrey);
   margin-bottom: 30px;
   text-align: right;
@@ -520,6 +540,7 @@ body {
   font-size: 1.8em;
   font-family: "Proxima Nova Light";
   line-height: 28px;
+  color: #707E81;
   color: var(--slategray);
   text-align: right;
   margin-bottom: 15px;
@@ -528,6 +549,7 @@ body {
 .serives__action {
   font-family: "Proxima Nova Bold";
   font-size: 1.8em;
+  color: #364550;
   color: var(--darkgrey);
   text-align: right;
   margin-bottom: 62px;
@@ -577,12 +599,14 @@ body {
   font-family: "Proxima Nova Black";
   font-size: 1.4em;
   margin-bottom: 14px;
+  color: #20baef;
   color: var(--deepsky);
 }
 
 .provider__title {
   font-family: "Proxima Nova Bold";
   font-size: 3.1em;
+  color: #364550;
   color: var(--darkgrey);
   margin-bottom: 25px;
 }
@@ -590,6 +614,7 @@ body {
 .provider__text {
   font-family: "Proxima Nova Light";
   font-size: 1.8em;
+  color: #707E81;
   color: var(--slategray);
   line-height: 28px;
 }
@@ -603,7 +628,8 @@ body {
 .provider__block__title {
   font-family: "Proxima Nova Bold";
   font-size: 2.2em;
-  var(--darkgrey);
+  color: #364550;
+  color: var(--darkgrey);
   margin-bottom: 8px;
 }
 
@@ -618,6 +644,7 @@ body {
 
 .systems__background {
   background: #F7F7FC;
+  background: var(--ghost);
   width: 100%;
 }
 
@@ -638,6 +665,7 @@ body {
 
 .systems__name {
   font-size: 1.4em;
+  color: #20baef;
   color: var(--deepsky);
   font-family: "Proxima Nova Black";
   margin-bottom: 14px;
@@ -646,12 +674,14 @@ body {
 .systems__title {
   font-family: "Proxima Nova Bold";
   font-size: 3.1em;
+  color: #364550;
   color: var(--darkgrey);
   margin-bottom: 25px;
 }
 
 .systems__text {
   font-family: "Proxima Nova Light";
+  color: #707E81;
   color: var(--slategray);
   font-size: 1.8em;
   line-height: 28px;
@@ -661,6 +691,7 @@ body {
   font-family: "Proxima Nova Bold";
   font-size: 2.2em;
   line-height: 28px;
+  color: #364550;
   color: var(--darkgrey);
   margin-bottom: 8px;
 }
@@ -681,6 +712,7 @@ body {
   padding: 85px 65px;
   margin-top: -40px;
   background: #F7F7FC;
+  background: var(--ghost);
 }
 
 .systems__block {
@@ -695,6 +727,7 @@ body {
 }
 
 .button__sub__blue {
+  background: #20baef;
   background: var(--deepsky);
   max-width: 201px;
 }
@@ -731,6 +764,7 @@ body {
 }
 
 .access__name {
+  color: #20baef;
   color: var(--deepsky);
   font-family: "Proxima Nova Black";
   font-size: 1.4em;
@@ -738,13 +772,15 @@ body {
 }
 
 .access__title {
-  color:var(--darkgrey);
+  color: #364550;
+  color: var(--darkgrey);
   font-family: "Proxima Nova Bold";
   font-size: 3.1em;
   margin-bottom: 25px;
 }
 
 .access__text {
+  color: #707E81;
   color: var(--slategray);
   font-family: "Proxima Nova Light";
   font-size: 1.8em;
@@ -768,6 +804,7 @@ body {
 }
 
 .trusted__name {
+  color: #20baef;
   color: var(--deepsky);
   font-size: 1.4em;
   font-family: "Proxima Nova Black";
@@ -779,6 +816,7 @@ body {
   text-align: center;
   font-size: 3.1em;
   font-family: "Proxima Nova Bold";
+  color: #364550;
   color: var(--darkgrey);
   margin-bottom: 27px;
 }
@@ -786,6 +824,7 @@ body {
 .trusted__text {
   font-size: 1.8em;
   font-family: "Proxima Nova Light";
+  color: #707E81;
   color: var(--slategray);
   max-width: 400px;
   line-height: 28px;
@@ -815,6 +854,7 @@ body {
 
 .trusted__subtitle {
   font-size: 4.2em;
+  color: #364550;
   color: var(--darkgrey);
   font-family: "Proxima Nova Black";
 }
@@ -822,6 +862,7 @@ body {
 .trusted__item__caption {
   font-size: 2em;
   font-family: "Proxima Nova Light";
+  color: #364550;
   color: var(--darkgrey);
 }
 
@@ -830,6 +871,7 @@ body {
 }
 
 .ready {
+  background: #20baef;
   background: var(--deepsky);
   width: 100%;
 }
@@ -874,6 +916,7 @@ body {
 }
 
 .button__sub__white {
+  color: #20baef;
   color: var(--deepsky);
   background: white;
   max-width: 194px;
@@ -885,6 +928,7 @@ body {
 
 .footer__top{
   background: #F7F7FC;
+  background: var(--ghost);
   width: 100%;
 }
 
@@ -912,6 +956,7 @@ body {
   font-family: "Proxima Nova Bold";
   font-size: 1.4em;
   margin-bottom: 7px;
+  color: #707E81;
   color: var(--slategray);
 }
 
@@ -919,6 +964,7 @@ body {
   display: block;
   font-family: "Proxima Nova Bold";
   font-size: 1.4em;
+  color: #20baef;
   color: var(--deepsky);
   text-decoration: none;
   margin-bottom: 19px;
@@ -943,6 +989,7 @@ body {
   font-family: "Proxima Nova Bold";
   font-size: 1.2em;
   text-transform: uppercase;
+  color: #707E81;
   color: var(--slategray);
 }
 
@@ -950,6 +997,7 @@ body {
   margin-top: 13px;
   font-size: 1em;
   font-family: "Proxima Nova Regular";
+  color: #707E81;
   color: var(--slategray);
   text-decoration: none;
 }
@@ -973,6 +1021,7 @@ body {
 .footer__middle__link {
   font-family: "Proxima Nova Regular";
   font-size: 1.2em;
+  color: #707E81;
   color: var(--slategray);
   text-decoration: none;
   margin-right: 41px;
@@ -987,6 +1036,7 @@ body {
   text-decoration: none;
   font-family: "Proxima Nova Light";
   font-size: 1.4em;
+  color: #707E81;
   color: var(--slategray);
   margin-bottom: 5px;
 }
@@ -1015,6 +1065,7 @@ body {
 
 .tab__close {
   font-size: 4em;
+  color: #364550;
   color: var(--darkgrey);
   align-self: flex-end;
   cursor: pointer;
@@ -1036,6 +1087,7 @@ body {
     overflow: hidden;
     top: 0;
     z-index: 10;
+    background: #364550;
     background: var(--darkgrey);
     display: none;
   }
