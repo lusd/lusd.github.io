@@ -104,6 +104,17 @@ body {
   text-decoration: none;
 }
 
+.header__static__wrap {
+  width: 100%;
+  z-index: 100;
+  background: white;
+}
+
+.static__menu {
+  position: fixed;
+  top: 0;
+}
+
 .header__tabs__wrap {
   position: relative;
   width: 100%;
@@ -187,7 +198,7 @@ body {
   height: 587px;
   opacity: 0;
   transform: translateY(-50px);
-  transition: 0.5s;
+  transition: 0.25s;
   position: absolute;
   background: var(--snow);
   padding-top: 95px;
@@ -1002,6 +1013,14 @@ body {
   display: none;
 }
 
+.tab__close {
+  font-size: 4em;
+  color: var(--darkgrey);
+  align-self: flex-end;
+  cursor: pointer;
+  display: none;
+}
+
 @media only screen and (max-width: 1023.98px) {
   .header__wrap {
     position: relative;
@@ -1109,9 +1128,7 @@ body {
   }
 
   .tab__close {
-    font-size: 4em;
-    color: var(--darkgrey);
-    align-self: flex-end;
+    display: block;
   }
 
   .tab__two .tab__content {
