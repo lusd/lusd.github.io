@@ -3,8 +3,14 @@
   <head>
     <meta charset="utf-8">
     <title>Rocket Fueled</title>
-    <link rel="stylesheet" href="./css/index.css">
+    <link rel="preload" as="style" href="./css/normalize.css">
+    <link rel="preload" as="style" href="./css/index.css">
+    <link rel="preload" as="style" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <link rel="preload" as="image" href="./img/bg.png">
+    <link rel="preload" as="image" href="./img/logo.png">
     <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <meta name="viewport" content="initial-scale=1, width=device-width, shrink-to-fit=0, user-scalable=no">
   </head>
   <body>
@@ -15,37 +21,44 @@
             <a class="header__logo__link" href="#">
               <img class="header__logo" src="./img/logo.png" alt="rocket fueled logo">
             </a>
-            <ul class="header__navigation">
-              <li class="header__navigation__item">
-                <a href="#">HOME</a>
-              </li>
-              <li class="header__navigation__item">
-                <a href="#">PRODUCT</a>
-              </li>
-              <li class="header__navigation__item">
-                <a href="#">Opportunity</a>
-              </li>
-              <li class="header__navigation__item">
-                <a href="#">About</a>
-              </li>
-              <li class="header__navigation__item">
-                <a class="login" href="#">LOGIN</a>
-              </li>
-            </ul>
+            <div class="header__navigation__wrap" onclick="toggleMenu(this)">
+              <div class="mobile__button">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+              </div>
+              <ul class="header__navigation">
+                <li class="header__navigation__item">
+                  <a href="#">HOME</a>
+                </li>
+                <li class="header__navigation__item">
+                  <a href="#">PRODUCT</a>
+                </li>
+                <li class="header__navigation__item">
+                  <a href="#">Opportunity</a>
+                </li>
+                <li class="header__navigation__item">
+                  <a href="#">About</a>
+                </li>
+                <li class="header__navigation__item">
+                  <a class="login" href="#">LOGIN</a>
+                </li>
+              </ul>
+            </div>
           </div>
           <div class="header__content">
-            <img src="./img/enegry.png" alt="energy / focus / mood, antioxidants, adaptogens & nootropics">
-            <h1 class="header__title">A Refreshing, Healthier Energy Drink</h1>
+            <img class="header__middle__image" data-aos-delay="600" data-aos="fade-up" src="./img/enegry.png" alt="energy / focus / mood, antioxidants, adaptogens & nootropics">
+            <h1 data-aos-delay="700" data-aos="fade-up" class="header__title">A Refreshing, Healthier Energy Drink</h1>
             <div class="header__content__block">
               <img class="header__background__path" src="./img/header.svg" alt="path">
               <div class="header__content__images">
-                <img class="header__content__image small" src="./img/smallcan.png" alt="small can">
-                <img class="header__content__image medium" src="./img/middlecan.png" alt="middle can">
-                <img class="header__content__image large" src="./img/bigcan.png" alt="Big can">
+                <img data-aos-delay="800" data-aos="fade-up" class="header__content__image small" src="./img/smallcan.png" alt="small can">
+                <img data-aos-delay="900" data-aos="fade-up" class="header__content__image medium" src="./img/middlecan.png" alt="middle can">
+                <img data-aos-delay="1000" data-aos="fade-up" class="header__content__image large" src="./img/bigcan.png" alt="Big can">
               </div>
-              <div class="header__reviews">
-                <h2 class="header__reviews__title">5 star reviews</h2>
-                <div class="header__review">
+              <div data-aos-delay="1000" data-aos-anchor-placement="top-bottom" data-aos="fade-up" class="header__reviews">
+                <h2 data-aos-delay="1100" data-aos-anchor-placement="top-bottom" data-aos="fade-left" class="header__reviews__title">5 star reviews</h2>
+                <div data-aos-delay="1200" data-aos-anchor-placement="top-bottom" data-aos="fade-left" class="header__review">
                   <img class="header__review__image" src="./img/girl.png" alt="girl">
                   <div class="header__review__content">
                     <div class="header__review__stars">
@@ -58,7 +71,7 @@
                     <p class="header__review__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
                   </div>
                 </div>
-                <div class="header__review">
+                <div  data-aos-delay="1300" data-aos-anchor-placement="top-bottom" data-aos="fade-left"  class="header__review">
                   <img class="header__review__image" src="./img/woman.png" alt="woman">
                   <div class="header__review__content">
                     <div class="header__review__stars">
@@ -71,7 +84,7 @@
                     <p class="header__review__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
                   </div>
                 </div>
-                <div class="header__review noBorder">
+                <div  data-aos-delay="1400" data-aos-anchor-placement="top-bottom" data-aos="fade-left"  class="header__review noBorder">
                   <img class="header__review__image" src="./img/man.png" alt="man">
                   <div class="header__review__content">
                     <div class="header__review__stars">
@@ -84,7 +97,7 @@
                     <p class="header__review__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
                   </div>
                 </div>
-                <div class="header__view">
+                <div data-aos="fade-left" class="header__view">
                   view all
                 </div>
               </div>
@@ -95,41 +108,39 @@
       <main class="main">
         <div class="main__inner">
           <div class="energized__wrap">
-            <div class="energized">
+            <div data-aos="flip-down" class="energized">
               <div class="tear__linear">
                 <div class="tear__block">
                   <div class="teat__wrap">
                     <div class="tear">
-                      <p class="energized__text small">Our Unique Recipe:</p>
                       <h2 class="energized__text big">Energized</h2>
                       <h3 class="energized__text medium">Super Foods</h3>
-                      <p class="energized__text bottom">So You Can Enjoy</p>
                     </div>
                   </div>
                 </div>
               </div>
-              <span class="energized__rdv">100% RDV of 12 essential vitamins</span>
-              <span class="energized__coffee">Coffee Berries</span>
-              <span class="energized__sweet">Sweet Cherry</span>
-              <span class="energized__acai">Acai Berries</span>
-              <span class="energized__Ashwagandha">Ashwagandha</span>
-              <span class="energized__mango">Mangosteen</span>
-              <span class="energized__berry">Blackberry</span>
-              <span class="enerzided__elder">Elderberry</span>
-              <span class="energized__goji">Goji Berries</span>
-              <span class="energized__lion">Lion’s Mane</span>
-              <span class="energized__rosea">Rhodiola Rosea</span>
-              <span class="energized__pome">Pomegranate</span>
-              <span class="energized__bil">Bilberry</span>
-              <span class="energized__cordy">Cordyceps</span>
-              <span class="energized__camu">Camu Camu</span>
-              <span class="energized__black">Black Current</span>
-              <span class="enegrized__code">CoQ10</span>
+              <span data-aos-delay="50" data-aos="fade-right" class="energized__span energized__rdv">100% RDV of 12 essential vitamins</span>
+              <span data-aos-delay="50" data-aos="fade-right" class="energized__span energized__coffee">Coffee Berries</span>
+              <span data-aos-delay="100" data-aos="fade-right" class="energized__span energized__sweet">Sweet Cherry</span>
+              <span data-aos-delay="100" data-aos="fade-right" class="energized__span energized__acai">Acai Berries</span>
+              <span data-aos-delay="100" data-aos="fade-right" class="energized__span energized__Ashwagandha">Ashwagandha</span>
+              <span data-aos-delay="150" data-aos="fade-right" class="energized__span energized__mango">Mangosteen</span>
+              <span data-aos-delay="150" data-aos="fade-right" class="energized__span energized__berry">Blackberry</span>
+              <span  data-aos-delay="150" data-aos="fade-right"class="energized__span enerzided__elder">Elderberry</span>
+              <span data-aos-delay="50" data-aos="fade-up" class="energized__span energized__goji">Goji Berries</span>
+              <span  data-aos-delay="50" data-aos="fade-up" class="energized__span energized__lion">Lion’s Mane</span>
+              <span data-aos-delay="50" data-aos="fade-up"  class="energized__span energized__rosea">Rhodiola Rosea</span>
+              <span  data-aos-delay="100" data-aos="fade-up" class="energized__span energized__pome">Pomegranate</span>
+              <span data-aos-delay="100" data-aos="fade-up"  class="energized__span energized__bil">Bilberry</span>
+              <span data-aos-delay="100" data-aos="fade-up"  class="energized__span energized__cordy">Cordyceps</span>
+              <span data-aos-delay="150" data-aos="fade-up"  class="energized__span energized__camu">Camu Camu</span>
+              <span data-aos-delay="150" data-aos="fade-up"  class="energized__span energized__black">Black Current</span>
+              <span data-aos-delay="150" data-aos="fade-up"  class="energized__span enegrized__code">CoQ10</span>
             </div>
           </div>
           <div class="benefits">
-            <div class="benefit">
-              <h2 class="benefit__title">a better today</h2>
+            <div data-aos="fade-up" class="benefit">
+              <h2  class="benefit__title">a better today</h2>
               <div class="benefit__content">
                 <div class="benefit__left">
                   <p class="benefit__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
@@ -142,7 +153,7 @@
                 </div>
               </div>
             </div>
-            <div class="benefit">
+            <div data-aos="fade-up" class="benefit">
               <h2 class="benefit__title tonight">a better tonight</h2>
               <div class="benefit__content">
                 <div class="benefit__left">
@@ -156,7 +167,7 @@
                 </div>
               </div>
             </div>
-            <div class="benefit">
+            <div data-aos="fade-up" class="benefit">
               <h2 class="benefit__title tomorrow">a better tomorrow</h2>
               <div class="benefit__content">
                 <div class="benefit__left">
@@ -170,12 +181,64 @@
                 </div>
               </div>
             </div>
+            <div data-aos="flip-down" class="benefit__order">
+              Order NOW!
+            </div>
           </div>
         </div>
       </main>
+      <div class="story">
+        <div class="story__inner">
+          <div data-aos="fade-up-right" class="story__left">
+            <img src="./img/story.png" alt="story">
+          </div>
+          <div class="story__right">
+            <h2 data-aos="fade-up"class="story__title">Our Story</h2>
+            <p data-aos="fade-up" class="story__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+            <br>
+            <p data-aos="fade-up" class="story__text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+            <br>
+            <p data-aos="fade-up"  class="story__text">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            <div data-aos="fade-up" class="story__button">view detail</div>
+          </div>
+        </div>
+      </div>
+      <div class="join">
+        <div class="join__inner">
+          <h2 data-aos="fade-up" class="join__title">JOIN US</h2>
+          <form class="join__form" action="index.html" method="post">
+            <div class="inputs">
+              <input data-aos-delay="50" data-aos="fade-up" type="text" name="name" value="" placeholder="Name" required>
+              <input data-aos-delay="150" data-aos="fade-up" type="email" name="email" value="" placeholder="Email" required>
+              <input data-aos-delay="250" data-aos="fade-up" type="number" name="phone" value="" placeholder="Phone" required>
+            </div>
+            <button data-aos-delay="350" data-aos="fade-up" class="join__button" type="submit" name="button">submit</button>
+          </form>
+        </div>
+      </div>
       <footer class="footer">
-
+        <div class="footer__inner">
+          <img data-aos-delay="50" data-aos="fade-up" class="footer__image" src="./img/logo.png" alt="logo">
+          <p data-aos-delay="50" data-aos="fade-up" class="footer__disclaimer">Disclaimer:  Rocket Fueled LIFE™ does NOT guarantee nor project any level of income or earnings of any Affiliate or Independent Distributor.  Any representation guarantee or projection would be misleading.  Earnings from the Rocket Fueled Life™ marketing and compensation plan depend solely on the sales and sales skill of each Affiliate or Independent Distributor, as provided in our official Rocket Fueled Energy™ Marketing and Compensation Plan, and in   accordance with State and Federal laws.  All references to income, implied or stated, throughout this document are for illustrative purposes only. Statements made regarding our products have NOT been evaluated by the Food and Drug Administration. The efficacy of these products has not been confirmed by FDA-approved research. These products are not intended to diagnose, treat, cure or prevent any disease. Copy, use or publication without license or permission is prohibited.
+          </p>
+          <p data-aos-delay="50" data-aos="fade-up" class="footer__copyright">Powered by 1DayWorkWeek. Copyright 2019 - ALL RIGHTS RESERVED</p>
+          <div class="footer__links">
+            <a class="footer__link" href="#">Purchase Agreement </a>
+            <span class="footer__dash">-</span>
+            <a class="footer__link" href="#">Terms & Conditions </a>
+            <span class="footer__dash">-</span>
+            <a href="#" class="footer__link">Income Disclaimer</a>
+            <span class="footer__dash">-</span>
+            <a href="#" class="footer__link">Privacy Policy</a>
+            <span class="footer__dash">-</span>
+            <a class="footer__link" href="#">Abuse Contact</a>
+          </div>
+        </div>
       </footer>
     </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./js/index.js">
+    </script>
   </body>
 </html>
