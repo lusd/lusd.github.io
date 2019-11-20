@@ -21,7 +21,7 @@
             </a>
           </div>
           <div class="header__homeImage__block">
-            <img src="./img/home_header.jpg" alt="Modern three-story office">
+            <img src="./img/home_deader.jpg" alt="Modern three-story office">
           </div>
         </div>
         <div class="navigation">
@@ -31,6 +31,13 @@
             <li class="navigation__item"><a href="#">CLIENTS</a></li>
             <li class="navigation__item"><a href="#">CONTACT</a></li>
           </ul>
+        </div>
+        <div class="mobile__button" onclick="toggleMenu(this)">
+          <div class="border">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+          </div>
         </div>
       </header>
       <main class="main">
@@ -55,17 +62,29 @@
         <div class="main__services">
           <div class="main__card">
             <h3 class="main__card__title">OUR COMPANY</h3>
-            <img class="main__card__image" src="./img/company.jpg" alt="Photo of big city skyscraper.">
+            <picture class="main__card__image">
+              <source srcset="./img/company.jpg" media="(min-width: 768px)">
+              <source srcset="./img/company_mobile.jpeg">
+              <img srcset="./img/company_mobile.jpeg" alt="Photo of big city skyscraper.">
+            </picture>
             <a class="home__readMore" href="#">READ MORE</a>
           </div>
           <div class="main__card">
             <h3 class="main__card__title">Our Services</h3>
-            <img class="main__card__image" src="./img/services.jpg" alt="Worker with metal cutting machine.">
+            <picture class="main__card__image">
+              <source srcset="./img/services.jpg" media="(min-width: 768px)">
+              <source srcset="./img/services_mobile.jpg">
+              <img srcset="./img/services_mobile.jpeg" alt="worker with metal saw">
+            </picture>
             <a class="home__readMore" href="#">READ MORE</a>
           </div>
           <div class="main__card">
             <h3 class="main__card__title">Our CLIENTS</h3>
-            <img class="main__card__image" src="./img/clients.jpg" alt="Worker on plant.">
+            <picture class="main__card__image">
+              <source srcset="./img/clients.jpg" media="(min-width: 768px)">
+              <source srcset="./img/clients_mobile.jpg">
+              <img srcset="./img/clients_mobile.jpeg" alt="Worker on plant.">
+            </picture>
             <a class="home__readMore" href="#">READ MORE</a>
           </div>
         </div>
@@ -75,7 +94,7 @@
           <a class="footer__item__link" href="#">
             <img class="footer__item__image" src="./img/toronto.png" alt="toronto company logo">
           </a>
-          <a class="footer__item__link" href="#">
+          <a class="footer__item__link smallOne" href="#">
             <img class="footer__item__image" src="./img/whims.png" alt="whmis company logo">
           </a>
           <a class="footer__item__link" href="#">
@@ -87,5 +106,7 @@
         </div>
       </footer>
     </div>
+    <script src="./js/index.js">
+    </script>
   </body>
 </html>
