@@ -190,6 +190,11 @@ body {
   width: 45.44%;
 }
 
+.header__reviews__wrap {
+  height: 307px;
+  overflow: auto;
+}
+
 .header__reviews {
   background: rgba(255,255,255,0.9);
   width: 34.21%;
