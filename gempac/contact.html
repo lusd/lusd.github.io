@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=0 user-scalable=no">
+    <link rel="preload" as="style" href="./css/normalize.css">
+    <link rel="preload" as="style" href="./css/contact.css">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Montserrat:500,900&display=swap">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:500,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/contact.css">
+    <title>Contact Us</title>
+  </head>
+  <body>
+    <div class="contact">
+      <header class="contact__header">
+        <div class="contact__header__inner">
+          <div class="contact__logo__block">
+            <a href="index.html">
+              <img src="./img/desktop_logo.png" alt="'GEMPAC contracting inc.' logo">
+            </a>
+          </div>
+          <h1 class="contact__title">
+            <span class="contact__title--smallLineHeight">Gempac</span>
+            <span class="contact__title--normalLineHeight">contracting</span>
+            <span class="contact__title--smallLineHeight">Inc.</span>
+          </h1>
+          <h2 class="contact__subtitle">a name that means business!</h2>
+          <h3 class="contact__yellow__title">Contact</h3>
+        </div>
+      </header>
+      <div class="adress">
+        <div class="adress__inner">
+          <div class="adress__left">
+            <h3 class="adress__title">WE ARE LOCATED AT:</h3>
+            <p class="adress__text">1 Roysun Road, Unit 1 Woodbridge, ON L4L 8R3</p>
+            <p class="adress__telephone">
+              PH# 905-264-0072 <br>
+              FAX# 905-264-5449
+            </p>
+          </div>
+          <div class="adress__right">
+            <iframe width="600" height="450" frameborder="0" style="border:0"
+            src="https://www.google.com/maps/embed/v1/place?q=1%20Roysun%20Road%2C%20Unit%201%20Woodbridge%2C%20ON%20L4L%208R3&key=AIzaSyAchxhBUngQJuCgC-oEnD_LE3ExJgT1T7g" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+      <div class="feedback">
+        <div class="feedback__text">
+          Please fill in the form below with any questions you may have about our
+          company and our services.  We would love to hear from you and will contact
+          you as soon as we can.  Thanks!<br>
+          <br>
+          Or email us at your leisure:<br>
+          <a href="mailto:Info@gempaccontracting.com" class="feedback__line">Info@gempaccontracting.com</a>
+        </div>
+        <div class="feeback__form__wrap">
+          <form class="feedback__form" action="" method="post">
+            <label class="feedback__label" for="Name">Your Name (required)</label>
+            <input class="feedback__input" type="text" name="Name" value="" required>
+            <label class="feedback__label" for="Email">Your Email (required)</label>
+            <input class="feedback__input" type="email" name="Email" value="" required>
+            <label class="feedback__label" for="subject">Subject</label>
+            <input class="feedback__input" type="text" name="subject" value="">
+            <label class="feedback__label" for="subject">Your Message</label>
+            <textarea class="feedback__textarea" name="text">
+
+            </textarea>
+            <img class="feedback__recaptcha" src="./img/recaptcha.png" alt="recaptcha">
+            <label class="feedback__label" for="recaptcha">Please enter the code above. It is not case sensitive</label>
+            <input class="feedback__input recaptcha" type="text" name="recaptcha" value="" required>
+            <span class="success">Your message has been sent.</span>
+            <button id="button" class="feedback__submit" type="submit" onSubmit="feedback(this)">Send</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>
