@@ -57,18 +57,18 @@
         <div class="feeback__form__wrap">
           <form class="feedback__form" action="" method="post">
             <label class="feedback__label" for="Name">Your Name (required)</label>
-            <input class="feedback__input" type="text" name="Name" value="" required>
+            <input class="feedback__input" title="Name" type="text" name="Name" value="" required>
             <label class="feedback__label" for="Email">Your Email (required)</label>
-            <input class="feedback__input" type="email" name="Email" value="" required>
+            <input class="feedback__input" title="Email" type="email" name="Email" value="" required>
             <label class="feedback__label" for="subject">Subject</label>
-            <input class="feedback__input" type="text" name="subject" value="">
-            <label class="feedback__label" for="subject">Your Message</label>
-            <textarea class="feedback__textarea" name="text">
+            <input class="feedback__input" title="subject" type="text" name="subject" value="">
+            <label class="feedback__label" for="Message">Your Message</label>
+            <textarea title="Message" class="feedback__textarea" name="text">
 
             </textarea>
             <img class="feedback__recaptcha" src="./img/recaptcha.png" alt="recaptcha">
             <label class="feedback__label" for="recaptcha">Please enter the code above. It is not case sensitive</label>
-            <input class="feedback__input recaptcha" type="text" name="recaptcha" value="" required>
+            <input title="recaptcha" class="feedback__input recaptcha" type="text" name="recaptcha" value="" required>
             <span class="success">Your message has been sent.</span>
             <button id="button" class="feedback__submit" type="submit" onSubmit="feedback(this)">Send</button>
           </form>
