@@ -125,6 +125,10 @@ body {
   color: #000;
 }
 
+.mobile__button {
+  display: none;
+}
+
 .main {
   width: 100%;
 }
@@ -215,7 +219,13 @@ body {
 
 .main__card__image {
   width: 100%;
+}
+
+.main__card__image__link {
+  width: 100%;
+  display: block;
   margin-bottom: 16px;
+
 }
 
 .main__card__image img {
@@ -259,10 +269,6 @@ body {
 
 .footer__item__image {
   width: 100%;
-}
-
-.mobile__button {
-  display: none;
 }
 
 @media only screen
@@ -399,8 +405,11 @@ and (max-width: 830px) {
   }
 
   .main__card__image {
-    margin-bottom: 0;
     display: flex;
+  }
+
+  .main__card__image__link {
+    margin-bottom: 0;
   }
 
   .home__readMore {

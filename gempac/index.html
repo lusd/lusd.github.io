@@ -26,7 +26,8 @@
         </div>
         <div class="navigation">
           <ul class="navigation__list">
-            <li class="navigation__item active"><a href="about.html"> ABOUT</a></li>
+            <li class="navigation__item active"><a href="home.html"> HOME</a></li>
+            <li class="navigation__item"><a href="about.html"> ABOUT</a></li>
             <li class="navigation__item"><a href="services.html">SERVICES</a></li>
             <li class="navigation__item"><a href="clients.html">CLIENTS</a></li>
             <li class="navigation__item"><a href="contact.html">CONTACT</a></li>
@@ -54,57 +55,51 @@
               professionalism, reliability and quality are the cornerstone of Gempac’s
               success and longevity.
             </p>
-            <a class="home__readMore" href="#">READ MORE</a>
+            <a class="home__readMore" href="about.html">READ MORE</a>
           </div>
         </div>
         <div class="main__services">
           <div class="main__card">
             <h3 class="main__card__title">OUR COMPANY</h3>
-            <picture class="main__card__image">
-              <source srcset="./img/company.jpg" media="(min-width: 830px)">
-              <source srcset="./img/company_mobile.png">
-              <img srcset="./img/company_mobile.jpeg" alt="Photo of big city skyscraper.">
-            </picture>
-            <a class="home__readMore" href="#">READ MORE</a>
+            <a class="main__card__image__link" href="about.html">
+              <img id="card1" class="main__card__image" src="./img/company.jpg" alt="Photo of big city skyscraper.">
+            </a>
+            <a class="home__readMore" href="about.html">READ MORE</a>
           </div>
           <div class="main__card">
             <h3 class="main__card__title">Our Services</h3>
-            <picture class="main__card__image">
-              <source srcset="./img/services.jpg" media="(min-width: 830px)">
-              <source srcset="./img/services_mobile.png">
-              <img srcset="./img/services_mobile.jpeg" alt="worker with metal saw">
-            </picture>
-            <a class="home__readMore" href="#">READ MORE</a>
+            <a class="main__card__image__link" href="services.html">
+              <img id="card2" class="main__card__image" src="./img/services.jpg" alt="Worker with metal saw">
+            </a>
+            <a class="home__readMore" href="services.html">READ MORE</a>
           </div>
           <div class="main__card">
             <h3 class="main__card__title">Our CLIENTS</h3>
-            <picture class="main__card__image">
-              <source srcset="./img/clients.jpg" media="(min-width: 830px)">
-              <source srcset="./img/clients_mobile.png">
-              <img srcset="./img/clients_mobile.jpeg" alt="Worker on plant.">
-            </picture>
-            <a class="home__readMore" href="#">READ MORE</a>
+            <a class="main__card__image__link" href="clients.html">
+              <img id="card3" class="main__card__image" src="./img/clients.jpg" alt="Worker on plant.">
+            </a>
+            <a class="home__readMore" href="clients.html">READ MORE</a>
           </div>
         </div>
       </main>
       <footer class="footer">
         <div class="footer__inner">
-          <a class="footer__item__link" href="#">
+          <a class="footer__item__link" href="https://www.toronto.ca/">
             <img class="footer__item__image" src="./img/toronto.png" alt="toronto company logo">
           </a>
-          <a class="footer__item__link smallOne" href="#">
+          <a class="footer__item__link smallOne" href="http://whmis.org/">
             <img class="footer__item__image" src="./img/whims.png" alt="whmis company logo">
           </a>
-          <a class="footer__item__link" href="#">
+          <a class="footer__item__link" href="https://www.wsib.ca/en/onlineservices">
             <img class="footer__item__image" src="./img/wsib.png" alt="wsib & cspaat company logo">
           </a>
-          <a class="footer__item__link" href="#">
+          <a class="footer__item__link" href="https://acmo.org/">
             <img class="footer__item__image" src="./img/acmo.png" alt="acmo company logo">
           </a>
         </div>
       </footer>
     </div>
-    <script src="./js/index.js">
-    </script>
+    <script src="./js/navigation.js"></script>
+    <script src="./js/index.js"></script>
   </body>
 </html>

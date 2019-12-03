@@ -20,6 +20,20 @@
               <img src="./img/desktop_logo.png" alt="'GEMPAC contracting inc.' logo">
             </a>
           </div>
+          <div class="navigation">
+            <ul class="navigation__list">
+              <li class="navigation__item"><a href="index.html">HOME</a></li>
+              <li class="navigation__item"><a href="about.html">ABOUT</a></li>
+              <li class="navigation__item"><a href="services.html">SERVICES</a></li>
+              <li class="navigation__item"><a href="clients.html">CLIENTS</a></li>
+              <li class="navigation__item active"><a href="contact.html">CONTACT</a></li>
+            </ul>
+          </div>
+          <div class="mobile__button" onclick="toggleMenu(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+          </div>
           <h1 class="contact__title">
             <span class="contact__title--smallLineHeight">Gempac</span>
             <span class="contact__title--normalLineHeight">contracting</span>
@@ -55,26 +69,42 @@
           <a href="mailto:Info@gempaccontracting.com" class="feedback__line">Info@gempaccontracting.com</a>
         </div>
         <div class="feeback__form__wrap">
-          <form class="feedback__form" action="" method="post">
+          <form class="feedback__form" action="#" method="post" onsubmit="">
             <label class="feedback__label" for="Name">Your Name (required)</label>
-            <input class="feedback__input" title="Name" type="text" name="Name" value="" required>
+            <input class="feedback__input" id="Name" title="Please use only alphabet characters and numbers, from 3 up to 32 symbols." minlength="3" maxlength="32" type="text" id="Name" value="" required
+            pattern="[A-Za-z1-9-_',]{1,32}">
             <label class="feedback__label" for="Email">Your Email (required)</label>
-            <input class="feedback__input" title="Email" type="email" name="Email" value="" required>
-            <label class="feedback__label" for="subject">Subject</label>
-            <input class="feedback__input" title="subject" type="text" name="subject" value="">
+            <input class="feedback__input" id="Email" minlength="3" maxlength="25" title="The domain portion of the email address is invalid (the portion after the @)." pattern="^([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22))*\x40([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d))*(\.\w{2,})+$" type="email" name="Email" value="" required >
+            <label class="feedback__label" for="Subject">Subject</label>
+            <input class="feedback__input" id="Subject" title="Please use only alphabet characters and numbers, up to 50 symbols" pattern="[A-Za-z1-9]{1,32}" type="text" name="subject" value="">
             <label class="feedback__label" for="Message">Your Message</label>
-            <textarea title="Message" class="feedback__textarea" name="text">
-
-            </textarea>
+            <textarea title="Message" class="feedback__textarea" name="text"></textarea>
             <img class="feedback__recaptcha" src="./img/recaptcha.png" alt="recaptcha">
             <label class="feedback__label" for="recaptcha">Please enter the code above. It is not case sensitive</label>
             <input title="recaptcha" class="feedback__input recaptcha" type="text" name="recaptcha" value="" required>
             <span class="success">Your message has been sent.</span>
-            <button id="button" class="feedback__submit" type="submit" onSubmit="feedback(this)">Send</button>
+            <button id="button" class="feedback__submit">Send</button>
           </form>
         </div>
       </div>
+      <footer class="footer">
+        <div class="footer__inner">
+          <a class="footer__item__link" href="#">
+            <img class="footer__item__image" src="./img/toronto.png" alt="toronto company logo">
+          </a>
+          <a class="footer__item__link smallOne" href="#">
+            <img class="footer__item__image" src="./img/whims.png" alt="whmis company logo">
+          </a>
+          <a class="footer__item__link" href="#">
+            <img class="footer__item__image" src="./img/wsib.png" alt="wsib & cspaat company logo">
+          </a>
+          <a class="footer__item__link" href="#">
+            <img class="footer__item__image" src="./img/acmo.png" alt="acmo company logo">
+          </a>
+        </div>
+      </footer>
     </div>
-
+    <script src="./js/navigation.js"></script>
+    <script src="./js/contact.js"></script>
   </body>
 </html>
