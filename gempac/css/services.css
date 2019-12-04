@@ -374,20 +374,23 @@ body {
 
   .services__content {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
     margin-top: 30px;
     margin-bottom: 0;
   }
 
-  .services__left,
   .services__right,
   .services__middle {
-    width: 100%;
+    width: 50%;
     text-align: center;
     margin: 15px auto;
     padding: 0;
     max-width: 400px;
+  }
+
+  .services__left {
+    width: 100%;
   }
 
   .footer {
