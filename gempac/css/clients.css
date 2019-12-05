@@ -19,6 +19,7 @@ h1, h2, h3, h4, h5, h6, p, ul, ol {
   --golden: #e7a632;
   --darkgray: #323337;
   --aliceblue: #f1ffff;
+  --lightgrey: #d8d8d8;
 }
 
 body {
@@ -49,8 +50,8 @@ body {
   left: 7.71%;
   width: 160px;
   height: 147px;
-  background: #e7a632;
-  background: var(--golden);
+  background: #d8d8d8;
+  background: var(--lightgrey);
   display: flex;
   justify-content: center;
   align-items: flex-end;
