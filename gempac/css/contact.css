@@ -273,6 +273,19 @@ body {
   margin-bottom: 30px;
 }
 
+.recaptcha {
+  transition: all 0.3s ease;
+  margin-top: 0;
+}
+
+#captcha.correct {
+	border-color: #009633;
+}
+
+#captcha.wrong {
+	border-color: #963300;
+}
+
 .feedback__textarea {
   background: black;
   min-height: 200px;
@@ -294,10 +307,6 @@ body {
   margin-bottom: 20px;
 }
 
-.feedback__input.recaptcha {
-  margin-top: 20px;
-}
-
 .feedback__submit {
   align-self: flex-start;
   border: 1px solid #f1ffff;
@@ -305,12 +314,14 @@ body {
   outline: none;
   padding: 5px 10px;
   display: block;
+  cursor: pointer;
   font-size: 2em;
   color: white;
   background-image: linear-gradient(to bottom, #000, #555);
 }
 
-.success {
+.success,
+.mistake {
   background: rgba(0, 200, 0, 0.5);
   border-radius: 5px;
   margin: 10px 0;
@@ -324,8 +335,11 @@ body {
   transform: translateY(-30px);
 }
 
+.mistake {
+  background: rgba(200, 0, 0, 0.5);
+}
+
 .animate {
-  display: block;
   opacity: 1;
   transform: translateY(0);
 }

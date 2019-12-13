@@ -55,7 +55,7 @@
           </div>
           <div class="adress__right">
             <iframe width="600" height="450" frameborder="0" style="border:0"
-            src="https://www.google.com/maps/embed/v1/place?q=1%20Roysun%20Road%2C%20Unit%201%20Woodbridge%2C%20ON%20L4L%208R3&key=AIzaSyAchxhBUngQJuCgC-oEnD_LE3ExJgT1T7g" allowfullscreen></iframe>
+            src="https://www.google.com/maps/embed/v1/place?q=1%20Roysun%20Road%2C%20Unit%201%20Woodbridge%2C%20ON%20L4L%208R3&key=AIzaSyBqsZR3WtvVfx2b0TIGxmbP8Ml8DK8A2T4" allowfullscreen></iframe>
           </div>
         </div>
       </div>
@@ -69,22 +69,22 @@
           <a href="mailto:Info@gempaccontracting.com" class="feedback__line">Info@gempaccontracting.com</a>
         </div>
         <div class="feeback__form__wrap">
-          <form class="feedback__form" action="#" method="post" onsubmit="">
+          <form class="feedback__form" action="https://formspree.io/mwkpjbwg" id="contactForm" method="POST" onsubmit="return formSubmit(event)">
             <label class="feedback__label" for="Name">Your Name (required)</label>
             <input class="feedback__input" id="Name" title="Please use only alphabet characters and numbers, from 3 up to 32 symbols." minlength="3" maxlength="32" type="text" id="Name" value="" required
-            pattern="([A-z0-9À-ž\s-_,]){2,32}">
+            pattern="([A-z0-9À-ž\s]{2,32})">
             <label class="feedback__label" for="Email">Your Email (required)</label>
-            <input class="feedback__input" id="Email" minlength="3" maxlength="60" title="Please check you email address for any typo." pattern="^([^\x00-\x21-\x23-\x24-\x25-\x5E-\x26-\x2A-\x2B-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22))*\x40([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d))*(\.\w{2,})+$" type="email" name="Email" value="" required >
+            <input class="feedback__input" name="_replyto" id="Email" minlength="3" maxlength="60" title="Please check you email address for any typo." pattern="^([^\x00-\x25\x5E\x26-\x2A\x2B\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22))*\x40([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d))*(\.\w{2,})+$" type="email" value="" required >
             <label class="feedback__label" for="Phone">Your Phone</label>
-            <input class="feedback__input" id="Phone" title="Use numbers and signs -+()/\" minlength="3" maxlength="30" type="tel" id="Name" value="" pattern="([0-9-+() ]\/){3,20}">
+            <input class="feedback__input" id="Phone" title="Use numbers and signs -+()" minlength="3" maxlength="30" type="tel" id="Name" value="" pattern="^\s*(?:\+?(\d{1,3}))?([-. (]*(\d{3})[-. )]*)?((\d{3})[-. ]*(\d{2,4})(?:[-.x ]*(\d+))?)\s*$">
             <label class="feedback__label" for="Subject">Subject</label>
             <input class="feedback__input" id="Subject" title="Please use only alphabet characters and numbers, up to 50 symbols" type="text" name="subject" value="">
             <label class="feedback__label" for="Message">Your Message</label>
             <textarea title="Message" class="feedback__textarea" name="text"></textarea>
-            <img class="feedback__recaptcha" src="./img/recaptcha.png" alt="recaptcha">
-            <label class="feedback__label" for="recaptcha">Please enter the code above. It is not case sensitive</label>
-            <input title="recaptcha" class="feedback__input recaptcha" type="text" name="recaptcha" value="" required>
-            <span class="success">Your message has been sent.</span>
+            <label class="feedback__label" for="captcha">Please solve simple math.</label>
+            <input id="captcha" title="Please solve simple math." class="feedback__input recaptcha" type="text" name="recaptcha" value="" required>
+            <span id="mistake" class="mistake">Please check the answer from the input</span>
+            <span id="success" class="success">Thank you! Your message has been sent.</span>
             <button id="button" class="feedback__submit">Send</button>
           </form>
         </div>
@@ -107,5 +107,7 @@
       </footer>
     </div>
     <script src="./js/navigation.js"></script>
+    <script src="./js/recaptcha.js"></script>
+    <script src="./js/formSubmission.js"></script>
   </body>
 </html>
