@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=0 user-scalable=no">
+    <meta charset="utf-8">
+    <link rel="preload" as="style" href="./css/normalize.css">
+    <link rel="preload" as="style" href="./css/index.css">
+    <link rel="preload" as="image" href="./img/home_deader.jpg">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Montserrat:500,900&display=swap">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:500,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <title>Home Page</title>
+  </head>
+  <body>
+    <div class="home">
+      <header class="header">
+        <div class="header__inner">
+          <div class="header__logo__block">
+            <a href="index.html">
+              <img src="./img/desktop_logo.png" alt="'GEMPAC contracting inc.' logo">
+            </a>
+          </div>
+          <div class="header__homeImage__block">
+            <img src="./img/home_deader.jpg" alt="Modern three-story office">
+          </div>
+        </div>
+        <div class="navigation">
+          <ul class="navigation__list">
+            <li class="navigation__item active"><a href="home.html"> HOME</a></li>
+            <li class="navigation__item"><a href="about.html"> ABOUT</a></li>
+            <li class="navigation__item"><a href="services.html">SERVICES</a></li>
+            <li class="navigation__item"><a href="clients.html">CLIENTS</a></li>
+            <li class="navigation__item"><a href="contact.html">CONTACT</a></li>
+          </ul>
+        </div>
+        <div class="mobile__button" onclick="toggleMenu(this)">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+        </div>
+      </header>
+      <main class="main">
+        <div class="main__about__wrap">
+          <div class="main__about">
+            <h1 class="main__header">
+              <span class="main__header--smallLineHeight">Gempac</span>
+              <span class="main__header--normalLineHeight">contracting</span>
+              <span class="main__header--smallLineHeight">Inc.</span>
+            </h1>
+            <h2 class="main__subheader">a name that means business!</h2>
+            <p class="main__text">
+              Founded in 1994, by Len Visconti and Rino Guida, Gempac has
+              been redefining service and quality ever since and is known in the
+              industry for its clean, quality work at competitive prices. Integrity,
+              professionalism, reliability and quality are the cornerstone of Gempac’s
+              success and longevity.
+            </p>
+            <a class="home__readMore" href="about.html">READ MORE</a>
+          </div>
+        </div>
+        <div class="main__services">
+          <div class="main__card">
+            <h3 class="main__card__title">OUR COMPANY</h3>
+            <a class="main__card__image__link" href="about.html">
+              <img id="card1" class="main__card__image" src="./img/company.jpg" alt="Photo of big city skyscraper.">
+            </a>
+            <a class="home__readMore" href="about.html">READ MORE</a>
+          </div>
+          <div class="main__card">
+            <h3 class="main__card__title">Our Services</h3>
+            <a class="main__card__image__link" href="services.html">
+              <img id="card2" class="main__card__image" src="./img/services.jpg" alt="Worker with metal saw">
+            </a>
+            <a class="home__readMore" href="services.html">READ MORE</a>
+          </div>
+          <div class="main__card">
+            <h3 class="main__card__title">Our CLIENTS</h3>
+            <a class="main__card__image__link" href="clients.html">
+              <img id="card3" class="main__card__image" src="./img/clients.jpg" alt="Worker on plant.">
+            </a>
+            <a class="home__readMore" href="clients.html">READ MORE</a>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <div class="footer__inner">
+          <a class="footer__item__link" href="https://www.toronto.ca/">
+            <img class="footer__item__image" src="./img/toronto.png" alt="toronto company logo">
+          </a>
+          <a class="footer__item__link smallOne" href="http://whmis.org/">
+            <img class="footer__item__image" src="./img/whims.png" alt="whmis company logo">
+          </a>
+          <a class="footer__item__link" href="https://www.wsib.ca/en/onlineservices">
+            <img class="footer__item__image" src="./img/wsib.png" alt="wsib & cspaat company logo">
+          </a>
+          <a class="footer__item__link" href="https://acmo.org/">
+            <img class="footer__item__image" src="./img/acmo.png" alt="acmo company logo">
+          </a>
+        </div>
+      </footer>
+    </div>
+    <script src="./js/navigation.js"></script>
+    <script src="./js/index.js"></script>
+  </body>
+</html>
