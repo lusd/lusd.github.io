@@ -15,16 +15,18 @@ h1, h2, h3, h4, h5, h6, p, ul, ol {
 }
 
 :root {
-  --black: #191d20;
+  --white: #fff;
   --golden: #e7a632;
   --darkgray: #323337;
   --aliceblue: #f1ffff;
   --lightgrey: #d8d8d8;
+  --black: #000;
+  --newblue: #0177aa;
 }
 
 body {
-  background: #191d20;
-  background: var(--black);
+  background: #fff;
+  background: var(--white);
   width: 100%;
 }
 
@@ -41,20 +43,19 @@ body {
 }
 
 .about__header__inner {
-  position: relative;
+  flex-direction: column;
+  display: flex;
 }
 
 .about__logo__block {
   width: 160px;
-  height: 147px;
-  background: #d8d8d8;
-  background: var(--lightgrey);
+  height: auto;
+  background: #fff;
+  background: var(--white);
   display: flex;
   justify-content: center;
-  align-items: flex-end;
-  padding: 0 12px 17px;
-  margin-bottom: 29px;
-  box-shadow: 0px 10px 8.7px 0.3px rgba(0, 0, 0, 0.26);
+  align-items: center;
+  padding: 17px 12px 17px;
 }
 
 .about__logo__block a {
@@ -92,26 +93,29 @@ body {
 }
 
 .navigation__item a {
-  color: #f1ffff;
+  color: black;
+  color: var(--black);
   text-decoration: none;
 }
 
 .navigation__item.active {
-  background: #e7a632;
-  background: var(--golden);
+  background: #0177aa;
+  background: var(--newblue);
 }
 
 .navigation__item.active a {
-  color: #000;
+  color: white;
+  color: var(--white);
 }
 
 .navigation__item:hover {
   background: #e7a632;
-  background: var(--golden);
+  background: var(--newblue);
 }
 
 .navigation__item:hover a {
-  color: #000;
+  color: white;
+  color: var(--white);
 }
 
 .mobile__button {
@@ -120,11 +124,12 @@ body {
 
 .about__title {
   font-weight: bold;
-  color: white;
+  color: black;
+  color: var(--black);
   font-size: 4.5em;
   text-transform: uppercase;
-  border-left-color: #e7a632;
-  border-left: 3px solid var(--golden);
+  border-left-color: #0177aa;
+  border-left: 12px solid var(--newblue);
   padding-left: 13px;
   line-height: 0.95;
   display: flex;
@@ -141,7 +146,8 @@ body {
 
 .about__subtitle {
   font-size: 2.5em;
-  color: white;
+  color: black;
+  color: var(--black);
   font-weight: 500;
   line-height: 1.64;
   text-transform: uppercase;
@@ -165,13 +171,14 @@ body {
 
 .main__title {
   padding: 0 22px 0 89px;
-  background: #e7a632;
-  background: var(--golden);
+  background: #0177aa;
+  background: var(--newblue);
   box-shadow: 0px 10px 8.7px 0.3px rgba(0, 0, 0, 0.26);
   margin-left: -89px;
   line-height: 51px;
   font-weight: 900;
-  color: black;
+  color: white;
+  color: var(--white);
   font-size: 2em;
   margin-bottom: 9.67%;
   white-space: nowrap;
@@ -191,7 +198,8 @@ body {
 
 .main__block {
   box-shadow: 0px 10px 8.7px 0.3px rgba(0, 0, 0, 0.26);
-  background: var(--darkgray);
+  background: #0177aa;
+  background: var(--newblue);
   color: white;
   font-size: 2.35em;
   font-weight: 500;
@@ -221,8 +229,8 @@ body {
   margin-top: 51px;
   padding: 0 59px 0 89px;
   font-size: 22px;
-  color: #e7a632;
-  color: var(--golden);
+  color: black;
+  color: var(--black);
   font-weight: 500;
   text-align: justify;
 }
@@ -236,8 +244,8 @@ body {
 
 .footer__inner {
   width: 100%;
-  background: #f1ffff;
-  background: var(--aliceblue);
+  background: #fff;
+  background: var(--white);
   padding: 30px 80px;
   display: flex;
   align-items: center;
@@ -284,13 +292,15 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 600px;
+    height: 100vh;
     justify-content: center;
     align-items: center;
-    background: var(--darkgray);
+    background: white;
+    background: var(--white);
     transition: 0.25s;
     opacity: 0;
     transform: translate(-50%, 0);
+    z-index: 999;
   }
 
   .navigation.active {
@@ -319,13 +329,14 @@ body {
     cursor: pointer;
     z-index: 11;
     padding: 5px 10px;
+    z-index: 1000;
   }
 
   .bar1, .bar2, .bar3 {
     width: 42px;
     height: 3px;
-    background: #e7a632;
-    background-color: var(--golden);
+    background: #0177aa;
+    background-color: var(--newblue);
     margin: 7px 0;
     transition: 0.4s;
     border-radius: 4px;
@@ -342,8 +353,6 @@ body {
   .change .bar1 {
     -webkit-transform: rotate(-45deg) translate(-7px, 7px);
     transform: rotate(-45deg) translate(-7px, 7px);
-    background: #e7a632;
-    background-color: var(--golden);
   }
 
   .change .bar2 {opacity: 0;}
@@ -352,8 +361,6 @@ body {
     -webkit-transform: rotate(45deg) translate(-7px, -7px);
     transform: rotate(45deg) translate(-7px, -7px);
     margin-left: 0;
-    background: #e7a632;
-    background-color: var(--golden);
   }
 
   .about__title {

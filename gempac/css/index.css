@@ -15,16 +15,18 @@ h1, h2, h3, h4, h5, h6, p, ul, ol {
 }
 
 :root {
-  --black: #191d20;
+  --white: #fff;
   --golden: #e7a632;
   --darkgray: #323337;
   --aliceblue: #f1ffff;
   --lightgrey: #d8d8d8;
+  --black: #000;
+  --newblue: #0177aa;
 }
 
 body {
-  background: #191d20;
-  background: var(--black);
+  background: #fff;
+  background: var(--white);
   width: 100%;
 }
 
@@ -46,21 +48,19 @@ body {
 .header__inner {
   width: 100%;
   position: relative;
-  padding-top: 56px;
+  display: flex;
+  flex-direction: column;
 }
 
 .header__logo__block {
   width: 160px;
-  height: 147px;
-  background: #d8d8d8;
-  background: var(--lightgrey);
+  height: auto;
+  background: #fff;
+  background: var(--white);
   display: flex;
   justify-content: center;
-  align-items: flex-end;
-  padding: 0 12px 17px;
-  position: absolute;
-  top: 0;
-  left: 2.34%;
+  align-items: center;
+  padding: 17px 12px 17px;
 }
 
 .header__logo__block a {
@@ -104,26 +104,29 @@ body {
 }
 
 .navigation__item a {
-  color: #f1ffff;
+  color: black;
+  color: var(--black);
   text-decoration: none;
 }
 
 .navigation__item.active {
-  background: #e7a632;
-  background: var(--golden);
+  background: #0177aa;
+  background: var(--newblue);
 }
 
 .navigation__item.active a {
-  color: #000;
+  color: white;
+  color: var(--white);
 }
 
 .navigation__item:hover {
   background: #e7a632;
-  background: var(--golden);
+  background: var(--newblue);
 }
 
 .navigation__item:hover a {
-  color: #000;
+  color: white;
+  color: var(--white);
 }
 
 .mobile__button {
@@ -135,8 +138,8 @@ body {
 }
 
 .main__about__wrap {
-  background: #323337;
-  background: var(--darkgray);
+  background: white;
+  background: var(--white);
   width: 100%;
 }
 
@@ -149,11 +152,12 @@ body {
 
 .main__header {
   font-weight: bold;
-  color: white;
+  color: black;
+  color: var(--black);
   font-size: 4.5em;
   text-transform: uppercase;
-  border-left-color: #e7a632;
-  border-left: 3px solid var(--golden);
+  border-left-color: #0177aa;
+  border-left: 12px solid var(--newblue);
   padding-left: 13px;
   line-height: 0.95;
   display: flex;
@@ -170,7 +174,9 @@ body {
 
 .main__subheader {
   margin-top: 35px;
-  color: white;
+  color: black;
+  color: var(--black);
+  margin-left: 26px;
   font-size: 3.2em;
   text-transform: uppercase;
   font-weight: 500;
@@ -178,28 +184,30 @@ body {
 }
 
 .main__text {
-  color: #e7a632;
-  color: var(--golden);
+  color: black;
+  color: var(--black);
   font-size: 2.2em;
   margin-bottom: 20px;
 }
 
 .home__readMore {
   cursor: pointer;
+  display: inline-block;
   padding: 7px 7px 7px;
   transition: 0.15s;
   border: none;
   outline: none;
-  color: #000;
+  color: white;
+  color: var(--white);
   font-size: 2.2em;
   text-decoration: none;
   line-height: 1.25;
-  background-color: #e7a632;
-  background-color: var(--golden);
+  background-color: #0177aa;
+  background-color: var(--newblue);
 }
 
 .home__readMore:hover {
-  background: #fa9532;
+  background: #006699;
 }
 
 .main__services {
@@ -256,8 +264,8 @@ body {
 
 .footer__inner {
   width: 100%;
-  background: #f1ffff;
-  background: var(--aliceblue);
+  background: #fff;
+  background: var(--white);
   padding: 30px 80px;
   display: flex;
   align-items: center;
@@ -278,8 +286,7 @@ and (max-width: 830px) {
   .header__logo__block {
     width: 98px;
     height: 91px;
-    left: auto;
-    right: 8.281%;
+    align-self: flex-end;
   }
 
   .navigation {
@@ -288,12 +295,14 @@ and (max-width: 830px) {
     top: 0;
     left: 0;
     width: 100%;
-    height: 600px;
+    height: 100vh;
     justify-content: center;
     align-items: center;
-    background: var(--darkgray);
+    background: white;
+    background: var(--white);
     transition: 0.25s;
     opacity: 0;
+    z-index: 999;
     transform: translate(-50%, 0);
   }
 
@@ -325,17 +334,19 @@ and (max-width: 830px) {
     top: 7px;
     display: block;
     cursor: pointer;
-    z-index: 11;
+    z-index: 1000;
     padding: 5px 10px;
   }
 
   .bar1, .bar2, .bar3 {
     width: 42px;
     height: 3px;
-    background-color: var(--golden);
+    background: #0177aa;
+    background-color: var(--newblue);
     margin: 7px 0;
     transition: 0.4s;
     border-radius: 4px;
+    z-index: 1000
   }
 
   .bar2 {

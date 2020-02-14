@@ -15,16 +15,18 @@ h1, h2, h3, h4, h5, h6, p, ul, ol {
 }
 
 :root {
-  --black: #191d20;
+  --white: #fff;
   --golden: #e7a632;
   --darkgray: #323337;
   --aliceblue: #f1ffff;
   --lightgrey: #d8d8d8;
+  --black: #000;
+  --newblue: #0177aa;
 }
 
 body {
-  background: #191d20;
-  background: var(--black);
+  background: #fff;
+  background: var(--white);
   width: 100%;
 }
 
@@ -37,6 +39,8 @@ body {
   max-width: 1220px;
   width: 100%;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .header__image {
@@ -45,17 +49,14 @@ body {
 }
 
 .clients__logo__block {
-  position: absolute;
-  top: 0;
-  left: 7.71%;
   width: 160px;
-  height: 147px;
-  background: #d8d8d8;
-  background: var(--lightgrey);
+  height: auto;
+  background: #fff;
+  background: var(--white);
   display: flex;
   justify-content: center;
-  align-items: flex-end;
-  padding: 0 12px 17px;
+  align-items: center;
+  padding: 17px 12px 17px;
 }
 
 .clients__logo__block a {
@@ -72,7 +73,7 @@ body {
 
 .header__title {
   font-size: 6.15em;
-  color: #191d20;
+  color: white;
   height: 95px;
   padding-right: 23px;
   padding-left: 101px;
@@ -81,9 +82,9 @@ body {
   display: flex;
   align-items:center;
   font-weight: bold;
-  bottom: 68px;
-  background: #e7a632;
-  background: var(--golden);
+  bottom: 78px;
+  background: #0177aa;
+  background: var(--newblue);
 }
 
 .navigation {
@@ -106,26 +107,29 @@ body {
 }
 
 .navigation__item a {
-  color: #f1ffff;
+  color: black;
+  color: var(--black);
   text-decoration: none;
 }
 
 .navigation__item.active {
-  background: #e7a632;
-  background: var(--golden);
+  background: #0177aa;
+  background: var(--newblue);
 }
 
 .navigation__item.active a {
-  color: #000;
+  color: white;
+  color: var(--white);
 }
 
 .navigation__item:hover {
   background: #e7a632;
-  background: var(--golden);
+  background: var(--newblue);
 }
 
 .navigation__item:hover a {
-  color: #000;
+  color: white;
+  color: var(--white);
 }
 
 .mobile__button {
@@ -137,8 +141,8 @@ body {
 }
 
 .clients__text {
-  color: #e7a632;
-  color: var(--golden);
+  color: black;
+  color: var(--black);
   font-size: 2.4em;
   font-weight: 500;
   padding: 35px 60px 24px 40px;
@@ -148,8 +152,8 @@ body {
 }
 
 .clients__says {
-  background:  #323337;
-  background: var(--darkgray);
+  background: white;
+  background: var(--white);
   width: 100%;
 }
 
@@ -158,30 +162,41 @@ body {
   width: 100%;
   margin: 0 auto;
   padding-top: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .clients__says__title {
   text-align: center;
+  display: inline-block;
+  margin: 0 auto -50px;
   font-size: 2.6em;
   font-weight: bold;
   line-height: 1.25;
-  color: #dfdfdf;
+  letter-spacing: 3px;
+  color: black;
+  color: var(--black);
   text-transform: uppercase;
-  margin-bottom: 58px;
+  position: relative;
+  z-index: 999;
+  background: #fff;
+  padding: 5px 20px;
 }
 
 .clients__says__block {
   display: flex;
   justify-content: space-between;
-  padding: 0 43px 56px;
+  padding: 80px 43px 56px;
   width: 100%;
   align-items: flex-start;
+  border: 12px solid black;
 }
 
 .clients__says__left {
   width: 45.96%;
-  border-left: 8px solid #e7a632;
-  border-left-color: var(--golden);
+  border-left: 12px solid #0177aa;
+  border-left-color: var(--newblue);
   padding-left: 34px;
 }
 
@@ -191,25 +206,28 @@ body {
   font-weight: bold;
   text-transform: uppercase;
   text-indent: -14px;
+  color: black;
+  color: var(--black);
 }
 
 .client__says__name {
   margin-top: 20px;
-  color: #e7a632;
-  color: var(--golden);
+  color: black;
+  color: var(--black);
   font-size: 2em;
 }
 
-
 .client__says__name .bold {
   font-weight: bold;
-  display:block;
+  display: block;
+  color: #0177aa;
+  color: var(--newblue);
 }
 
 .clients__says__right {
   width: 51.88%;
-  border-left: 8px solid #e7a632;
-  border-left-color: var(--golden);
+  border-left: 12px solid #0177aa;
+  border-left-color: var(--newblue);
   padding-left: 34px;
 }
 
@@ -217,7 +235,7 @@ body {
   max-width: 1220px;
   width: 100%;
   margin: 0 auto;
-  padding: 25px 43px 24px 43px;
+  padding: 45px 43px 24px 43px;
 }
 
 .clients__row {
@@ -230,13 +248,15 @@ body {
 .clients__item {
   width: 49%;
   font-size: 2em;
-  color: #e7a632;
-  color: var(--golden);
+  color: black;
+  color: var(--black);
 }
 
 .clients__item .bold {
   font-weight: 900;
   display: block;
+  color: #0177aa;
+  color: var(--newblue);
 }
 
 .footer {
@@ -248,8 +268,8 @@ body {
 
 .footer__inner {
   width: 100%;
-  background: #f1ffff;
-  background: var(--aliceblue);
+  background: #ffffff;
+  background: var(--white);
   padding: 30px 80px;
   display: flex;
   align-items: center;
@@ -269,8 +289,7 @@ body {
   .clients__logo__block {
     width: 98px;
     height: 91px;
-    left: auto;
-    right: 8.281%;
+    align-self: flex-end;
   }
 
   .header {
@@ -297,13 +316,15 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 600px;
+    height: 100vh;
     justify-content: center;
     align-items: center;
-    background: var(--darkgray);
+    background: white;
+    background: var(--white);
     transition: 0.25s;
     opacity: 0;
     transform: translate(-50%, 0);
+    z-index: 999;
   }
 
   .navigation.active {
@@ -332,13 +353,14 @@ body {
     cursor: pointer;
     z-index: 11;
     padding: 5px 10px;
+    z-index: 1000;
   }
 
   .bar1, .bar2, .bar3 {
     width: 42px;
     height: 3px;
-    background: #323337;
-    background-color: var(--darkgray);
+    background: #0177aa;
+    background: var(--newblue);
     margin: 7px 0;
     transition: 0.4s;
     border-radius: 4px;
@@ -355,8 +377,6 @@ body {
   .change .bar1 {
     -webkit-transform: rotate(-45deg) translate(-7px, 7px);
     transform: rotate(-45deg) translate(-7px, 7px);
-    background: #e7a632;
-    background-color: var(--golden);
   }
 
   .change .bar2 {opacity: 0;}
@@ -365,8 +385,6 @@ body {
     -webkit-transform: rotate(45deg) translate(-7px, -7px);
     transform: rotate(45deg) translate(-7px, -7px);
     margin-left: 0;
-    background: #e7a632;
-    background-color: var(--golden);
   }
 
   .clients__text {
