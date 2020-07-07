@@ -1,19 +1,22 @@
-*, *::before, *::after{
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
-html, body{
+html,
+body {
   width: 100%;
   margin: 0;
   height: 100%;
 }
-#battlefield{
-  border: 1px solid rgb(254,250,203);
+#battlefield {
+  border: 1px solid rgb(254, 250, 203);
   margin: 0 auto;
   display: flex;
   justify-content: center;
   box-shadow: 5px 5px 5px rgba(150, 150, 150, 0.5);
 }
-.wrap{
+.wrap {
   width: 602px;
   display: flex;
   flex-wrap: wrap;
@@ -22,7 +25,7 @@ html, body{
   margin: 0 auto;
   height: 100%;
 }
-.numbers__column{
+.numbers__column {
   width: 25px;
   margin-right: 5px;
   display: flex;
@@ -35,16 +38,16 @@ html, body{
   font-weight: 200;
   color: #555;
 }
-.numbers__column span{
+.numbers__column span {
   vertical-align: middle;
 }
-.numbers__row{
+.numbers__row {
   margin-top: 5px;
   width: 570px;
   display: flex;
   margin-left: auto;
 }
-.numbers__row span{
+.numbers__row span {
   display: block;
   font-size: 20px;
   font-family: Helvetica, sans-serif;
@@ -53,7 +56,7 @@ html, body{
   font-weight: 200;
   color: #555;
 }
-.author{
+.author {
   display: flex;
   justify-content: flex-end;
   width: 100%;
@@ -62,12 +65,12 @@ html, body{
   color: #777;
   font-weight: 300;
 }
-.author__link{
+.author__link {
   opacity: 0.2;
   color: #777;
   text-decoration: none;
 }
-.author__link:hover{
+.author__link:hover {
   opacity: 1;
   transition: 0.2s;
 }
